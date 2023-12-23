@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Hello, world!</title>
     <link rel="stylesheet" href="{{asset('website/css/index.css')}}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
   </head>
   <body>
     <!-- navbar -->
@@ -41,7 +41,8 @@
     </nav> --}}
 
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right-border">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right-border" >
+  <div class="container">
     <a class="navbar-brand" href="#">+ 91- 8888352777  </a>
         <a class="navbar-brand" href="#"> 0253-7966831</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,6 +67,7 @@
         </li>
       </ul>
     </div>
+  </div>
   </nav>
     <!-- end navbar -->
 

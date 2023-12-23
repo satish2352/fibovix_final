@@ -7,13 +7,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="container">
-      <div class="col-lg-12 col-md-10 col-sm-6">
+      <div class="col-lg-12 col-md-12 col-sm-10">
         <div id="corn">
           <div class="row news text-center mt-5">
             <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
             <div class="input-group  justify-content-center">
               <div class="form-outline" data-mdb-input-init>
-                <input type="email" id="form1" class="form-control col-md-12 mx-5"  placeholder="Email"/>
+                <input type="email" id="form1" class="form-control c col-md-12 col-sm-8"  placeholder="Email"/>
               </div>
               <button type="button" class="btn btn-primary" data-mdb-ripple-init>
                Subscribe

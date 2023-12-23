@@ -12,14 +12,14 @@ body{
   li {
     font-weight: 200px;
     font-size: 20px;
-    /* float: left; */
+    /* float: center; */
     border-left:1px solid #bbb;
   }
   
   li:last-child {
     border-right: none;
   }
- 
+
   .nav-item a {
     /* display: block; */
     color: black;
@@ -91,7 +91,7 @@ body{
   }
   #fibovix{
     line-height: 100px;
-    font-weight: 750px;
+    font-weight: 750;
     /* margin-top: 50%; */
     font-size: 40px !important;
   }
@@ -102,7 +102,6 @@ body{
     padding: 20px;
     /* margin-left: 40px; */
     /* margin-bottom: 50%; */
-
   }
 
   /* end */
@@ -124,15 +123,49 @@ body{
     border: none;
     margin: 50px;
   }
+  #navbar1 li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
 
-  #rcorners3 {
+#rcorners3 {
+    position: relative; /* Set to relative to allow absolute positioning inside */
+    border-radius: 80px 0px 80px;
+    background: #73AD21;
+    padding: 0.2rem; 
+    width: 100%;
+    /* height: 2%; */
+    box-sizing: border-box;
+    
+    /* margin-top: 10px; Adjust this value based on your navbar height */
+}
+#rcorners3 li {
+  font-weight: 200px;
+  font-size: 20px;
+  /* float: left; */
+  border-right:1px solid #bbb;
+}
+#rcorners3 li:last-child {
+  border-right: none;
+}
+#rcorners3 li:first-child {
+  border-left: none;
+}
+
+  /* #rcorners3 {
     border-radius: 80px 0px 80px;
     background: #73AD21;
     padding: 2rem; 
     width: 100%;
     height: 2%;
    
-  }
+  } */
 /* take action */
 
   
@@ -229,6 +262,11 @@ body{
     background-image: url('../images/about_us.png');
     background-size: cover;
   }
+  .btn-primary1 {
+    color: #fff !important;
+    background-color: #1F2D87 !important;
+    border-color: #1F2D87 !important;
+}
   /* badge circle  */
   .bdgcrl{
     font-size: 2.4rem !important;
@@ -300,16 +338,7 @@ body{
     /* margin-top: 50%; */
     font-size: 30px !important;
   }
-  .data{
-    position: absolute;
-    margin-top: -60%;
-    font-size: 15px;
-    padding: 20px;
-    /* margin-left: 40px; */
-    /* margin-bottom: 50%; */
-
-  }
-
+ 
   /* end */
  }
 
@@ -342,19 +371,7 @@ body{
     font-size: 20px;
    
   }
-  #fibovix{
-    line-height: 25px;
-    font-weight: 750;
-    /* margin-top: 50%; */
-    font-size: 30px !important;
-  }
-  .data{
-    position: absolute;
-    margin-top: -110%;
-    font-size: 11px;
-    padding: 15px;
-
-  }
+  
   .data img{
     width: 30%;
    
