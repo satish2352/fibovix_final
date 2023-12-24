@@ -2,8 +2,64 @@
 {{-- start hero section --}}
 
 <div class="container-fluid">
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+        </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="row">
+                    <div class="col-md-6">
+                    <img class="first_carousel" src="{{ asset('website/images/Logo1.png') }}" alt="">
+                    </div>
+                    <div class="col-md-6">
+                    
+                    </div>
+                    <div class="col-md-6">
+                        <h2 style="color: #1F2D87;display:flex;">WHY US</h2>
+                        <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by three principles: we start by
+                            understanding the client’s investment objectives; we seek the best risk-adjusted returns
+                            within the scope of the mandate they give us; and we underpin our work with research, data,
+                            and analytics. Research informs our investment decisions and product innovation. We research
+                            major structural trends shaping the economy, markets, and asset prices.
+                        </p>
+                    </div>
+                </div> 
+                
+            </div>
+        </div>
+        <!-- <div class="carousel-item">
+            <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
     <!-- Content Section -->
-    <div class="row">
+    <!-- <div class="row">
         <img class="img1" src="{{ asset('website/images/backimg1.jpg') }}" alt="">
         <div class="container  content ">
             <div class="container col-md-8 col-sm-8">
@@ -20,12 +76,12 @@
                             within the scope of the mandate they give us; and we underpin our work with research, data,
                             and analytics. Research informs our investment decisions and product innovation. We research
                             major structural trends shaping the economy, markets, and asset prices.</p>
-                        <!-- Add your additional content here -->
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 {{-- end hero section --}}
@@ -44,7 +100,7 @@
                 </p>
                 <!-- Add your additional content here -->
             </div>
-            <div class=" container">
+            <div class="container section_center">
                 <div class="row ">
 
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -94,9 +150,8 @@
 
     <div class="container">
         <div class="row text-center">
-            <h2 id="fibovix"> <span style="color:#6246E5"> Services </span> </h2>
-            <p>Finding the right opportunity. Conquering obstacles. Moving onward with the next phase. We provide a
-                variety of options to assist you in achieving your objectives.
+            <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
+            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill and Bank of America offer a wide range of solutions to help you get there.
             </p>
         </div>
         <div class="row text-center">
@@ -138,7 +193,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 20rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title">Checking</h5>
@@ -148,7 +203,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 18rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title"> Savings</h5>
@@ -158,7 +213,7 @@
                   </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 18rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagec.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title">Credit cards</h5>
@@ -168,7 +223,7 @@
                   </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 18rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title">Cash Management</h5>
@@ -178,7 +233,7 @@
                   </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 18rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title">Rewards</h5>
@@ -188,7 +243,7 @@
                   </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="width: 18rem; border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
                       <h5 class="card-title">Mobile and online access</h5>
@@ -215,7 +270,7 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:50%; height:15rem">
+                <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
                             class="position-absolute px-3 py-2 badge outerBadge bg-primary border border-light rounded-circle">
@@ -227,7 +282,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:50%; height:15rem">
+                <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
                             class="position-absolute px-3 py-2 badge outerBadge bg-primary border border-light rounded-circle">
@@ -239,7 +294,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:50%; height:15rem">
+                <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
                             class="position-absolute px-3 py-2 badge outerBadge bg-primary border border-light rounded-circle">
@@ -251,7 +306,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 ">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:50%; height:15rem">
+                <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
                             class="position-absolute px-3 py-2 badge outerBadge bg-primary border border-light rounded-circle">
@@ -265,7 +320,7 @@
 
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:10%; height:15rem">
+                <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">Together with your advisor, determine your
                             priorities for the now and your long-term goals. If you are in need of an advisor, we
@@ -275,7 +330,7 @@
                 </div>
             </div>
             <div class="col-3 col-md-3 col-sm-1">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:10%; height:15rem">
+                <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">With assistance that genuinely supports you, we'll
                             develop a customized strategy that is all about you.
@@ -284,7 +339,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:10%; height:15rem">
+                <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light">Find out more about your program alternatives and
                             investment connection. Then, with the help of your adviser, implement your strategy by
@@ -294,7 +349,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 ">
-                <div class="card shadow-lg" style="width: 15rem; border-radius:10%; height:15rem">
+                <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">You can monitor your progress and adjust your
                             strategy in response to both anticipated and unforeseen events in life.
@@ -315,8 +370,8 @@
    
             <div class="row">
                 <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card" style="width: 18rem; " >
-                        <img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTNQx6dAy_XJh-wLZwOd5qGL63kg_JOHHqe8QJOsg5-C9HYswaFOAvHAkOx-KLHxsSU" class="card-img-top" alt="...">
+                    <div class="card addi_sol_card">
+                        <img class="addi_sol_card_img" src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcTNQx6dAy_XJh-wLZwOd5qGL63kg_JOHHqe8QJOsg5-C9HYswaFOAvHAkOx-KLHxsSU" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Diversify your investment</h5>
                           <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
@@ -330,8 +385,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card" style="width: 18rem;" >
-                        <img src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
+                    <div class="card addi_sol_card">
+                        <img class="addi_sol_card_img" src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Investment consolidation</h5>
                           <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
@@ -345,8 +400,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card" style="width: 18rem;" >
-                        <img src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
+                    <div class="card addi_sol_card">
+                        <img class="addi_sol_card_img" src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title"> Online Account view</h5>
                           <p class="card-text">Combine your online banking and investment.</p>
@@ -368,6 +423,28 @@
 
 
     {{-- end additional solution --}}
+</div>
+
+<div class="horizontal">
+   	<div class="fvertical vertical1">
+   </div>
+   <div class="fvertical vertical2">
+      <img src="{{ asset('website/images/f1.png') }}">
+      <img src="{{ asset('website/images/f2.png') }}">
+   </div>
+   <div class="fvertical vertical3">
+    <div class="fcard">
+        <div class="fcard_about">
+            <h4>Founder</h4>
+            <h2>Our Founder</h2>
+            <p>fibovix</p>
+        </div>
+    </div>
+      <img src="{{ asset('website/images/f3.png') }}">
+   </div>
+   <div class="fvertical vertical4">
+     
+   </div>
 </div>
 
 @include('website.layouts.footer')

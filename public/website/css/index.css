@@ -24,8 +24,9 @@ body{
     /* display: block; */
     color: black;
     text-align: center;
-    padding: 5px 5px;
+    padding: 10px 5px;
     text-decoration: none;
+    padding-left: 0.3rem !important;
   }
   
   .nav-item a:hover {
@@ -119,9 +120,10 @@ body{
     color: #1F2D87;
   }
   .card{
-    /* padding: 10px; */
+    padding: 10px;
     border: none;
-    margin: 50px;
+    /* margin: 50px; */
+    margin-bottom: 20px;
   }
   #navbar1 li{
     position: absolute;
@@ -393,3 +395,139 @@ body{
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {  }
+
+
+
+/* vivek */
+
+.section_center{
+  display: flex;
+  justify-content: center;
+}
+
+/* carousel */
+
+.first_carousel{
+  /* display: flex; */
+  margin-bottom: 16%;
+  height: 145px;
+  margin-left: -20px;
+}
+
+.action_circle{
+  width: 15rem; 
+  border-radius:50%; 
+  height:15rem; 
+  background-color: #EEFFFE;
+}
+
+.action_square{
+  width: 15rem; 
+  border-radius:10%; 
+  height:15rem; 
+  background-color: #FAF8F8;
+}
+
+.addi_sol_card{
+  padding: 0px !important;
+  border: none;
+  /* margin: 50px; */
+  margin-bottom: 20px;
+  border-radius: 15px !important;
+  border-bottom: 5px solid darkblue;
+}
+
+.addi_sol_card_img{
+  border-radius: 15px !important;
+}
+
+.float-right{
+  float: right;
+}
+
+/*  */
+.horizontal:after{
+  content: "";
+  display: flex;
+  clear: both;
+}
+.vertical1{
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+.vertical2{
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.vertical3{
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.vertical4{
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+.fvertical img{
+  margin-top: 12px;
+  width: 100%;
+ cursor: pointer;
+}
+/* img:hover{
+box-shadow:4px 4px 4px #111;
+} */
+@media(max-width: 720px){
+  .vertical1{
+  width: 50%;
+  }
+  .vertical2{
+    width: 50%;
+    }
+  .vertical3{
+    width: 50%;
+    }
+  .vertical4{
+    width: 50%;
+    }
+  .fcard {
+    width: 50%;
+    height:12em;
+  }
+}
+.fcard {
+  /* background: #6246E5;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px; */
+
+  /* margin: 1rem; */
+
+  /* margin-left: -20px; */
+
+  /* position: relative; */
+
+  /* width: 100%; */
+  margin-top: 12px;
+
+  display:inline-block;
+  width:100%;
+  height:24em;
+  /* text-align:center; */
+  /* line-height:15em; */
+  background: #6246E5;
+}
+@media screen and (max-width:48em) {
+	.fcard {
+		display:block;
+		width:100%;
+	}
+}
+
+.fcard_about{
+  padding: 50px;
+  margin-top: 50px;
+  color: #fff;
+}
