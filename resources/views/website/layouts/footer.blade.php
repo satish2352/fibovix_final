@@ -6,23 +6,29 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="container">
-      <div class="col-lg-12 col-md-12 col-sm-10">
+    
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8">
         <div id="corn">
+          <div class="container">
           <div class="row news text-center mt-5">
             <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
             <div class="input-group  justify-content-center">
-              <div class="form-outline" data-mdb-input-init>
-                <input type="email" id="form1" class="form-control c col-md-12 col-sm-8"  placeholder="Email"/>
-              </div>
-              <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-               Subscribe
-              </button>
+            <form class="footer_subscribe_form" action="">
+              <input type="email" name="email" id="email" placeholder="example@example.com" />
+              <input type="submit" name="submit" value="subscribe">
+            </form>
             </div>
+          </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        
+      </div>
+    
   </div>
 </div>
 

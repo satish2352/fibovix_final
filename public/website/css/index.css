@@ -280,15 +280,16 @@ body{
     position: relative;
     border-radius: 15px;
     background-image: url('../images/subs.png');
+    background-size: cover;
     /* padding: 20px;  */
     width: 100%;
-    height: 350px; 
+    height: 250px; 
     color: #FFFFFF;
     font-weight: 200px !important;
   } 
   .news{
    font-weight: 5rem;
-    position: absolute;
+    /* position: absolute; */
   }
   .footimg{
     background-image: url('../images/footer.png');
@@ -533,6 +534,10 @@ box-shadow:4px 4px 4px #111;
 }
 
 /*  */
+.our_advi_nav{
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+}
 .our_advi_tab{
   /* position: relative; */
   border-radius: 80px 0px 80px;
@@ -569,8 +574,8 @@ box-shadow:4px 4px 4px #111;
   font-family: serif !important;
 }
 .our_advi_tab_link:hover {
-  color: #fff;
-  font-family: inherit !important;
+  color: #000;
+  /* font-family: inherit !important; */
 }
 
 
@@ -649,4 +654,88 @@ box-shadow:4px 4px 4px #111;
 .card_image {
   max-width: 100%;
   border-radius: 15px;
+}
+
+/*  */
+
+.about_contact_form{
+  padding: 2%;
+  box-shadow: 2px 2px 4px 2px #ddd;
+}
+
+.about_contact_row{
+  padding-left: 12%;
+    padding-right: 12%;
+}
+
+.about_contact_input{
+  width: 90%;
+}
+
+.form_btn{
+  display: flex;
+  justify-content: end;
+}
+
+.form_para{
+  text-align: justify;
+  width: 100%;
+}
+
+/*  */
+
+.why_fibovis_p{
+  text-align: justify;
+    padding: 0.5rem;
+    line-height: 1.2;
+    font-size: 20px;
+    font-family: serif;
+}
+
+
+
+/* footer subscribe */
+.footer_subscribe_form {
+  position: relative;
+  display: block;
+  height: 70px;
+  border-radius: 10px;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .28);
+  overflow: hidden;
+}
+.footer_subscribe_form input {
+  line-height: 70px;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 300;
+  background: #eee;
+  letter-spacing: 0.02em;
+}
+.footer_subscribe_form input:not([type=submit]) {
+  width: 100%;
+  display: block;
+  padding: 0px 290px 0 40px;
+}
+.footer_subscribe_form input:not([type=email]) {
+  position: absolute;
+  height: 50px;
+  line-height: 50px;
+  top: 10px;
+  right: 10px;
+  border-radius: 25px;
+  padding: 0 25px;
+  background: #f65269;
+  color: white;
+  cursor: pointer;
+}
+.footer_subscribe_form input:not([type=email]):hover {
+  background: #f00c2c;
+}
+.footer_subscribe_form input:focus {
+  outline: none;
+  background: white;
 }
