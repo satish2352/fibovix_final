@@ -5,15 +5,15 @@ use DB;
 use Illuminate\Support\Carbon;
 // use Session;
 use App\Models\ {
-CoursesOffered
+AdditionalSolutions
 };
 use Config;
 
-class CoursesOfferedRepository  {
+class AdditionalSolutionsRepository  {
 
     public function getAll(){
         try {
-            $data_output = CoursesOffered::orderBy('updated_at', 'desc')->get();
+            $data_output = AdditionalSolutions::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
@@ -22,16 +22,17 @@ class CoursesOfferedRepository  {
      public function addAll($request){
         try {
             $data =array();
-            $dataOutput = new CoursesOffered();
+            $dataOutput = new AdditionalSolutions();
             $dataOutput->title = $request['title'];
-            $dataOutput->description = $request['description'];
+            $dataOutput->short_description = $request['short_description'];
+            $dataOutput->long_description = $request['long_description'];
         
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
 
             $ImageName = $last_insert_id .'_' . rand(100000, 999999) . '_image.' . $request->image->extension();
             
-            $finalOutput = CoursesOffered::find($last_insert_id); // Assuming $request directly contains the ID
+            $finalOutput = AdditionalSolutions::find($last_insert_id); // Assuming $request directly contains the ID
             $finalOutput->image = $ImageName; // Save the image filename to the database
             $finalOutput->save();
             
@@ -47,7 +48,7 @@ class CoursesOfferedRepository  {
     }
     public function getById($id){
         try {
-            $dataOutputByid = CoursesOffered::find($id);
+            $dataOutputByid = AdditionalSolutions::find($id);
             if ($dataOutputByid) {
                 return $dataOutputByid;
             } else {
@@ -64,7 +65,7 @@ class CoursesOfferedRepository  {
     public function updateAll($request){
         try {
             $return_data = array();
-            $dataOutput = CoursesOffered::find($request->id);
+            $dataOutput = AdditionalSolutions::find($request->id);
 
             if (!$dataOutput) {
                 return [
@@ -77,7 +78,8 @@ class CoursesOfferedRepository  {
 
             // Update the fields from the request
             $dataOutput->title = $request['title'];
-            $dataOutput->description = $request['description'];
+            $dataOutput->short_description = $request['short_description'];
+            $dataOutput->long_description = $request['long_description'];
             
             $dataOutput->save();
             $last_insert_id = $dataOutput->id;
@@ -96,7 +98,7 @@ class CoursesOfferedRepository  {
     }
     public function updateOne($request){
         try {
-            $updateOutput = CoursesOffered::find($request); // Assuming $request directly contains the ID
+            $updateOutput = AdditionalSolutions::find($request); // Assuming $request directly contains the ID
 
             // Assuming 'is_active' is a field in the model
             if ($updateOutput) {
@@ -123,10 +125,10 @@ class CoursesOfferedRepository  {
     }
     public function deleteById($id){
             try {
-                $deleteDataById = CoursesOffered::find($id);
+                $deleteDataById = AdditionalSolutions::find($id);
                 if ($deleteDataById) {
-                    if (file_exists_view(Config::get('DocumentConstant.COURSES_OFFERED_DELETE') . $deleteDataById->image)){
-                        removeImage(Config::get('DocumentConstant.COURSES_OFFERED_DELETE') . $deleteDataById->image);
+                    if (file_exists_view(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $deleteDataById->image)){
+                        removeImage(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $deleteDataById->image);
                     }
                     $deleteDataById->delete();
                     

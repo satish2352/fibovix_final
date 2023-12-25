@@ -11,9 +11,9 @@ return [
     'SLIDER_DELETE'	         => '/all_web_data/images/home/slides/',
     'SLIDER_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/slides/',
 
-    'COURSES_OFFERED_ADD'	         => "/all_web_data/images/home/coursesOffered/",
-    'COURSES_OFFERED_DELETE'	         => '/all_web_data/images/home/coursesOffered/',
-    'COURSES_OFFERED_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/coursesOffered/',
+    'ADDITIONAL_SOLUTIONS_ADD'	         => "/all_web_data/images/home/additionalSolutions/",
+    'ADDITIONAL_SOLUTIONS_DELETE'	     => '/all_web_data/images/home/additionalSolutions/',
+    'ADDITIONAL_SOLUTIONS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/additionalSolutions/',
     
     'TESTIMONIAL_ADD'	         => "/all_web_data/images/home/testimonial/",
     'TESTIMONIAL_DELETE'	         => '/all_web_data/images/home/testimonial/',

@@ -9,7 +9,7 @@
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('list-courses-offered') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('list-our-solutions') }}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Update Courses Offered</li>
                     </ol>
                 </nav>
@@ -18,8 +18,8 @@
                 <div class="col-12 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <form class="forms-sample" action="{{ route('update-courses-offered') }}" method="post" id="regForm"
-                                enctype="multipart/form-data">
+                            <form class="forms-sample" action="{{ route('update-our-solutions') }}" method="post"
+                                id="regForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -44,7 +44,7 @@
                                             @endif
                                         </div>
                                         <img id="english"
-                                            src="{{ Config::get('DocumentConstant.COURSES_OFFERED_VIEW') }}{{ $editData->image }}"
+                                            src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $editData->image }}"
                                             class="img-fluid img-thumbnail" width="150">
                                         <img id="english_imgPreview" src="#"
                                             alt=" {{ strip_tags($editData['title']) }} Image"
@@ -53,15 +53,35 @@
 
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group" id="summernote_id">
-                                            <label for="english_description">Description</label>&nbsp<span
+                                            <label for="short_description">Short Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
-                                                <textarea class="form-control" name="description" id="description" placeholder="Enter the Description">
-                                                @if (old('description')){{ old('description') }}@else{{ $editData->description }}@endif
-                                        </textarea>
+                                                <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description">
+                                                @if (old('short_description'))
+                                                {{ old('short_description') }}@else{{ $editData->short_description }}
+                                                @endif
+                                                </textarea>
                                             </span>
-                                            @if ($errors->has('description'))
-                                                <span class="red-text"><?php echo $errors->first('description', ':message'); ?></span>
+                                            @if ($errors->has('short_description'))
+                                                <span class="red-text"><?php echo $errors->first('short_description', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+
+                                     <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group" id="summernote_id">
+                                            <label for="long_description">Long Description</label>&nbsp<span
+                                                class="red-text">*</span>
+                                            <span class="summernote1">
+                                                <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description">
+                                                @if (old('long_description'))
+                                                {{ old('long_description') }}@else{{ $editData->long_description }}
+                                                @endif
+                                                </textarea>
+                                            </span>
+                                            @if ($errors->has('long_description'))
+                                                <span class="red-text"><?php echo $errors->first('long_description', ':message'); ?></span>
                                             @endif
                                         </div>
                                     </div>
@@ -70,7 +90,7 @@
                                             Save &amp; Update
                                         </button>
                                         {{-- <button type="reset" class="btn btn-sm btn-danger">Cancel</button> --}}
-                                        <span><a href="{{ route('list-courses-offered') }}"
+                                        <span><a href="{{ route('list-our-solutions') }}"
                                                 class="btn btn-sm btn-primary ">Back</a></span>
                                     </div>
                                 </div>
@@ -198,5 +218,4 @@
                 });
             });
         </script> --}}
-        
     @endsection

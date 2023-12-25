@@ -1,17 +1,17 @@
 <?php
 namespace App\Http\Services\Admin\Home;
-use App\Http\Repository\Admin\Home\CoursesOfferedRepository;
+use App\Http\Repository\Admin\Home\AdditionalSolutionsRepository;
 use Carbon\Carbon;
 use App\Models\ {
-    CoursesOffered
+    AdditionalSolutions
     };
 
 use Config;
-class CoursesOfferedServices
+class AdditionalSolutionsServices
 {
 	protected $repo;
     public function __construct(){
-        $this->repo = new CoursesOfferedRepository();
+        $this->repo = new AdditionalSolutionsRepository();
     }
     public function getAll(){
         try {
@@ -23,7 +23,7 @@ class CoursesOfferedServices
     public function addAll($request){
         try {
             $last_id = $this->repo->addAll($request);
-            $path = Config::get('DocumentConstant.COURSES_OFFERED_ADD');
+            $path = Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_ADD');
             $ImageName = $last_id['ImageName'];
             uploadImage($request, 'image', $path, $ImageName);
            
@@ -48,11 +48,11 @@ class CoursesOfferedServices
         try {
             $return_data = $this->repo->updateAll($request);
             
-            $path = Config::get('DocumentConstant.COURSES_OFFERED_ADD');
+            $path = Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_ADD');
             if ($request->hasFile('image')) {
                 if ($return_data['image']) {
-                    if (file_exists_view(Config::get('DocumentConstant.COURSES_OFFERED_DELETE') . $return_data['image'])) {
-                        removeImage(Config::get('DocumentConstant.COURSES_OFFERED_DELETE') . $return_data['image']);
+                    if (file_exists_view(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $return_data['image'])) {
+                        removeImage(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $return_data['image']);
                     }
 
                 }
@@ -66,14 +66,14 @@ class CoursesOfferedServices
                 }                
                 // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
                 uploadImage($request, 'image', $path, $englishImageName);
-                $slide_data = CoursesOffered::find($return_data['last_insert_id']);
+                $slide_data = AdditionalSolutions::find($return_data['last_insert_id']);
                 $slide_data->image = $englishImageName;
                 $slide_data->save();
             }          
             if ($return_data) {
-                return ['status' => 'success', 'msg' => 'Slide Updated Successfully.'];
+                return ['status' => 'success', 'msg' => 'Additional Solutions Updated Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Slide  Not Updated.'];
+                return ['status' => 'error', 'msg' => 'Additional Solutions  Not Updated.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];

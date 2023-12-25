@@ -5,15 +5,15 @@
         <div class="content-wrapper mt-7">
             <div class="page-header">
                 <h3 class="page-title">
-                    Courses Offered List
-                    <a href="{{ route('add-courses-offered') }}" class="btn btn-sm btn-primary ml-3">+
+                    Our Solutions List
+                    <a href="{{ route('add-our-solutions') }}" class="btn btn-sm btn-primary ml-3">+
                         Add</a>
 
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('list-courses-offered') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Courses Offered List</li>
+                        <li class="breadcrumb-item"><a href="{{ route('list-our-solutions') }}">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Our Solutions List</li>
                     </ol>
                 </nav>
             </div>
@@ -30,7 +30,8 @@
                                                 <tr>
                                                     <th>Sr. No.</th>
                                                     <th>Title </th>
-                                                    <th>Description </th>
+                                                    <th>Short Description </th>
+                                                    <th>Long Description </th>
                                                     <th>Image </th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -41,9 +42,10 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>{{ strip_tags($item->title) }}</td>
-                                                        <td>{{ strip_tags($item->description) }}</td>
+                                                        <td>{{ strip_tags($item->short_description) }}</td>
+                                                        <td>{{ strip_tags($item->long_description) }}</td>
                                                         <td> <img class="img-size"
-                                                                src="{{ Config::get('DocumentConstant.COURSES_OFFERED_VIEW') }}{{ $item->image }}"
+                                                                src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />
                                                         </td>
                                                         <td>
@@ -59,7 +61,7 @@
                                                         </td>
                                                         <td>
                                                             <div class="d-flex">
-                                                                <a href="{{ route('edit-courses-offered', base64_encode($item->id)) }}"
+                                                                <a href="{{ route('edit-our-solutions', base64_encode($item->id)) }}"
                                                                     class="btn btn-sm btn-outline-primary m-1"
                                                                     title="Edit Slide"><i
                                                                         class="fas fa-pencil-alt"></i></a>
@@ -86,15 +88,15 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="{{ url('/delete-courses-offered') }}" id="deleteform">
+        <form method="POST" action="{{ url('/delete-our-solutions') }}" id="deleteform">
             @csrf
             <input type="hidden" name="delete_id" id="delete_id" value="">
         </form>
-        <form method="POST" action="{{ url('/show-courses-offered') }}" id="showform">
+        <form method="POST" action="{{ url('/show-our-solutions') }}" id="showform">
             @csrf
             <input type="hidden" name="show_id" id="show_id" value="">
         </form>
-        <form method="POST" action="{{ url('/update-active-courses-offered') }}" id="activeform">
+        <form method="POST" action="{{ url('/update-active-our-solutions') }}" id="activeform">
             @csrf
             <input type="hidden" name="active_id" id="active_id" value="">
         </form>

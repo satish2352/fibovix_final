@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end align-items-center">
                             <div>
-                                <a href="{{ route('list-courses-offered') }}" class="btn btn-sm btn-primary ml-3">Back</a>
+                                <a href="{{ route('list-additional-solutions') }}" class="btn btn-sm btn-primary ml-3">Back</a>
                             </div>
                         </div>
 
@@ -45,7 +45,7 @@
                                             <label> Image :</label>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <img src="{{ Config::get('DocumentConstant.COURSES_OFFERED_VIEW') }}{{ $showData->image }}"
+                                            <img src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $showData->image }}"
                                                 style="width:300px; height:150px;" alt=" {{ strip_tags($showData['title']) }} Image"/>
                                         </div>
                                     </div>

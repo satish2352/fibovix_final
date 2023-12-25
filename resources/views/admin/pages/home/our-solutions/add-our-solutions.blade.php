@@ -8,7 +8,7 @@
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('list-courses-offered') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('list-our-solutions') }}">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Courses Offered </li>
                     </ol>
                 </nav>
@@ -17,7 +17,7 @@
                 <div class="col-12 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <form class="forms-sample" action="{{ route('add-courses-offered') }}" method="POST"
+                            <form class="forms-sample" action="{{ route('add-our-solutions') }}" method="POST"
                                 enctype="multipart/form-data" id="regForm">
                                 @csrf
                                 <div class="row">
@@ -44,10 +44,20 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group" id="summernote_id">
-                                            <label for="description">Description <span class="red-text">*</span></label>
-                                            <textarea class="form-control" name="description" id="description" placeholder="Enter Page Content">{{ old('description') }}</textarea>
-                                            @if ($errors->has('description'))
-                                                <span class="red-text">{{ $errors->first('description') }}</span>
+                                            <label for="description">Short Description <span class="red-text">*</span></label>
+                                            <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter Short Content">{{ old('short_description') }}</textarea>
+                                            @if ($errors->has('short_description'))
+                                                <span class="red-text">{{ $errors->first('short_description') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+                                     <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group" id="summernote_id">
+                                            <label for="description">Long Description <span class="red-text">*</span></label>
+                                            <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter Long Content">{{ old('long_description') }}</textarea>
+                                            @if ($errors->has('long_description'))
+                                                <span class="red-text">{{ $errors->first('long_description') }}</span>
                                             @endif
                                         </div>
                                     </div>
@@ -56,7 +66,7 @@
                                             Save &amp; Submit
                                         </button>
                                         {{-- <button type="reset" class="btn btn-sm btn-danger">Cancel</button> --}}
-                                        <span><a href="{{ route('list-courses-offered') }}"
+                                        <span><a href="{{ route('list-our-solutions') }}"
                                                 class="btn btn-sm btn-primary ">Back</a></span>
                                     </div>
                                 </div>
@@ -110,7 +120,10 @@
                             required: true,
                             spcenotallow: true,
                         },
-                        description: {
+                        short_description: {
+                            required: true,
+                        },
+                        long_description: {
                             required: true,
                         },
                         image: {
@@ -125,7 +138,10 @@
                             required: "Please enter the Title.",
                             spcenotallow: "Enter Some Title",
                         },
-                        description: {
+                        short_description: {
+                            required: "Please Enter the Description",
+                        },
+                        long_description: {
                             required: "Please Enter the Description",
                         },
                         image: {

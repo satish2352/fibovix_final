@@ -4,26 +4,26 @@ namespace App\Http\Controllers\Admin\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Services\Admin\Home\CoursesOfferedServices;
+use App\Http\Services\Admin\Home\OurSolutionsServices;
 use Session;
 use Validator;
 use Config;
 
-class CoursesOfferedController extends Controller
-{
+class OurSolutionsController extends Controller
+{ 
     public function __construct(){
-        $this->service = new CoursesOfferedServices();
+        $this->service = new OurSolutionsServices();
         }
         public function index(){
             try {
                 $getOutput = $this->service->getAll();
-                return view('admin.pages.home.courses-offered.list-courses-offered', compact('getOutput'));
+                return view('admin.pages.home.our-solutions.list-our-solutions', compact('getOutput'));
             } catch (\Exception $e) {
                 return $e;
             }
         }    
         public function add(){
-            return view('admin.pages.home.courses-offered.add-courses-offered');
+            return view('admin.pages.home.our-solutions.add-our-solutions');
         }
         public function store(Request $request){
             $rules = [
@@ -47,7 +47,7 @@ class CoursesOfferedController extends Controller
                 $validation = Validator::make($request->all(), $rules, $messages);
                 
                 if ($validation->fails()) {
-                    return redirect('add-courses-offered')
+                    return redirect('add-our-solutions')
                         ->withInput()
                         ->withErrors($validation);
                 } else {
@@ -58,20 +58,20 @@ class CoursesOfferedController extends Controller
                         $status = $add_record['status'];
     
                         if ($status == 'success') {
-                            return redirect('list-courses-offered')->with(compact('msg', 'status'));
+                            return redirect('list-our-solutions')->with(compact('msg', 'status'));
                         } else {
-                            return redirect('add-courses-offered')->withInput()->with(compact('msg', 'status'));
+                            return redirect('add-our-solutions')->withInput()->with(compact('msg', 'status'));
                         }
                     }
                 }
             } catch (Exception $e) {
-                return redirect('add-courses-offered')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
+                return redirect('add-our-solutions')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
             }
         }
         public function show(Request $request){
             try {
                 $showData = $this->service->getById($request->show_id);
-                return view('admin.pages.home.courses-offered.show-courses-offered', compact('showData'));
+                return view('admin.pages.home.our-solutions.show-our-solutions', compact('showData'));
             } catch (\Exception $e) {
                 return $e;
             }
@@ -80,7 +80,7 @@ class CoursesOfferedController extends Controller
             $edit_data_id = base64_decode($request->edit_id);
             $editData = $this->service->getById($edit_data_id);
            
-            return view('admin.pages.home.courses-offered.edit-courses-offered', compact('editData'));
+            return view('admin.pages.home.our-solutions.edit-our-solutions', compact('editData'));
         }
         public function update(Request $request){
             $rules = [
@@ -115,7 +115,7 @@ class CoursesOfferedController extends Controller
                         $msg = $update_data['msg'];
                         $status = $update_data['status'];
                         if ($status == 'success') {
-                            return redirect('list-courses-offered')->with(compact('msg', 'status'));
+                            return redirect('list-our-solutions')->with(compact('msg', 'status'));
                         } else {
                             return redirect()->back()
                                 ->withInput()
@@ -133,7 +133,7 @@ class CoursesOfferedController extends Controller
             try {
                 $active_id = $request->active_id;
             $result = $this->service->updateOne($active_id);
-                return redirect('list-courses-offered')->with('flash_message', 'Updated!');  
+                return redirect('list-our-solutions')->with('flash_message', 'Updated!');  
             } catch (\Exception $e) {
                 return $e;
             }
@@ -145,7 +145,7 @@ class CoursesOfferedController extends Controller
                     $msg = $delete_record['msg'];
                     $status = $delete_record['status'];
                     if ($status == 'success') {
-                        return redirect('list-courses-offered')->with(compact('msg', 'status'));
+                        return redirect('list-our-solutions')->with(compact('msg', 'status'));
                     } else {
                         return redirect()->back()
                             ->withInput()

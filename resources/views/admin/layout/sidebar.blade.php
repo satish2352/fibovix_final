@@ -60,8 +60,11 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item d-none d-lg-block"><a class="nav-link active"
                             href="{{ route('list-slide') }}">Slider</a></li>
+
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-courses-offered') }}">Courses Offered</a></li>
+                            href="{{ route('list-our-solutions') }}">Our Solutions</a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-additional-solutions') }}">Additional Solutions</a></li>
                     {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ route('list-fesspayment-form') }}">Sub Slider</a> --}}
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-marquee') }}">Marquee</a>

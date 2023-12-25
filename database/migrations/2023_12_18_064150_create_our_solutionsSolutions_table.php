@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('courses', function (Blueprint $table) {
+        Schema::create('our_solutions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('course_name')->default('null');
             $table->boolean('is_active')->default(true);
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses');
+        Schema::dropIfExists('our_solutions');
     }
 };

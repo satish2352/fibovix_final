@@ -54,15 +54,28 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/delete-slide', ['as' => 'delete-slide', 'uses' => 'App\Http\Controllers\Admin\Home\SliderController@destroy']);
     Route::post('/update-active-slide', ['as' => 'update-active-slide', 'uses' => 'App\Http\Controllers\Admin\Home\SliderController@updateOne']);
     
-// =============Courses Offered============
-    Route::get('/list-courses-offered', ['as' => 'list-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@index']);
-    Route::get('/add-courses-offered', ['as' => 'add-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@add']);
-    Route::post('/add-courses-offered', ['as' => 'add-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@store']);
-    Route::get('/edit-courses-offered/{edit_id}', ['as' => 'edit-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@edit']);
-    Route::post('/update-courses-offered', ['as' => 'update-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@update']);
-    Route::post('/show-courses-offered', ['as' => 'show-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@show']);
-    Route::post('/delete-courses-offered', ['as' => 'delete-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@destroy']);
-    Route::post('/update-active-courses-offered', ['as' => 'update-active-courses-offered', 'uses' => 'App\Http\Controllers\Admin\Home\CoursesOfferedController@updateOne']);
+
+    Route::get('/list-our-solutions', ['as' => 'list-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@index']);
+    Route::get('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@add']);
+    Route::post('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@store']);
+    Route::get('/edit-our-solutions/{edit_id}', ['as' => 'edit-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@edit']);
+    Route::post('/update-our-solutions', ['as' => 'update-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@update']);
+    Route::post('/show-our-solutions', ['as' => 'show-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@show']);
+    Route::post('/delete-our-solutions', ['as' => 'delete-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@destroy']);
+    Route::post('/update-active-our-solutions', ['as' => 'update-active-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@updateOne']);
+
+
+
+    Route::get('/list-additional-solutions', ['as' => 'list-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@index']);
+    Route::get('/add-additional-solutions', ['as' => 'add-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@add']);
+    Route::post('/add-additional-solutions', ['as' => 'add-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@store']);
+    Route::get('/edit-additional-solutions/{edit_id}', ['as' => 'edit-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@edit']);
+    Route::post('/update-additional-solutions', ['as' => 'update-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@update']);
+    Route::post('/show-additional-solutions', ['as' => 'show-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@show']);
+    Route::post('/delete-additional-solutions', ['as' => 'delete-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@destroy']);
+    Route::post('/update-active-additional-solutions', ['as' => 'update-active-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@updateOne']);
+
+
     // ============Marquee=============
     Route::get('/list-marquee-tab', ['as' => 'list-marquee-tab', 'uses' => 'App\Http\Controllers\Admin\Master\MarqueeTabController@index']);
     Route::get('/add-marquee-tab', ['as' => 'add-marquee-tab', 'uses' => 'App\Http\Controllers\Admin\Master\MarqueeTabController@add']);
