@@ -22,6 +22,10 @@ Route::get('/login', function () {
     return view('admin.login');
 });
 
+Route::get('/aboutus', function () {
+    return view('website.aboutus');
+});
+
 
 Route::group(['middleware' => ['admin']], function () {
     Route::get('/dashboard', ['as' => '/dashboard', 'uses' => 'App\Http\Controllers\Admin\Dashboard\DashboardController@index']);
@@ -199,6 +203,7 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/submitLogin', ['as' => 'submitLogin', 'uses' => 'App\Http\Controllers\Admin\LoginRegister\LoginController@submitLogin']);
 
     Route::get('/', ['as' => 'index', 'uses' => 'App\Http\Controllers\Website\IndexController@index']);
+    Route::get('/aboutus', ['as' => 'index', 'uses' => 'App\Http\Controllers\Website\IndexController@index']);
     //About Us========
     Route::get('/updadhyeclasses', ['as' => 'updadhyeclasses', 'uses' => 'App\Http\Controllers\Website\AboutUs\AboutUsController@index']);
     Route::get('/directordesk', ['as' => 'directordesk', 'uses' => 'App\Http\Controllers\Website\AboutUs\AboutUsController@getDirectordesk']);

@@ -531,3 +531,122 @@ box-shadow:4px 4px 4px #111;
   margin-top: 50px;
   color: #fff;
 }
+
+/*  */
+.our_advi_tab{
+  /* position: relative; */
+  border-radius: 80px 0px 80px;
+  background: #6246E5;
+  padding: 0.5rem;
+  width: 100%;
+  /* height: 2%; */
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.our_advi_tab_link{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  border-left: 1px solid #bbb;
+}
+
+.our_advi_tab .our_advi_tab_link.active {
+  color: #495057;
+  background-color: transparent;
+  border-color: transparent;
+  font-family: inherit !important;
+}
+
+.our_advi_tab_link:hover {
+  border-color: transparent !important;
+  isolation: isolate;
+  color: #fff;
+}
+
+.our_advi_tab_link {
+  color: #fff;
+  font-family: serif !important;
+}
+.our_advi_tab_link:hover {
+  color: #fff;
+  font-family: inherit !important;
+}
+
+
+/*  */
+
+.main {
+  display: grid;
+  /* padding: 2rem; */
+  grid-template-columns: 56% 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 100%;
+  margin: 0% auto;
+  font: 500 100%/1.5 system-ui;
+  background: #E1F8FF;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.our_advisor_h1{
+  /* font-size: 42px; */
+  font-weight: 600;
+  line-height: 2.2;
+  color: #000000;
+}
+.our_advisor_p{
+  font-size:18px;
+  line-height:1.3;
+  text-align: justify;
+}
+
+.our_advisor_img {
+  max-width: 100%;
+  height: 450px;
+  box-shadow: 2px 2px 42px 2px #ddd;
+  border-radius: 20px;
+}
+
+.sub_main{
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .main {
+    display: block;
+  }
+  .our_advisor_p {
+    position: relative;
+    background-color: #ffffff85
+  }
+  .our_advisor_img {
+    max-width: 100%;
+    background-position:center;
+    object-fit:cover;
+  }
+  .our_advisor_h1{
+    font-size:35px;
+    padding-top:0px;
+    padding-bottom:0px;
+
+  }
+}
+
+.card_container {
+  background-color: #fff !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.card_image {
+  max-width: 100%;
+  border-radius: 15px;
+}
