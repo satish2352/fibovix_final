@@ -432,38 +432,40 @@
                        
                     </div>
                 </div>
-          --}}
+            </div>
     </div>
 
-
-
+    {{-- end additional solution --}}
 </div>
 
+{{-- start gallary --}}
 
-{{-- end additional solution --}}
-</div>
-
-<div class="horizontal">
-    <div class="fvertical vertical1">
-    </div>
-    <div class="fvertical vertical2">
-        <img src="{{ asset('website/images/f1.png') }}">
-        <img src="{{ asset('website/images/f2.png') }}">
-    </div>
-    <div class="fvertical vertical3">
-        <div class="fcard">
-            <div class="fcard_about">
-                <h4>Founder</h4>
-                <h2>Our Founder</h2>
-                <p>fibovix</p>
+<div class="container">
+    <div class="row ">
+        <div class="col-lg-5">
+            <div class="row gy-4 d-grid">
+                <img src="{{ asset('website/images/f1.png') }}" alt="">
+                <img src="{{ asset('website/images/f2.png') }}" alt="">
             </div>
         </div>
-        <img src="{{ asset('website/images/f3.png') }}">
-    </div>
-    <div class="fvertical vertical4">
-
+        <div class="col-lg-7">
+            <div class="row g-5 d-grid">
+                <div class="fcard">
+                    <div class="fcard_about">
+                        <h4>Founder</h4>
+                        <h2>Our Founder</h2>
+                        <p>Fibovix investment approach is informed by three principles: we start by understanding the client’s investment objectives we seek the best risk-adjusted returns within the scope of the mandate they give us; and we underpin our work with research, data, and analytics. Research informs our investment decisions and product innovation. We research major structural trends shaping the economy, markets, and asset prices.</p>
+                    </div>
+                </div>
+                <img src="{{ asset('website/images/f3.png') }}" alt="">
+            </div>
+        </div>
     </div>
 </div>
+
+
+{{-- end img grid --}}
+
 
 <div class="container">
     <div class="card p-3">
@@ -499,21 +501,41 @@
                         <img class="goal_advisor_img" src="{{ asset('website/images/why_fibovix.png') }}" width="450" height="300" alt='Responsive 2-column layout'>
 
                     </div>
+                    <div class="container shadow mt-5">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <h5 id="hh">Your needs</h5>
+                                <p>
+                                    Your goals, concerns and attitude about investing are the foundation of your plan.</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <h5 id="hh">Your Advisor</h5>
+                                <p>From the first conversation on, your advisor will provide personalized advice, committed to helping you reach your goals.</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <h5 id="hh"> Your personalized strategy </h5>
+                                <p>                                    
+                                    As part of your overall investing plan, your advisor can offer tax minimization strategies.</p>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <div class="main">
 
-                    <div class="sub_main">
-                        <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
-                        <p class="our_advisor_p">You may think your advisor’s role is limited to your portfolio however
-                            we believe it goes beyond that. Working with a Merrill advisor can help turn your hopes and
-                            dreams into a personalized financial strategy. Your advisor is your resource, and your
-                            strategy is your personal financial road map.</p>
+			<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="main col-lg-12 col-md-12 col-sm-6">    
+                    
+                    <div class="sub_main ">
+                    <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
+                        <p class="our_advisor_p">You may think your advisor’s role is limited to your portfolio however we believe it goes beyond that. Working with a Merrill advisor can help turn your hopes and dreams into a personalized financial strategy. Your advisor is your resource, and your strategy is your personal financial road map.</p>
                     </div>
-                    <img class="our_advisor_img" src="{{ asset('website/images/f1.png') }}" width="450"
-                        height="300" alt='Responsive 2-column layout'>
+                    <img class="our_advisor_img position-relative" src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300" alt='Responsive 2-column layout'>
+                    
+                    <img class="circleimg  position-absolute" src="{{ asset('website/images/our_advicer/advisorcircle.png') }}"  alt='Responsive 3-column layout'>
                 </div>
 
                 <!--  -->
@@ -600,34 +622,28 @@
                     <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
                     <div class="row about_contact_row">
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900"> Name</label> <br>
+                            <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Last Name</label> <br>
+                            <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Email address</label> <br>
+                            <input type="email" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Confirm email</label> <br>
+                            <input type="email" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Primary Phone</label> <br>
+                            <input type="tel" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
+                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Zip code</label> <br>
+                            <input type="tel" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <p class="form_para mt-4">By providing your contact information above, you agree that a
