@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/', ['as' => 'index', 'uses' => 'App\Http\Controllers\Website\IndexController@index']);
+Route::get('/', ['as' => '/', 'uses' => 'App\Http\Controllers\Website\IndexController@index']);
 Route::get('/aboutus', ['as' => 'aboutus', 'uses' => 'App\Http\Controllers\Website\IndexController@aboutus']);
 Route::get('/contactus', ['as' => 'contact-us', 'uses' => 'App\Http\Controllers\Website\IndexController@contactus']);
 Route::get('/resources-insights', ['as' => 'resources-insights', 'uses' => 'App\Http\Controllers\Website\IndexController@resources']);

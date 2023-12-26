@@ -15,6 +15,10 @@ use App\Models\ {
 
 };
 
+use App\Models\ {
+    AdditionalSolutions
+};
+
 class IndexController extends Controller
 {
     public function __construct()
@@ -24,13 +28,16 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         try {
-            $data_output_slider = $this->service->getAllSlider();
-            $data_output_courses_offered = $this->service->getAllCoursesOffered();
-            $data_output_upcoming_courses = $this->service->getAllUpcomingCourses();
-            $data_output_testimonial = $this->service->getAllTestimonial();
+
+            $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
+            // $data_output_slider = $this->service->getAllSlider();
+            // $data_output_courses_offered = $this->service->getAllCoursesOffered();
+            // $data_output_upcoming_courses = $this->service->getAllUpcomingCourses();
+            // $data_output_testimonial = $this->service->getAllTestimonial();
             
          
-            return view('website.pages.index', compact('data_output_slider','data_output_courses_offered','data_output_upcoming_courses','data_output_testimonial'));
+            // return view('website.pages.index', compact('data_output_slider','data_output_courses_offered','data_output_upcoming_courses','data_output_testimonial'));
+            return view('website.pages.index', compact('additionalSolutions'));
         } catch (\Exception $e) {
             return $e;
         }
