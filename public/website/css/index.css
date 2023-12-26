@@ -478,6 +478,9 @@ box-shadow:4px 4px 4px #111;
   /* font-family: inherit !important; */
 }
 
+.goal_advisor_img{
+  width: 100%;
+}
 
 /*  */
 
@@ -638,4 +641,57 @@ box-shadow:4px 4px 4px #111;
 .footer_subscribe_form input:focus {
   outline: none;
   background: white;
+}
+
+/*  */
+
+.logo{
+  background-size: cover;
+  
+}
+
+/* card */
+.services {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 0;
+  margin-bottom: 30px;
+  /* box-shadow: 0px 24px 48px -13px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0 0 11px rgb(194 186 186 / 49%);
+  text-decoration: none;
+}
+.services .icon {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #eff2ff;
+  margin-bottom: 10px;
+}
+.services .text h2 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 10px;
+
+}
+.services .text p {
+  color: #88879e;
+}
+.py-5 {
+  padding-top: 3rem ;
+  padding-bottom: 3rem ;
+}
+.contact-form{
+  width: 50%;
+}
+.background-color{
+  background-color: #FFFFFF;
+  box-shadow: 2px -2px 10px #d8d6dc;
+  position: relative;
+  top: -80px;
 }
