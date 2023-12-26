@@ -280,7 +280,18 @@
                         </p>
                     </div>
                 </div>
+                
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light ">Together with your advisor, determine your
+                            priorities for the now and your long-term goals. If you are in need of an advisor, we
+                            can assist you in finding one.
+                        </p>
+                    </div>
+                </div>
+            
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -292,7 +303,15 @@
                         </p>
                     </div>
                 </div>
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light ">With assistance that genuinely supports you, we'll
+                            develop a customized strategy that is all about you.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -304,7 +323,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
+                            investment connection. Then, with the help of your adviser, implement your strategy by
+                            choosing from a variety of possible possibilities.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6 ">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -315,40 +343,6 @@
                         <p class="card-text p-4 fs-5 fw-3">Review & track your progress</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light ">Together with your advisor, determine your
-                            priorities for the now and your long-term goals. If you are in need of an advisor, we
-                            can assist you in finding one.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 col-md-3 col-sm-1">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light ">With assistance that genuinely supports you, we'll
-                            develop a customized strategy that is all about you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
-                            investment connection. Then, with the help of your adviser, implement your strategy by
-                            choosing from a variety of possible possibilities.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 ">
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">You can monitor your progress and adjust your
@@ -357,6 +351,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     </div>
 
