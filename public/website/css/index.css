@@ -517,7 +517,7 @@ box-shadow:4px 4px 4px #111;
 }
 
 .our_advisor_img {
-  max-width: 100%;
+  width: 100%;
   height: 450px;
   box-shadow: 2px 2px 42px 2px #ddd;
   border-radius: 20px;
@@ -612,6 +612,17 @@ box-shadow:4px 4px 4px #111;
     font-family: serif;
 }
 
+.anytime_section_p{
+  text-align: justify;
+    padding: 0.5rem;
+    line-height: 1.2;
+    font-size: 20px;
+    font-family: serif;
+}
+
+.anytime_section{
+  margin-top: 10%;
+}
 
 
 /* footer subscribe */
