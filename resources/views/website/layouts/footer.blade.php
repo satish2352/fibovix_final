@@ -12,14 +12,14 @@
       </div>
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div id="corn">
-          <div class="container">
+          <div class="container mt-5">
           <div class="row news text-center mt-5">
             <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
             <div class="input-group  justify-content-center">
-            <form class="footer_subscribe_form" action="">
-              <input type="email" name="email" id="email" placeholder="example@example.com" />
-              <input type="submit" name="submit" value="subscribe">
-            </form>
+              <form class="footer_subscribe_form" action="">
+                <input type="email" name="email" id="email" placeholder="example@example.com" />
+                <input type="submit" name="submit" class="btnn" value="subscribe">
+              </form>
             </div>
           </div>
           </div>
@@ -33,8 +33,8 @@
 </div>
 
 <div class="main"></div>
-<footer id="Footer"style="" class="page-footer font-small stylish-color-dark pt-4">
-  <div style="" class="container text-center text-md-left">
+<footer id="Footer" class="page-footer font-small stylish-color-dark pt-4">
+  <div class="container text-center text-md-left">
     <div class="row">
       <div class="col-md-4 mx-auto">
         <!-- Content -->
@@ -116,7 +116,7 @@
     <!-- Option 2: Separate Popper and Bootstrap JS -->
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> --}}
     
     
     

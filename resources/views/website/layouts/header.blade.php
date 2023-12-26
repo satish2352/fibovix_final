@@ -55,16 +55,16 @@
           <a class="nav-link" href="#">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{route('aboutus')}">About</a>
+          <a class="nav-link" href="{{ route('aboutus') }}">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="{{ route('services') }}">Services</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Resources & insights</a>
+            <a class="nav-link" href="{{ route('resources-insights') }}">Resources & insights</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a>
         </li>
       </ul>
     </div>

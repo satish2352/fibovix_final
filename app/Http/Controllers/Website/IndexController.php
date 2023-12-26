@@ -105,4 +105,24 @@ class IndexController extends Controller
         }
         return view('website.pages.particularcoursedetails',compact('data_output'));
     }
+
+    public function aboutus() {
+        return view('website.pages.aboutus');
+    }
+
+    
+    public function contactus() {
+        return view('website.pages.contactus');
+    }
+
+
+    
+    public function resources() {
+        return view('website.pages.resources-insights');
+    }
+
+    
+    public function services() {
+        return view('website.pages.services');
+    }
 }
