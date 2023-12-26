@@ -47,27 +47,27 @@
                         <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
                         <div class="row about_contact_row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -187,27 +187,27 @@
                         <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
                         <div class="row about_contact_row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
-                                <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
+                                <label for="name" class="leading-7 py-2 text-lg text-gray-900">Your Name</label> <br>
                                 <input type="text" id="name" name="name" required="" class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12">
