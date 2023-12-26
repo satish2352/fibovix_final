@@ -4,7 +4,7 @@
     
 }
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     text-decoration: none; 
     color: #666666;
 }
@@ -75,36 +75,23 @@ body{
     font-weight: 750;
   }
 
- /* start fibovix */
-  #rcorners2 {
-    position: relative;
-    border-radius: 150px 150px 0 150px;
-    background: #FFFFFF;
-    padding: 20px; 
-    width: 350px;
-    height: 250px; 
-  }
-  .content2{
-    position: absolute;
-    /* margin-top: 10%; */
-    font-size: 20px;
-   
-  }
+ /* start whyfibovix */
+
+ .whyfibocards{
+  width: 20rem;
+   border-radius:150px 150px 0 150px; 
+   height:15rem
+ }
   #fibovix{
     line-height: 100px;
     font-weight: 750;
     /* margin-top: 50%; */
     font-size: 40px !important;
   }
-  .data{
-    position: absolute;
-    margin-top: -60%;
-    font-size: 15px;
-    padding: 20px;
-    /* margin-left: 40px; */
-    /* margin-bottom: 50%; */
-  }
 
+  #fibovix span{
+    color: #1F2D87 
+  }
   /* end */
 
   /* start card */
@@ -176,90 +163,8 @@ body{
 }
 
     /* additional solution  */
-    .slider {
-      max-width: 1100px;
-      height: 427px;
-      display: flex;
-      background: transparent;
-  }
-  .slider .card {
-      flex: 1;
-      margin: 0 10px;
-      background: var(--card-bg);
-      border: var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-  }
+   
   
-  .slider .card .img {
-      height: 200px;
-      margin: 16px;
-      width: calc(100% - 32px);
-      border-radius: 10px;
-      transition: all 0.2s ease;
-      overflow: hidden;
-  }
-  .slider .card .img:hover {
-      filter: brightness(75%);
-  }
-  .slider .card .img img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      transition: all 0.2s ease-in-out;
-  }
-  
-  .slider .card .img img:hover {
-      transform: scale(1.1); /* Scale up by 10% on hover */
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .slider .card .contents {
-      padding: 10px 20px;
-  }
-  .card .contents .title {
-      text-align: justify;
-      font-size: 25px;
-      font-weight: 500;
-      color: var(--text);
-  }
-  .card .contents .sub-title {
-      font-size: 16px;
-      font-weight: 400;
-      color: var(--sub-text);
-      line-height: 20px;
-      text-align: left;
-  }
-  
-  .card .contents p {
-      text-align: justify;
-      margin: 10px 0;
-      color: var(--sub-text);
-      line-height: 1.5; /* Adjust the line height as needed */
-      max-height: 6em; /* 4 lines multiplied by the line height (adjust as needed) */
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-  }
-  
-  .card .content button {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      bottom: 10px;
-      right: 24px;
-      font-size: 20px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      opacity: 0;
-      transition: bottom 0.2s ease-out, opacity 0.2s ease-out;
-  }
-  
-  .card:hover button {
-      bottom: 15px;
-      opacity: 1;
-  }
   .bimg{
     background-image: url('../images/about_us.png');
     background-size: cover;
@@ -283,7 +188,7 @@ body{
     background-size: cover;
     /* padding: 20px;  */
     width: 100%;
-    height: 250px; 
+    height: 350px; 
     color: #FFFFFF;
     font-weight: 200px !important;
   } 
@@ -291,6 +196,7 @@ body{
    font-weight: 5rem;
     /* position: absolute; */
   }
+
   .footimg{
     background-image: url('../images/footer.png');
     background-size: cover;
@@ -374,19 +280,13 @@ body{
     font-size: 20px;
    
   }
-  
-  .data img{
-    width: 30%;
-   
-  }
+
   .data #hh{
     font-size: 0.9rem !important;
   }
-
-  /* end */
-
   
-  }
+}
+/* end */
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {  }
@@ -726,14 +626,14 @@ box-shadow:4px 4px 4px #111;
   line-height: 50px;
   top: 10px;
   right: 10px;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 0 25px;
-  background: #f65269;
+  background: #6246E5 ;
   color: white;
   cursor: pointer;
 }
 .footer_subscribe_form input:not([type=email]):hover {
-  background: #f00c2c;
+  background: #1e42a4;
 }
 .footer_subscribe_form input:focus {
   outline: none;

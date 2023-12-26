@@ -88,12 +88,11 @@
 
 {{-- start whyfibovix section --}}
 
-
 <div class="container-fluid">
     {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}"  alt=""> --}}
     <div class="row">
         <div class="backimg1 text-center py-5">
-            <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
+            <h2 id="fibovix">Why FIBO<span>VIX</span></h2>
             <div class="text-center">
                 <p id="" class="px-5">Everything we do starts with our purpose. Re imagining the power of
                     investing. Connecting people for a better world. This is our purpose. This is Fibovix
@@ -104,7 +103,7 @@
                 <div class="row ">
 
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg whyfibocards" >
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
                                 <h5 id="hh">Needs</h5>
@@ -115,7 +114,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg whyfibocards" >
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
                                 <h5 id="hh">Advisor</h5>
@@ -127,7 +126,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg whyfibocards" >
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
                                 <h5 id="hh">Strategy</h5>
@@ -280,7 +279,18 @@
                         </p>
                     </div>
                 </div>
+                
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light ">Together with your advisor, determine your
+                            priorities for the now and your long-term goals. If you are in need of an advisor, we
+                            can assist you in finding one.
+                        </p>
+                    </div>
+                </div>
+            
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -292,7 +302,15 @@
                         </p>
                     </div>
                 </div>
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light ">With assistance that genuinely supports you, we'll
+                            develop a customized strategy that is all about you.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -304,7 +322,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="card shadow-lg action_square">
+                    <div class="card-body ">
+                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
+                            investment connection. Then, with the help of your adviser, implement your strategy by
+                            choosing from a variety of possible possibilities.
+                        </p>
+                    </div>
+                </div>
             </div>
+
             <div class="col-lg-3 col-md-4 col-sm-6 ">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
@@ -315,40 +342,6 @@
                         <p class="card-text p-4 fs-5 fw-3">Review & track your progress</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light ">Together with your advisor, determine your
-                            priorities for the now and your long-term goals. If you are in need of an advisor, we
-                            can assist you in finding one.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3 col-md-3 col-sm-1">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light ">With assistance that genuinely supports you, we'll
-                            develop a customized strategy that is all about you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
-                            investment connection. Then, with the help of your adviser, implement your strategy by
-                            choosing from a variety of possible possibilities.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 ">
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">You can monitor your progress and adjust your
@@ -357,6 +350,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+
         </div>
     </div>
 
