@@ -42,6 +42,30 @@
                                             @endif
                                         </div>
                                     </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="title">Title</label>&nbsp<span class="red-text">*</span>
+                                            <input class="form-control mb-2" name="title" id="title"
+                                                placeholder="Enter the Title" name="title"
+                                                value="{{ old('title') }}">
+                                            @if ($errors->has('title'))
+                                                <span class="red-text"><?php echo $errors->first('title', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group" id="summernote_id">
+                                            <label for="description">Description <span class="red-text">*</span></label>
+                                            <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter Long Content">{{ old('long_description') }}</textarea>
+                                            @if ($errors->has('long_description'))
+                                                <span class="red-text">{{ $errors->first('long_description') }}</span>
+                                            @endif
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-12 col-sm-12 text-center">
                                         <button type="submit" class="btn btn-sm btn-success" id="submitButton"
                                             {{-- disabled --}}>
@@ -101,10 +125,18 @@
                             required: true,
                             spcenotallow: true,
                         },
+                        title: {
+                            required: true,
+                            spcenotallow: true,
+                        },
+                        long_description: {
+                            required: true,
+                            spcenotallow: true,
+                        },
                         image: {
                             required: true,
-                            fileExtension: ["jpg", "jpeg", "png"],
-                            fileSize: [10, 2048], // Min 10KB and Max 2MB (2 * 1024 KB)
+                            // fileExtension: ["jpg", "jpeg", "png"],
+                            // fileSize: [1800, 20480], // Min 10KB and Max 2MB (2 * 1024 KB)
                         },
                     },
                     messages: {
@@ -112,10 +144,18 @@
                             required: "Please enter the Rank Number.",
                             spcenotallow: "Enter Some Number",
                         },
+                        title: {
+                            required: "Please enter title.",
+                            spcenotallow: "Enter Some Number",
+                        },
+                        long_description: {
+                            required: "Please enter description.",
+                            spcenotallow: "Enter Some Number",
+                        },
                         image: {
                             required: "Please upload an Image (JPG, JPEG, PNG).",
-                            fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
-                            fileSize: "File size must be between 10 KB and 2 MB.",
+                            // fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
+                            // fileSize: "File size must be between 10 KB and 2 MB.",
                         },
                     },
                 });

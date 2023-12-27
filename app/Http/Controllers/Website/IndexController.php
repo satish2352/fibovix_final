@@ -16,7 +16,8 @@ use App\Models\ {
 };
 
 use App\Models\ {
-    AdditionalSolutions
+    AdditionalSolutions,
+    Slider
 };
 
 class IndexController extends Controller
@@ -30,14 +31,14 @@ class IndexController extends Controller
         try {
 
             $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
-            // $data_output_slider = $this->service->getAllSlider();
+            $data_output_slider = Slider::where('is_active', true)->get();
             // $data_output_courses_offered = $this->service->getAllCoursesOffered();
             // $data_output_upcoming_courses = $this->service->getAllUpcomingCourses();
             // $data_output_testimonial = $this->service->getAllTestimonial();
             
          
             // return view('website.pages.index', compact('data_output_slider','data_output_courses_offered','data_output_upcoming_courses','data_output_testimonial'));
-            return view('website.pages.index', compact('additionalSolutions'));
+            return view('website.pages.index', compact('additionalSolutions','data_output_slider'));
         } catch (\Exception $e) {
             return $e;
         }

@@ -27,17 +27,18 @@ class SliderController extends Controller
     public function store(Request $request){
         $rules = [
             'rank_no' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.SLIDER_IMAGE_MAX_SIZE").'|dimensions:min_width=400,min_height=300,max_width=1500,max_height=1200|min:'.Config::get("AllFileValidation.SLIDER_IMAGE_MIN_SIZE").'',
+            'image' => 'required|image|mimes:jpeg,png,jpg',
+            //|max:'.Config::get("AllFileValidation.SLIDER_IMAGE_MAX_SIZE").'|dimensions:min_width=400,min_height=300,max_width=1500,max_height=1200|min:'.Config::get("AllFileValidation.SLIDER_IMAGE_MIN_SIZE").'',
            
         ];
         $messages = [    
             'rank_no.required'=>'Please enter title.',
             'image.required' => 'The image is required.',
             'image.image' => 'The image must be a valid image file.',
-            'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-            'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.SLIDER_IMAGE_MAX_SIZE").'KB .',
-            'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.SLIDER_IMAGE_MIN_SIZE").'KB .',
-            'image.dimensions' => 'The image dimensions must be between 1500x500 and 2000x1000 pixels.',
+            // 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
+            // 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.SLIDER_IMAGE_MAX_SIZE").'KB .',
+            // 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.SLIDER_IMAGE_MIN_SIZE").'KB .',
+            // 'image.dimensions' => 'The image dimensions must be between 1500x500 and 2000x1000 pixels.',
         ];
 
         try {

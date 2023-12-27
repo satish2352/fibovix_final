@@ -5,52 +5,61 @@
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
+        
+
+        @foreach ($data_output_slider as $item)
+      
+
             <div class="carousel-item active">
                 <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="row">
                         <div class="col-md-6">
-                            <img class="first_carousel" src="{{ asset('website/images/Logo1.png') }}" alt="">
+                            <img class="first_carousel" src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" alt="">
                         </div>
                         <div class="col-md-6">
 
                         </div>
                         <div class="col-md-6">
-                            <h2 style="color: #1F2D87;display:flex;">WHY US</h2>
-                            <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by
-                                three principles: we start by
-                                understanding the client’s investment objectives; we seek the best risk-adjusted returns
-                                within the scope of the mandate they give us; and we underpin our work with research,
-                                data,
-                                and analytics. Research informs our investment decisions and product innovation. We
-                                research
-                                major structural trends shaping the economy, markets, and asset prices.
+                            <h2 style="color: #1F2D87;display:flex;">{{ strip_tags($item->title) }}</h2>
+                            <p style="color: #808080;text-align: justify;">
+                            {{ strip_tags($item->desc) }}
                             </p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <!-- <div class="carousel-item">
-            <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+
+            @endforeach
+            <!-- 
+
+            <div class="carousel-item">
+                <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-item">
+                <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
             </div>
-        </div> -->
+             -->
         </div>
+
+      
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,7 +103,7 @@
 {{-- start whyfibovix section --}}
 
 <div class="container-fluid">
-    {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}"  alt=""> --}}
+    {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
     <div class="row">
         <div class="backimg1 text-center py-5">
             <h2 id="fibovix">Why FIBO<span>VIX</span></h2>
@@ -370,7 +379,7 @@
 </div>
 
 {{-- end take action --}}
-{{-- additional solution  --}}
+{{-- additional solution --}}
 
 <div class="container mb-5 ">
     <div class="row text-center">
@@ -381,58 +390,62 @@
 
 
         @foreach ($additionalSolutions as $item)
-            <div class="col-md-4 col-lg-4 col-sm-12">
-                <div class="card addi_sol_card">
-                    <img class="addi_sol_card_img"
-                        src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
-                        <p class="card-text">{{ strip_tags($item->short_description) }}</p>
-                        <a href="" target="_blank">
-                            <button class="btn btn-primary1 float-right">
-                                Learn More
-                            </button>
-                        </a>
-                    </div>
-
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="card addi_sol_card">
+                <img class="addi_sol_card_img"
+                    src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
+                    <p class="card-text">{{ strip_tags($item->short_description) }}</p>
+                    <a href="" target="_blank">
+                        <button class="btn btn-primary1 float-right">
+                            Learn More
+                        </button>
+                    </a>
                 </div>
+
             </div>
+        </div>
         @endforeach
 
-        {{-- 
-                <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card addi_sol_card">
-                        <img class="addi_sol_card_img" src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">Investment consolidation</h5>
-                          <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
-                          <a href="" target="_blank">
-                            <button class="btn btn-primary1 float-right">
-                                Learn More
-                            </button>
-                        </a>
-                        </div>
-                       
-                    </div>
+        {{--
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="card addi_sol_card">
+                <img class="addi_sol_card_img"
+                    src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Investment consolidation</h5>
+                    <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
+                    <a href="" target="_blank">
+                        <button class="btn btn-primary1 float-right">
+                            Learn More
+                        </button>
+                    </a>
                 </div>
-                <div class="col-md-4 col-lg-4 col-sm-12">
-                    <div class="card addi_sol_card">
-                        <img class="addi_sol_card_img" src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title"> Online Account view</h5>
-                          <p class="card-text">Combine your online banking and investment.</p>
-                          <br>
-                          <a href="" target="_blank">
-                            <button class="btn btn-primary1 float-right">
-                                Learn More
-                            </button>
-                        </a>
-                        </div>
-                       
-                    </div>
+
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="card addi_sol_card">
+                <img class="addi_sol_card_img"
+                    src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> Online Account view</h5>
+                    <p class="card-text">Combine your online banking and investment.</p>
+                    <br>
+                    <a href="" target="_blank">
+                        <button class="btn btn-primary1 float-right">
+                            Learn More
+                        </button>
+                    </a>
                 </div>
-          --}}
+
+            </div>
+        </div>
+        --}}
     </div>
 
 
@@ -496,7 +509,8 @@
                             yours.. </p>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <img class="goal_advisor_img" src="{{ asset('website/images/why_fibovix.png') }}" width="450" height="300" alt='Responsive 2-column layout'>
+                        <img class="goal_advisor_img" src="{{ asset('website/images/why_fibovix.png') }}" width="450"
+                            height="300" alt='Responsive 2-column layout'>
 
                     </div>
                 </div>
@@ -512,8 +526,8 @@
                             dreams into a personalized financial strategy. Your advisor is your resource, and your
                             strategy is your personal financial road map.</p>
                     </div>
-                    <img class="our_advisor_img" src="{{ asset('website/images/f1.png') }}" width="450"
-                        height="300" alt='Responsive 2-column layout'>
+                    <img class="our_advisor_img" src="{{ asset('website/images/f1.png') }}" width="450" height="300"
+                        alt='Responsive 2-column layout'>
                 </div>
 
                 <!--  -->
@@ -663,86 +677,89 @@
 
 <!-- Start contact-background -->
 <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-md-12">
-                    <div class="logo image-fluid">
-                        <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%" ;>
-                    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-md-12">
+                <div class="logo image-fluid">
+                    <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%" ;>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End contact-background -->
+    </div>
+</section>
+<!-- End contact-background -->
 
-    <!-- Start Cards -->
-    <div class="container mb-md-4">
-        <div class="row g-0">
-            <div class="col-md-12">
-                <div class="row g-3 justify-content-center">
-                    <div class="col-md-12 col-lg-8">
-                        <div class="row">
-                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                <div class="services">
-                                    <div class="icon d-flex align-items-center justify-content-center"><span>
-                                            <i><img src="{{ asset('website/images/Group 1000003610.png') }}" alt=""></i></span>
-                                    </div>
-                                    <div class="text">
-                                        <h2>Office</h2>
-                                        <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
-                                    </div>
+<!-- Start Cards -->
+<div class="container mb-md-4">
+    <div class="row g-0">
+        <div class="col-md-12">
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-12 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                            <div class="services">
+                                <div class="icon d-flex align-items-center justify-content-center"><span>
+                                        <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
+                                                alt=""></i></span>
+                                </div>
+                                <div class="text">
+                                    <h2>Office</h2>
+                                    <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                <div class="services">
-                                    <div class="icon d-flex align-items-center justify-content-center">
-                                        <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}" alt=""></i></span>
-                                    </div>
-                                    <div class="text">
-                                        <h2>Email</h2>
-                                        <p>info@fibovix.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                <div class="services">
-                                    <div class="icon d-flex align-items-center justify-content-center">
-                                        <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i> </span>
-                                    </div>
-                                    <div class="text">
-                                        <h2>Phone</h2>
-                                        <p>6262757562 </p>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                            <div class="services">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
+                                            alt=""></i></span>
+                                </div>
+                                <div class="text">
+                                    <h2>Email</h2>
+                                    <p>info@fibovix.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                            <div class="services">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i>
+                                        </span>
+                                </div>
+                                <div class="text">
+                                    <h2>Phone</h2>
+                                    <p>6262757562 </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </section>
-    <!-- End Cards -->
+</div>
+</section>
+<!-- End Cards -->
 
-    <!-- start Map -->
-    <section>
-        <div class="container" style="position: relative;">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22097.967898937644!2d73.78348365959188!3d19.987863371093294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703580760467!5m2!1sen!2sin"
-                        width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+<!-- start Map -->
+<section>
+    <div class="container" style="position: relative;">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22097.967898937644!2d73.78348365959188!3d19.987863371093294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703580760467!5m2!1sen!2sin"
+                    width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section>
-    <!-- End Map -->
+    </div>
+</section>
+<!-- End Map -->
 
-    <!--Start form -->
-    <section class=" d-flex justify-content-center">
-        <div class="contact-form col-md-4 background-color p-5">
+<!--Start form -->
+<section class=" d-flex justify-content-center">
+    <div class="contact-form col-md-4 background-color p-5">
         <form class="row g-3 needs-validation" novalidate>
             <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Name</label>
@@ -772,8 +789,8 @@
             </div>
         </form>
 
-        </div>
-    </section>
-    <!-- End form -->
+    </div>
+</section>
+<!-- End form -->
 
 @include('website.layouts.footer')

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('slider', function (Blueprint $table) {
             $table->id();
             $table->string('image')->default('null');
+            $table->string('title')->default('null');
+            $table->string('long_description')->default('null');
             $table->text('rank_no');
             $table->string('is_deleted')->default(false);
             $table->boolean('is_active')->default(true);

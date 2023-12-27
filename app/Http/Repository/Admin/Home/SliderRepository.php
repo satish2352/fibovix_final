@@ -24,6 +24,8 @@ class SliderRepository  {
             $data =array();
             $dataOutput = new Slider();
             $dataOutput->rank_no = $request['rank_no'];
+            $dataOutput->title = $request['title'];
+            $dataOutput->long_description = $request['long_description'];
         
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
