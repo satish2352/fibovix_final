@@ -19,7 +19,7 @@
     <div class="container mb-md-4">
         <div class="row g-0">
             <div class="col-md-12">
-                <div class="row g-3 justify-content-center">
+                <div class="row mt-5 g-3 justify-content-center">
                     <div class="col-md-12 col-lg-8">
                         <div class="row">
                             <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
