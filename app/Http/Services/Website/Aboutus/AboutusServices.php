@@ -19,38 +19,54 @@ class AboutUsServices
     {
         $this->repo = new AboutusRepository();
     }
-    public function getAllDisasterManagmentPortal()
+    // public function getAllDisasterManagmentPortal()
+    // {
+    //     try {
+    //         return $this->repo->getAllDisasterManagmentPortal();
+    //     } catch (\Exception $e) {
+    //         return $e;
+    //     }
+    // } 
+    
+    // public function getAllObjectiveGoals()
+    // {
+    //     try {
+    //         return $this->repo->getAllObjectiveGoals();
+    //     } catch (\Exception $e) {
+    //         return $e;
+    //     }
+    // } 
+    // public function getAllStateDisasterManagementAuthority()
+    // {
+    //     try {
+    //         return $this->repo->getAllStateDisasterManagementAuthority();
+    //     } catch (\Exception $e) {
+    //         return $e;
+    //     }
+    // }   
+    
+    // public function getAllGallery()
+    // {
+    //     try {
+    //         return $this->repo->getAllGallery();
+    //     } catch (\Exception $e) {
+    //         return $e;
+    //     }
+    // }  
+    
+    
+    public function aboutusContact($request)
     {
         try {
-            return $this->repo->getAllDisasterManagmentPortal();
-        } catch (\Exception $e) {
-            return $e;
-        }
+            $add_contact = $this->repo->aboutusContact($request);
+            if ($add_contact) {
+                return ['status' => 'success', 'msg' => 'Contact Added Successfully.'];
+            } else {
+                return ['status' => 'error', 'msg' => 'Contact get Not Added.'];
+            }  
+        } catch (Exception $e) {
+            return ['status' => 'error', 'msg' => $e->getMessage()];
+        }      
     } 
     
-    public function getAllObjectiveGoals()
-    {
-        try {
-            return $this->repo->getAllObjectiveGoals();
-        } catch (\Exception $e) {
-            return $e;
-        }
-    } 
-    public function getAllStateDisasterManagementAuthority()
-    {
-        try {
-            return $this->repo->getAllStateDisasterManagementAuthority();
-        } catch (\Exception $e) {
-            return $e;
-        }
-    }   
-    
-    public function getAllGallery()
-    {
-        try {
-            return $this->repo->getAllGallery();
-        } catch (\Exception $e) {
-            return $e;
-        }
-    }   
 }
