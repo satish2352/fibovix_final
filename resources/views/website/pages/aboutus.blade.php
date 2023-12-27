@@ -38,6 +38,28 @@
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <img class="goal_advisor_img" src="{{ asset('website/images/why_fibovix.png') }}" alt='Responsive 2-column layout'>
                         </div>
+                        <div class="container col-md-8 shadow mt-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <h5 id="hh">Your needs</h5>
+                                    <p>
+                                        Your goals, concerns and attitude about investing are the foundation of your plan.</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <h5 id="hh">Your Advisor</h5>
+                                    <p>From the first conversation on, your advisor will provide personalized advice, committed to helping you reach your goals.</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12">
+                                    <h5 id="hh"> Your personalized strategy </h5>
+                                    <p>                                    
+                                        As part of your overall investing plan, your advisor can offer tax minimization strategies.</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
                     </div>
 
                     <!--  -->
@@ -101,13 +123,15 @@
                 </div>
 
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                    <div class="main">    
+                    <div class="main col-lg-12 col-md-12 col-sm-6">    
                         
                         <div class="sub_main">
                         <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
                             <p class="our_advisor_p">You may think your advisor’s role is limited to your portfolio however we believe it goes beyond that. Working with a Merrill advisor can help turn your hopes and dreams into a personalized financial strategy. Your advisor is your resource, and your strategy is your personal financial road map.</p>
                         </div>
-                        <img class="our_advisor_img" src="{{ asset('website/images/f1.png') }}" alt='Responsive 2-column layout'>
+                        <img class="our_advisor_img position-relative" src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300" alt='Responsive 2-column layout'>
+
+                        <img class="circleimg  position-absolute" src="{{ asset('website/images/our_advicer/advisorcircle.png') }}"  alt='Responsive 3-column layout'>
                     </div>
 
                     <!--  -->
