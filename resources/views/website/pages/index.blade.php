@@ -475,20 +475,7 @@
 {{-- end additional solution --}}
 </div>
 
-<div class="horizontal">
-    <div class="fvertical vertical1">
-    </div>
-    <div class="fvertical vertical2">
-        <img src="{{ asset('website/images/f1.png') }}">
-        <img src="{{ asset('website/images/f2.png') }}">
-    </div>
-    <div class="fvertical vertical3">
-        <div class="fcard">
-            <div class="fcard_about">
-                <h4>Founder</h4>
-                <h2>Our Founder</h2>
-                <p>fibovix</p>
-            </div>
+    {{-- start gallary --}}
 
             {{-- end additional solution --}}
         </div>

@@ -8,6 +8,9 @@ body{
     text-decoration: none; 
     color: #666666;
 }
+.red-text{
+  color: red;
+}
   /* start navbar */
   li {
     font-weight: 200px;
@@ -782,19 +785,113 @@ box-shadow:4px 4px 4px #111;
   width: 100%;
   position: relative;
   border-radius: 15px;
-  /* padding: 0.5rem; */
+  padding: 0rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
 
-.article_card_body{
-  padding: 0.5rem;
+  height: 93%!important;
 }
 
 .article_card_footer {
   padding: 0.5rem 1rem;
   background-color: transparent !important;
   border-top: none !important;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+
+/* dhanshree css */
+
+.wtsub{
+  background-color: #1F2D87;
+  border-radius: 50px 25px 25px 50px;   
+  border: 1px solid #B3B3B3;
+}
+
+.wtsubmain{
+  /* padding:80px 80px 10px 30px; */
+  padding: 65px 30px 18px 30px;
+}
+
+.thing_5_top{
+  margin-top: 8rem;
+}
+
+.wtsubtit1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.wtsubtit2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #10F1FF;    
+}
+
+.wtsub p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.wtsubpara{
+  padding-top: 30px;
+}
+
+.wt-sub-img{
+  border: 1px solid #B3B3B3;
+  border-radius: 24px;
+  margin-left: 12px;
+  background: none;
+}
+
+.wtgrp-img{
+  background-size: cover;
+  position: relative;
+  top: 100px;
+  right: 100px;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .wt-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .workt-img {
+    height: auto;
+  }
+
+  .col-lg-5 {
+    margin-top: 20px;
+  }
+
+  .wtsub {
+    border-radius: 0;
+  }
+
+  .wtgrp-img {
+    top: 0;
+    right: 0;
+  }
 }

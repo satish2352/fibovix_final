@@ -90,38 +90,35 @@
 
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card article_card_container h-100">
                             <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title">Looking toward a new era of growth</h5>
                             </div>
                             <div class="card-footer article_card_footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
                             </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card article_card_container h-100">
                             <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
                             </div>
                             <div class="card-footer article_card_footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
                             </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100">
+                            <div class="card article_card_container h-100">
                             <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                <h5 class="card-title">How much is too much global debt?</h5>
                             </div>
                             <div class="card-footer article_card_footer">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
                             </div>
                             </div>
                         </div>
