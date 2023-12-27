@@ -95,7 +95,11 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="col-2">
+                
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image" class="card_image" />
@@ -107,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
@@ -118,6 +122,10 @@
                     <div class="card_footer">
                     </div>
                 </div>
+            </div>
+
+            <div class="col-2">
+                
             </div>
 
         </div> 
