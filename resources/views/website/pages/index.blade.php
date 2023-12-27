@@ -13,17 +13,18 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-        
 
-        @foreach ($data_output_slider as $item)
-      
+
+            @foreach ($data_output_slider as $item)
+
 
             <div class="carousel-item active">
                 <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="row">
                         <div class="col-md-6">
-                            <img class="first_carousel" src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" alt="">
+                            <img class="first_carousel"
+                                src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" alt="">
                         </div>
                         <div class="col-md-6">
 
@@ -31,24 +32,25 @@
                         <div class="col-md-6">
                             <h2 style="color: #1F2D87;display:flex;">{{ strip_tags($item->title) }}</h2>
                             <p style="color: #808080;text-align: justify;">
-                            {{ strip_tags($item->desc) }}
+                                {{ strip_tags($item->desc) }}
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                    
+
                     </div>
                     <div class="col-md-6">
                         <h2 style="color: #1F2D87;display:flex;">WHY US</h2>
-                        <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by three principles: we start by
+                        <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by
+                            three principles: we start by
                             understanding the client’s investment objectives; we seek the best risk-adjusted returns
                             within the scope of the mandate they give us; and we underpin our work with research, data,
                             and analytics. Research informs our investment decisions and product innovation. We research
                             major structural trends shaping the economy, markets, and asset prices.
                         </p>
                     </div>
-                </div> 
-                
+                </div>
+
             </div>
 
             @endforeach
@@ -71,7 +73,7 @@
              -->
         </div>
 
-      
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -130,7 +132,8 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
                                 <h5 id="hh">Needs</h5>
@@ -141,23 +144,27 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
                                 <h5 id="hh">Advisor</h5>
                                 <p>
-                                    Your adviser is dedicated to supporting you in achieving your objectives & will offer
+                                    Your adviser is dedicated to supporting you in achieving your objectives & will
+                                    offer
                                     tailored guidance from the start.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
                                 <h5 id="hh">Strategy</h5>
-                                <p>Your adviser can recommend tax-minimization techniques as part of your overall investing
+                                <p>Your adviser can recommend tax-minimization techniques as part of your overall
+                                    investing
                                     strategy.
                                 </p>
                             </div>
@@ -177,7 +184,8 @@
     <div class="container">
         <div class="row text-center">
             <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
-            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill and Bank of America offer a wide range of solutions to help you get there.
+            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+                and Bank of America offer a wide range of solutions to help you get there.
             </p>
         </div>
         <div class="row text-center">
@@ -219,64 +227,70 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title">Checking</h5>
-                      <p class="card-text "> Accounts that offer discounts on regular banking services, relationship-based maintenance fee
-                        exemptions, and tiered interest rates.</p>
+                        <h5 class="card-title">Checking</h5>
+                        <p class="card-text "> Accounts that offer discounts on regular banking services,
+                            relationship-based maintenance fee
+                            exemptions, and tiered interest rates.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title"> Savings</h5>
-                      <p class="card-text">A range of savings options, such as CDs and money market accounts, to help you reach your
-                        savings objectives.</p>
+                        <h5 class="card-title"> Savings</h5>
+                        <p class="card-text">A range of savings options, such as CDs and money market accounts, to help
+                            you reach your
+                            savings objectives.</p>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imagec.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title">Credit cards</h5>
-                      <p class="card-text"> Accounts that offer discounts on regular banking services, relationship-based maintenance fee
-                        exemptions, and tiered interest rates.</p>
+                        <h5 class="card-title">Credit cards</h5>
+                        <p class="card-text"> Accounts that offer discounts on regular banking services,
+                            relationship-based maintenance fee
+                            exemptions, and tiered interest rates.</p>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title">Cash Management</h5>
-                      <p class="card-text"> A collection of outstanding credit cards with cash back choices, travel incentives, and expanded
-                        features.</p>
+                        <h5 class="card-title">Cash Management</h5>
+                        <p class="card-text"> A collection of outstanding credit cards with cash back choices, travel
+                            incentives, and expanded
+                            features.</p>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title">Rewards</h5>
-                      <p class="card-text">  We express our gratitude to you by offering you exclusive advantages and prizes related to the
-                        various ways you collaborate with us.</p>
+                        <h5 class="card-title">Rewards</h5>
+                        <p class="card-text"> We express our gratitude to you by offering you exclusive advantages and
+                            prizes related to the
+                            various ways you collaborate with us.</p>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; " >
+                <div class="card shadow" style="border-radius:10%; ">
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                      <h5 class="card-title">Mobile and online access</h5>
-                      <p class="card-text">  A range of savings options, such as CDs and money market accounts, to help you reach your
-                        savings objectives.</p>
+                        <h5 class="card-title">Mobile and online access</h5>
+                        <p class="card-text"> A range of savings options, such as CDs and money market accounts, to help
+                            you reach your
+                            savings objectives.</p>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>
@@ -306,7 +320,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">Together with your advisor, determine your
@@ -315,7 +329,7 @@
                         </p>
                     </div>
                 </div>
-            
+
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -391,67 +405,67 @@
     </div>
 
     {{-- end take action --}}
-    {{-- additional solution  --}}
+    {{-- additional solution --}}
 
 
-        @foreach ($additionalSolutions as $item)
-        <div class="col-md-4 col-lg-4 col-sm-12">
-            <div class="card addi_sol_card">
-                <img class="addi_sol_card_img"
-                    src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
-                    <p class="card-text">{{ strip_tags($item->short_description) }}</p>
-                    <a href="" target="_blank">
-                        <button class="btn btn-primary1 float-right">
-                            Learn More
-                        </button>
-                    </a>
-                </div>
-
+    @foreach ($additionalSolutions as $item)
+    <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="card addi_sol_card">
+            <img class="addi_sol_card_img"
+                src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
+                <p class="card-text">{{ strip_tags($item->short_description) }}</p>
+                <a href="" target="_blank">
+                    <button class="btn btn-primary1 float-right">
+                        Learn More
+                    </button>
+                </a>
             </div>
-        </div>
-        @endforeach
 
-        {{--
-        <div class="col-md-4 col-lg-4 col-sm-12">
-            <div class="card addi_sol_card">
-                <img class="addi_sol_card_img"
-                    src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Investment consolidation</h5>
-                    <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
-                    <a href="" target="_blank">
-                        <button class="btn btn-primary1 float-right">
-                            Learn More
-                        </button>
-                    </a>
-                </div>
-
-            </div>
         </div>
-        <div class="col-md-4 col-lg-4 col-sm-12">
-            <div class="card addi_sol_card">
-                <img class="addi_sol_card_img"
-                    src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"> Online Account view</h5>
-                    <p class="card-text">Combine your online banking and investment.</p>
-                    <br>
-                    <a href="" target="_blank">
-                        <button class="btn btn-primary1 float-right">
-                            Learn More
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-        --}}
     </div>
+    @endforeach
+
+    {{--
+    <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="card addi_sol_card">
+            <img class="addi_sol_card_img"
+                src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Investment consolidation</h5>
+                <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
+                <a href="" target="_blank">
+                    <button class="btn btn-primary1 float-right">
+                        Learn More
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12">
+        <div class="card addi_sol_card">
+            <img class="addi_sol_card_img"
+                src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"> Online Account view</h5>
+                <p class="card-text">Combine your online banking and investment.</p>
+                <br>
+                <a href="" target="_blank">
+                    <button class="btn btn-primary1 float-right">
+                        Learn More
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    --}}
+</div>
 
 
 
@@ -476,38 +490,43 @@
                 <p>fibovix</p>
             </div>
 
-        {{-- end additional solution --}}
-    </div>
-
-
-
-    {{--  --}}
-{{-- start gallary --}}
-
-<div class="container">
-    <div class="row ">
-        <div class="col-lg-5">
-            <div class="row gy-4 d-grid">
-                <img src="{{ asset('website/images/f1.png') }}" alt="">
-                <img src="{{ asset('website/images/f2.png') }}" alt="">
-            </div>
+            {{-- end additional solution --}}
         </div>
-        <div class="col-lg-7">
-            <div class="row g-5 d-grid">
-                <div class="fcard">
-                    <div class="fcard_about">
-                        <h4>Founder</h4>
-                        <h2>Our Founder</h2>
-                        <p>Fibovix investment approach is informed by three principles: we start by understanding the client’s investment objectives we seek the best risk-adjusted returns within the scope of the mandate they give us; and we underpin our work with research, data, and analytics. Research informs our investment decisions and product innovation. We research major structural trends shaping the economy, markets, and asset prices.</p>
+
+
+
+        {{-- --}}
+        {{-- start gallary --}}
+
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-5">
+                    <div class="row gy-4 d-grid">
+                        <img src="{{ asset('website/images/f1.png') }}" alt="">
+                        <img src="{{ asset('website/images/f2.png') }}" alt="">
                     </div>
                 </div>
-                <img src="{{ asset('website/images/f3.png') }}" alt="">
+                <div class="col-lg-7">
+                    <div class="row g-5 d-grid">
+                        <div class="fcard">
+                            <div class="fcard_about">
+                                <h4>Founder</h4>
+                                <h2>Our Founder</h2>
+                                <p>Fibovix investment approach is informed by three principles: we start by
+                                    understanding the client’s investment objectives we seek the best risk-adjusted
+                                    returns within the scope of the mandate they give us; and we underpin our work with
+                                    research, data, and analytics. Research informs our investment decisions and product
+                                    innovation. We research major structural trends shaping the economy, markets, and
+                                    asset prices.</p>
+                            </div>
+                        </div>
+                        <img src="{{ asset('website/images/f3.png') }}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- End gallary -->
+        <!-- End gallary -->
 
 
-@include('website.layouts.footer')
+        @include('website.layouts.footer')

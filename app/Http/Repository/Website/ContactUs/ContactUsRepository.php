@@ -17,7 +17,6 @@ class ContactUsRepository{
 		public function addAll($request)
 {
     try {
-      
         $contact = new ContactUs();
         $contact->full_name = $request['full_name'];
         $contact->email = $request['email'];
