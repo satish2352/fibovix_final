@@ -33,7 +33,11 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="main col-lg-12 col-md-12 col-sm-6">    
+            <div class="col-md-12">
+            <div class="col-1">    
+                
+            </div>
+            <div class="main col-lg-11 col-md-11 col-sm-11">    
                         
                 <div class="sub_main">
                 <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
@@ -42,6 +46,10 @@
                 <img class="our_advisor_img position-relative" src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300" alt='Responsive 2-column layout'>
 
                 <img class="circleimg  position-absolute" src="{{ asset('website/images/our_advicer/advisorcircle.png') }}"  alt='Responsive 3-column layout'>
+            </div>
+            <div class="col-1">    
+
+            </div>
             </div>
 
         </div>
