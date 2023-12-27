@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('our_solutions_master', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('course_name')->default('null');
+            $table->text('solution_name')->default('null');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

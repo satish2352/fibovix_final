@@ -40,7 +40,7 @@
                                                 @foreach ($incidenttype_data as $item)
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ strip_tags($item->name) }}</td>
+                                                        <td>{{ strip_tags($item->solution_name) }}</td>
                                                         <td>
                                                             <label class="switch">
                                                                 <input data-id="{{ $item->id }}" type="checkbox"

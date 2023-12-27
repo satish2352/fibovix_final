@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('our_solution_master', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');            
+            $table->string('solution_name');            
             $table->string('is_deleted')->default(false);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

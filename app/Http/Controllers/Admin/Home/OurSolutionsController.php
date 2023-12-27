@@ -33,14 +33,16 @@ class OurSolutionsController extends Controller
 // dd($request);
             $rules = [
                 'title' => 'required',
-                'description' => 'required',
+                'short_description' => 'required',
+                'long_description' => 'required',
                 'solution_id' => 'required',
                 // 'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'',
                
             ];
             $messages = [    
                 'title.required'=>'Please enter title.',
-                'description.required' => 'Please  enter description.',
+                'short_description.required' => 'Please  enter description.',
+                'long_description.required' => 'Please  enter description.',
                 'image.required' => 'The image is required.',
                 'solution_id.required' => 'Select the atleats one option',
                 'image.image' => 'The image must be a valid image file.',
@@ -49,16 +51,16 @@ class OurSolutionsController extends Controller
                 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
                 'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
             ];
+
     
             try {
-                // $validation = Validator::make($request->all(), $rules, $messages);
+                $validation = Validator::make($request->all(), $rules, $messages);
                         
-//                 if ($validation->fails()) {
-// dd($validation);
-//                     return redirect('add-our-solutions')
-//                         ->withInput()
-//                         ->withErrors($validation);
-//                 } else {
+                if ($validation->fails()) {
+                    return redirect('add-our-solutions')
+                        ->withInput()
+                        ->withErrors($validation);
+                } else {
 
                     $add_record = $this->service->addAll($request);
         
@@ -72,7 +74,7 @@ class OurSolutionsController extends Controller
                             return redirect('add-our-solutions')->withInput()->with(compact('msg', 'status'));
                         }
                     }
-                
+                }
             } catch (Exception $e) {
                 // dd($e);
                 return redirect('add-our-solutions')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);

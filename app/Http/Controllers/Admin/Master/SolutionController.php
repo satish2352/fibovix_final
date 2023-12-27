@@ -32,12 +32,13 @@ class SolutionController extends Controller
 
     public function store(Request $request) {
         $rules = [
-            'name' => 'required|unique:location_address|regex:/^[a-zA-Z\s]+$/u|max:255',
+            'solution_name' => 'required|max:255',
+            // |unique:solution_name|regex:/^[a-zA-Z\s]+$/u|max:255',
          ];
         $messages = [   
-            'name'       =>  'Please enter title.',
-            'name.regex' => 'Please  enter text only.',
-            'name.unique' => 'Title already exist.',
+            'solution_name'       =>  'Please enter title.',
+            // 'solution_name.regex' => 'Please  enter text only.',
+            // 'solution_name.unique' => 'Title already exist.',
         ];
 
         try {

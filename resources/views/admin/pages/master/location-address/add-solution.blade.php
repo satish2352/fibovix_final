@@ -25,10 +25,10 @@
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="name">Name</label>&nbsp<span class="red-text">*</span>
-                                            <input type="text" class="form-control mb-2" name="name" id="name"
-                                                value="{{ old('name') }}" placeholder="Enter the Name">
-                                            @if ($errors->has('name'))
-                                                <span class="red-text"><?php echo $errors->first('name', ':message'); ?></span>
+                                            <input type="text" class="form-control mb-2" name="solution_name" id="solution_name"
+                                                value="{{ old('solution_name') }}" placeholder="Enter the Name">
+                                            @if ($errors->has('solution_name'))
+                                                <span class="red-text"><?php echo $errors->first('solution_name', ':message'); ?></span>
                                             @endif
                                         </div>
                                     </div>

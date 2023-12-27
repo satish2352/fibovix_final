@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OurSolutions extends Model
+class OurSolutionsMasters extends Model
 {
     use HasFactory;
-    protected $table = 'our_solutions';
+    protected $table = 'our_solution_master';
     protected $primaryKey = 'id';
 // protected $fillable = [
 //         'title',

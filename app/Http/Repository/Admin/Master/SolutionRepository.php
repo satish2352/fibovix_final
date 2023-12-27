@@ -23,7 +23,7 @@ class SolutionRepository{
 	public function addAll($request){
         try {
             $incidenttype_data = new SolutionModel();
-            $incidenttype_data->name = $request['name'];
+            $incidenttype_data->solution_name  = $request['solution_name'];
           
             $incidenttype_data->save();       
                 
