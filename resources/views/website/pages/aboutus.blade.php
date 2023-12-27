@@ -15,6 +15,38 @@
     </section>
     <!-- End contact-background -->
 
+    {{-- start gallary --}}
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-5">
+                <div class="row gy-4 d-grid">
+                    <img src="{{ asset('website/images/f1.png') }}" alt="">
+                    <img src="{{ asset('website/images/f2.png') }}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-5 d-grid">
+                    <div class="fcard">
+                        <div class="fcard_about">
+                            <h4>Founder</h4>
+                            <h2>Our Founder</h2>
+                            <p>Fibovix investment approach is informed by three principles: we start by
+                                understanding the client’s investment objectives we seek the best risk-adjusted
+                                returns within the scope of the mandate they give us; and we underpin our work with
+                                research, data, and analytics. Research informs our investment decisions and product
+                                innovation. We research major structural trends shaping the economy, markets, and
+                                asset prices.</p>
+                        </div>
+                    </div>
+                    <img src="{{ asset('website/images/f3.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End gallary -->
+
     <div class="container">
         <div class="row">
             <h2 class="text-center p-3">Our <span style="color:#6246E5; padding:5px;">Advisor</span></h2>
