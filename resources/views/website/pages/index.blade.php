@@ -35,8 +35,20 @@
                             </p>
                         </div>
                     </div>
-
-                </div>
+                    <div class="col-md-6">
+                    
+                    </div>
+                    <div class="col-md-6">
+                        <h2 style="color: #1F2D87;display:flex;">WHY US</h2>
+                        <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by three principles: we start by
+                            understanding the client’s investment objectives; we seek the best risk-adjusted returns
+                            within the scope of the mandate they give us; and we underpin our work with research, data,
+                            and analytics. Research informs our investment decisions and product innovation. We research
+                            major structural trends shaping the economy, markets, and asset prices.
+                        </p>
+                    </div>
+                </div> 
+                
             </div>
 
             @endforeach
@@ -102,11 +114,12 @@
 
 {{-- start whyfibovix section --}}
 
+
 <div class="container-fluid">
     {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
     <div class="row">
         <div class="backimg1 text-center py-5">
-            <h2 id="fibovix">Why FIBO<span>VIX</span></h2>
+            <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
             <div class="text-center">
                 <p id="" class="px-5">Everything we do starts with our purpose. Re imagining the power of
                     investing. Connecting people for a better world. This is our purpose. This is Fibovix
@@ -116,8 +129,8 @@
             <div class="container section_center">
                 <div class="row">
 
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg whyfibocards">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
                                 <h5 id="hh">Needs</h5>
@@ -127,26 +140,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg whyfibocards">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
                                 <h5 id="hh">Advisor</h5>
                                 <p>
-                                    Your adviser is dedicated to supporting you in achieving your objectives & will
-                                    offer
+                                    Your adviser is dedicated to supporting you in achieving your objectives & will offer
                                     tailored guidance from the start.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="card shadow-lg whyfibocards">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg" style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
                             <div class="card-body ">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
                                 <h5 id="hh">Strategy</h5>
-                                <p>Your adviser can recommend tax-minimization techniques as part of your overall
-                                    investing
+                                <p>Your adviser can recommend tax-minimization techniques as part of your overall investing
                                     strategy.
                                 </p>
                             </div>
@@ -166,8 +177,7 @@
     <div class="container">
         <div class="row text-center">
             <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
-            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
-                and Bank of America offer a wide range of solutions to help you get there.
+            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill and Bank of America offer a wide range of solutions to help you get there.
             </p>
         </div>
         <div class="row text-center">
@@ -209,70 +219,64 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title">Checking</h5>
-                        <p class="card-text "> Accounts that offer discounts on regular banking services,
-                            relationship-based maintenance fee
-                            exemptions, and tiered interest rates.</p>
+                      <h5 class="card-title">Checking</h5>
+                      <p class="card-text "> Accounts that offer discounts on regular banking services, relationship-based maintenance fee
+                        exemptions, and tiered interest rates.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title"> Savings</h5>
-                        <p class="card-text">A range of savings options, such as CDs and money market accounts, to help
-                            you reach your
-                            savings objectives.</p>
+                      <h5 class="card-title"> Savings</h5>
+                      <p class="card-text">A range of savings options, such as CDs and money market accounts, to help you reach your
+                        savings objectives.</p>
                     </div>
-                </div>
+                  </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagec.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title">Credit cards</h5>
-                        <p class="card-text"> Accounts that offer discounts on regular banking services,
-                            relationship-based maintenance fee
-                            exemptions, and tiered interest rates.</p>
+                      <h5 class="card-title">Credit cards</h5>
+                      <p class="card-text"> Accounts that offer discounts on regular banking services, relationship-based maintenance fee
+                        exemptions, and tiered interest rates.</p>
                     </div>
-                </div>
+                  </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title">Cash Management</h5>
-                        <p class="card-text"> A collection of outstanding credit cards with cash back choices, travel
-                            incentives, and expanded
-                            features.</p>
+                      <h5 class="card-title">Cash Management</h5>
+                      <p class="card-text"> A collection of outstanding credit cards with cash back choices, travel incentives, and expanded
+                        features.</p>
                     </div>
-                </div>
+                  </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imageb.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title">Rewards</h5>
-                        <p class="card-text"> We express our gratitude to you by offering you exclusive advantages and
-                            prizes related to the
-                            various ways you collaborate with us.</p>
+                      <h5 class="card-title">Rewards</h5>
+                      <p class="card-text">  We express our gratitude to you by offering you exclusive advantages and prizes related to the
+                        various ways you collaborate with us.</p>
                     </div>
-                </div>
+                  </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card shadow" style="border-radius:10%; ">
+                <div class="card shadow" style="border-radius:10%; " >
                     <img src="{{ asset('website/images/Imagea.png') }}" class="card-img-top" alt="...">
                     <div class="card-body text-left">
-                        <h5 class="card-title">Mobile and online access</h5>
-                        <p class="card-text"> A range of savings options, such as CDs and money market accounts, to
-                            help you reach your
-                            savings objectives.</p>
+                      <h5 class="card-title">Mobile and online access</h5>
+                      <p class="card-text">  A range of savings options, such as CDs and money market accounts, to help you reach your
+                        savings objectives.</p>
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -302,7 +306,7 @@
                         </p>
                     </div>
                 </div>
-
+                
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light ">Together with your advisor, determine your
@@ -311,7 +315,7 @@
                         </p>
                     </div>
                 </div>
-
+            
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -386,7 +390,8 @@
         <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
     </div>
 
-    <div class="row">
+    {{-- end take action --}}
+    {{-- additional solution  --}}
 
 
         @foreach ($additionalSolutions as $item)
@@ -470,327 +475,39 @@
                 <h2>Our Founder</h2>
                 <p>fibovix</p>
             </div>
-        </div>
-        <img src="{{ asset('website/images/f3.png') }}">
-    </div>
-    <div class="fvertical vertical4">
 
+        {{-- end additional solution --}}
     </div>
-</div>
+
+
+
+    {{--  --}}
+{{-- start gallary --}}
 
 <div class="container">
-    <div class="card p-3">
-
-        <nav class="our_advi_nav p-3">
-            <div class="nav nav-tabs our_advi_tab" id="nav-tab" role="tablist">
-                <button class="nav-link our_advi_tab_link active" id="nav-home-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                    aria-selected="true">Why Fibovix</button>
-                <button class="nav-link our_advi_tab_link" id="nav-profile-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                    aria-selected="false">Our Advisor</button>
-                <button class="nav-link our_advi_tab_link" id="nav-contact-tab" data-bs-toggle="tab"
-                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
-                    aria-selected="false">Working together</button>
+    <div class="row ">
+        <div class="col-lg-5">
+            <div class="row gy-4 d-grid">
+                <img src="{{ asset('website/images/f1.png') }}" alt="">
+                <img src="{{ asset('website/images/f2.png') }}" alt="">
             </div>
-        </nav>
-        <h2 class="text-center p-3">Our <span style="color:#6246E5; padding:5px;">Advisor</span></h2>
-        <div class="tab-content p-3" id="nav-tabContent">
-            <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <h1 class="p-3">Your goals are your <span style="color:#6246E5; padding:5px;">advisor’s
-                            </span>priority</h1>
-                        <p class="why_fibovis_p">You probably expect your advisor to provide guidance developing your
-                            financial plan and investment approach.
-                            But with Merrill, your advisor is so much more – listening to your needs and understanding
-                            what matters most to you and your family.
-                            You and your advisor will work together one on one to help create a strategy that’s uniquely
-                            yours.. </p>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <img class="goal_advisor_img" src="{{ asset('website/images/why_fibovix.png') }}" width="450"
-                            height="300" alt='Responsive 2-column layout'>
-
+        </div>
+        <div class="col-lg-7">
+            <div class="row g-5 d-grid">
+                <div class="fcard">
+                    <div class="fcard_about">
+                        <h4>Founder</h4>
+                        <h2>Our Founder</h2>
+                        <p>Fibovix investment approach is informed by three principles: we start by understanding the client’s investment objectives we seek the best risk-adjusted returns within the scope of the mandate they give us; and we underpin our work with research, data, and analytics. Research informs our investment decisions and product innovation. We research major structural trends shaping the economy, markets, and asset prices.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <div class="main">
-
-                    <div class="sub_main">
-                        <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
-                        <p class="our_advisor_p">You may think your advisor’s role is limited to your portfolio however
-                            we believe it goes beyond that. Working with a Merrill advisor can help turn your hopes and
-                            dreams into a personalized financial strategy. Your advisor is your resource, and your
-                            strategy is your personal financial road map.</p>
-                    </div>
-                    <img class="our_advisor_img" src="{{ asset('website/images/f1.png') }}" width="450" height="300"
-                        alt='Responsive 2-column layout'>
-                </div>
-
-                <!--  -->
-
-                <div class="container mt-5">
-                    <h2 class="text-center p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span>
-                        can help you do</h2>
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <div class="card_container">
-                                <div class="card_header">
-                                    <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image"
-                                        class="card_image" />
-                                </div>
-                                <div class="card_body">
-                                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                                </div>
-                                <div class="card_footer">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <div class="card_container">
-                                <div class="card_header">
-                                    <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image"
-                                        class="card_image" />
-                                </div>
-                                <div class="card_body">
-                                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                                </div>
-                                <div class="card_footer">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <div class="card_container">
-                                <div class="card_header">
-                                    <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image"
-                                        class="card_image" />
-                                </div>
-                                <div class="card_body">
-                                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                                </div>
-                                <div class="card_footer">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <div class="card_container">
-                                <div class="card_header">
-                                    <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image"
-                                        class="card_image" />
-                                </div>
-                                <div class="card_body">
-                                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                                </div>
-                                <div class="card_footer">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-4">
-                            <div class="card_container">
-                                <div class="card_header">
-                                    <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image"
-                                        class="card_image" />
-                                </div>
-                                <div class="card_body">
-                                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                                </div>
-                                <div class="card_footer">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!--  -->
-
-                <div class="container about_contact_form">
-                    <h2 class="text-center p-3">Have an <span style="color:#6246E5; padding:5px;">Advisor</span>
-                        contact you.</h2>
-                    <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
-                    <div class="row about_contact_row">
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
-                            <label for="name" class="leading-7 py-4 text-lg text-gray-900">Your Name</label> <br>
-                            <input type="text" id="name" name="name" required=""
-                                class="about_contact_input w-full bg-white rounded border border-gray-400 focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-900 py-1 px-1 leading-8 transition-colors duration-200 ease-in-out ">
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <p class="form_para mt-4">By providing your contact information above, you agree that a
-                                representative of Merrill, the Brokerage
-                                affiliate of Bank of America Corporation, may contact you via telephone and/or email to
-                                discuss and/or offer investment products and services that may be appropriate for you.
-                                You agree that
-                                you are providing to us your consent for us to contact you regardless of any Do Not Call
-                                or Do Not
-                                Email privacy choices you may have previously expressed until you revoke this consent,
-                                or up to 90 days.
-                                You may revoke your consent at any time by notifying the Merrill representative.</p>
-                        </div>
-                        <div class="form_btn">
-                            <button type="button" class="btn btn-primary mb-2">Submit</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <p><strong>This is some placeholder content the Contact tab's associated content.</strong>
-                    Clicking another tab will toggle the visibility of this one for the next.
-                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
-                    tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+                <img src="{{ asset('website/images/f3.png') }}" alt="">
             </div>
         </div>
     </div>
 </div>
 
+<!-- End gallary -->
 
-
-<!-- Start contact-background -->
-<section>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-md-12">
-                <div class="logo image-fluid">
-                    <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%" ;>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End contact-background -->
-
-<!-- Start Cards -->
-<div class="container mb-md-4">
-    <div class="row g-0">
-        <div class="col-md-12">
-            <div class="row g-3 justify-content-center">
-                <div class="col-md-12 col-lg-8">
-                    <div class="row">
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center"><span>
-                                        <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
-                                                alt=""></i></span>
-                                </div>
-                                <div class="text">
-                                    <h2>Office</h2>
-                                    <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
-                                            alt=""></i></span>
-                                </div>
-                                <div class="text">
-                                    <h2>Email</h2>
-                                    <p>info@fibovix.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i>
-                                        </span>
-                                </div>
-                                <div class="text">
-                                    <h2>Phone</h2>
-                                    <p>6262757562 </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<!-- End Cards -->
-
-<!-- start Map -->
-<section>
-    <div class="container" style="position: relative;">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22097.967898937644!2d73.78348365959188!3d19.987863371093294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703580760467!5m2!1sen!2sin"
-                    width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Map -->
-
-<!--Start form -->
-<section class=" d-flex justify-content-center">
-    <div class="contact-form col-md-4 background-color p-5">
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-6">
-                <label for="validationCustom01" class="form-label">Name</label>
-                <input type="text" class="form-control" id="validationCustom01" required>
-
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom02" class="form-label">Email</label>
-                <input type="text" class="form-control" id="validationCustom02" required>
-            </div>
-
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-            </div>
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-            </div>
-            <div class="col-md-12">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-            </div>
-
-            <div class="col-12 d-flex justify-content-center mt-3"><br>
-                <button class="btn btn-primary" type="submit">Send Message</button>
-            </div>
-        </form>
-
-    </div>
-</section>
-<!-- End form -->
 
 @include('website.layouts.footer')
