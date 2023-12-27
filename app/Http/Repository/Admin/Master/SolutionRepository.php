@@ -6,13 +6,13 @@ use DB;
 use Illuminate\Support\Carbon;
 // use Session;
 use App\Models\ {
-	LocationAddress
+	SolutionModel
 };
 
-class LocationAddressRepository{
+class SolutionRepository{
     public function getAll(){
         try {
-            $data_output = LocationAddress::orderBy('updated_at', 'desc')->get();
+            $data_output = SolutionModel::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
@@ -22,7 +22,7 @@ class LocationAddressRepository{
 
 	public function addAll($request){
         try {
-            $incidenttype_data = new LocationAddress();
+            $incidenttype_data = new SolutionModel();
             $incidenttype_data->name = $request['name'];
           
             $incidenttype_data->save();       
@@ -38,7 +38,7 @@ class LocationAddressRepository{
     }
     public function getById($id){
         try {
-            $incidenttype = LocationAddress::find($id);
+            $incidenttype = SolutionModel::find($id);
             if ($incidenttype) {
                 return $incidenttype;
             } else {
@@ -47,18 +47,18 @@ class LocationAddressRepository{
         } catch (\Exception $e) {
             return $e;
             return [
-                'msg' => 'Failed to get by Id Location Address Type.',
+                'msg' => 'Failed to get by Id Solution Type.',
                 'status' => 'error'
             ];
         }
     }
     public function updateAll($request){
         try {
-            $incidenttype_data = LocationAddress::find($request->id);
+            $incidenttype_data = SolutionModel::find($request->id);
             
             if (!$incidenttype_data) {
                 return [
-                    'msg' => 'Location Address data not found.',
+                    'msg' => 'Solution data not found.',
                     'status' => 'error'
                 ];
             }
@@ -68,13 +68,13 @@ class LocationAddressRepository{
             $incidenttype_data->save();        
         
             return [
-                'msg' => 'Location Address Type data updated successfully.',
+                'msg' => 'Solution Type data updated successfully.',
                 'status' => 'success'
             ];
         } catch (\Exception $e) {
             return $e;
             return [
-                'msg' => 'Failed to update Location Address Type data.',
+                'msg' => 'Failed to update Solution Type data.',
                 'status' => 'error'
             ];
         }
@@ -82,7 +82,7 @@ class LocationAddressRepository{
 
     public function deleteById($id) {
         try {
-            $incidenttype = LocationAddress::find($id);
+            $incidenttype = SolutionModel::find($id);
             if ($incidenttype) {
                 // Delete the images from the storage folder
                 Storage::delete([
@@ -104,7 +104,7 @@ class LocationAddressRepository{
     }
     public function updateOne($request){
         try {
-            $slide = LocationAddress::find($request); // Assuming $request directly contains the ID
+            $slide = SolutionModel::find($request); // Assuming $request directly contains the ID
 
             // Assuming 'is_active' is a field in the Slider model
             if ($slide) {

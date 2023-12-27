@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('location_address', function (Blueprint $table) {
+        Schema::create('our_solution_master', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');            
             $table->string('is_deleted')->default(false);
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('location_address');
+        Schema::dropIfExists('our_solution_master');
     }
 };

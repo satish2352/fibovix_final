@@ -1,6 +1,24 @@
 @extends('admin.layout.master')
 
 @section('content')
+<head>
+<style>
+    /* Custom CSS for the button */
+    .btn-secondary {
+      background-color: grey; /* Set button background color */
+      border-color: #007bff; /* Set button border color */
+    }
+
+    /* Custom CSS for the dropdown menu */
+    .dropdown-menu {
+      background-color: #343a40; /* Set dropdown menu background color */
+    }
+
+    .dropdown-item {
+      color: #ffffff; /* Set dropdown item text color */
+    }
+  </style>
+</head>
     <div class="main-panel">
         <div class="content-wrapper mt-6">
             <div class="page-header">
@@ -13,14 +31,24 @@
                     </ol>
                 </nav>
             </div>
-            <div class="row">
-                <div class="col-12 grid-margin">
-                    <div class="card">
-                        <div class="card-body">
-                            <form class="forms-sample" action="{{ route('add-our-solutions') }}" method="POST"
+            <form class="forms-sample" action="{{ route('add-our-solutions') }}" method="POST"
                                 enctype="multipart/form-data" id="regForm">
                                 @csrf
                                 <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                          <label for="Solution">Solution:</label>
+                                    <select name="solution_id" >
+                                @foreach($data as $solution)
+                                <option value="{{ $solution->id }}">{{ $solution->name }}</option>
+                                @endforeach
+                                </select>
+                                    @if ($errors->has('title'))
+                                        <span class="red-text"><?php echo $errors->first('title', ':message'); ?></span>
+                                    @endif
+                                    </div>
+                                    </div>
+
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="title">Title</label>&nbsp<span class="red-text">*</span>
@@ -154,4 +182,17 @@
                 });
             });
         </script>
+<script>
+    // Add an event listener to each dropdown item
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+            // Set the selected solution's ID to the hidden input field
+            document.getElementById('selectedSolutionId').value = this.getAttribute('data-value');
+            
+            // Update the dropdown button text with the selected solution's name
+            document.getElementById('dropdownMenuButton').innerText = this.innerText;
+        });
+    });
+</script>
+
     @endsection

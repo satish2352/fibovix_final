@@ -24,7 +24,9 @@ class OurSolutionsRepository  {
             $data =array();
             $dataOutput = new OurSolutions();
             $dataOutput->title = $request['title'];
-            $dataOutput->description = $request['description'];
+            $dataOutput->short_description = $request['short_description'];
+            $dataOutput->long_description = $request['long_description'];
+            $dataOutput->solution_id = $request['solution_id'];
         
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;

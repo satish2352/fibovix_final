@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('our_solutions', function (Blueprint $table) {
+        Schema::create('our_solutions_master', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('course_name')->default('null');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('our_solutions');
+        Schema::dropIfExists('our_solutions_master');
     }
 };

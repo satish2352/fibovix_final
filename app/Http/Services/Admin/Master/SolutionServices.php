@@ -1,13 +1,13 @@
 <?php
 namespace App\Http\Services\Admin\Master;
 
-use App\Http\Repository\Admin\Master\LocationAddressRepository;
+use App\Http\Repository\Admin\Master\SolutionRepository;
 
 use App\LocationAddress;
 use Carbon\Carbon;
 
 
-class LocationAddressServices{
+class SolutionServices{
 
 	protected $repo;
 
@@ -15,7 +15,7 @@ class LocationAddressServices{
      * TopicService constructor.
      */
     public function __construct(){
-        $this->repo = new LocationAddressRepository();
+        $this->repo = new SolutionRepository();
     }
     public function getAll(){
         try {
@@ -29,9 +29,9 @@ class LocationAddressServices{
         try {
             $add_Incidenttype = $this->repo->addAll($request);
             if ($add_Incidenttype) {
-                return ['status' => 'success', 'msg' => 'Location Address Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Solution Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Location Address Not Added.'];
+                return ['status' => 'error', 'msg' => 'Solution Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
@@ -48,9 +48,9 @@ class LocationAddressServices{
         try {
             $update_Incidenttype = $this->repo->updateAll($request);
             if ($update_Incidenttype) {
-                return ['status' => 'success', 'msg' => 'Location Address Updated Successfully.'];
+                return ['status' => 'success', 'msg' => 'Solution Updated Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Location Address Not Updated.'];
+                return ['status' => 'error', 'msg' => 'Solution Not Updated.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];

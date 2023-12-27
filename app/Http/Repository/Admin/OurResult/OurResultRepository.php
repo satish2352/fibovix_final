@@ -32,6 +32,9 @@ class OurResultRepository  {
         $data =array();
         $gallery = new OurResult();
         $gallery->category_id = $request['category_id'];
+
+
+
         $gallery->save();
           
         $last_insert_id = $gallery->id;

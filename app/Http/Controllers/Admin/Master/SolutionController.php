@@ -4,29 +4,30 @@ namespace App\Http\Controllers\Admin\Master;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\LocationAddress;
-use App\Http\Services\Admin\Master\LocationAddressServices;
+use App\Models\SolutionModel;
+use App\Http\Services\Admin\Master\SolutionServices;
 use Validator;
 use Illuminate\Validation\Rule;
 
-class LocationAddressController extends Controller
+class SolutionController extends Controller
 {
     public function __construct()
     {
-        $this->service = new LocationAddressServices();
+        $this->service = new SolutionServices();
     }
     public function index()
     {
         try {
             $incidenttype_data = $this->service->getAll();
-            return view('admin.pages.master.location-address.list-location-address', compact('incidenttype_data'));
+// dd($incidenttype_data);
+            return view('admin.pages.master.location-address.list-solution', compact('incidenttype_data'));
         } catch (\Exception $e) {
             return $e;
         }
     }
     public function add()
     {
-        return view('admin.pages.master.location-address.add-location-address');
+        return view('admin.pages.master.location-address.add-solution');
     }
 
     public function store(Request $request) {
@@ -43,7 +44,7 @@ class LocationAddressController extends Controller
             $validation = Validator::make($request->all(),$rules,$messages);
             if($validation->fails() )
             {
-                return redirect('add-location-address')
+                return redirect('add-solution')
                     ->withInput()
                     ->withErrors($validation);
             }
@@ -56,16 +57,16 @@ class LocationAddressController extends Controller
                     $msg = $add_incidenttype_data['msg'];
                     $status = $add_incidenttype_data['status'];
                     if($status=='success') {
-                        return redirect('list-location-address')->with(compact('msg','status'));
+                        return redirect('list-solution')->with(compact('msg','status'));
                     }
                     else {
-                        return redirect('add-location-address')->withInput()->with(compact('msg','status'));
+                        return redirect('add-solution')->withInput()->with(compact('msg','status'));
                     }
                 }
 
             }
         } catch (Exception $e) {
-            return redirect('add-location-address')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
+            return redirect('add-solution')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
         }
     }
     
@@ -73,7 +74,7 @@ class LocationAddressController extends Controller
     {
         $edit_data_id = base64_decode($request->edit_id);
         $incidenttype_data = $this->service->getById($edit_data_id);
-        return view('admin.pages.master.location-address.edit-location-address', compact('incidenttype_data'));
+        return view('admin.pages.master.location-address.edit-solution', compact('incidenttype_data'));
    
     }
    
@@ -107,7 +108,7 @@ class LocationAddressController extends Controller
                 $status = $update_incidenttype_data['status'];
 
                 if ($status == 'success') {
-                    return redirect('list-location-address')->with(compact('msg', 'status'));
+                    return redirect('list-solution')->with(compact('msg', 'status'));
                 } else {
                     return redirect()->back()
                         ->withInput()
@@ -126,7 +127,7 @@ class LocationAddressController extends Controller
     {
         try {
             $incidenttype_data = $this->service->getById($request->show_id);
-            return view('admin.pages.master.location-address.show-location-address', compact('incidenttype_data'));
+            return view('admin.pages.master.location-address.show-solution', compact('incidenttype_data'));
         } catch (\Exception $e) {
             return $e;
         }
@@ -135,7 +136,7 @@ class LocationAddressController extends Controller
         try {
             $active_id = $request->active_id;
         $result = $this->service->updateOne($active_id);
-            return redirect('list-location-address')->with('flash_message', 'Updated!');  
+            return redirect('list-solution')->with('flash_message', 'Updated!');  
         } catch (\Exception $e) {
             return $e;
         }
@@ -148,7 +149,7 @@ class LocationAddressController extends Controller
                 $msg = $incidenttype_data['msg'];
                 $status = $incidenttype_data['status'];
                 if ($status == 'success') {
-                    return redirect('list-location-address')->with(compact('msg', 'status'));
+                    return redirect('list-solution')->with(compact('msg', 'status'));
                 } else {
                     return redirect()->back()
                         ->withInput()

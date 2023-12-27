@@ -9,7 +9,7 @@
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('list-location-address') }}">Master</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('list-solution') }}">Master</a></li>
                         <li class="breadcrumb-item active" aria-current="page"> Update Location Address
                         </li>
                     </ol>
@@ -19,7 +19,7 @@
                 <div class="col-12 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <form class="forms-sample" action="{{ route('update-location-address') }}" method="post"
+                            <form class="forms-sample" action="{{ route('update-solution') }}" method="post"
                                 id="regForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
@@ -38,7 +38,7 @@
                                         <button type="submit" class="btn btn-sm btn-success" id="submitButton">Save &amp;
                                             Update</button>
                                         {{-- <button type="reset" class="btn btn-danger">Cancel</button> --}}
-                                        <span><a href="{{ route('list-location-address') }}"
+                                        <span><a href="{{ route('list-solution') }}"
                                                 class="btn btn-sm btn-primary ">Back</a></span>
                                     </div>
                                 </div>

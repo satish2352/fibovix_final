@@ -5,12 +5,12 @@
         <div class="content-wrapper mt-6">
             <div class="page-header">
                 <h3 class="page-Name">
-                    Location Address
+                    Solutions
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('list-location-address') }}">Master</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Location Address</li>
+                        <li class="breadcrumb-item"><a href="{{ url('list-solution') }}">Master</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> Solutions</li>
                     </ol>
                 </nav>
             </div>
@@ -18,7 +18,7 @@
                 <div class="col-12 grid-margin">
                     <div class="card">
                         <div class="card-body">
-                            <form class="forms-sample" action="{{ url('add-location-address') }}" method="POST"
+                            <form class="forms-sample" action="{{ url('add-solution') }}" method="POST"
                                 enctype="multipart/form-data" id="regForm">
                                 @csrf
                                 <div class="row">
@@ -37,7 +37,7 @@
                                             Save &amp; Submit
                                         </button>
                                         {{-- <button type="reset" class="btn btn-danger">Cancel</button> --}}
-                                        <span><a href="{{ route('list-location-address') }}"
+                                        <span><a href="{{ route('list-solution') }}"
                                                 class="btn btn-sm btn-primary">Back</a></span>
                                     </div>
                                 </div>

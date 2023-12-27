@@ -43,7 +43,7 @@
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-marquee-tab') }}">Marquee</a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-location-address') }}">Location Address</a>
+                            href="{{ route('list-solution') }}">Solutions</a>
                    
                     </li>
                 </ul>

@@ -5,17 +5,17 @@
         <div class="content-wrapper mt-7">
             <div class="page-header">
                 <h3 class="page-title">
-                    Location Address
+                    Solutions
                   
-                        <a href="{{ route('add-location-address') }}" class="btn btn-sm btn-primary ml-3">+
+                        <a href="{{ route('add-solution') }}" class="btn btn-sm btn-primary ml-3">+
                             Add</a>
                 
 
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('list-location-address') }}">Master</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Location Address</li>
+                        <li class="breadcrumb-item"><a href="{{ url('list-solution') }}">Master</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"> Solutions</li>
                     </ol>
                 </nav>
             </div>
@@ -56,7 +56,7 @@
                                                             <div class="d-flex">
                                                                
                                                                     <a
-                                                                        href="{{ route('edit-location-address', base64_encode($item->id)) }}"
+                                                                        href="{{ route('edit-solution', base64_encode($item->id)) }}"
                                                                         class="btn btn-sm btn-outline-primary m-1"
                                                                         title="Edit"><i class="fas fa-pencil-alt"></i></a>
                                                              
@@ -84,15 +84,15 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="{{ url('/delete-location-address') }}" id="deleteform">
+        <form method="POST" action="{{ url('/delete-solution') }}" id="deleteform">
             @csrf
             <input type="hidden" name="delete_id" id="delete_id" value="">
         </form>
-        <form method="POST" action="{{ url('/show-location-address') }}" id="showform">
+        <form method="POST" action="{{ url('/show-solution') }}" id="showform">
             @csrf
             <input type="hidden" name="show_id" id="show_id" value="">
         </form>
-        <form method="POST" action="{{ url('/update-one-location-address') }}" id="activeform">
+        <form method="POST" action="{{ url('/update-one-solution') }}" id="activeform">
             @csrf
             <input type="hidden" name="active_id" id="active_id" value="">
         </form>

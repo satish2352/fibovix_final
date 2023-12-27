@@ -13,16 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('courses_details', function (Blueprint $table) {
+        Schema::create('our_solutions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('course_id');
-            $table->text('course_type')->default('null');
-            $table->text('course_duration')->default('null');
-            $table->text('admission_procedure')->default('null');
-            $table->text('eligibility')->default('null');
-            $table->text('preparation')->default('null');
+            $table->unsignedBigInteger('solution_id');
+            $table->text('title')->default('null');
+            $table->text('short_description')->default('null');
+            $table->text('long_description')->default('null');
+            $table->text('image')->default('null');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+
+        
         });
     }
 
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('courses_details');
+        Schema::dropIfExists('our_solutions');
     }
 };
