@@ -637,7 +637,7 @@ box-shadow:4px 4px 4px #111;
 
 .article_tab{
   /* position: relative; */
-  border-radius: 80px 0px 80px;
+  border-radius: 0px 50px 0px;
   background: #6246E5;
   padding: 0.5rem;
   width: 100%;
@@ -658,8 +658,22 @@ box-shadow:4px 4px 4px #111;
   background-color: transparent;
   border-color: transparent;
   font-family: inherit !important;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 2px solid;
+  text-align: start;
+  padding: 10px;
+  width: 90%;
+}
+
+.article_tab .article_tab_link{
+  border-bottom: 2px solid;
+  margin-top: 10px;
+  text-align: start;
+  padding: 10px;
+  font-size: 18px;
+  width: 90%;
 }
 
 .article_tab_link:hover {
@@ -895,3 +909,4 @@ box-shadow:4px 4px 4px #111;
     right: 0;
   }
 }
+
