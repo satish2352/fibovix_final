@@ -28,7 +28,7 @@ class ContactUsController extends Controller
         $rules = [
             'full_name' => 'required',
             'email' => 'required|email',
-            'mobile_number' => 'required|regex:/^\d{10}$/',
+            'mobile_number' => 'required|regex:/[0-9]{10}/',
             'subject' => 'required',
             'message' => 'required',
             'g-recaptcha-response' => 'required|captcha',

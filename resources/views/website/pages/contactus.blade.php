@@ -86,14 +86,13 @@
 <!--Start form -->
 <section class=" d-flex justify-content-center">
     <div class="contact-form col-md-4 background-color p-5">
-
-        <form class="row g-3 needs-validation"  action="{{ url('add-contactus') }}" id="regForm" method="POST"
-                        enctype="multipart/form-data">
-                    @csrf
+        @include('website.layouts.alert')
+        <form class="row g-3 needs-validation" action="{{ url('add-contactus') }}" id="regForm" method="POST"
+            enctype="multipart/form-data">
+            @csrf
             <div class="col-md-6">
-                <label for="validationCustom01" class="form-label" >Name</label>
-                <input type="text" class="form-control" name="full_name"
-                                    value="{{ old('full_name') }}" id="full_name" >
+                <label for="validationCustom01" class="form-label">Name</label>
+                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}" id="full_name">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('full_name'))
                 <span class="red-text">
@@ -104,8 +103,7 @@
             </div>
             <div class="col-md-6">
                 <label for="validationCustom02" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email"
-                    value="{{ old('email') }}" >
+                <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('email'))
                 <span class="red-text">
@@ -117,7 +115,7 @@
             <div class="col-md-6">
                 <label for="validationCustom03" class="form-label">Phone</label>
                 <input type="text" class="form-control" name="mobile_number" value="{{ old('mobile_number') }}"
-                    id="validationCustom03" >
+                    id="validationCustom03">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('mobile_number'))
                 <span class="red-text">
@@ -128,7 +126,7 @@
             <div class="col-md-6">
                 <label for="validationCustom03" class="form-label">Subject</label>
                 <input type="text" class="form-control" id="validationCustom03" name="subject"
-                    value="{{ old('subject') }}" >
+                    value="{{ old('subject') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('subject'))
                 <span class="red-text">
@@ -147,16 +145,16 @@
                 </span>
                 @endif
             </div>
-            <!-- <div class="col-md-4 py-3 captcha_set" style="text-align: -webkit-right;">
-                                {!! NoCaptcha::renderJs() !!}
-                                {!! NoCaptcha::display() !!}
+            <div class="col-md-12 py-3 captcha_set" style="text-align: -webkit-right;">
+                {!! NoCaptcha::renderJs() !!}
+                {!! NoCaptcha::display() !!}
 
-                                @if ($errors->has('g-recaptcha-response'))
-                                    <span class="help-block">
-                                        <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
-                                    </span>
-                                @endif
-                            </div> -->
+                @if ($errors->has('g-recaptcha-response'))
+                <span class="help-block">
+                    <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
+                </span>
+                @endif
+            </div>
             <div class="col-12 d-flex justify-content-center mt-3"><br>
                 <button class="btn btn-primary" type="submit">Send Message</button>
             </div>
