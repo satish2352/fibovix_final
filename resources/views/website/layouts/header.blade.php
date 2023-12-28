@@ -50,7 +50,7 @@
     </nav> --}}
 
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right-border" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right-border fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">+ 91- 8888352777  </a>
         <a class="navbar-brand" href="#"> 0253-7966831</a>

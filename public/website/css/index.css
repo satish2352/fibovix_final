@@ -6,7 +6,7 @@
 body{
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     text-decoration: none; 
-    color: #666666;
+    color: #000;
 }
 .red-text{
   color: red;
@@ -101,9 +101,12 @@ body{
 
   .contaback{
     background-image: url('../images/Rectangle2.png');
-    background-size: cover;
+    /* background-size: cover;
     
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    background-size: inherit;
+    background-attachment: inherit;
+    border-radius: 11rem;
     
    }
   .card-title{
@@ -742,7 +745,13 @@ box-shadow:4px 4px 4px #111;
 
 .logo{
   background-size: cover;
-  
+}
+
+.tick_icon{
+  font-weight: 500;
+}
+.tick_circle{
+  background-color: #6246E5;
 }
 
 /* card */
@@ -908,5 +917,56 @@ box-shadow:4px 4px 4px #111;
     top: 0;
     right: 0;
   }
+}
+
+/* resoures */
+.resources_row{
+  padding: 4rem;
+}
+
+.solution_card{
+  background-color: transparent !important;
+}
+
+/* about */
+.about_img{
+  background-image: url('../images/about_us.png');
+  /* background-size: cover;
+  
+  background-attachment: fixed; */
+  background-size: inherit;
+  background-attachment: inherit;
+  
+ }
+ .about_img_head{
+  color: #1F2D87;
+  font-weight: 900;
+ }
+
+ .our_advisor_heading{
+  font-weight: 900;
+ }
+ .founder_section_row{
+    padding: 3rem;
+ }
+ .about_banner_para{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 19px;
+    line-height: 1.7;
+ }
+
+ .fibovix_team {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-slider {
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.font_color{
+  color: blue;
 }
 
