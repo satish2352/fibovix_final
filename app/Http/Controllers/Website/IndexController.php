@@ -17,7 +17,9 @@ use App\Models\ {
 
 use App\Models\ {
     AdditionalSolutions,
-    Slider
+    Slider,
+    OurSolutions,
+    OurSolutionsMasters
 };
 
 class IndexController extends Controller
@@ -31,6 +33,16 @@ class IndexController extends Controller
         try {
 
             $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
+            $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
+                                    ->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
+                                    'our_solutions.short_description',
+                                    'our_solutions.long_description',
+                                    'our_solutions.image',
+                                    'our_solutions_master.solution_name',
+                                    'our_solutions_master.id as our_solutions_master_id')
+                                    ->get();
+// dd($ourSolutions);
+            $ourSolutionsMaster  = OurSolutionsMasters::where('is_active','=',true)->orderBy('updated_at', 'desc')->get();
             $data_output_slider = Slider::where('is_active', true)->get();
             // $data_output_courses_offered = $this->service->getAllCoursesOffered();
             // $data_output_upcoming_courses = $this->service->getAllUpcomingCourses();
@@ -38,11 +50,13 @@ class IndexController extends Controller
             
          
             // return view('website.pages.index', compact('data_output_slider','data_output_courses_offered','data_output_upcoming_courses','data_output_testimonial'));
-            return view('website.pages.index', compact('additionalSolutions','data_output_slider'));
+            return view('website.pages.index', compact('additionalSolutions','data_output_slider','ourSolutions','ourSolutionsMaster'));
         } catch (\Exception $e) {
             return $e;
         }
     }
+
+    // list-our-solutions
 
     public function getAllAjaxMultimedia(Request $request) {
         $return_data = $this->service->getAllGallery($request);
