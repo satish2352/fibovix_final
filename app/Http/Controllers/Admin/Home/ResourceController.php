@@ -36,7 +36,7 @@ class ResourceController extends Controller
                 'title' => 'required',
                 'short_description' => 'required',
                 'long_description' => 'required',
-                'solution_id' => 'required',
+                'resource_id' => 'required',
                 // 'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'',
                
             ];
@@ -45,7 +45,7 @@ class ResourceController extends Controller
                 'short_description.required' => 'Please  enter description.',
                 'long_description.required' => 'Please  enter description.',
                 'image.required' => 'The image is required.',
-                'solution_id.required' => 'Select the atleats one option',
+                'resource_id.required' => 'Select the atleats one option',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 // 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',

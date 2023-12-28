@@ -42,11 +42,11 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="form-group">
-                        <label for="Solution">Solution:</label> &nbsp<span class="red-text">*</span>
-                        <select  class="form-control mb-2" name="solution_id" id="solution_id">
-                        <option value="" default>select solution</option>
-                            @foreach($data as $solution)
-                            <option value="{{ $solution->id }}">{{ $solution->solution_name }}</option>
+                        <label for="resource">resource:</label> &nbsp<span class="red-text">*</span>
+                        <select  class="form-control mb-2" name="resource_id" id="resource_id">
+                        <option value="" default>select resource</option>
+                            @foreach($data as $resource)
+                            <option value="{{ $resource->id }}">{{ $resource->name }}</option>
                             @endforeach
                         </select>
                         @if ($errors->has('title'))
@@ -198,10 +198,10 @@
     // Add an event listener to each dropdown item
     document.querySelectorAll('.dropdown-item').forEach(item => {
         item.addEventListener('click', function () {
-            // Set the selected solution's ID to the hidden input field
-            document.getElementById('selectedSolutionId').value = this.getAttribute('data-value');
+            // Set the selected resource's ID to the hidden input field
+            document.getElementById('selectedresourceId').value = this.getAttribute('data-value');
 
-            // Update the dropdown button text with the selected solution's name
+            // Update the dropdown button text with the selected resource's name
             document.getElementById('dropdownMenuButton').innerText = this.innerText;
         });
     });
