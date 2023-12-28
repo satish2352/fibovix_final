@@ -47,7 +47,14 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/website-contact', ['as' => 'website-contact', 'uses' => 'App\Http\Controllers\Admin\LoginRegister\RegisterController@updateProfile']);
 
 
-
+    Route::get('/list-resource', ['as' => 'list-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@index']);
+    Route::get('/add-resource', ['as' => 'add-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@add']);
+    Route::post('/add-resource', ['as' => 'add-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@store']);
+    Route::get('/edit-resource/{edit_id}', ['as' => 'edit-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@edit']);
+    Route::post('/update-resource', ['as' => 'update-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@update']);
+    Route::post('/show-resource', ['as' => 'show-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@show']);
+    Route::post('/delete-resource', ['as' => 'delete-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@destroy']);
+    Route::post('/update-one-resource', ['as' => 'update-one-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@updateOne']);
 
     Route::get('/list-solution', ['as' => 'list-solution', 'uses' => 'App\Http\Controllers\Admin\Master\SolutionController@index']);
     Route::get('/add-solution', ['as' => 'add-solution', 'uses' => 'App\Http\Controllers\Admin\Master\SolutionController@add']);
@@ -77,6 +84,15 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/show-our-solutions', ['as' => 'show-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@show']);
     Route::post('/delete-our-solutions', ['as' => 'delete-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@destroy']);
     Route::post('/update-active-our-solutions', ['as' => 'update-active-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@updateOne']);
+
+    Route::get('/list-resources', ['as' => 'list-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@index']);
+    Route::get('/add-resources', ['as' => 'add-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@add']);
+    Route::post('/add-resources', ['as' => 'add-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@store']);
+    Route::get('/edit-resources/{edit_id}', ['as' => 'edit-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@edit']);
+    Route::post('/update-resources', ['as' => 'update-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@update']);
+    Route::post('/show-resources', ['as' => 'show-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@show']);
+    Route::post('/delete-resources', ['as' => 'delete-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@destroy']);
+    Route::post('/update-active-resources', ['as' => 'update-active-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@updateOne']);
 
 
 
