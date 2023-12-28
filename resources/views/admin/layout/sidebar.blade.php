@@ -44,7 +44,9 @@
                             href="{{ route('list-marquee-tab') }}">Marquee</a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-solution') }}">Solutions</a>
-                   
+                    </li>
+                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resource') }}">Resources & Insights</a>
                     </li>
                 </ul>
             </div>
@@ -63,6 +65,8 @@
 
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-our-solutions') }}">Our Solutions</a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resources') }}">Our Resources</a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-additional-solutions') }}">Additional Solutions</a></li>
                     {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ route('list-fesspayment-form') }}">Sub Slider</a> --}}
