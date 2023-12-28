@@ -3,22 +3,30 @@
 
     <!-- Start contact-background -->
     <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-md-12">
-                        <div class="logo image-fluid">
-                            <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%" ;>
+            <div class="container-fluid about_img">
+               
+                    <div class="container">
+                        <div class="row mt-5">
+                            <div class="col-md-12 mt-5 text-center">
+                                <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
+                                <h2 class="mt-3 about_img_head">WHY US</h2>
+                                <p class="mb-4 about_banner_para">You probably expect your advisor to provide guidance developing your financial 
+                                    plan and investment approach. But with FIBOVIX , your advisor is so much 
+                                    more – listening to your needs and understanding what matters most to you and 
+                                    your family. You and your advisor will work together one on one to help 
+                                    create a strategy that’s uniquely yours.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
     </section>
     <!-- End contact-background -->
 
     {{-- start gallary --}}
 
-    <div class="container mt-5 mb-5">
-        <div class="row ">
+    <div class="container mt-1 mb-4">
+        <div class="row founder_section_row">
             <div class="col-lg-5">
                 <div class="row gy-4 d-grid">
                     <img src="{{ asset('website/images/f1.png') }}" alt="">
@@ -49,7 +57,7 @@
 
     <div class="container">
         <div class="row">
-            <h2 class="text-center p-3">Our <span style="color:#6246E5; padding:5px;">Advisor</span></h2>
+            <h1 class="text-center our_advisor_heading p-2">Our <span style="color:#6246E5; padding:5px;">Advisor</span></h1>
             <div class="col-md-3 col-lg-3 col-sm-3">
 
             </div>
@@ -88,9 +96,9 @@
     </div>
 
     <div class="container thing_5_top">
-        <h2 class="text-center p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span> can help you do</h2>
+        <h1 class="text-center our_advisor_heading p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span> can help you do</h1>
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center"">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
@@ -102,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center"">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
@@ -114,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center"">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
@@ -131,7 +139,7 @@
                 
             </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center"">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image" class="card_image" />
@@ -143,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center"">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
@@ -162,6 +170,59 @@
 
         </div> 
     </div>
+
+    <div class="container fibovix_team">
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <img class="img-fluid" src="{{ asset('website/images/Fibovix_team.jpg') }}" alt="Image">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="text-slider">
+                               <p>WORKING TOGETHER-1</p>
+                                <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                <h4><b>Typing the knot and starting a family </b></h4>
+                                <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-slider">
+                                <p>WORKING TOGETHER-2</p>
+                                 <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                 <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                 <h4><b>Typing the knot and starting a family </b></h4>
+                                 <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                             </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-slider">
+                                <p>WORKING TOGETHER-3</p>
+                                 <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                 <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                 <h4><b>Typing the knot and starting a family </b></h4>
+                                 <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                             </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#textCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="row">
