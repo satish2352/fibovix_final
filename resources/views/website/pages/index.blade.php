@@ -121,13 +121,26 @@
         {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
         <div class="row">
             <div class="backimg1 text-center py-5">
-                <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
-                <div class="text-center">
-                    <p id="" class="px-5">Everything we do starts with our purpose. Re imagining the power of
-                        investing. Connecting people for a better world. This is our purpose. This is Fibovix
-                    </p>
-                    <!-- Add your additional content here -->
+                
+                <div class="container mt-4">
+                    <div class="row text-center">
+                        <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
+                        <div class="col-md-2 col-lg-2 col-sm-2">
+
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
+                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+                            and Bank of America offer a wide range of solutions to help you get there.
+                        </p>
+
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-2">
+
+                        </div>
+                        
+                    </div>
                 </div>
+                
                 <div class="container section_center">
                     <div class="row">
 
@@ -183,12 +196,22 @@
 
     {{-- start cards --}}
 
-    <div class="container">
+    <div class="container mt-2">
         <div class="row text-center">
             <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
+            <div class="col-md-2 col-lg-2 col-sm-2">
+
+            </div>
+            <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
             <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
                 and Bank of America offer a wide range of solutions to help you get there.
             </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2">
+
+            </div>
+            
         </div>
     </div>
 
@@ -570,8 +593,7 @@
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light">Find out more about your program alternatives and
-                            investment connection. Then, with the help of your adviser, implement your strategy by
-                            choosing from a variety of possible possibilities.
+                            investment connection. Then, with the help of your adviser, implement your strategy.
                         </p>
                     </div>
                 </div>

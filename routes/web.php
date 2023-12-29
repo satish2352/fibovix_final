@@ -34,6 +34,8 @@ Route::get('/contactus', ['as' => 'contact-us', 'uses' => 'App\Http\Controllers\
 Route::get('/resources-insights', ['as' => 'resources-insights', 'uses' => 'App\Http\Controllers\Website\IndexController@resources']);
 Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\IndexController@services']);
 
+Route::get('/details', ['as' => 'details', 'uses' => 'App\Http\Controllers\Website\IndexController@resouceInsightsDetails']);
+
 
 
 

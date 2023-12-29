@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-</section>
+
 <!-- End contact-background -->
 
 <div class="container mt-5">
@@ -102,193 +102,254 @@
 
     </div>
 </div>
-
-<div class="container thing_5_top">
-    <h2 class="text-center p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span> can help you do
-    </h2>
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card_container">
-                <div class="card_header">
-                    <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
-                </div>
-                <div class="card_body">
-                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                </div>
-                <div class="card_footer">
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card_container">
-                <div class="card_header">
-                    <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
-                </div>
-                <div class="card_body">
-                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                </div>
-                <div class="card_footer">
+<div class="container-fluid thing5_bg">
+    <div class="container thing_5_top">
+        <h2 class="text-center p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span> can help you do
+        </h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card_container">
+                    <div class="card_header">
+                        <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
+                    </div>
+                    <div class="card_body">
+                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                    </div>
+                    <div class="card_footer">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="card_container">
-                <div class="card_header">
-                    <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
-                </div>
-                <div class="card_body">
-                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                </div>
-                <div class="card_footer">
-                </div>
-            </div>
-        </div>
-
-        <div class="col-2">
-
-        </div>
-
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="card_container">
-                <div class="card_header">
-                    <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image"
-                        class="card_image" />
-                </div>
-                <div class="card_body">
-                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                </div>
-                <div class="card_footer">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card_container">
+                    <div class="card_header">
+                        <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
+                    </div>
+                    <div class="card_body">
+                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                    </div>
+                    <div class="card_footer">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="card_container">
-                <div class="card_header">
-                    <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
-                </div>
-                <div class="card_body">
-                    <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
-                </div>
-                <div class="card_footer">
+            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card_container">
+                    <div class="card_header">
+                        <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
+                    </div>
+                    <div class="card_body">
+                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                    </div>
+                    <div class="card_footer">
+                    </div>
                 </div>
             </div>
+
+            <div class="col-2">
+
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card_container">
+                    <div class="card_header">
+                        <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image"
+                            class="card_image" />
+                    </div>
+                    <div class="card_body">
+                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                    </div>
+                    <div class="card_footer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+                <div class="card_container">
+                    <div class="card_header">
+                        <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
+                    </div>
+                    <div class="card_body">
+                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                    </div>
+                    <div class="card_footer">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-2">
+
+            </div>
+
         </div>
-
-        <div class="col-2">
-
-        </div>
-
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-1">
 
-        </div>
-        <div class="col-md-10">
+<div class="container fibovix_team mt-5 mb-5">
+        <div class="row fibovix_team_setcard">
+            <div class="col-12 col-md-8 set_team_img">
+                <img class="img-fluid" src="{{ asset('website/images/Fibovix_team.jpg') }}" alt="Image">
+            </div>
+            <div class="col-12 col-md-4 media_set_about">
 
-            <div class="container about_contact_form">
-                <h2 class="text-center p-3">Have an <span style="color:#6246E5; padding:5px;">Advisor</span> contact
-                    you.</h2>
-                <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
-                <div class="row about_contact_row">
-                    @include('website.layouts.alert')
-                    <form class="row g-3 needs-validation" action="{{ url('add-about-us-contactus') }}" id="regForm"
-                        method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="col-md-6">
-                            <label for="validationCustom01" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}"
-                                id="full_name">
-                            <span id="number-validate" class="red-text"></span>
-                            @if ($errors->has('full_name'))
-                            <span class="red-text">
-                                <?php echo $errors->first('full_name', ':message'); ?>
-                            </span>
-                            @endif
-
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators carousel-indicators_new">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div class="col-md-6">
-                            <label for="validationCustom02" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
-                            <span id="number-validate" class="red-text"></span>
-                            @if ($errors->has('email'))
-                            <span class="red-text">
-                                <?php echo $errors->first('email', ':message'); ?>
-                            </span>
-                            @endif
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="text-slider">
+                                <p>WORKING TOGETHER-1</p>
+                                    <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                    <h4><b>Typing the knot and starting a family </b></h4>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="text-slider">
+                                    <p>WORKING TOGETHER-2</p>
+                                    <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                    <h4><b>Typing the knot and starting a family </b></h4>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="text-slider">
+                                    <p>WORKING TOGETHER-3</p>
+                                    <h3>Prepare for important <span class="font_color">milestones</span> </h3>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
+                                    <h4><b>Typing the knot and starting a family </b></h4>
+                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="col-md-6">
-                            <label for="validationCustom03" class="form-label">Phone</label>
-                            <input type="text" class="form-control" name="mobile_number"
-                                value="{{ old('mobile_number') }}" id="validationCustom03">
-                            <span id="number-validate" class="red-text"></span>
-                            @if ($errors->has('mobile_number'))
-                            <span class="red-text">
-                                <?php echo $errors->first('mobile_number', ':message'); ?>
-                            </span>
-                            @endif
-                        </div>
-                        <div class="col-md-6">
-                            <label for="zip_code" class="form-label">Zip Code</label>
-                            <input type="text" class="form-control" id="validationCustom03" name="zip_code"
-                                value="{{ old('zip_code') }}">
-                            <span id="number-validate" class="red-text"></span>
-                            @if ($errors->has('zip_code'))
-                            <span class="red-text">
-                                <?php echo $errors->first('zip_code', ':message'); ?>
-                            </span>
-                            @endif
-                        </div>
-
-                        <div class="col-md-12 py-3 captcha_set" style="text-align: -webkit-right;">
-                            {!! NoCaptcha::renderJs() !!}
-                            {!! NoCaptcha::display() !!}
-
-                            @if ($errors->has('g-recaptcha-response'))
-                            <span class="help-block">
-                                <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
-                            </span>
-                            @endif
-                        </div>
-
-                        <div class="col-sm-12 col-md-12 col-lg-12">
-                            <p class="form_para mt-4"> <input type="checkbox" id="agree_checkbox" name="agree_checkbox"
-                                    value="">
-                                @if ($errors->has('agree_checkbox'))
-                                <span class="help-block">
-                                    <span class="red-text">{{ $errors->first('agree_checkbox') }}</span>
-                                </span>
-                                @endif
-                                By providing your contact information above, you agree that a
-                                representative of Merrill, the Brokerage
-                                affiliate of Bank of America Corporation, may contact you via telephone and/or email to
-                                discuss and/or offer investment products and services that may be appropriate for you.
-                                You
-                                agree that
-                                you are providing to us your consent for us to contact you regardless of any Do Not Call
-                                or
-                                Do Not
-                                Email privacy choices you may have previously expressed until you revoke this consent,
-                                or up
-                                to 90 days.
-                                You may revoke your consent at any time by notifying the Merrill representative.
-                            </p>
-                        </div>
-
-
-                        <div class="form_btn"><br>
-                            <button class="btn btn-primary mb-2" type="submit">Submit</button>
-                        </div>
-                    </form>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div class="col-md-1">
+    </div>
 
+
+<div class="container-fluid about_contact_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10">
+
+                <div class="container about_contact_form">
+                    <h2 class="text-center p-3">Have an <span style="color:#6246E5; padding:5px;">Advisor</span> contact
+                        you.</h2>
+                    <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
+                    <div class="row about_contact_row">
+                        @include('website.layouts.alert')
+                        <form class="row g-3 needs-validation" action="{{ url('add-about-us-contactus') }}" id="regForm"
+                            method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}"
+                                    id="full_name">
+                                <span id="number-validate" class="red-text"></span>
+                                @if ($errors->has('full_name'))
+                                <span class="red-text">
+                                    <?php echo $errors->first('full_name', ':message'); ?>
+                                </span>
+                                @endif
+
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
+                                <span id="number-validate" class="red-text"></span>
+                                @if ($errors->has('email'))
+                                <span class="red-text">
+                                    <?php echo $errors->first('email', ':message'); ?>
+                                </span>
+                                @endif
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="validationCustom03" class="form-label">Phone</label>
+                                <input type="text" class="form-control" name="mobile_number"
+                                    value="{{ old('mobile_number') }}" id="validationCustom03">
+                                <span id="number-validate" class="red-text"></span>
+                                @if ($errors->has('mobile_number'))
+                                <span class="red-text">
+                                    <?php echo $errors->first('mobile_number', ':message'); ?>
+                                </span>
+                                @endif
+                            </div>
+                            <div class="col-md-6">
+                                <label for="zip_code" class="form-label">Zip Code</label>
+                                <input type="text" class="form-control" id="validationCustom03" name="zip_code"
+                                    value="{{ old('zip_code') }}">
+                                <span id="number-validate" class="red-text"></span>
+                                @if ($errors->has('zip_code'))
+                                <span class="red-text">
+                                    <?php echo $errors->first('zip_code', ':message'); ?>
+                                </span>
+                                @endif
+                            </div>
+
+                            <div class="col-md-12 py-3 captcha_set" style="text-align: -webkit-right;">
+                                {!! NoCaptcha::renderJs() !!}
+                                {!! NoCaptcha::display() !!}
+
+                                @if ($errors->has('g-recaptcha-response'))
+                                <span class="help-block">
+                                    <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
+                                </span>
+                                @endif
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <p class="form_para mt-4"> <input type="checkbox" id="agree_checkbox" name="agree_checkbox"
+                                        value="">
+                                    @if ($errors->has('agree_checkbox'))
+                                    <span class="help-block">
+                                        <span class="red-text">{{ $errors->first('agree_checkbox') }}</span>
+                                    </span>
+                                    @endif
+                                    By providing your contact information above, you agree that a
+                                    representative of Merrill, the Brokerage
+                                    affiliate of Bank of America Corporation, may contact you via telephone and/or email to
+                                    discuss and/or offer investment products and services that may be appropriate for you.
+                                    You
+                                    agree that
+                                    you are providing to us your consent for us to contact you regardless of any Do Not Call
+                                    or
+                                    Do Not
+                                    Email privacy choices you may have previously expressed until you revoke this consent,
+                                    or up
+                                    to 90 days.
+                                    You may revoke your consent at any time by notifying the Merrill representative.
+                                </p>
+                            </div>
+
+
+                            <div class="form_btn"><br>
+                                <button class="btn btn-primary mb-2" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-1">
+
+            </div>
         </div>
     </div>
 </div>

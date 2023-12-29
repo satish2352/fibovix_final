@@ -133,4 +133,9 @@ class IndexController extends Controller
     public function services() {
         return view('website.pages.services');
     }
+
+    
+    public function resouceInsightsDetails() {
+        return view('website.pages.details');
+    }
 }
