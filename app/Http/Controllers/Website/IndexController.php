@@ -56,7 +56,29 @@ class IndexController extends Controller
         }
     }
 
-    // list-our-solutions
+    // 
+
+    public function listOurSolutionsAjax(Request $request)
+    {
+        try {
+
+            $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id');
+                                    if($request['our_solutions_master_id'] != 'all') {
+                                        $ourSolutions =  $ourSolutions->where('our_solutions_master.id','=',$request['our_solutions_master_id']);
+                                    }
+            $ourSolutions =  $ourSolutions->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
+                                    'our_solutions.short_description',
+                                    'our_solutions.long_description',
+                                    'our_solutions.image',
+                                    'our_solutions_master.solution_name',
+                                    'our_solutions_master.id as our_solutions_master_id')
+                                    ->get();
+
+            return $ourSolutions;
+        } catch (\Exception $e) {
+            return $e;
+        }
+    }
 
     public function getAllAjaxMultimedia(Request $request) {
         $return_data = $this->service->getAllGallery($request);

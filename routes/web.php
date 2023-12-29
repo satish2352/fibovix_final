@@ -32,6 +32,8 @@ Route::get('/', ['as' => '/', 'uses' => 'App\Http\Controllers\Website\IndexContr
 Route::get('/aboutus', ['as' => 'aboutus', 'uses' => 'App\Http\Controllers\Website\IndexController@aboutus']);
 Route::get('/contactus', ['as' => 'contact-us', 'uses' => 'App\Http\Controllers\Website\IndexController@contactus']);
 Route::get('/resources-insights', ['as' => 'resources-insights', 'uses' => 'App\Http\Controllers\Website\IndexController@resources']);
+Route::POST('/list-our-solutions-ajax', ['as' => 'list-our-solutions-ajax', 'uses' => 'App\Http\Controllers\Website\IndexController@listOurSolutionsAjax']);
+
 Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\IndexController@services']);
 
 
