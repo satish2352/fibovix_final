@@ -117,18 +117,107 @@
 {{-- start whyfibovix section --}}
 
 
-<div class="container-fluid">
-    {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
-    <div class="row">
-        <div class="backimg1 text-center py-5">
-            <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
-            <div class="text-center">
-                <p id="" class="px-5">Everything we do starts with our purpose. Re imagining the power of
-                    investing. Connecting people for a better world. This is our purpose. This is Fibovix
-                </p>
-                <!-- Add your additional content here -->
+    <div class="container-fluid">
+        {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
+        <div class="row">
+            <div class="backimg1 text-center py-5">
+                
+                <div class="container mt-4">
+                    <div class="row text-center">
+                        <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
+                        <div class="col-md-2 col-lg-2 col-sm-2">
+
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
+                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+                            and Bank of America offer a wide range of solutions to help you get there.
+                        </p>
+
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-2">
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="container section_center">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card shadow-lg"
+                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                                <div class="card-body ">
+                                    <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
+                                    <h5 id="hh">Needs</h5>
+                                    <p>
+                                        Your strategy is built on your objectives, concerns, and investment mindset.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card shadow-lg"
+                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                                <div class="card-body ">
+                                    <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
+                                    <h5 id="hh">Advisor</h5>
+                                    <p>
+                                        Your adviser is dedicated to supporting you in achieving your objectives & will
+                                        offer
+                                        tailored guidance from the start.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card shadow-lg"
+                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                                <div class="card-body ">
+                                    <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
+                                    <h5 id="hh">Strategy</h5>
+                                    <p>Your adviser can recommend tax-minimization techniques as part of your overall
+                                        investing
+                                        strategy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container section_center">
+
+        </div>
+    </div>
+
+    {{-- end whyfibovix section --}}
+    <!-- <div class="contaback text-center mx-auto"> -->
+
+
+    {{-- start cards --}}
+
+    <div class="container mt-2">
+        <div class="row text-center">
+            <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
+            <div class="col-md-2 col-lg-2 col-sm-2">
+
+            </div>
+            <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
+            <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+                and Bank of America offer a wide range of solutions to help you get there.
+            </p>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2">
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container contaback">
+        <div class="card solution_card p-3">
+            <div class="col-md-12">
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -330,8 +419,7 @@
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
                         <p class="card-text border-0 bg-light">Find out more about your program alternatives and
-                            investment connection. Then, with the help of your adviser, implement your strategy by
-                            choosing from a variety of possible possibilities.
+                            investment connection. Then, with the help of your adviser, implement your strategy.
                         </p>
                     </div>
                 </div>

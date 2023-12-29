@@ -3,11 +3,11 @@
 
 <!-- Start contact-background -->
 <section>
-    <div class="container-fluid">
+    <div class="container-fluid conact_page_img">
         <div class="row">
-            <div class="col-lg-md-12">
+            <div class="col-md-12 g-0">
                 <div class="logo image-fluid">
-                    <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%" ;>
+                    <img src="{{ asset('website/images/contact-background.jpg') }}" width="100%">
                 </div>
             </div>
         </div>
@@ -15,58 +15,59 @@
 </section>
 <!-- End contact-background -->
 
-<!-- Start Cards -->
-<div class="container mb-md-4">
-    <div class="row g-0">
-        <div class="col-md-12">
-            <div class="row mt-5 g-3 justify-content-center">
-                <div class="col-md-12 col-lg-8">
-                    <div class="row">
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center"><span>
-                                        <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
-                                                alt=""></i></span>
+        <!-- Start Cards -->
+    <div class="container contactus_bg">    
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="row mt-5 g-3 justify-content-center">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                    <div class="services">
+                                        <div class="icon d-flex align-items-center justify-content-center"><span>
+                                                <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
+                                                        alt=""></i></span>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Office</h2>
+                                            <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h2>Office</h2>
-                                    <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
+                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                    <div class="services">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
+                                                    alt=""></i></span>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Email</h2>
+                                            <p>info@fibovix.com</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
-                                            alt=""></i></span>
+                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                    <div class="services">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i>
+                                                </span>
+                                        </div>
+                                        <div class="text">
+                                            <h2>Phone</h2>
+                                            <p>6262757562 </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <h2>Email</h2>
-                                    <p>info@fibovix.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                            <div class="services">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i>
-                                        </span>
-                                </div>
-                                <div class="text">
-                                    <h2>Phone</h2>
-                                    <p>6262757562 </p>
-                                </div>
-                            </div>
-                        </div>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</section>
-<!-- End Cards -->
+        <!-- End Cards -->
 
 <!-- start Map -->
 <section>
@@ -145,7 +146,7 @@
                 </span>
                 @endif
             </div>
-            <div class="col-md-12 py-3 captcha_set" style="text-align: -webkit-right;">
+            <div class="col-md-12 py-3 captcha_set captcha_css" style="text-align: -webkit-right;">
                 {!! NoCaptcha::renderJs() !!}
                 {!! NoCaptcha::display() !!}
 
