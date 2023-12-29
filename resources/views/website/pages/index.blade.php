@@ -381,11 +381,11 @@
             <div class="card-body">
                 <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
                 <p class="card-text">{{ strip_tags($item->short_description) }}</p>
-                <a href="" target="_blank">
+                <!-- <a href="" target="_blank">
                     <button class="btn btn-primary1 float-right">
                         Learn More
                     </button>
-                </a>
+                </a> -->
             </div>
 
         </div>

@@ -97,6 +97,17 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/update-active-resources', ['as' => 'update-active-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@updateOne']);
 
 
+//Satish
+    Route::get('/list-resource-and-insights', ['as' => 'list-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@index']);
+    Route::get('/add-resource-and-insights', ['as' => 'add-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@add']);
+    Route::post('/add-resource-and-insights', ['as' => 'add-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@store']);
+    Route::get('/edit-resource-and-insights/{edit_id}', ['as' => 'edit-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@edit']);
+    Route::post('/update-resource-and-insights', ['as' => 'update-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@update']);
+    Route::post('/show-resource-and-insights', ['as' => 'show-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@show']);
+    Route::post('/delete-resource-and-insights', ['as' => 'delete-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@destroy']);
+    Route::post('/update-active-resource-and-insights', ['as' => 'update-active-resource-and-insights', 'uses' => 'App\Http\Controllers\Admin\Home\ResourcesAndInsightsController@updateOne']);
+//Satish
+
 
     Route::get('/list-additional-solutions', ['as' => 'list-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@index']);
     Route::get('/add-additional-solutions', ['as' => 'add-additional-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\AdditionalSolutionsController@add']);
