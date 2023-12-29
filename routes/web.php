@@ -36,6 +36,8 @@ Route::POST('/list-our-solutions-ajax', ['as' => 'list-our-solutions-ajax', 'use
 
 Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\IndexController@services']);
 
+Route::get('/details', ['as' => 'details', 'uses' => 'App\Http\Controllers\Website\IndexController@resouceInsightsDetails']);
+
 
 
 

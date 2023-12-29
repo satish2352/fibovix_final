@@ -1,7 +1,7 @@
 {{-- <hr class="line"> --}}
 
 {{-- footer --}}
-<footer>
+<footer class="mt-5">
 <div class="footimg">
 
 <div class="container-fluid">
@@ -43,10 +43,29 @@
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
         <p>Book your trip in minute, get full
           Control for much longer.</p>
+        <div class="row">
+          <div class="col-md-12 set_social_media_icon">
+            <div class="col-md-4 set_icons_content">
+              <div class="icon d-flex align-items-center justify-content-center social_icons_div"><span>
+                <i class="fa fa-instagram fa-1x icon" aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <div class="col-md-4 set_icons_content">
+              <div class="icon d-flex align-items-center justify-content-center social_icons_div"><span>
+                <i class="fa fa-facebook fa-1x icon" aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <div class="col-md-4 set_icons_content">
+              <div class="icon d-flex align-items-center justify-content-center social_icons_div"><span>
+                <i class="fa fa-envelope-o fa-1x icon" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <hr class="clearfix w-100 d-md-none">
-      <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h6 class="text-uppercase mt-4 font-weight-bold">Company</h6>
+      <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer_link">
+        <h6 class="text-uppercase mt-4 font-weight-bold mb-4">Company</h6>
         {{-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
         <p>
           <a href="#!" id="links">About</a>
@@ -62,8 +81,8 @@
         </p> --}}
       </div>
       <hr class="clearfix w-100 d-md-none">
-      <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-        <h6 class="text-uppercase mt-4 font-weight-bold">Contact</h6>
+      <div id="link10" class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer_link">
+        <h6 class="text-uppercase mt-4 font-weight-bold mb-4">Contact</h6>
         {{-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
         <p>
           <a href="#!" id="links">Help/FAQ</a>
@@ -79,8 +98,8 @@
         </p> --}}
       </div>
       <hr class="clearfix w-100 d-md-none">
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-        <h6 class="text-uppercase mt-4 font-weight-bold">More</h6>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer_link">
+        <h6 class="text-uppercase mt-4 font-weight-bold mb-4">More</h6>
         {{-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> --}}
         <p id="links">
           {{-- <i class="fas fa-home mr-3"></i> --}}
@@ -100,7 +119,7 @@
 
   <div class="container ">
     <div class="row">
-      <div id="links" class="col-lg-10 col-md-10 col-sm-6 mb-3">Copyright, Trabook 2022. All rights reserved.</div>
+      <div id="links" class="col-lg-10 col-md-10 col-sm-6 mb-3">Copyright, Sumago infotech 2023. All rights reserved.</div>
       <div id="links" class="col-lg-2 col-md-10 col-sm-6 mb-3">Terms & Conditions</div>
     </div>
   </div>
@@ -110,9 +129,12 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
-
-  
+    
+    
+    
 </body>
 </html>

@@ -7,10 +7,50 @@ body{
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     text-decoration: none; 
     color: #000;
+    font-family: 'Poppins', sans-serif;
 }
 .red-text{
   color: red;
 }
+
+a{
+  text-decoration: none !important;
+}
+
+.fibovix_navbar .fibovix_navbar_nav .nav-link:active{
+  color: #4B75EB !important;
+}
+
+.fibovix_navbar_nav li.nav-item:active{
+  color: #4B75EB !important;
+}
+
+.nav-item a:active {
+  color: #4B75EB !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+  color: #4B75EB !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0) !important;
+  font-weight: 500 !important;
+}
+
+.fibovix_navbar {
+  border-bottom: 1px solid #adadad94;
+}
+
+.navbar_mobile {
+  color: rgb(0 0 0) !important;
+  font-weight: 500 !important;
+}
+
+.mt4 {
+  margin-top: 4.1rem!important;
+}
+
   /* start navbar */
   li {
     font-weight: 200px;
@@ -36,8 +76,8 @@ body{
     color: #223fa0;
   }
   .navbar-nav li.nav-item {
-    padding-left: 20px; /* Adjust the left padding as needed */
-    padding-right: 20px; /* Adjust the right padding as needed */
+    padding-left: 17px; /* Adjust the left padding as needed */
+    padding-right: 17px; /* Adjust the right padding as needed */
   }
   
   /* end navbar */
@@ -86,7 +126,7 @@ body{
    height:15rem
  }
   #fibovix{
-    line-height: 100px;
+    line-height: 88px;
     font-weight: 750;
     /* margin-top: 50%; */
     font-size: 40px !important;
@@ -196,7 +236,7 @@ body{
   }
 
   .footimg{
-    background-image: url('../images/footer.png');
+    background-image: url('../images/new_footer.png');
     background-size: cover;
     /* height: %; */
     /* background-attachment: fixed; */
@@ -206,7 +246,32 @@ body{
   #links{
     color:#666666 !important;
   }
+.set_social_media_icon{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
 
+@media screen and (min-width: 995px) {
+    .footer_link{
+      margin-top: 5rem;
+    }
+}
+
+.social_icons_div{
+  background-color: #fff;
+  color: #6246E5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.social_icons_div:hover{
+  background-color: #6246E5;
+  color: #fff;
+}
+.set_icons_content{
+  display: contents;
+}
 
    /* media query */
    
@@ -586,7 +651,8 @@ box-shadow:4px 4px 4px #111;
 
 .about_contact_form{
   padding: 2%;
-  box-shadow: 2px 2px 4px 2px #ddd;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px 2px #ddd;
 }
 
 .about_contact_row{
@@ -712,7 +778,7 @@ box-shadow:4px 4px 4px #111;
   border: none;
   outline: none;
   font-size: 1rem;
-  font-weight: 300;
+  /* font-weight: 300; */
   background: #eee;
   letter-spacing: 0.02em;
 }
@@ -758,10 +824,10 @@ box-shadow:4px 4px 4px #111;
 .services {
   width: 100%;
   background: #fff;
-  padding: 20px;
+  padding: 19px;
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 15px;
   transition: all 0.3s ease;
   z-index: 0;
   margin-bottom: 30px;
@@ -775,13 +841,13 @@ box-shadow:4px 4px 4px #111;
   margin: 0 auto;
   border-radius: 50%;
   background: #eff2ff;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
 }
 .services .text h2 {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 10px;
-
+  color: #7C4EE4;
 }
 .services .text p {
   color: #88879e;
@@ -904,10 +970,10 @@ box-shadow:4px 4px 4px #111;
   .workt-img {
     height: auto;
   }
-
+/* 
   .col-lg-5 {
     margin-top: 20px;
-  }
+  } */
 
   .wtsub {
     border-radius: 0;
@@ -938,6 +1004,31 @@ box-shadow:4px 4px 4px #111;
   background-attachment: inherit;
   
  }
+
+ .thing5_bg{
+    background-image: url('../images/about_us.png');
+    /* 
+    background-attachment: fixed; */
+    background-size: cover;
+    /* background-attachment: inherit; */
+ }
+
+ .about_contact_bg{
+  background-image: url('../images/contact_about.png');
+  /* 
+  background-attachment: fixed; */
+  background-size: cover;
+  /* background-attachment: inherit; */
+}
+
+.contactus_bg{
+  background-image: url('../images/Rectangle2.png');
+  /* 
+  background-attachment: fixed; */
+  background-size: cover;
+  /* background-attachment: inherit; */
+}
+
  .about_img_head{
   color: #1F2D87;
   font-weight: 900;
@@ -970,3 +1061,111 @@ box-shadow:4px 4px 4px #111;
   color: blue;
 }
 
+/*  */
+.fibovix_team {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fibovix_team_setcard{
+  box-shadow: 2px 2px 4px 2px #ddd;
+  border-radius: 2px;
+}
+
+.set_team_img{
+  padding-left: 0!important;
+}
+
+.text-slider {
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.font_color{
+  color: blue;
+}
+
+.carousel-indicators_new [data-bs-target] {
+  border-radius: 50%;
+    width: 1rem !important;
+    height: 15px !important;
+    background-color: #3C3C3C;
+}
+/* .carousel-indicators_new{
+  right: 14rem !important;
+  top: 19.5rem !important;
+  bottom: -16px !important;
+} */
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .media_set_about{
+    overflow-y: scroll;
+    height: 11rem;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1016px) {
+  .media_set_about{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 13rem;
+  }
+  .circleimg {
+    margin-left: 43%;
+  }
+}
+
+@media (min-width: 1017px) and (max-width: 1193px) {
+  .media_set_about{
+    overflow-y: scroll;
+    height: 18rem;
+  }
+}
+
+/* @media (min-width: 1194px) and (max-width: 1394px) {
+  .media_set_about{
+    overflow-y: scroll;
+    height: 19rem;
+  }
+} */
+
+@media (max-width: 1024px) {
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* .conact_page_img{
+  padding: 0px !important;
+} */
+
+@media (max-width: 768px) {
+  .conact_page_img{
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 380px) {
+  .conact_page_img{
+    margin-top: 6rem;
+  }
+}
+
+.captcha_css{
+  text-align: -webkit-right;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+/* details page */
+.set_details_pg_row{
+  /* padding: 4rem; */
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+
+.text-align-justify{
+  text-align: justify;
+}
