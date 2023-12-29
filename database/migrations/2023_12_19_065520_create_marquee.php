@@ -17,8 +17,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('marquee_tab_id');
             $table->string('title');
-            $table->string('url')->default('null');
-            $table->string('image')->default('null');
+            $table->string('url');
+            $table->string('image');
             $table->string('is_deleted')->default(false);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

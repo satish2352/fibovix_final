@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('our_solutions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('solution_id');
-            $table->text('title')->default('null');
-            $table->text('short_description')->default('null');
-            $table->text('long_description')->default('null');
-            $table->text('image')->default('null');
+            $table->text('title');
+            $table->text('short_description');
+            $table->text('long_description');
+            $table->text('image');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

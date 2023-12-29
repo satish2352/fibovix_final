@@ -87,6 +87,19 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/delete-our-solutions', ['as' => 'delete-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@destroy']);
     Route::post('/update-active-our-solutions', ['as' => 'update-active-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@updateOne']);
 
+
+
+    Route::get('/list-services', ['as' => 'list-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@index']);
+    Route::get('/add-services', ['as' => 'add-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@add']);
+    Route::post('/add-services', ['as' => 'add-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@store']);
+    Route::get('/edit-services/{edit_id}', ['as' => 'edit-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@edit']);
+    Route::post('/update-services', ['as' => 'update-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@update']);
+    Route::post('/show-services', ['as' => 'show-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@show']);
+    Route::post('/delete-services', ['as' => 'delete-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@destroy']);
+    Route::post('/update-active-services', ['as' => 'update-active-services', 'uses' => 'App\Http\Controllers\Admin\Master\ServicesMasterController@updateOne']);
+
+
+
     Route::get('/list-resources', ['as' => 'list-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@index']);
     Route::get('/add-resources', ['as' => 'add-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@add']);
     Route::post('/add-resources', ['as' => 'add-resources', 'uses' => 'App\Http\Controllers\Admin\Home\ResourceController@store']);

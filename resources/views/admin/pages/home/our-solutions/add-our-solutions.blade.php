@@ -27,12 +27,12 @@
 <div class="main-panel">
     <div class="content-wrapper mt-6">
         <div class="page-header">
-            <h3 class="page-title">Courses Offered
+            <h3 class="page-title">Our Solutions
             </h3>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('list-our-solutions') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"> Courses Offered </li>
+                    <li class="breadcrumb-item active" aria-current="page"> Our Solutions </li>
                 </ol>
             </nav>
         </div>

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('resource_master', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('name')->default('null');
+            $table->text('name');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

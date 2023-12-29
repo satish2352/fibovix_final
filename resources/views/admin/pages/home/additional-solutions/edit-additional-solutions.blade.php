@@ -5,12 +5,12 @@
         <div class="content-wrapper mt-6">
             <div class="page-header">
                 <h3 class="page-title">
-                    Courses Offered
+                    Addiotional Solutions
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('list-additional-solutions') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Update Courses Offered</li>
+                        <li class="breadcrumb-item active" aria-current="page"> Update Addiotional Solutions</li>
                     </ol>
                 </nav>
             </div>

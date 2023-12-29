@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('our_resource', function (Blueprint $table) {
+        Schema::create('services_masters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('resource_id');
-            $table->text('title');
-            $table->text('short_description');
-            $table->text('long_description');
-            $table->text('image');
+            $table->text('service_name');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 
-        
         });
     }
 
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('our_resource');
+        Schema::dropIfExists('services_masters');
     }
 };

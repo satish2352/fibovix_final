@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('short_description');
             $table->text('long_description');
-            $table->string('image')->default('null');
+            $table->string('image');
             $table->string('is_deleted')->default(false);
             $table->boolean('is_active')->default(true);
             $table->timestamps();

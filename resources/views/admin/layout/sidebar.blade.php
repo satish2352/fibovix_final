@@ -31,7 +31,7 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-        <li class="{{request()->is('list-marquee-tab*') 
+        <!-- <li class="{{request()->is('list-marquee-tab*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
                 <i class="fa fa-th-large menu-icon"></i>
@@ -42,15 +42,83 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-marquee-tab') }}">Marquee</a></li>
+                    
+                </ul>
+            </div>
+        </li> -->
+
+
+        <li class="{{request()->is('list-marquee-tab*') 
+            ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
+                <i class="fa fa-th-large menu-icon"></i>
+                <span class="menu-title">Our Solutions</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="master">
+                <ul class="nav flex-column sub-menu">
+                   
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-solution') }}">Solutions</a>
                     </li>
+
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-resource') }}">Resources & Insights</a>
+                            href="{{ route('list-our-solutions') }}">Our Solutions</a></li>
+
+                   
+                </ul>
+            </div>
+        </li>
+
+
+        <li class="{{request()->is('list-marquee-tab*') 
+            ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
+                <i class="fa fa-th-large menu-icon"></i>
+                <span class="menu-title">Services</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="master">
+                <ul class="nav flex-column sub-menu">
+                   
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-services') }}">Services</a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resource') }}">Services Details</a>
                     </li>
                 </ul>
             </div>
         </li>
+
+
+        <li class="{{request()->is('list-marquee-tab*') 
+            ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
+                <i class="fa fa-th-large menu-icon"></i>
+                <span class="menu-title">Resources & Insights</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="master">
+                <ul class="nav flex-column sub-menu">
+                   
+                    <!-- <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resource') }}">Resources & Insights Master</a>
+                    </li>
+
+
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resources') }}">Resources Details</a></li> -->
+
+
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-resource-and-insights') }}">Resources and Insights Details</a></li>
+
+                  
+                </ul>
+            </div>
+        </li>
+
+
         <li class="{{request()->is('list-slide*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home">
@@ -62,20 +130,13 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item d-none d-lg-block"><a class="nav-link active"
                             href="{{ route('list-slide') }}">Slider</a></li>
-
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-our-solutions') }}">Our Solutions</a></li>
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link" href="{{ route('list-resources') }}">Our
-                            Resources</a></li>
+                    
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-additional-solutions') }}">Additional Solutions</a></li>
 
-                    <!-- Satish -->
-                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-resource-and-insights') }}">Resources and Insights Solutions</a></li>
-                    <!-- Satish -->
-                    {{-- <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-fesspayment-form') }}">Sub Slider</a> --}}
+                    
+                    <!-- <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-fesspayment-form') }}">Sub Slider</a>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-marquee') }}">Marquee</a>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
@@ -85,11 +146,11 @@
                             href="{{ route('list-fesspayment-form') }}"> Reasons Choose Upadhye Classes</a> --}}
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-testimonial') }}">Testimonial </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </li>
-        <li class="{{request()->is('list-application-form*') 
+        <!-- <li class="{{request()->is('list-application-form*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#adminssion" aria-expanded="false" aria-controls="master">
                 <i class="fas fa-file-alt menu-icon"></i>
@@ -111,8 +172,8 @@
 
                 </ul>
             </div>
-        </li>
-        <li class="{{request()->is('list-ourresult-category*') 
+        </li> -->
+        <!-- <li class="{{request()->is('list-ourresult-category*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#ourresult" aria-expanded="false" aria-controls="master">
                 <i class="fas fa-bars menu-icon"></i>
@@ -131,7 +192,7 @@
 
                 </ul>
             </div>
-        </li>
+        </li> -->
         <li class="{{request()->is('list-gallery*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('list-gallery') }}">
