@@ -1005,6 +1005,22 @@ box-shadow:4px 4px 4px #111;
   
  }
 
+ /* .media_img{
+  background-image: url('../images/media/media_banner.png');
+  background-size: cover;
+  background-attachment: fixed;
+  
+ } */
+
+ .media_bg_img{
+    background-image: url('../images/media/media_bg.png');
+    /* background-size: cover;
+    
+    background-attachment: fixed; */
+    background-size: cover;
+    background-attachment: inherit;
+ }
+
  .thing5_bg{
     background-image: url('../images/about_us.png');
     /* 
