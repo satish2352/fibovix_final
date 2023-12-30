@@ -26,7 +26,7 @@ class AdditionalSolutionsRepository  {
             $dataOutput->title = $request['title'];
             $dataOutput->short_description = $request['short_description'];
             $dataOutput->long_description = $request['long_description'];
-        
+            $dataOutput->image = 'null';
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
 
@@ -55,9 +55,8 @@ class AdditionalSolutionsRepository  {
                 return null;
             }
         } catch (\Exception $e) {
-            return $e;
             return [
-                'msg' => 'Failed to get by id Data.',
+                'msg' => $e,
                 'status' => 'error'
             ];
         }
@@ -80,6 +79,7 @@ class AdditionalSolutionsRepository  {
             $dataOutput->title = $request['title'];
             $dataOutput->short_description = $request['short_description'];
             $dataOutput->long_description = $request['long_description'];
+            
             
             $dataOutput->save();
             $last_insert_id = $dataOutput->id;

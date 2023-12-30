@@ -31,7 +31,6 @@ class ResourceController extends Controller
 }
 
         public function store(Request $request){
-// dd($request);
             $rules = [
                 'title' => 'required',
                 'short_description' => 'required',

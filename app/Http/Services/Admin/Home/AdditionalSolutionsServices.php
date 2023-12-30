@@ -28,9 +28,9 @@ class AdditionalSolutionsServices
             uploadImage($request, 'image', $path, $ImageName);
            
             if ($last_id) {
-                return ['status' => 'success', 'msg' => 'Courses Offered Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => ' Courses Offered get Not Added.'];
+                return ['status' => 'error', 'msg' => ' Data Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
@@ -59,10 +59,8 @@ class AdditionalSolutionsServices
                 if ($request->hasFile('image')) {
                     $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->file('image')->extension();
                     
-                    // Rest of your code...
                 } else {
-                    // Handle the case where 'image' key is not present in the request.
-                    // For example, you might want to skip the file handling or return an error message.
+                    
                 }                
                 // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
                 uploadImage($request, 'image', $path, $englishImageName);

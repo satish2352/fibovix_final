@@ -26,7 +26,7 @@ class ResourcesAndInsightsRepository  {
             $dataOutput->title = $request['title'];
             $dataOutput->short_description = $request['short_description'];
             $dataOutput->long_description = $request['long_description'];
-        
+            $dataOutput->image = 'null';
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
 

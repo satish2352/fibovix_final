@@ -11,29 +11,24 @@ return [
     'SLIDER_DELETE'	         => '/all_web_data/images/home/slides/',
     'SLIDER_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/slides/',
 
-    'ADDITIONAL_SOLUTIONS_ADD'	         => "/all_web_data/images/home/additionalSolutions/",
-    'ADDITIONAL_SOLUTIONS_DELETE'	     => '/all_web_data/images/home/additionalSolutions/',
-    'ADDITIONAL_SOLUTIONS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/additionalSolutions/',
+    'ADDITIONAL_SOLUTIONS_ADD'	         => "/all_web_data/images/home/additional_solutions/",
+    'ADDITIONAL_SOLUTIONS_DELETE'	     => '/all_web_data/images/home/additional_solutions/',
+    'ADDITIONAL_SOLUTIONS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/additional_solutions/',
 
-    'RESOURCES_AND_INSIGHTS_ADD'	         => "/all_web_data/images/home/additionalSolutions/",
-    'RESOURCES_AND_INSIGHTS_DELETE'	     => '/all_web_data/images/home/additionalSolutions/',
-    'RESOURCES_AND_INSIGHTS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/additionalSolutions/',
+    'RESOURCES_AND_INSIGHTS_ADD'	         => "/all_web_data/images/home/resource_and_insights/",
+    'RESOURCES_AND_INSIGHTS_DELETE'	     => '/all_web_data/images/home/resource_and_insights/',
+    'RESOURCES_AND_INSIGHTS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/resource_and_insights/',
+
+
+    'OUR_SOLUTIONS_ADD'	         => "/all_web_data/images/home/our_solutions/",
+    'OUR_SOLUTIONS_DELETE'	     => '/all_web_data/images/home/our_solutions/',
+    'OUR_SOLUTIONS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/our_solutions/',
     
-    'TESTIMONIAL_ADD'	         => "/all_web_data/images/home/testimonial/",
-    'TESTIMONIAL_DELETE'	         => '/all_web_data/images/home/testimonial/',
-    'TESTIMONIAL_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/testimonial/',
-
-    'UPCOMING_COURSES_ADD'	         => "/all_web_data/images/home/upcomingcourses/",
-    'UPCOMING_COURSES_DELETE'	         => '/all_web_data/images/home/upcomingcourses/',
-    'UPCOMING_COURSES_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/upcomingcourses/',
 
     'GALLERY_ADD'	         => "/all_web_data/images/gallery/",
     'GALLERY_DELETE'	         => '/all_web_data/images/gallery/',
     'GALLERY_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/gallery/',
 
-    'OUR_RESULT_ADD'	         => "/all_web_data/images/ourresult/",
-    'OUR_RESULT_DELETE'	         => '/all_web_data/images/ourresult/',
-    'OUR_RESULT_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/ourresult/',
     
     'DB_BACKUP'	 => "/all_web_data/DBBackup//",
 ];

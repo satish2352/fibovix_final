@@ -6,13 +6,13 @@ use DB;
 use Illuminate\Support\Carbon;
 // use Session;
 use App\Models\ {
-	SolutionModel
+	SolutionsMaster
 };
 
 class SolutionRepository{
     public function getAll(){
         try {
-            $data_output = SolutionModel::orderBy('updated_at', 'desc')->get();
+            $data_output = SolutionsMaster::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
@@ -22,12 +22,12 @@ class SolutionRepository{
 
 	public function addAll($request){
         try {
-            $incidenttype_data = new SolutionModel();
-            $incidenttype_data->solution_name  = $request['solution_name'];
+            $solutions_master_data = new SolutionsMaster();
+            $solutions_master_data->solution_name  = $request['solution_name'];
           
-            $incidenttype_data->save();       
+            $solutions_master_data->save();       
                 
-            return $incidenttype_data;
+            return $solutions_master_data;
 
         } catch (\Exception $e) {
             return [
@@ -38,7 +38,7 @@ class SolutionRepository{
     }
     public function getById($id){
         try {
-            $incidenttype = SolutionModel::find($id);
+            $incidenttype = SolutionsMaster::find($id);
             if ($incidenttype) {
                 return $incidenttype;
             } else {
@@ -54,27 +54,25 @@ class SolutionRepository{
     }
     public function updateAll($request){
         try {
-            $incidenttype_data = SolutionModel::find($request->id);
-            
-            if (!$incidenttype_data) {
+            $solutions_master_data = SolutionsMaster::find($request->id);
+
+            if (!$solutions_master_data) {
                 return [
                     'msg' => 'Solution data not found.',
                     'status' => 'error'
                 ];
             }
-        // Store the previous image names
-            $incidenttype_data->name = $request['name'];
-            // $incidenttype_data->url = $request['url'];
-            $incidenttype_data->save();        
+            $solutions_master_data->solution_name = $request['solution_name'];
+            $solutions_master_data->save();        
         
             return [
-                'msg' => 'Solution Type data updated successfully.',
+                'msg' => 'Solution data updated successfully.',
                 'status' => 'success'
             ];
         } catch (\Exception $e) {
             return $e;
             return [
-                'msg' => 'Failed to update Solution Type data.',
+                'msg' => 'Failed to update Solution data.',
                 'status' => 'error'
             ];
         }
@@ -82,7 +80,7 @@ class SolutionRepository{
 
     public function deleteById($id) {
         try {
-            $incidenttype = SolutionModel::find($id);
+            $incidenttype = SolutionsMaster::find($id);
             if ($incidenttype) {
                 // Delete the images from the storage folder
                 Storage::delete([
@@ -104,7 +102,7 @@ class SolutionRepository{
     }
     public function updateOne($request){
         try {
-            $slide = SolutionModel::find($request); // Assuming $request directly contains the ID
+            $slide = SolutionsMaster::find($request); // Assuming $request directly contains the ID
 
             // Assuming 'is_active' is a field in the Slider model
             if ($slide) {
