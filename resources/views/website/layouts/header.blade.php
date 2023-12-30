@@ -17,9 +17,7 @@
 
     <script src="https://kit.fontawesome.com/8b9cb07d67.js" crossorigin="anonymous"></script>
 
-    <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-</style>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');</style>
     
 
     
@@ -85,7 +83,7 @@
             <a class="nav-link" href="{{ route('services') }}">Services</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{{ route('resources-insights') }}">Resources & insights</a>
+              <a class="nav-link" href="{{ route('resources-insights') }}">Insights</a>
             </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a>

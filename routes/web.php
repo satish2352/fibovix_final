@@ -38,6 +38,8 @@ Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Web
 
 Route::get('/details', ['as' => 'details', 'uses' => 'App\Http\Controllers\Website\IndexController@resouceInsightsDetails']);
 
+Route::get('/media', ['as' => 'media', 'uses' => 'App\Http\Controllers\Website\IndexController@media']);
+
 
 
 

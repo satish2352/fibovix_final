@@ -177,4 +177,8 @@ class IndexController extends Controller
     public function resouceInsightsDetails() {
         return view('website.pages.details');
     }
+
+    public function media() {
+        return view('website.pages.media');
+    }
 }
