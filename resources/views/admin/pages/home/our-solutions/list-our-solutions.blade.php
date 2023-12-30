@@ -24,12 +24,13 @@
                         <div class="row">
                             <div class="col-12">
                                 @include('admin.layout.alert')
-                                @if(count($getOutput))
+                                @if(count($combinedData))
                                 <div class="table-responsive">
                                     <table id="order-listing" class="table table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Sr. No.</th>
+                                                <th>Solution Name </th>
                                                 <th>Title </th>
                                                 <th>Short Description </th>
                                                 <th>Long Description </th>
@@ -39,10 +40,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @forelse ($getOutput as $item)
+                                            @forelse ($combinedData as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
+                                                <td>{{ strip_tags($item->solution_name) }}</td>
                                                 <td>{{ strip_tags($item->title) }}</td>
+                                               
                                                 <td>{{ strip_tags($item->short_description) }}</td>
                                                 <td>{{ strip_tags($item->long_description) }}</td>
                                                 <td> <img class="img-size"

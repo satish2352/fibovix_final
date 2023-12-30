@@ -48,6 +48,7 @@ class ServiceDetailsServices
     public function updateAll($request){
         try {
             $return_data = $this->repo->updateAll($request);
+    // dd($return_data);
             
             $path = Config::get('DocumentConstant.SERVICES_ADD');
             if ($request->hasFile('image')) {

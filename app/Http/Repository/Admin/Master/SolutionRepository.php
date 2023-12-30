@@ -28,7 +28,6 @@ class SolutionRepository{
             $solutions_master_data->save();       
                 
             return $solutions_master_data;
-
         } catch (\Exception $e) {
             return [
                 'msg' => $e,

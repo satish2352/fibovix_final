@@ -47,7 +47,7 @@ class OurSolutionsServices
     public function updateAll($request){
         try {
             $return_data = $this->repo->updateAll($request);
-            
+            // dd($return_data);
             $path = Config::get('DocumentConstant.OUR_SOLUTIONS_ADD');
             if ($request->hasFile('image')) {
                 if ($return_data['image']) {

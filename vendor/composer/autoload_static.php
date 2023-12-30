@@ -145,6 +145,7 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         array (
             'Fruitcake\\Cors\\' => 15,
             'Faker\\' => 6,
+            'Facade\\IgnitionContracts\\' => 25,
         ),
         'E' => 
         array (
@@ -468,6 +469,10 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
         ),
+        'Facade\\IgnitionContracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facade/ignition-contracts/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -551,6 +556,7 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         'App\\Http\\Controllers\\Admin\\LoginRegister\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LoginRegister/LoginController.php',
         'App\\Http\\Controllers\\Admin\\LoginRegister\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LoginRegister/RegisterController.php',
         'App\\Http\\Controllers\\Admin\\Master\\ResourceController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Master/ResourceController.php',
+        'App\\Http\\Controllers\\Admin\\Master\\ServiceDetailsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Master/ServiceDetailsController.php',
         'App\\Http\\Controllers\\Admin\\Master\\ServicesMasterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Master/ServicesMasterController.php',
         'App\\Http\\Controllers\\Admin\\Master\\SolutionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/Master/SolutionController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -580,6 +586,7 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         'App\\Http\\Repository\\Admin\\LoginRegister\\LoginRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/LoginRegister/LoginRepository.php',
         'App\\Http\\Repository\\Admin\\LoginRegister\\RegisterRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/LoginRegister/RegisterRepository.php',
         'App\\Http\\Repository\\Admin\\Master\\ResourceRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/Master/ResourceRepository.php',
+        'App\\Http\\Repository\\Admin\\Master\\ServiceDetailsRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/Master/ServiceDetailsRepository.php',
         'App\\Http\\Repository\\Admin\\Master\\ServicesMasterRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/Master/ServicesMasterRepository.php',
         'App\\Http\\Repository\\Admin\\Master\\SolutionRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Admin/Master/SolutionRepository.php',
         'App\\Http\\Repository\\Website\\ContactUs\\ContactUsRepository' => __DIR__ . '/../..' . '/app/Http/Repository/Website/ContactUs/ContactUsRepository.php',
@@ -595,6 +602,7 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         'App\\Http\\Services\\Admin\\LoginRegister\\LoginService' => __DIR__ . '/../..' . '/app/Http/Services/Admin/LoginRegister/LoginService.php',
         'App\\Http\\Services\\Admin\\LoginRegister\\RegisterServices' => __DIR__ . '/../..' . '/app/Http/Services/Admin/LoginRegister/RegisterServices.php',
         'App\\Http\\Services\\Admin\\Master\\ResourceServices' => __DIR__ . '/../..' . '/app/Http/Services/Admin/Master/ResourceServices.php',
+        'App\\Http\\Services\\Admin\\Master\\ServiceDetailsServices' => __DIR__ . '/../..' . '/app/Http/Services/Admin/Master/ServiceDetailsServices.php',
         'App\\Http\\Services\\Admin\\Master\\ServicesMasterServices' => __DIR__ . '/../..' . '/app/Http/Services/Admin/Master/ServicesMasterServices.php',
         'App\\Http\\Services\\Admin\\Master\\SolutionServices' => __DIR__ . '/../..' . '/app/Http/Services/Admin/Master/SolutionServices.php',
         'App\\Http\\Services\\Website\\ContactUs\\ContactUsServices' => __DIR__ . '/../..' . '/app/Http/Services/Website/ContactUs/ContactUsServices.php',
@@ -610,6 +618,7 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         'App\\Models\\ResourceModel' => __DIR__ . '/../..' . '/app/Models/ResourceModel.php',
         'App\\Models\\ResourcesAndInsights' => __DIR__ . '/../..' . '/app/Models/ResourcesAndInsights.php',
         'App\\Models\\Scolarship' => __DIR__ . '/../..' . '/app/Models/Scolarship.php',
+        'App\\Models\\ServiceDetails' => __DIR__ . '/../..' . '/app/Models/ServiceDetails.php',
         'App\\Models\\ServiceMasters' => __DIR__ . '/../..' . '/app/Models/ServiceMasters.php',
         'App\\Models\\Slider' => __DIR__ . '/../..' . '/app/Models/Slider.php',
         'App\\Models\\SolutionsMaster' => __DIR__ . '/../..' . '/app/Models/SolutionsMaster.php',
@@ -952,6 +961,12 @@ class ComposerStaticInit08943ac761702bfce78fdb6579c4b3d0
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Facade\\IgnitionContracts\\BaseSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/BaseSolution.php',
+        'Facade\\IgnitionContracts\\HasSolutionsForThrowable' => __DIR__ . '/..' . '/facade/ignition-contracts/src/HasSolutionsForThrowable.php',
+        'Facade\\IgnitionContracts\\ProvidesSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/ProvidesSolution.php',
+        'Facade\\IgnitionContracts\\RunnableSolution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/RunnableSolution.php',
+        'Facade\\IgnitionContracts\\Solution' => __DIR__ . '/..' . '/facade/ignition-contracts/src/Solution.php',
+        'Facade\\IgnitionContracts\\SolutionProviderRepository' => __DIR__ . '/..' . '/facade/ignition-contracts/src/SolutionProviderRepository.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Inn.php',

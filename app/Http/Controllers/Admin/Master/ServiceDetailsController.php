@@ -15,14 +15,20 @@ class ServiceDetailsController extends Controller
     public function __construct(){
         $this->service = new ServiceDetailsServices();
         }
-        public function index(){
-            try {
-                $getOutput = $this->service->getAll();
-                return view('admin.pages.master.service-details.list-service-details', compact('getOutput'));
-            } catch (\Exception $e) {
-                return $e;
-            }
-        }    
+    public function index(){
+        try {
+            // $getOutput = $this->service->getAll();
+           $combinedData = ServiceMasters::join('service_details', 'service_details.service_id', '=', 'services_masters.id')
+            ->select('service_details.*', 'services_masters.service_name')
+            ->get();;
+// dd($combinedData);
+            return view('admin.pages.master.service-details.list-service-details', compact('combinedData'));
+        } catch (\Exception $e) {
+            return $e;
+        }
+    }    
+
+
        public function add(){
     $data = ServiceMasters::getall();
     // dd($data);
@@ -48,8 +54,8 @@ class ServiceDetailsController extends Controller
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 // 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
-                'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                // 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
+                // 'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
             ];
 
     
