@@ -51,8 +51,8 @@ class ResourcesAndInsightsServices
             $path = Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_ADD');
             if ($request->hasFile('image')) {
                 if ($return_data['image']) {
-                    if (file_exists_view(Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_ADD') . $return_data['image'])) {
-                        removeImage(Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_ADD') . $return_data['image']);
+                    if (file_exists_view(Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_DELETE') . $return_data['image'])) {
+                        removeImage(Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_DELETE') . $return_data['image']);
                     }
 
                 }

@@ -32,7 +32,7 @@
         @foreach ($resourceInsights as $item)
        <div class="col-md-4 col-lg-4 col-sm-6">
                 <div class="card article_card_container h-100">
-                    <img src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}" class="card-img-top" alt="...">
+                    <img src="{{ Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_VIEW') }}{{ $item->image }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
                     </div>

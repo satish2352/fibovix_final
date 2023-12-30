@@ -8,7 +8,7 @@ use App\Http\Services\Admin\Home\OurSolutionsServices;
 use Session;
 use Validator;
 use Config;
-use App\Models\SolutionModel;
+use App\Models\SolutionsMaster;
 
 class OurSolutionsController extends Controller
 { 
@@ -24,10 +24,10 @@ class OurSolutionsController extends Controller
             }
         }    
        public function add(){
-    $data = SolutionModel::getall();
-    // dd($data);
-    return view('admin.pages.home.our-solutions.add-our-solutions', ['data' => $data]);
-}
+            $data = SolutionsMaster::where('is_active', true)->get();
+            // dd($data);
+            return view('admin.pages.home.our-solutions.add-our-solutions', ['data' => $data]);
+        }
 
         public function store(Request $request){
 // dd($request);

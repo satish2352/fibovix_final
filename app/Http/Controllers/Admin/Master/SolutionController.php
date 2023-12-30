@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin\Master;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\SolutionModel;
 use App\Http\Services\Admin\Master\SolutionServices;
 use Validator;
 use Illuminate\Validation\Rule;
@@ -19,7 +18,6 @@ class SolutionController extends Controller
     {
         try {
             $incidenttype_data = $this->service->getAll();
-// dd($incidenttype_data);
             return view('admin.pages.master.location-address.list-solution', compact('incidenttype_data'));
         } catch (\Exception $e) {
             return $e;
@@ -84,7 +82,7 @@ class SolutionController extends Controller
 {
     $id = $request->input('id'); // Assuming the 'id' value is present in the request
     $rules = [
-        'name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('location_address', 'name')->ignore($id, 'id')],
+        'name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('our_solutions_master', 'solution_name')->ignore($id, 'id')],
     ];
 
     $messages = [

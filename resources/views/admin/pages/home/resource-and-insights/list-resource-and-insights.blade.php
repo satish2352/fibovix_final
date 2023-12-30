@@ -45,7 +45,7 @@
                                                         <td>{{ strip_tags($item->short_description) }}</td>
                                                         <td>{{ strip_tags($item->long_description) }}</td>
                                                         <td> <img class="img-size"
-                                                                src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
+                                                                src="{{ Config::get('DocumentConstant.RESOURCES_AND_INSIGHTS_VIEW') }}{{ $item->image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />
                                                         </td>
                                                         <td>

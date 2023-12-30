@@ -5,12 +5,12 @@
         <div class="content-wrapper mt-6">
             <div class="page-header">
                 <h3 class="page-title">
-                    Location Address
+                Solutions Master
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('list-services') }}">Master</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Update Location Address
+                        <li class="breadcrumb-item active" aria-current="page"> Update Solutions Master
                         </li>
                     </ol>
                 </nav>

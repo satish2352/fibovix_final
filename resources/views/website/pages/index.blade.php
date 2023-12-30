@@ -234,7 +234,6 @@
                     </nav>
                 </div>
                 <div class="col-md-9">
-
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
                             @forelse ($ourSolutions as $key=>$itemNew)
@@ -247,7 +246,7 @@
                                     @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
                                     <div class="col">
                                         <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item['image'] }}"
+                                            <img src="{{ Config::get('DocumentConstant.OUR_SOLUTIONS_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
                                             <div class="card-body">
                                                 <h5 class="card-title">{{ $item['title'] }}</h5>

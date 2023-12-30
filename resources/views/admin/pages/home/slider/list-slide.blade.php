@@ -29,6 +29,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Sr. No.</th>
+                                                    <th>Sr.No. To View </th>
                                                     <th>Title </th>
                                                     <th>Description </th>
                                                     <th>Image </th>

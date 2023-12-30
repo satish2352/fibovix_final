@@ -30,9 +30,9 @@ class HomeResourcesServices
             uploadImage($request, 'image', $path, $ImageName);
            
             if ($last_id) {
-                return ['status' => 'success', 'msg' => 'Courses Offered Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => ' Courses Offered get Not Added.'];
+                return ['status' => 'error', 'msg' => ' Data Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
