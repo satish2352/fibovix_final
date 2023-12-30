@@ -85,7 +85,7 @@ class OurSolutionsRepository  {
 
             // Update the fields from the request
             $dataOutput->title = $request['title'];
-            $dataOutput->description = $request['description'];
+            $dataOutput->short_description = $request['short_description'];
             
             $dataOutput->save();
             $last_insert_id = $dataOutput->id;

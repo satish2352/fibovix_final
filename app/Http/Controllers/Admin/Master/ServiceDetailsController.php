@@ -54,8 +54,8 @@ class ServiceDetailsController extends Controller
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 // 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
-                'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                // 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
+                // 'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
             ];
 
     

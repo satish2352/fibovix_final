@@ -63,7 +63,7 @@ class ServicesMasterRepository{
                 ];
             }
         // Store the previous image names
-            $incidenttype_data->name = $request['name'];
+            $incidenttype_data->service_name = $request['service_name'];
             // $incidenttype_data->url = $request['url'];
             $incidenttype_data->save();        
         

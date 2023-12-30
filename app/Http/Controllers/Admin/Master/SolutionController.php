@@ -82,14 +82,14 @@ class SolutionController extends Controller
 {
     $id = $request->input('id'); // Assuming the 'id' value is present in the request
     $rules = [
-        'name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('our_solutions_master', 'solution_name')->ignore($id, 'id')],
+        'solution_name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('our_solutions_master', 'solution_name')->ignore($id, 'id')],
     ];
 
     $messages = [
-        'name.required' => 'Please enter an title.',
-        'name.regex' => 'Please  enter text only.',
-        'name.max' => 'Please enter an  title with a maximum of 255 characters.',
-        'name.unique' => 'The title already exists.',
+        'solution_name.required' => 'Please enter an title.',
+        'solution_name.regex' => 'Please  enter text only.',
+        'solution_name.max' => 'Please enter an  title with a maximum of 255 characters.',
+        'solution_name.unique' => 'The title already exists.',
     ];
 
     try {

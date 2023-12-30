@@ -26,11 +26,11 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="form-group">
                                             <label for="name">Name</label>&nbsp<span class="red-text">*</span>
-                                            <input class="form-control mb-2" name="name" id="name"
+                                            <input class="form-control mb-2" name="service_name" id="name"
                                                 placeholder="Enter the Name"
-                                                value="@if (old('name')) {{ old('name') }}@else{{ $incidenttype_data->name }} @endif">
+                                                value="@if (old('service_name')) {{ old('service_name') }}@else{{ $incidenttype_data->service_name }} @endif">
                                             @if ($errors->has('name'))
-                                                <span class="red-text"><?php echo $errors->first('name', ':message'); ?></span>
+                                                <span class="red-text"><?php echo $errors->first('service_name', ':message'); ?></span>
                                             @endif
                                         </div>
                                     </div>

@@ -30,7 +30,7 @@ class ResourcesAndInsightsController extends Controller
                 'title' => 'required',
                 'short_description' => 'required',
                 'long_description' => 'required',
-                'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'',
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'',
                
             ];
             $messages = [    
@@ -42,7 +42,7 @@ class ResourcesAndInsightsController extends Controller
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
                 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                // 'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
             ];
     
             try {
@@ -87,11 +87,15 @@ class ResourcesAndInsightsController extends Controller
         public function update(Request $request){
             $rules = [
                 'title' => 'required',
+                'short_description' => 'required',
+                'long_description' => 'required',
                 
+               
             ];
+            
     
             if($request->has('image')) {
-                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE");
+                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE");
             }
            
             $messages = [   
@@ -101,7 +105,6 @@ class ResourcesAndInsightsController extends Controller
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
                 'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
                
             ];
     

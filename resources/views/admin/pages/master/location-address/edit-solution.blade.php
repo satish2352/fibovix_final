@@ -26,9 +26,9 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <div class="form-group">
                                         <label for="name">Name</label>&nbsp<span class="red-text">*</span>
-                                        <input class="form-control mb-2" name="name" id="name"
+                                        <input class="form-control mb-2" name="solution_name" id="name"
                                             placeholder="Enter the Name"
-                                            value="@if (old('name')) {{ old('name') }}@else{{ $incidenttype_data->name }} @endif">
+                                            value="@if (old('solution_name')) {{ old('solution_name') }}@else{{ $incidenttype_data->name }} @endif">
                                         @if ($errors->has('name'))
                                         <span class="red-text">
                                             <?php echo $errors->first('name', ':message'); ?>

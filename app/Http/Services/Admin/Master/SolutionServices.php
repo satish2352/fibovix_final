@@ -46,7 +46,10 @@ class SolutionServices{
     }
     public function updateAll($request){
         try {
+// dd($request);
             $update_Incidenttype = $this->repo->updateAll($request);
+                        // dd($update_Incidenttype);
+
             if ($update_Incidenttype) {
                 return ['status' => 'success', 'msg' => 'Solution Updated Successfully.'];
             } else {

@@ -85,26 +85,25 @@ class ServicesMasterController extends Controller
 {
     $id = $request->input('id'); // Assuming the 'id' value is present in the request
     $rules = [
-        'name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('location_address', 'name')->ignore($id, 'id')],
+        'service_name' => ['required', 'max:255','regex:/^[a-zA-Z\s]+$/u', Rule::unique('services_masters', 'service_name')->ignore($id, 'id')],
     ];
 
     $messages = [
-        'name.required' => 'Please enter an title.',
-        'name.regex' => 'Please  enter text only.',
-        'name.max' => 'Please enter an  title with a maximum of 255 characters.',
-        'name.unique' => 'The title already exists.',
+        'service_name.required' => 'Please enter an title.',
+        'service_name.regex' => 'Please  enter text only.',
+        'service_name.max' => 'Please enter an  title with a maximum of 255 characters.',
+        'service_name.unique' => 'The title already exists.',
     ];
 
     try {
         $validation = Validator::make($request->all(), $rules, $messages);
-
         if ($validation->fails()) {
             return redirect()->back()
                 ->withInput()
                 ->withErrors($validation);
         } else {
             $update_incidenttype_data = $this->service->updateAll($request);
-
+            // dd($update_incidenttype_data);
             if ($update_incidenttype_data) {
                 $msg = $update_incidenttype_data['msg'];
                 $status = $update_incidenttype_data['status'];
