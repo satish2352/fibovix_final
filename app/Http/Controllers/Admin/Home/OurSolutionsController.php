@@ -18,7 +18,11 @@ class OurSolutionsController extends Controller
         public function index(){
             try {
                 $getOutput = $this->service->getAll();
-                return view('admin.pages.home.our-solutions.list-our-solutions', compact('getOutput'));
+                $combinedData = SolutionsMaster::join('our_solutions', 'our_solutions.solution_id', '=', 'our_solutions_master.id')
+                                ->select('our_solutions.*', 'our_solutions_master.solution_name')
+                                ->get();;
+                // dd($combinedData);
+                return view('admin.pages.home.our-solutions.list-our-solutions', compact('combinedData'));
             } catch (\Exception $e) {
                 return $e;
             }
