@@ -23,6 +23,11 @@ return [
     'OUR_SOLUTIONS_ADD'	         => "/all_web_data/images/home/our_solutions/",
     'OUR_SOLUTIONS_DELETE'	     => '/all_web_data/images/home/our_solutions/',
     'OUR_SOLUTIONS_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/our_solutions/',
+
+
+    'SERVICES_ADD'	         => "/all_web_data/images/home/services/",
+    'SERVICES_DELETE'	     => '/all_web_data/images/home/services/',
+    'SERVICES_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/home/services/',
     
 
     'GALLERY_ADD'	         => "/all_web_data/images/gallery/",

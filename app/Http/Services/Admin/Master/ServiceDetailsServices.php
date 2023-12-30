@@ -24,7 +24,7 @@ class ServiceDetailsServices
         try {
             $last_id = $this->repo->addAll($request);
             // dd($last_id);
-            $path = Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_ADD');
+            $path = Config::get('DocumentConstant.SERVICES_ADD');
             $ImageName = $last_id['ImageName'];
             uploadImage($request, 'image', $path, $ImageName);
            
@@ -49,11 +49,11 @@ class ServiceDetailsServices
         try {
             $return_data = $this->repo->updateAll($request);
             
-            $path = Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_ADD');
+            $path = Config::get('DocumentConstant.SERVICES_ADD');
             if ($request->hasFile('image')) {
                 if ($return_data['image']) {
-                    if (file_exists_view(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $return_data['image'])) {
-                        removeImage(Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_DELETE') . $return_data['image']);
+                    if (file_exists_view(Config::get('DocumentConstant.SERVICES_DELETE') . $return_data['image'])) {
+                        removeImage(Config::get('DocumentConstant.SERVICES_DELETE') . $return_data['image']);
                     }
 
                 }
