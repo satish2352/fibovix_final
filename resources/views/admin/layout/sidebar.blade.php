@@ -84,7 +84,7 @@
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
                             href="{{ route('list-services') }}">Services</a></li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link"
-                            href="{{ route('list-resource') }}">Services Details</a>
+                            href="{{ route('list-service-details') }}">Services Details</a>
                     </li>
                 </ul>
             </div>

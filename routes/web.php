@@ -80,6 +80,19 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/update-active-slide', ['as' => 'update-active-slide', 'uses' => 'App\Http\Controllers\Admin\Home\SliderController@updateOne']);
     
 
+
+    Route::get('/list-service-details', ['as' => 'list-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@index']);
+    Route::get('/add-service-details', ['as' => 'add-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@add']);
+    Route::post('/add-service-details', ['as' => 'add-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@store']);
+    Route::get('/edit-service-details/{edit_id}', ['as' => 'edit-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@edit']);
+    Route::post('/update-service-details', ['as' => 'update-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@update']);
+    Route::post('/show-service-details', ['as' => 'show-service-details', 'uses' => 'App\Http\Controllers\Admin\HMasterServiceDetailsController@show']);
+    Route::post('/delete-service-details', ['as' => 'delete-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@destroy']);
+    Route::post('/update-active-service-details', ['as' => 'update-active-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@updateOne']);
+
+
+
+
     Route::get('/list-our-solutions', ['as' => 'list-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@index']);
     Route::get('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@add']);
     Route::post('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@store']);
