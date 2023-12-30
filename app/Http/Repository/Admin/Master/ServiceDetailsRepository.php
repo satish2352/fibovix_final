@@ -27,6 +27,7 @@ class ServiceDetailsRepository  {
             $dataOutput->short_description = $request['short_description'];
             $dataOutput->long_description = $request['long_description'];
             $dataOutput->service_id = $request['service_id'];
+            $dataOutput->image = 'null';
         
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;

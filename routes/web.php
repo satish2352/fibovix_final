@@ -33,6 +33,9 @@ Route::get('/aboutus', ['as' => 'aboutus', 'uses' => 'App\Http\Controllers\Websi
 Route::get('/contactus', ['as' => 'contact-us', 'uses' => 'App\Http\Controllers\Website\IndexController@contactus']);
 Route::get('/resources-insights', ['as' => 'resources-insights', 'uses' => 'App\Http\Controllers\Website\IndexController@resources']);
 Route::POST('/list-our-solutions-ajax', ['as' => 'list-our-solutions-ajax', 'uses' => 'App\Http\Controllers\Website\IndexController@listOurSolutionsAjax']);
+Route::POST('/list-our-services-ajax', ['as' => 'list-our-services-ajax', 'uses' => 'App\Http\Controllers\Website\IndexController@listServicesAjax']);
+
+
 
 Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\IndexController@services']);
 
@@ -260,6 +263,7 @@ Route::group(['middleware' => ['admin']], function () {
     // //Start Contact========
     Route::post('/add-contactus', ['as' => 'add-contactus', 'uses' => 'App\Http\Controllers\Website\ContactUs\ContactUsController@addContactUs']);
     Route::post('/add-about-us-contactus', ['as' => 'add-about-us-contactus', 'uses' => 'App\Http\Controllers\Website\AboutUs\AboutUsController@aboutusContact']);
-
+    Route::post('/add-subscriber', ['as' => 'add-subscriber', 'uses' => 'App\Http\Controllers\Website\Subscriber\SubscriberController@addSubscriber']);
+    
 
  

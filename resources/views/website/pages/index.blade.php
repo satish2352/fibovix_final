@@ -3,199 +3,116 @@
 
 <div class="container-fluid">
 
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                 aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                 aria-label="Slide 3"></button>
         </div>
+
         <div class="carousel-inner">
-
-
-            @foreach ($data_output_slider as $item)
-
-
-            <div class="carousel-item active">
-                <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img class="first_carousel"
-                                src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" alt="">
-                        </div>
-                        <div class="col-md-6">
-
-                        </div>
-                        <div class="col-md-6">
-                            <h2 style="color: #1F2D87;display:flex;">{{ strip_tags($item->title) }}</h2>
-                            <p style="color: #808080;text-align: justify;">
-                                {{ strip_tags($item->desc) }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-
-                    </div>
-                    <div class="col-md-6">
-                        <h2 style="color: #1F2D87;display:flex;">WHY US</h2>
-                        <p style="color: #808080;text-align: justify;">Fibovix's investment approach is informed by
-                            three principles: we start by
-                            understanding the client’s investment objectives; we seek the best risk-adjusted returns
-                            within the scope of the mandate they give us; and we underpin our work with research, data,
-                            and analytics. Research informs our investment decisions and product innovation. We research
-                            major structural trends shaping the economy, markets, and asset prices.
-                        </p>
-                    </div>
-                </div>
-
+            @foreach ($data_output_slider as $key=> $item)
+            <div class="carousel-item @if($key == 0) {{'active'}} @endif">
+                <img src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" class="d-block w-100"
+                    alt="...">
             </div>
-
             @endforeach
-            <!-- 
-
-                <div class="carousel-item">
-                    <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('website/images/backimg1.jpg') }}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-                -->
         </div>
-
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <!-- Content Section -->
-    <!-- <div class="row">
-            <img class="img1" src="{{ asset('website/images/backimg1.jpg') }}" alt="">
-            <div class="container  content ">
-                <div class="container col-md-8 col-sm-8">
-                    <div class="row">
-                        <div class="col-3" style="height: 250px; margin-left:150px">
-                            <img class="img2" src="{{ asset('website/images/Logo1.png') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="row whyus ">
-                        <div class="whyus">
-                            <h1 id="whyus1">WHY US</h1>
-                            <p id="content">Fibovix's investment approach is informed by three principles: we start by
-                                understanding the client’s investment objectives; we seek the best risk-adjusted returns
-                                within the scope of the mandate they give us; and we underpin our work with research, data,
-                                and analytics. Research informs our investment decisions and product innovation. We research
-                                major structural trends shaping the economy, markets, and asset prices.</p>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+
 </div>
 
-{{-- end hero section --}}
-
-{{-- start whyfibovix section --}}
 
 
-    <div class="container-fluid">
-        {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
-        <div class="row">
-            <div class="backimg1 text-center py-5">
-                
-                <div class="container mt-4">
-                    <div class="row text-center">
-                        <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
-                        <div class="col-md-2 col-lg-2 col-sm-2">
+<div class="container-fluid">
+    {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
+    <div class="row">
+        <div class="backimg1 text-center py-5">
 
-                        </div>
-                        <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+            <div class="container mt-4">
+                <div class="row text-center">
+                    <h2 id="fibovix">Why FIBO<span style="color: #1F2D87 ">VIX</span></h2>
+                    <div class="col-md-2 col-lg-2 col-sm-2">
+
+                    </div>
+                    <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
+                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your
+                            goals, Merrill
                             and Bank of America offer a wide range of solutions to help you get there.
                         </p>
 
-                        </div>
-                        <div class="col-md-2 col-lg-2 col-sm-2">
-
-                        </div>
-                        
                     </div>
-                </div>
-                
-                <div class="container section_center">
-                    <div class="row">
+                    <div class="col-md-2 col-lg-2 col-sm-2">
 
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="card shadow-lg"
-                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                                <div class="card-body ">
-                                    <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
-                                    <h5 id="hh">Needs</h5>
-                                    <p>
-                                        Your strategy is built on your objectives, concerns, and investment mindset.
-                                    </p>
-                                </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container section_center">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                            <div class="card-body ">
+                                <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
+                                <h5 id="hh">Needs</h5>
+                                <p>
+                                    Your strategy is built on your objectives, concerns, and investment mindset.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="card shadow-lg"
-                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                                <div class="card-body ">
-                                    <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
-                                    <h5 id="hh">Advisor</h5>
-                                    <p>
-                                        Your adviser is dedicated to supporting you in achieving your objectives & will
-                                        offer
-                                        tailored guidance from the start.
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                            <div class="card-body ">
+                                <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
+                                <h5 id="hh">Advisor</h5>
+                                <p>
+                                    Your adviser is dedicated to supporting you in achieving your objectives & will
+                                    offer
+                                    tailored guidance from the start.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="card shadow-lg"
-                                style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                                <div class="card-body ">
-                                    <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
-                                    <h5 id="hh">Strategy</h5>
-                                    <p>Your adviser can recommend tax-minimization techniques as part of your overall
-                                        investing
-                                        strategy.
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg"
+                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
+                            <div class="card-body ">
+                                <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
+                                <h5 id="hh">Strategy</h5>
+                                <p>Your adviser can recommend tax-minimization techniques as part of your overall
+                                    investing
+                                    strategy.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
     </div>
+</div>
 
-    {{-- end whyfibovix section --}}
-    <!-- <div class="contaback text-center mx-auto"> -->
-
-
-{{-- start cards --}}
-
+@if(count($ourSolutions))
 <div class="container">
     <div class="row text-center">
         <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
@@ -214,7 +131,7 @@
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
 
 
-                            <button class="nav-link article_tab_link mt-5 active" id="" onclick="myFunction('all')"
+                            <button class="nav-link article_tab_link mt-5 active" id="" onclick="getOurSolutions('all')"
                                 data-bs-toggle="tab" data-bs-target="#" type="button" role="tab"
                                 aria-controls="nav-home" aria-selected="true">All
                                 items</button>
@@ -222,14 +139,16 @@
 
                             <button class="nav-link article_tab_link" id="id_{{ $categories_data['id'] }}"
                                 data-bs-toggle="tab" data-bs-target="#data_id_{{ $categories_data['id'] }}"
-                                onclick="myFunction('{{ $categories_data['id'] }}')" type="button" role="tab"
+                                onclick="getOurSolutions('{{ $categories_data['id'] }}')" type="button" role="tab"
                                 aria-controls="nav-profile" aria-selected="false">{{
                                 $categories_data['solution_name'] }}</button>
 
                             @empty
-                            {{'No data found'}}
+                            <div class="alert alert-primary" role="alert">
+                                No Data Found
+                            </div>
                             @endforelse
-                           
+
                         </div>
                     </nav>
                 </div>
@@ -242,7 +161,7 @@
                                 aria-labelledby="id_{{$itemNew['our_solutions_master_id']}}">
 
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
-                                    @foreach ($ourSolutions as $key=>$item)
+                                    @forelse ($ourSolutions as $key=>$item)
                                     @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
                                     <div class="col">
                                         <div class="card article_card_container h-100">
@@ -259,12 +178,18 @@
                                         </div>
                                     </div>
                                     @endif
-                                    @endforeach
+                                    @empty
+                                    <div class="alert alert-primary" role="alert">
+                                        No Data Found
+                                    </div>
+                                    @endforelse
                                 </div>
 
                             </div>
                             @empty
-                            {{'No Categries found'}}
+                            <div class="alert alert-primary" role="alert">
+                                No Data Found
+                            </div>
                             @endforelse
 
                         </div>
@@ -274,10 +199,8 @@
         </div>
     </div>
 </div>
+@endif
 
-{{-- end cards --}}
-
-{{-- start take action --}}
 <div class="container-fluid position-relative mb-5 bimg">
     <div class="container">
         <div class="row text-center ">
@@ -371,18 +294,11 @@
     </div>
 </div>
 
-{{-- end take action --}}
-{{-- additional solution --}}
-
+@if(count($additionalSolutions))
 <div class="container mb-5 ">
     <div class="row text-center">
         <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
     </div>
-
-    {{-- end take action --}}
-    {{-- additional solution --}}
-
-
     @foreach ($additionalSolutions as $item)
     <div class="col-md-4 col-lg-4 col-sm-12">
         <div class="card addi_sol_card">
@@ -402,84 +318,30 @@
         </div>
     </div>
     @endforeach
-
-    {{--
-    <div class="col-md-4 col-lg-4 col-sm-12">
-        <div class="card addi_sol_card">
-            <img class="addi_sol_card_img"
-                src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Investment consolidation</h5>
-                <p class="card-text">Increase the diversity of your solutions to diversify your portfolio.</p>
-                <a href="" target="_blank">
-                    <button class="btn btn-primary1 float-right">
-                        Learn More
-                    </button>
-                </a>
-            </div>
-
-        </div>
-    </div>
-    <div class="col-md-4 col-lg-4 col-sm-12">
-        <div class="card addi_sol_card">
-            <img class="addi_sol_card_img"
-                src="https://haleyblackall.com/wp-content/uploads/2020/12/things-to-do-in-Kandy-20.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> Online Account view</h5>
-                <p class="card-text">Combine your online banking and investment.</p>
-                <br>
-                <a href="" target="_blank">
-                    <button class="btn btn-primary1 float-right">
-                        Learn More
-                    </button>
-                </a>
-            </div>
-
-        </div>
-    </div>
-    --}}
 </div>
-
-
-
-</div>
-
-
-{{-- end additional solution --}}
-</div>
-
-{{-- start gallary --}}
-
-{{-- end additional solution --}}
-</div>
-
-
-
-{{-- --}}
+@endif
 
 <script>
 
-function myFunction(our_solutions_master_id) {
-    $("#gallary_data").empty();
-    $.ajax({
-        url: "{{ route('list-our-solutions-ajax') }}",
-        method: "POST",
-        data: {
-            "our_solutions_master_id": our_solutions_master_id
-        },
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        success: function (data) {
-          var path= '<?php echo Config:: get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW'); ?>';
+    function getOurSolutions(our_solutions_master_id) {
+    gallary_data").empty();
+        $.ajax({
+            url: "{{ route('list-our-solutions-ajax') }}",
+            method: "POST",
+            data: {
+                "our_solutions_master_id": our_solutions_master_id
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                var path = '<?php echo Config:: get('DocumentConstant.OUR_SOLUTIONS_VIEW'); ?>';
             $("#gallary_data").empty();
             $.each(data, function (i, item) {
                 $("#gallary_data").append(` 
                                 <div class="col">
                                     <div class="card article_card_container h-100">
-                                        <img src="`+path + item.image + `"
+                                        <img src="`+ path + item.image + `"
                                             class="card-img-top" alt="`+ item.title + `">
                                         <div class="card-body">
                                             <h5 class="card-title">`+ item.title + `</h5>
@@ -493,7 +355,7 @@ function myFunction(our_solutions_master_id) {
                          `);
             });
         },
-        error: function (data) { }
+            error: function (data) { }
         });
 }
 

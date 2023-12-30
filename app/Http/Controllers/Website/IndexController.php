@@ -8,11 +8,10 @@ use App\Http\Services\Website\IndexServices;
 use Session;
 use Validator;
 use App\Models\ {
-    LocationAddress,
-    EducationBoard,
-    EducationClass,
-    MarqueeTab,
-    ResourcesAndInsights
+
+    ResourcesAndInsights,
+    ServiceMasters,
+    ServiceDetails
 
 };
 
@@ -81,76 +80,6 @@ class IndexController extends Controller
         }
     }
 
-    // public function getAllAjaxMultimedia(Request $request) {
-    //     $return_data = $this->service->getAllGallery($request);
-    //     return $return_data['gallery_data'];
-    // }
-    // static function getCommonFormData() {
-    //     try {
-    //         $retun_data = [];
-    //         $data_output_location_address = LocationAddress::where('is_active', true)
-    //         ->select(
-    //             'location_address.name',
-    //             'location_address.id',
-    //         )
-    //         ->get()
-    //         ->toArray();
-
-    //     $retun_data['data_output_location_address'] = $data_output_location_address;
-
-    //         $data_output_all_board = EducationBoard::where('is_active', true)
-    //             ->select(
-    //                 'education_board.name',
-    //                 'education_board.id',
-    //             )
-    //             ->get()
-    //             ->toArray();
-    
-    //         $retun_data['data_output_all_board'] = $data_output_all_board;
-    
-    //         $data_output_all_class = EducationClass::where('is_active', true)
-    //             ->select(
-    //                 'education_class.name',
-    //                 'education_class.id',
-    //             )
-    //             ->get()
-    //             ->toArray();
-    
-    //         $retun_data['data_output_all_class'] = $data_output_all_class;
-            
-    //         $data_output_marquee_tab = MarqueeTab::where('is_active', true)
-    //             ->select(
-    //                 'marquee_tab.title',
-    //                 'marquee_tab.id',
-    //             )
-    //             ->get()
-    //             ->toArray();
-    
-    //         $retun_data['data_output_marquee_tab'] = $data_output_marquee_tab;
-            
-    //         return $retun_data;
-    //     } catch (\Exception $e) {
-    //         // Log the error for debugging
-    //         \Log::error($e);
-    
-    //         // Return an error response
-    //         return ['error' => 'An error occurred while fetching data. Please try again later.'];
-    //     }
-    // }
-    
-    // ================
-
-    // public function showParticularUpcominCourses()
-    // {
-    //     try {
-    //         $data_output = $this->service->showParticularUpcominCourses();
-
-    //     } catch (\Exception $e) {
-    //         return $e;
-    //     }
-    //     return view('website.pages.particularcoursedetails',compact('data_output'));
-    // }
-
     public function aboutus() {
         return view('website.pages.aboutus');
     }
@@ -170,7 +99,42 @@ class IndexController extends Controller
 
     
     public function services() {
-        return view('website.pages.services');
+
+        $all_services = ServiceMasters::where(['is_active'=>true] )->orderBy('updated_at', 'desc')->get();
+        $all_services_details = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id')
+                                                        ->select('service_details.id','service_details.service_id', 'service_details.title',
+                                                        'service_details.short_description',
+                                                        'service_details.long_description',
+                                                        'service_details.image',
+                                                        'services_masters.service_name',
+                                                        'services_masters.id as service_details_id')
+                                                        ->get();
+        return view('website.pages.services',compact('all_services','all_services_details'));
+    }
+
+
+    
+
+    public function listServicesAjax(Request $request)
+    {
+        try {
+
+            $all_services_details = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id');
+            if($request['our_services_master_id'] != 'all') {
+                $all_services_details =  $all_services_details->where('services_masters.id','=',$request['our_services_master_id']);
+            }
+            $all_services_details =  $all_services_details->select('service_details.id','service_details.service_id', 'service_details.title',
+                                    'service_details.short_description',
+                                    'service_details.long_description',
+                                    'service_details.image',
+                                    'services_masters.service_name',
+                                    'services_masters.id as service_details_id')
+                                    ->get();
+
+            return $all_services_details;
+        } catch (\Exception $e) {
+            return $e;
+        }
     }
 
     
@@ -181,4 +145,6 @@ class IndexController extends Controller
     public function media() {
         return view('website.pages.media');
     }
+
+
 }

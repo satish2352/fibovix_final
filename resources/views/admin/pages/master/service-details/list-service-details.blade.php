@@ -77,14 +77,18 @@
                                                 </td>
                                             </tr>
                                             @empty
-                                            {{'No data found'}}
+                                            <div class="alert alert-primary" role="alert">
+                                                No Data Found
+                                            </div>
                                             @endforelse
 
                                         </tbody>
                                     </table>
                                 </div>
-                                @else 
-                                {{'No Data Found'}}
+                                @else
+                                <div class="alert alert-primary" role="alert">
+                                    No Data Found
+                                </div>
                                 @endif
                             </div>
                         </div>

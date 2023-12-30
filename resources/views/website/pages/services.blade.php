@@ -1,341 +1,139 @@
 @include('website.layouts.header')
-{{-- start hero section --}}
+@if(count($all_services_details))
+<section>
+    <div class="container-fluid about_img">
 
-
-    <!-- Start contact-background -->
-    <section>
-            <div class="container-fluid about_img">
-               
-                    <div class="container">
-                        <div class="row mt-5">
-                            <div class="col-md-12 mt-5 text-center">
-                                <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
-                                <h2 class="mt-3 about_img_head">OUR SOLUTIONS</h2>
-                                <p class="mb-4 about_banner_para">You probably expect your advisor to provide guidance developing your financial 
-                                    plan and investment approach. But with FIBOVIX , your advisor is so much 
-                                    more – listening to your needs and understanding what matters most to you and 
-                                    your family. You and your advisor will work together one on one to help 
-                                    create a strategy that’s uniquely yours.</p>
-                            </div>
-                        </div>
-                    </div>
-                
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12 mt-5 text-center">
+                    <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
+                    <h2 class="mt-3 about_img_head">OUR SOLUTIONS</h2>
+                    <p class="mb-4 about_banner_para">You probably expect your advisor to provide guidance developing
+                        your financial
+                        plan and investment approach. But with FIBOVIX , your advisor is so much
+                        more – listening to your needs and understanding what matters most to you and
+                        your family. You and your advisor will work together one on one to help
+                        create a strategy that’s uniquely yours.</p>
+                </div>
             </div>
-    </section>
-    <!-- End contact-background -->
+        </div>
 
+    </div>
+</section>
 
+<div class="container">
+    <div class="card p-3">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3 mt-5">
+                    <nav class="article_nav p-3">
+                        <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
+                            <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
+                                data-bs-toggle="tab" data-bs-target="#todays_market" type="button" role="tab"
+                                aria-controls="nav-home" aria-selected="true">All items</button>
+                            @forelse($all_services as $key=>$categories_data)
 
-    <div class="container">
-        <div class="card p-3">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-3 mt-5">
-                        <nav class="article_nav p-3">
-                            <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
-                                <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab" data-bs-toggle="tab" data-bs-target="#todays_market" type="button" role="tab" aria-controls="nav-home" aria-selected="true">All items</button>
-                                <button class="nav-link article_tab_link" id="invesment_trends_tab" data-bs-toggle="tab" data-bs-target="#invesment_trends" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Wealth Planning</button>
-                                <button class="nav-link article_tab_link" id="portfolio_tab" data-bs-toggle="tab" data-bs-target="#portfolio" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Insurance</button>
-                                <button class="nav-link article_tab_link" id="banking_tab" data-bs-toggle="tab" data-bs-target="#banking" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Banking</button>
+                            <button class="nav-link article_tab_link" id="id_{{ $categories_data['id'] }}"
+                                data-bs-toggle="tab" data-bs-target="#data_id_{{ $categories_data['id'] }}"
+                                onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
+                                aria-controls="nav-profile" aria-selected="false">{{
+                                $categories_data['service_name'] }}</button>
 
-                                <button class="nav-link article_tab_link" id="financial_planning_tab" data-bs-toggle="tab" data-bs-target="#financial_planning" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Retirement & savings</button>
-                                <button class="nav-link article_tab_link" id="retirement_tab" data-bs-toggle="tab" data-bs-target="#retirement" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Investments</button>
-                                <button class="nav-link article_tab_link mb-5" id="diverse_viewport_tab" data-bs-toggle="tab" data-bs-target="#diverse_viewport" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Lending</button>
+                            @empty
+                            <div class="alert alert-primary" role="alert">
+                                No Data Found
                             </div>
-                        </nav>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="tab-content p-3" id="nav-tabContent">
-                            <div class="tab-pane fade active show" id="todays_market" role="tabpanel" aria-labelledby="todays_market_tab">
+                            @endforelse
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-9">
+                    <div class="tab-content p-3" id="nav-tabContent">
+                        <div class="row d-flex gallery" id="gallary_data">
+                            @forelse ($all_services_details as $key=>$itemNew)
+                            <div class="tab-pane fade active @if($key==0) {{'show'}} @endif"
+                                id="data_id_{{$itemNew['service_details_id']}}" role="tabpanel"
+                                aria-labelledby="id_{{$itemNew['service_details_id']}}">
 
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="row row-cols-1 row-cols-md-4 g-3">
+                                    @forelse ($all_services_details as $key=>$item)
+                                    @if($itemNew['service_details_id'] === $item['service_details_id'])
                                     <div class="col">
                                         <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
+                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
+                                                class="card-img-top" alt="{{ $item['title'] }}">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ $item['title'] }}</h5>
+                                            </div>
+                                            <div class="card-footer article_card_footer">
+                                                <small class="text-muted"><i style="color: orange;"
+                                                        class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;{{
+                                                    $item['short_description'] }}</small>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
+                                    @endif
+                                    @empty
+                                    <div class="alert alert-primary" role="alert">
+                                        No Data Found
                                     </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article4.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    
-                            </div>
-
-                            <div class="tab-pane fade" id="invesment_trends" role="tabpanel" aria-labelledby="invesment_trends_tab">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio_tab">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
+                                    @endforelse
                                 </div>
 
                             </div>
-
-                            <div class="tab-pane fade" id="banking" role="tabpanel" aria-labelledby="banking_tab_tab">
-
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    
-                            </div>
-
-                            <div class="tab-pane fade" id="financial_planning" role="tabpanel" aria-labelledby="financial_planning_tab">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="tab-pane fade" id="retirement" role="tabpanel" aria-labelledby="retirement_tab">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="tab-pane fade" id="diverse_viewport" role="tabpanel" aria-labelledby="diverse_viewport_tab">
-                                <div class="row row-cols-1 row-cols-md-3 g-4">
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article1.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Looking toward a new era of growth</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article2.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Global elections and the markets: What to expect in 2024.</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="card article_card_container h-100">
-                                        <img src="{{ asset('website/images/resource/article3.png') }}" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">How much is too much global debt?</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;" class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;Todays Market</small>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            </div>
+                            @empty
+                            {{'No Categries found'}}
+                            @endforelse
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
+@endif
+
+<script>
+
+    function getServices(our_services_master_id) {
+        $("#gallary_data").empty();
+        $.ajax({
+            url: "{{ route('list-our-services-ajax') }}",
+            method: "POST",
+            data: {
+                "our_services_master_id": our_services_master_id
+            },
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            success: function (data) {
+                var path = '<?php echo Config:: get('DocumentConstant.SERVICES_VIEW'); ?>';
+            $("#gallary_data").empty();
+            $.each(data, function (i, item) {
+                $("#gallary_data").append(` 
+                                <div class="col">
+                                    <div class="card article_card_container h-100">
+                                        <img src="`+ path + item.image + `"
+                                            class="card-img-top" alt="`+ item.title + `">
+                                        <div class="card-body">
+                                            <h5 class="card-title">`+ item.title + `</h5>
+                                        </div>
+                                        <div class="card-footer article_card_footer">
+                                            <small class="text-muted"><i style="color: orange;"
+                                                    class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;`+ item.short_description + `</small>
+                                        </div>
+                                    </div>
+                                </div>
+                         `);
+            });
+        },
+            error: function (data) { }
+        });
+}
+
+
+
+</script>
 
 
 @include('website.layouts.footer')
