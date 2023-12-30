@@ -25,9 +25,6 @@ class AboutUsController extends Controller
             return $e;
         }
     }
-
-    
-
     
     public function aboutusContact(Request $request) {
         $rules = [
