@@ -26,8 +26,9 @@
             </a>
         </li>
 
-        <li class="@if(request()->is('list-solution*') || request()->is('list-our-solutions*')) {{'nav-item active'}} @else {{'nav-item' }} @endif">
-            <a class="nav-link" data-toggle="collapse" href="#our_olutions" aria-expanded="false" aria-controls="our_olutions">
+        <li class="@if (request()->is('list-solution*') || request()->is('list-our-solutions*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
+            <a class="nav-link" data-toggle="collapse" href="#our_olutions" aria-expanded="false"
+                aria-controls="our_olutions">
                 <i class="fa fa-th-large menu-icon"></i>
                 <span class="menu-title">Our Solutions</span>
                 <i class="menu-arrow"></i>
@@ -35,11 +36,13 @@
             <div class="collapse" id="our_olutions">
                 <ul class="nav flex-column sub-menu">
 
-                    <li class="nav-item d-none d-lg-block"><a class="@if(request()->is('list-solution*') ) {{'nav-link active'}} @else {{'nav-link' }} @endif"
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-solution*')) {{ 'nav-link active' }} @else {{ 'nav-link' }} @endif"
                             href="{{ route('list-solution') }}">Solutions</a>
                     </li>
 
-                    <li class="nav-item d-none d-lg-block"><a class="@if( request()->is('list-our-solutions*')) {{'nav-link active'}} @else {{'nav-link' }} @endif"
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-our-solutions*')) {{ 'nav-link active' }} @else {{ 'nav-link' }} @endif"
                             href="{{ route('list-our-solutions') }}">Our Solutions</a></li>
 
 
@@ -48,7 +51,7 @@
         </li>
 
 
-        <li class="@if(request()->is('list-services*')  || request()->is('list-service-details*')) {{'nav-item active'}} @else  {{'nav-item' }} @endif">
+        <li class="@if (request()->is('list-services*') || request()->is('list-service-details*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="services">
                 <i class="fa fa-th-large menu-icon"></i>
                 <span class="menu-title">Services</span>
@@ -57,9 +60,11 @@
             <div class="collapse" id="services">
                 <ul class="nav flex-column sub-menu">
 
-                    <li class="nav-item d-none d-lg-block"><a class="@if(request()->is('list-services*')) {{'nav-link active'}} @else  {{'nav-link' }} @endif"
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-services*')) {{ 'nav-link active' }} @else  {{ 'nav-link' }} @endif"
                             href="{{ route('list-services') }}">Services</a></li>
-                    <li class="nav-item d-none d-lg-block"><a class="@if( request()->is('list-service-details*')) {{'nav-link active'}} @else  {{'nav-link' }} @endif"
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-service-details*')) {{ 'nav-link active' }} @else  {{ 'nav-link' }} @endif"
                             href="{{ route('list-service-details') }}">Services Details</a>
                     </li>
                 </ul>
@@ -115,7 +120,7 @@
         <li class="{{ request()->is('list-subscriber*') ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('list-subscriber') }}">
                 <i class="fas fa-window-restore menu-icon"></i>
-                <span class="menu-title">Subscriber</span>
+                <span class="menu-title">Subscriber From Website</span>
             </a>
         </li>
 
@@ -138,6 +143,14 @@
                             href="{{ route('list-about-us-contactus') }}">About Us Contact List</a></li>
                 </ul>
             </div>
+        </li>
+
+
+        <li class="{{ request()->is('log-out*') ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" href="{{ url('log-out') }}">
+                <i class="fas fa-window-restore menu-icon"></i>
+                <span class="menu-title">Log Out</span>
+            </a>
         </li>
 
     </ul>

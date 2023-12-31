@@ -64,13 +64,12 @@
             margin-top: -5px;
 
         }
-
     </style>
 
 </head>
 
 <?php $profile = '';
- ?>
+?>
 
 
 <body class="sidebar-icon-only">
@@ -80,10 +79,10 @@
         <!-- top navigation -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="#"><img
-                        src="{{ asset('fibovix_logo.png') }}" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="#"><img
-                        src="{{ asset('fibovix_logo.png') }}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo" href="#"><img src="{{ asset('fibovix_logo.png') }}"
+                        alt="logo" /></a>
+                <a class="navbar-brand brand-logo-mini" href="#"><img src="{{ asset('fibovix_logo.png') }}"
+                        alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch pr-0">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -98,20 +97,18 @@
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown mr-0">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                            <img class="img-size" 
-                            src=""
-                            />
+                            <img class="img-size" src="{{ asset('fibovix_logo.png') }}" />
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
                             {{-- @foreach ($user_data as $item) --}}
-                            <a 
-                            {{-- data-id="{{ $user_data->id }}"  --}}
+                            {{--   <a 
+                            data-id="{{ $user_data->id }}" 
                             class="dropdown-item edit-user-btn"
                                 href="{{ route('edit-user-profile') }}">
                                 <i class="fas fa-user text-primary"></i>
                                 Profile
-                            </a>
+                            </a> --}}
                             {{-- @endforeach --}}
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('log-out') }}">
