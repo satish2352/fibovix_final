@@ -28,9 +28,9 @@ class ResourcesAndInsightsServices
             uploadImage($request, 'image', $path, $ImageName);
            
             if ($last_id) {
-                return ['status' => 'success', 'msg' => 'Courses Offered Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => ' Courses Offered get Not Added.'];
+                return ['status' => 'error', 'msg' => ' Data Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
@@ -58,22 +58,16 @@ class ResourcesAndInsightsServices
                 }
                 if ($request->hasFile('image')) {
                     $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->file('image')->extension();
-                    
-                    // Rest of your code...
-                } else {
-                    // Handle the case where 'image' key is not present in the request.
-                    // For example, you might want to skip the file handling or return an error message.
-                }                
-                // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
+                } 
                 uploadImage($request, 'image', $path, $englishImageName);
                 $slide_data = ResourcesAndInsights::find($return_data['last_insert_id']);
                 $slide_data->image = $englishImageName;
                 $slide_data->save();
             }          
             if ($return_data) {
-                return ['status' => 'success', 'msg' => 'Additional Solutions Updated Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Updated Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Additional Solutions  Not Updated.'];
+                return ['status' => 'error', 'msg' => 'Data Not Updated.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
