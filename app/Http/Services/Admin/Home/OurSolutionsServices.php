@@ -28,9 +28,9 @@ class OurSolutionsServices
             uploadImage($request, 'image', $path, $ImageName);
            
             if ($last_id) {
-                return ['status' => 'success', 'msg' => 'Courses Offered Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => ' Courses Offered get Not Added.'];
+                return ['status' => 'error', 'msg' => ' Data Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
@@ -47,7 +47,7 @@ class OurSolutionsServices
     public function updateAll($request){
         try {
             $return_data = $this->repo->updateAll($request);
-            
+
             $path = Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_ADD');
             if ($request->hasFile('image')) {
                 if ($return_data['image']) {
@@ -66,7 +66,7 @@ class OurSolutionsServices
                 }                
                 // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
                 uploadImage($request, 'image', $path, $englishImageName);
-                $slide_data = CoursesOffered::find($return_data['last_insert_id']);
+                $slide_data = OurSolutions::find($return_data['last_insert_id']);
                 $slide_data->image = $englishImageName;
                 $slide_data->save();
             }          

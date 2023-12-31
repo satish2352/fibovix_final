@@ -35,6 +35,7 @@ class IndexController extends Controller
 
             $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
             $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
+                                    ->where('our_solutions.is_active','=',true)
                                     ->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
                                     'our_solutions.short_description',
                                     'our_solutions.long_description',
