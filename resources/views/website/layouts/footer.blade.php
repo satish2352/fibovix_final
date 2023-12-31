@@ -57,20 +57,29 @@
                             <div class="col-md-12 set_social_media_icon">
                                 <div class="col-md-4 set_icons_content">
                                     <div class="icon d-flex align-items-center justify-content-center social_icons_div">
-                                        <span>
-                                            <i class="fa fa-instagram fa-1x icon" aria-hidden="true"></i></span>
+
+                                        <a href="{{ $website_contact_details[0]['instagram_link'] }}">
+                                            <span>
+                                                <i class="fa fa-instagram fa-1x icon" aria-hidden="true"></i></span>
+                                        </a>
+
                                     </div>
                                 </div>
                                 <div class="col-md-4 set_icons_content">
                                     <div class="icon d-flex align-items-center justify-content-center social_icons_div">
                                         <span>
-                                            <i class="fa fa-facebook fa-1x icon" aria-hidden="true"></i></span>
+                                            <a href="{{ $website_contact_details[0]['facebook_link'] }}">
+                                                <i class="fa fa-facebook fa-1x icon" aria-hidden="true"></i></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="col-md-4 set_icons_content">
                                     <div class="icon d-flex align-items-center justify-content-center social_icons_div">
-                                        <span>
+                                     <a href="mail:{{ $website_contact_details[0]['mail_id'] }}">
+                                            <span>
                                             <i class="fa fa-envelope-o fa-1x icon" aria-hidden="true"></i></span>
+                                        </a>
+                                       
                                     </div>
                                 </div>
                             </div>

@@ -77,6 +77,12 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/update-active-service-details', ['as' => 'update-active-service-details', 'uses' => 'App\Http\Controllers\Admin\Master\ServiceDetailsController@updateOne']);
 
 
+    // List of route contact details
+    Route::get('/edit-website-contact-details', ['as' => 'edit-website-contact-details', 'uses' => 'App\Http\Controllers\Admin\WebsiteContactDetailsController@edit']);
+    Route::post('/update-website-contact', ['as' => 'update-website-contact', 'uses' => 'App\Http\Controllers\Admin\WebsiteContactDetailsController@update']);
+
+
+
     Route::get('/list-our-solutions', ['as' => 'list-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@index']);
     Route::get('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@add']);
     Route::post('/add-our-solutions', ['as' => 'add-our-solutions', 'uses' => 'App\Http\Controllers\Admin\Home\OurSolutionsController@store']);

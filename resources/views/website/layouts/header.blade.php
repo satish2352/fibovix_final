@@ -31,8 +31,8 @@
     <!-- navbar -->
     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right-border">
 
-        <a class="navbar-brand" href="#">+ 91- 8888352777  </a>
-        <a class="navbar-brand" href="#"> 0253-7966831</a>
+        <a class="navbar-brand" href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{ $website_contact_details[0]['contact_one'] }}   </a>
+        <a class="navbar-brand" href="tel:{{ $website_contact_details[0]['contact_two'] }}"> {{ $website_contact_details[0]['contact_two'] }}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -60,8 +60,8 @@
     
   <nav class="navbar navbar-expand-lg navbar-light fibovix_navbar bg-light navbar-right-border fixed-top">
     <div class="container">
-      <a class="navbar-brand navbar_mobile" href="tel:8888352777">+ 91- 8888352777  </a>
-          <a class="navbar-brand navbar_mobile" href="tel:02537966831"> 0253-7966831</a>
+      <a class="navbar-brand navbar_mobile" href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{ $website_contact_details[0]['contact_one'] }}  </a>
+          <a class="navbar-brand navbar_mobile" href="tel:{{ $website_contact_details[0]['contact_two'] }}"> {{ $website_contact_details[0]['contact_two'] }}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

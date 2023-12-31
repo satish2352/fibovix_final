@@ -20,7 +20,8 @@ use App\Models\ {
     AdditionalSolutions,
     Slider,
     OurSolutions,
-    OurSolutionsMasters
+    OurSolutionsMasters,
+    WebsiteContactDetails
 };
 
 class IndexController extends Controller
@@ -32,7 +33,7 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         try {
-
+            $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
             $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
             $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
                                     ->where('our_solutions.is_active','=',true)
@@ -43,16 +44,10 @@ class IndexController extends Controller
                                     'our_solutions_master.solution_name',
                                     'our_solutions_master.id as our_solutions_master_id')
                                     ->get();
-// dd($ourSolutions);
             $ourSolutionsMaster  = OurSolutionsMasters::where('is_active','=',true)->orderBy('updated_at', 'desc')->get();
             $data_output_slider = Slider::where('is_active', true)->get();
-            // $data_output_courses_offered = $this->service->getAllCoursesOffered();
-            // $data_output_upcoming_courses = $this->service->getAllUpcomingCourses();
-            // $data_output_testimonial = $this->service->getAllTestimonial();
-            
-         
-            // return view('website.pages.index', compact('data_output_slider','data_output_courses_offered','data_output_upcoming_courses','data_output_testimonial'));
-            return view('website.pages.index', compact('additionalSolutions','data_output_slider','ourSolutions','ourSolutionsMaster'));
+        
+            return view('website.pages.index', compact('additionalSolutions','data_output_slider','ourSolutions','ourSolutionsMaster','website_contact_details'));
         } catch (\Exception $e) {
             return $e;
         }
@@ -83,25 +78,27 @@ class IndexController extends Controller
     }
 
     public function aboutus() {
-        return view('website.pages.aboutus');
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
+        return view('website.pages.aboutus',compact('website_contact_details'));
     }
 
     
     public function contactus() {
-        return view('website.pages.contactus');
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
+        return view('website.pages.contactus',compact('website_contact_details'));
     }
 
 
     
     public function resources() {
-
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
         $resourceInsights = ResourcesAndInsights::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
-        return view('website.pages.resources-insights',compact('resourceInsights'));
+        return view('website.pages.resources-insights',compact('resourceInsights','website_contact_details'));
     }
 
     
     public function services() {
-
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
         $all_services = ServiceMasters::where(['is_active'=>true] )->orderBy('updated_at', 'desc')->get();
         $all_services_details = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id')
                                                         ->select('service_details.id','service_details.service_id', 'service_details.title',
@@ -111,7 +108,7 @@ class IndexController extends Controller
                                                         'services_masters.service_name',
                                                         'services_masters.id as service_details_id')
                                                         ->get();
-        return view('website.pages.services',compact('all_services','all_services_details'));
+        return view('website.pages.services',compact('all_services','all_services_details','website_contact_details'));
     }
 
 
@@ -141,12 +138,14 @@ class IndexController extends Controller
 
     
     public function resouceInsightsDetails() {
-        return view('website.pages.details');
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
+        return view('website.pages.details',compact('website_contact_details'));
     }
 
     public function media() {
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
         $gallery_data  = Gallery::where('is_active','=',true)->orderBy('updated_at', 'desc')->get();
-        return view('website.pages.media',compact('gallery_data'));
+        return view('website.pages.media',compact('gallery_data','website_contact_details'));
     }
 
 

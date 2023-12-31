@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="text">
                                         <h2>Office</h2>
-                                        <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
+                                        <p>{{ $website_contact_details[0]['address'] }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="text">
                                         <h2>Email</h2>
-                                        <p>info@fibovix.com</p>
+                                        <p><a href="mail:{{ $website_contact_details[0]['mail_id'] }}">{{ $website_contact_details[0]['mail_id'] }}</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,8 @@
                                     </div>
                                     <div class="text">
                                         <h2>Phone</h2>
-                                        <p>6262757562 </p>
+                                        <p><a  href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{ $website_contact_details[0]['contact_one'] }}   </a> &nbsp; 
+                                        <a  href="tel:{{ $website_contact_details[0]['contact_two'] }}">{{ $website_contact_details[0]['contact_two'] }}   </a></p>
                                     </div>
                                 </div>
                             </div>

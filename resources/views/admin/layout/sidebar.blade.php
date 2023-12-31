@@ -145,6 +145,12 @@
             </div>
         </li>
 
+        <li class="{{ request()->is('edit-website-contact-details*') ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" href="{{ url('edit-website-contact-details') }}">
+                <i class="fas fa-window-restore menu-icon"></i>
+                <span class="menu-title">Website Contact Details</span>
+            </a>
+        </li>
 
         <li class="{{ request()->is('log-out*') ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ url('log-out') }}">
