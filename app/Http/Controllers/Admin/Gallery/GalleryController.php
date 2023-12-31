@@ -16,13 +16,13 @@ class GalleryController extends Controller
     public function index(){
         try {
             $getOutput = $this->service->getAll();
-            return view('admin.pages.Gallery.gallery.list-gallery', compact('getOutput'));
+            return view('admin.pages.gallery.gallery.list-gallery', compact('getOutput'));
         } catch (\Exception $e) {
             return $e;
         }
     }    
     public function add(){
-        return view('admin.pages.Gallery.gallery.add-gallery');
+        return view('admin.pages.gallery.gallery.add-gallery');
     }
     public function store(Request $request){
         $rules = [
@@ -67,7 +67,7 @@ class GalleryController extends Controller
     public function show(Request $request){
         try {
             $showData = $this->service->getById($request->show_id);
-            return view('admin.pages.Gallery.gallery.show-gallery', compact('showData'));
+            return view('admin.pages.gallery.gallery.show-gallery', compact('showData'));
         } catch (\Exception $e) {
             return $e;
         }
@@ -75,7 +75,7 @@ class GalleryController extends Controller
     public function edit(Request $request){
         $edit_data_id = base64_decode($request->edit_id);
         $editData = $this->service->getById($edit_data_id);
-        return view('admin.pages.Gallery.gallery.edit-gallery', compact('editData'));
+        return view('admin.pages.gallery.gallery.edit-gallery', compact('editData'));
     }
     public function update(Request $request){
         $rules = [            
