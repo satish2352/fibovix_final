@@ -3,6 +3,9 @@
 namespace App\Constants;
 
 return [
+
+    'OUR_SOLUTION_MAX_IMAGE_SIZE'=>'300',
+    'OUR_SOLUTION_MAX_IMAGE_MIN_SIZE'=>'5',
     //Home
     'SLIDER_IMAGE_MAX_SIZE'=>'2048',
     'SLIDER_IMAGE_MIN_SIZE'=>'180',

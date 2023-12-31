@@ -22,6 +22,25 @@
                                 id="regForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="Solution">Solution:</label> &nbsp<span class="red-text">*</span>
+                                            <select class="form-control mb-2" name="solution_id" id="solution_id">
+                                                <option value="" default>select solution</option>
+                                                @foreach ($data as $solution)
+                                                    <option value="{{ $solution->id }}" @if($editData->solution_id == $solution->id) {{'selected'}} @endif>{{ $solution->solution_name }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                            @if ($errors->has('title'))
+                                                <span class="red-text">
+                                                    <?php echo $errors->first('title', ':message'); ?>
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label for="title">Title </label>&nbsp<span class="red-text">*</span>
@@ -58,8 +77,8 @@
                                             <span class="summernote1">
                                                 <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description">
                                                 @if (old('short_description'))
-                                                {{ old('short_description') }}@else{{ $editData->short_description }}
-                                                @endif
+{{ old('short_description') }}@else{{ $editData->short_description }}
+@endif
                                                 </textarea>
                                             </span>
                                             @if ($errors->has('short_description'))
@@ -69,15 +88,15 @@
                                     </div>
 
 
-                                     <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group" id="summernote_id">
                                             <label for="long_description">Long Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
                                                 <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description">
                                                 @if (old('long_description'))
-                                                {{ old('long_description') }}@else{{ $editData->long_description }}
-                                                @endif
+{{ old('long_description') }}@else{{ $editData->long_description }}
+@endif
                                                 </textarea>
                                             </span>
                                             @if ($errors->has('long_description'))

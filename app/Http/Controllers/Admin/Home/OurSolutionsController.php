@@ -34,13 +34,13 @@ class OurSolutionsController extends Controller
         }
 
         public function store(Request $request){
-// dd($request);
+
             $rules = [
                 'title' => 'required',
                 'short_description' => 'required',
                 'long_description' => 'required',
                 'solution_id' => 'required',
-                // 'image' => 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'',
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509',
                
             ];
             $messages = [    
@@ -51,9 +51,9 @@ class OurSolutionsController extends Controller
                 'solution_id.required' => 'Select the atleats one option',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-                // 'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
-                'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
+                'image.max' => 'The image size must not exceed 500 KB .',
+                'image.min' => 'The image size must not be less than 5 KB .',
+                'image.dimensions' => 'The image dimensions must be between 100X100 and 500x529 pixels.',
             ];
 
     
@@ -94,31 +94,35 @@ class OurSolutionsController extends Controller
         }
         public function edit(Request $request){
             $edit_data_id = base64_decode($request->edit_id);
+            $data = SolutionsMaster::where('is_active', true)->get();
             $editData = $this->service->getById($edit_data_id);
            
-            return view('admin.pages.home.our-solutions.edit-our-solutions', compact('editData'));
+            return view('admin.pages.home.our-solutions.edit-our-solutions', compact('data','editData'));
         }
         public function update(Request $request){
             $rules = [
                 'title' => 'required',
-                
+                'short_description' => 'required',
+                'long_description' => 'required',
+                'solution_id' => 'required',
             ];
-    
+          
             if($request->has('image')) {
-                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'|dimensions:min_width=100,min_height=100,max_width=800,max_height=800|min:'.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE");
+                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509';
             }
            
-            $messages = [   
-                'title.required'=>'Please enter Title.',
+            $messages = [    
+                'title.required'=>'Please enter title.',
+                'short_description.required' => 'Please  enter description.',
+                'long_description.required' => 'Please  enter description.',
                 'image.required' => 'The image is required.',
+                'solution_id.required' => 'Select the atleats one option',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-                'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MAX_SIZE").'KB .',
-                'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.COURSES_OFFERED_IMAGE_MIN_SIZE").'KB .',
-                'image.dimensions' => 'The image dimensions must be between 100X100 and 800x800 pixels.',
-               
+                'image.max' => 'The image size must not exceed 500 KB .',
+                'image.min' => 'The image size must not be less than 5 KB .',
+                'image.dimensions' => 'The image dimensions must be between 100X100 and 500x529 pixels.',
             ];
-    
             try {
                 $validation = Validator::make($request->all(),$rules, $messages);
                 if ($validation->fails()) {

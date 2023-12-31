@@ -60,20 +60,16 @@ class OurSolutionsServices
                     $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->file('image')->extension();
                     
                     // Rest of your code...
-                } else {
-                    // Handle the case where 'image' key is not present in the request.
-                    // For example, you might want to skip the file handling or return an error message.
-                }                
-                // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
+                } 
                 uploadImage($request, 'image', $path, $englishImageName);
-                $slide_data = CoursesOffered::find($return_data['last_insert_id']);
+                $slide_data = OurSolutions::find($return_data['last_insert_id']);
                 $slide_data->image = $englishImageName;
                 $slide_data->save();
             }          
             if ($return_data) {
-                return ['status' => 'success', 'msg' => 'Slide Updated Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Updated Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Slide  Not Updated.'];
+                return ['status' => 'error', 'msg' => 'Data Not Updated.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];
