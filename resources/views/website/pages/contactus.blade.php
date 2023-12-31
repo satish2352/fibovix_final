@@ -15,59 +15,60 @@
 </section>
 <!-- End contact-background -->
 
-        <!-- Start Cards -->
-    <div class="container contactus_bg">    
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-md-12">
-                    <div class="row mt-5 g-3 justify-content-center">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                    <div class="services">
-                                        <div class="icon d-flex align-items-center justify-content-center"><span>
-                                                <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
-                                                        alt=""></i></span>
-                                        </div>
-                                        <div class="text">
-                                            <h2>Office</h2>
-                                            <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                    <div class="services">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
+<!-- Start Cards -->
+<div class="container contactus_bg">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-12">
+                <div class="row mt-5 g-3 justify-content-center">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                <div class="services">
+                                    <div class="icon d-flex align-items-center justify-content-center"><span>
+                                            <i><img src="{{ asset('website/images/Group 1000003610.png') }}"
                                                     alt=""></i></span>
-                                        </div>
-                                        <div class="text">
-                                            <h2>Email</h2>
-                                            <p>info@fibovix.com</p>
-                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <h2>Office</h2>
+                                        <p>Express towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021 </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
-                                    <div class="services">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}" alt=""></i>
-                                                </span>
-                                        </div>
-                                        <div class="text">
-                                            <h2>Phone</h2>
-                                            <p>6262757562 </p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
+                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                <div class="services">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span<i><img src="{{ asset('website/images/Group 1000003611.png') }}"
+                                                alt=""></i></span>
+                                    </div>
+                                    <div class="text">
+                                        <h2>Email</h2>
+                                        <p>info@fibovix.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 text-center d-flex align-items-stretch">
+                                <div class="services">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span<i><img src="{{ asset('website/images/Group 1000003612.png') }}"
+                                                alt=""></i>
+                                            </span>
+                                    </div>
+                                    <div class="text">
+                                        <h2>Phone</h2>
+                                        <p>6262757562 </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <!-- End Cards -->
+</div>
+<!-- End Cards -->
 
 <!-- start Map -->
 <section>
@@ -93,12 +94,13 @@
             @csrf
             <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Name</label>
-                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}" id="full_name">
+                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}"
+                    id="full_name">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('full_name'))
-                <span class="red-text">
-                    <?php echo $errors->first('full_name', ':message'); ?>
-                </span>
+                    <span class="red-text">
+                        <?php echo $errors->first('full_name', ':message'); ?>
+                    </span>
                 @endif
 
             </div>
@@ -107,9 +109,9 @@
                 <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('email'))
-                <span class="red-text">
-                    <?php echo $errors->first('email', ':message'); ?>
-                </span>
+                    <span class="red-text">
+                        <?php echo $errors->first('email', ':message'); ?>
+                    </span>
                 @endif
             </div>
 
@@ -119,9 +121,9 @@
                     id="validationCustom03">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('mobile_number'))
-                <span class="red-text">
-                    <?php echo $errors->first('mobile_number', ':message'); ?>
-                </span>
+                    <span class="red-text">
+                        <?php echo $errors->first('mobile_number', ':message'); ?>
+                    </span>
                 @endif
             </div>
             <div class="col-md-6">
@@ -130,9 +132,9 @@
                     value="{{ old('subject') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('subject'))
-                <span class="red-text">
-                    <?php echo $errors->first('subject', ':message'); ?>
-                </span>
+                    <span class="red-text">
+                        <?php echo $errors->first('subject', ':message'); ?>
+                    </span>
                 @endif
             </div>
             <div class="col-md-12">
@@ -141,9 +143,9 @@
                     id="message" placeholder="Write a Message" class="form-control">{{ old('message') }}</textarea>
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('message'))
-                <span class="red-text">
-                    <?php echo $errors->first('message', ':message'); ?>
-                </span>
+                    <span class="red-text">
+                        <?php echo $errors->first('message', ':message'); ?>
+                    </span>
                 @endif
             </div>
             <div class="col-md-12 py-3 captcha_set captcha_css" style="text-align: -webkit-right;">
@@ -151,9 +153,9 @@
                 {!! NoCaptcha::display() !!}
 
                 @if ($errors->has('g-recaptcha-response'))
-                <span class="help-block">
-                    <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
-                </span>
+                    <span class="help-block">
+                        <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
+                    </span>
                 @endif
             </div>
             <div class="col-12 d-flex justify-content-center mt-3"><br>
