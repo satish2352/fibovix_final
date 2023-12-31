@@ -29,7 +29,7 @@
         <li class="{{request()->is('list-marquee-tab*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
-                <i class="fa fa-th-large menu-icon"></i>
+                <i class="fa fa-users menu-icon"></i>
                 <span class="menu-title">Our Solutions</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -52,7 +52,7 @@
         <li class="{{request()->is('list-marquee-tab*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#master" aria-expanded="false" aria-controls="master">
-                <i class="fa fa-th-large menu-icon"></i>
+                <i class="fa fa-server menu-icon"></i>
                 <span class="menu-title">Services</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -91,7 +91,7 @@
         <li class="{{request()->is('list-slide*') 
             ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home">
-                <i class="fas fa-bars menu-icon"></i>
+                <i class="fa fa-home menu-icon"></i>
                 <span class="menu-title">Home</span>
                 <i class="menu-arrow"></i>
             </a>

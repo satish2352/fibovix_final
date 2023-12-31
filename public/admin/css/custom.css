@@ -1253,3 +1253,8 @@ button.btn.btn-outline-warning.btn-fw {  display: block;   width: 100%;   margin
   .emergancy-contact p {
     color: #fff !important;
   }
+
+.icon_color i{
+    font-size: 3rem;
+    color: #1F2D87;
+}
