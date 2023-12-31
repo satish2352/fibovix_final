@@ -222,6 +222,12 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/delete-contactus-form', ['as' => 'delete-contactus-form', 'uses' => 'App\Http\Controllers\Admin\ContactUs\ContactUsListController@destroy']);
 
 
+    // Contact From About US
+    Route::get('/list-about-us-contactus', ['as' => 'list-about-us-contactus', 'uses' => 'App\Http\Controllers\Admin\ContactUs\AboutUsContactUsListController@index']);
+    Route::post('/show-about-us-contactus', ['as' => 'show-about-us-contactus', 'uses' => 'App\Http\Controllers\Admin\ContactUs\AboutUsContactUsListController@show']);
+    Route::post('/delete-about-us-contactus', ['as' => 'delete-about-us-contactus', 'uses' => 'App\Http\Controllers\Admin\ContactUs\AboutUsContactUsListController@destroy']);
+
+
 
     Route::get('/list-main-menu', ['as' => 'list-main-menu', 'uses' => 'App\Http\Controllers\Admin\Menu\MainMenuController@index']);
     Route::get('/add-main-menu', ['as' => 'add-main-menu', 'uses' => 'App\Http\Controllers\Admin\Menu\MainMenuController@add']);

@@ -44,20 +44,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item f>
+              <a class="nav-link @if(\Request::route()->getName() == '/') {{'active'}} @endi" href="{{ route('/') }}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('aboutus') }}">About Us</a>
+            <li class="nav-item f>
+              <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endi" href="{{ route('aboutus') }}">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ route('services') }}">Services</a>
+            <li class="nav-item f>
+              <a class="nav-link @if(\Request::route()->getName() == 'services') {{'active'}} @endi" href="{{ route('services') }}">Services</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Resources & insights</a>
+            <li class="nav-item ">
+              <a class="nav-link @if(\Request::route()->getName() == 'resources-insights') {{'active'}} @endif" href="{{ route('resources-insights') }}">Insights</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('contact-us') }}">Contact</a>
+            <li class="nav-item ">
+                <a class="nav-link @if(\Request::route()->getName() == 'services' {{'contact-us'}} @endif" href="{{ route('contact-us') }}">Contact</a>
               </li>
           </ul>
         </div>
@@ -73,20 +73,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav fibovix_navbar_nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="{{ route('/') }}">Home </a>
+          <li class="nav-item ">
+            <a class="nav-link @if(\Request::route()->getName() == '/') {{'active'}} @endif" href="{{ route('/') }}">Home </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('aboutus') }}">About</a>
+          <li class="nav-item ">
+            <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endif" href="{{ route('aboutus') }}">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('services') }}">Services</a>
+          <li class="nav-item ">
+            <a class="nav-link @if(\Request::route()->getName() == 'services') {{'active'}} @endif" href="{{ route('services') }}">Services</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{{ route('resources-insights') }}">Insights</a>
+          <li class="nav-item ">
+              <a class="nav-link @if(\Request::route()->getName() == 'resources-insights') {{'active'}} @endif" href="{{ route('resources-insights') }}">Insights</a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('contact-us') }}">Contact Us</a>
+          <li class="nav-item ">
+            <a class="nav-link @if(\Request::route()->getName() == 'contact-us') {{'active'}} @endif" href="{{ route('contact-us') }}">Contact Us</a>
           </li>
         </ul>
       </div>

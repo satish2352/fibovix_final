@@ -30,8 +30,7 @@
                                                 <tr>
                                                     <th>Sr. No.</th>
                                                     <th>Sr.No. To View </th>
-                                                    <th>Title </th>
-                                                    <th>Description </th>
+                                                  
                                                     <th>Image </th>
                                                     <th>Status</th>
                                                     <th>Action</th>
@@ -42,8 +41,7 @@
                                                     <tr>
                                                         <td>{{ $loop->iteration }}</td>
                                                         <td>{{ strip_tags($item->rank_no) }}</td>
-                                                        <td>{{ strip_tags($item->title) }}</td>
-                                                        <td>{{ strip_tags($item->long_description) }}</td>
+                                                     
                                                         <td> <img class="img-size"
                                                                 src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />

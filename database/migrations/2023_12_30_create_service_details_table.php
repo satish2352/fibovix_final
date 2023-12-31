@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('our_resource');
+        Schema::dropIfExists('service_details');
     }
 };

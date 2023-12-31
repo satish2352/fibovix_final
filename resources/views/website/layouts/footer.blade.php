@@ -28,8 +28,6 @@
                       <?php echo $errors->first('email', ':message'); ?>
                     </span>
                     @endif
-
-                    <!-- <button class="btnn" type="submit">subscribe</button> -->
                     <input type="submit" name="submit" class="btnn" value="subscribe">
                   </form>
                 </div>

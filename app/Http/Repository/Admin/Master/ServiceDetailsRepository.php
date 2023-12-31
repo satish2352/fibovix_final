@@ -81,6 +81,8 @@ class ServiceDetailsRepository  {
             // Update the fields from the request
             $dataOutput->title = $request['title'];
             $dataOutput->short_description = $request['short_description'];
+            $dataOutput->long_description = $request['long_description'];
+            $dataOutput->service_id = $request['service_id'];
             
             $dataOutput->save();
             // dd($dataOutput);

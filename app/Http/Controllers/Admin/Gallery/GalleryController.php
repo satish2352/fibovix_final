@@ -26,16 +26,17 @@ class GalleryController extends Controller
     }
     public function store(Request $request){
         $rules = [
-            'image' => 'image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.GALLERY_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=200,max_width=1500,max_height=1000|min:'.Config::get("AllFileValidation.GALLERY_IMAGE_MIN_SIZE").'',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=1024,max_height=1024'
            
         ];
         $messages = [    
             'image.required' => 'The image is required.',
             'image.image' => 'The image must be a valid image file.',
             'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-            'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.GALLERY_IMAGE_MAX_SIZE").'KB .',
-            'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.GALLERY_IMAGE_MIN_SIZE").'KB .',
-            'image.dimensions' => 'The image dimensions must be between 200X200 and 1500X1000 pixels.',
+            'image.max' => 'The image size must not exceed 500 KB .',
+            'image.min' => 'The image size must not be less than 5 KB .',
+            'image.dimensions' => 'The image dimensions must be between 100X100 and 1024x1024 pixels.',
+           
         ];
 
         try {
@@ -81,16 +82,15 @@ class GalleryController extends Controller
         ];
 
         if($request->has('image')) {
-            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:'.Config::get("AllFileValidation.GALLERY_IMAGE_MAX_SIZE").'|dimensions:min_width=200,min_height=200,max_width=1500,max_height=1000|min:'.Config::get("AllFileValidation.GALLERY_IMAGE_MIN_SIZE");
+            $rules['image'] =  'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=1024,max_height=1024';
         }
        
         $messages = [   
-            'image.required' => 'The image is required.',
             'image.image' => 'The image must be a valid image file.',
             'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-            'image.max' => 'The image size must not exceed '.Config::get("AllFileValidation.GALLERY_IMAGE_MAX_SIZE").'KB .',
-            'image.min' => 'The image size must not be less than '.Config::get("AllFileValidation.GALLERY_IMAGE_MIN_SIZE").'KB .',
-            'image.dimensions' => 'The image dimensions must be between 200X200 and 1500X1000 pixels.',
+            'image.max' => 'The image size must not exceed 500 KB .',
+            'image.min' => 'The image size must not be less than 5 KB .',
+            'image.dimensions' => 'The image dimensions must be between 100X100 and 1024x1024 pixels.',
            
         ];
 

@@ -43,28 +43,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="form-group">
-                                            <label for="title">Title</label>&nbsp<span class="red-text">*</span>
-                                            <input class="form-control mb-2" name="title" id="title"
-                                                placeholder="Enter the Title" name="title"
-                                                value="{{ old('title') }}">
-                                            @if ($errors->has('title'))
-                                                <span class="red-text"><?php echo $errors->first('title', ':message'); ?></span>
-                                            @endif
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="form-group" id="summernote_id">
-                                            <label for="description">Description <span class="red-text">*</span></label>
-                                            <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter Long Content">{{ old('long_description') }}</textarea>
-                                            @if ($errors->has('long_description'))
-                                                <span class="red-text">{{ $errors->first('long_description') }}</span>
-                                            @endif
-                                        </div>
-                                    </div>
+                                  
 
                                     <div class="col-md-12 col-sm-12 text-center">
                                         <button type="submit" class="btn btn-sm btn-success" id="submitButton"

@@ -11,7 +11,8 @@ use App\Models\ {
 
     ResourcesAndInsights,
     ServiceMasters,
-    ServiceDetails
+    ServiceDetails,
+    Gallery
 
 };
 
@@ -144,7 +145,8 @@ class IndexController extends Controller
     }
 
     public function media() {
-        return view('website.pages.media');
+        $gallery_data  = Gallery::where('is_active','=',true)->orderBy('updated_at', 'desc')->get();
+        return view('website.pages.media',compact('gallery_data'));
     }
 
 

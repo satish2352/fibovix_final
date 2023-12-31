@@ -116,13 +116,38 @@
                 <span class="menu-title">Gallery</span>
             </a>
         </li>
+        {{--
         <li class="{{request()->is('list-contactus-form*') 
             ? 'nav-item active' : 'nav-item' }}">
-            <a class="nav-link" href="{{ route('list-contactus-form') }}">
+            <a class="nav-link" href="">
                 <i class="fas fa-window-restore menu-icon"></i>
                 <span class="menu-title">Contact Us</span>
             </a>
         </li>
+        --}}
+
+
+         <li class="{{request()->is('list-slide*') 
+            ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home">
+                <i class="fas fa-bars menu-icon"></i>
+                <span class="menu-title">Contact</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="home">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link active"
+                            href="{{ route('list-contactus-form') }}">Contact Us List</a></li>
+                    
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link"
+                            href="{{ route('list-about-us-contactus') }}">About Us Contact List</a></li>
+
+                    
+            
+                </ul>
+            </div>
+        </li>
+
     </ul>
 </nav>
 <!-- partial -->

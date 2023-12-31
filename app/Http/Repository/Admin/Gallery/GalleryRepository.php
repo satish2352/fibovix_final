@@ -23,6 +23,7 @@ class GalleryRepository  {
         try {
             $data =array();
             $dataOutput = new Gallery();
+            $dataOutput->image = 'null'; 
             $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
 

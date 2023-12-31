@@ -54,7 +54,7 @@ class OurSolutionsController extends Controller
                 'long_description.min'=>'Please enter minimum 7 character.',
                 'long_description.max'=>'Please enter maximum character upto 150.',
                 'image.required' => 'The image is required.',
-                'solution_id.required' => 'Select the atleats one option',
+                'solution_id.required' => 'Select the at least one option',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
                 'image.max' => 'The image size must not exceed 500 KB .',
