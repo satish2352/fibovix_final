@@ -1012,6 +1012,10 @@ box-shadow:4px 4px 4px #111;
   
  } */
 
+ .fw-7{
+  font-weight: 700;
+ }
+
  .media_bg_img{
     background-image: url('../images/media/media_bg.png');
     /* background-size: cover;

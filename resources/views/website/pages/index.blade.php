@@ -116,13 +116,24 @@
 <div class="container">
     <div class="row text-center">
         <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
-        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
-            and Bank of America offer a wide range of solutions to help you get there.
-        </p>
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="col-8">
+                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
+                and Bank of America offer a wide range of solutions to help you get there.
+                </p>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+        
     </div>
 </div>
 
-<div class="container contaback">
+<div class="container-fluid contaback">
     <div class="card solution_card p-3">
         <div class="col-md-12">
             <div class="row">
@@ -163,17 +174,17 @@
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($ourSolutions as $key=>$item)
                                     @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
-                                    <div class="col">
+                                    <div class="col-md-6 col-lg-4 col-sm-12">
                                         <div class="card article_card_container h-100">
                                             <img src="{{ Config::get('DocumentConstant.OUR_SOLUTIONS_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
                                             <div class="card-body">
-                                                <h5 class="card-title">{{ $item['title'] }}</h5>
+                                                <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                                <p class="text-align-justify">{{
+                                                    $item['short_description'] }}</p>
                                             </div>
                                             <div class="card-footer article_card_footer">
-                                                <small class="text-muted"><i style="color: orange;"
-                                                        class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;{{
-                                                    $item['short_description'] }}</small>
+                                                
                                             </div>
                                         </div>
                                     </div>

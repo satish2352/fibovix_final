@@ -21,20 +21,15 @@ class OurSolutionsRepository  {
     }
      public function addAll($request){
         try {
-            try { 
-                $data =array();
-                $dataOutput = new OurSolutions();
-                $dataOutput->title = $request['title'];
-                $dataOutput->short_description = $request['short_description'];
-                $dataOutput->long_description = $request['long_description'];
-                $dataOutput->solution_id = $request['solution_id'];
-            
-                $dataOutput->save(); 
-
-            } catch(\Illuminate\Database\QueryException $ex){ 
-                dd($ex->getMessage()); 
-                // Note any method of class PDOException can be called on $ex.
-            }
+            $data =array();
+            $dataOutput = new OurSolutions();
+            $dataOutput->title = $request['title'];
+            $dataOutput->short_description = $request['short_description'];
+            $dataOutput->long_description = $request['long_description'];
+            $dataOutput->solution_id = $request['solution_id'];
+            $dataOutput->image = 'null';
+        
+            $dataOutput->save(); 
             $last_insert_id = $dataOutput->id;
 
             $ImageName = $last_insert_id .'_' . rand(100000, 999999) . '_image.' . $request->image->extension();
