@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('title');
             $table->text('short_description');
             $table->text('long_description');
-            $table->text('image')->default(false);
+            $table->string('image');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 

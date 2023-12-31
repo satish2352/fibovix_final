@@ -76,10 +76,9 @@
     <div class="container" style="position: relative;">
         <div class="row">
             <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22097.967898937644!2d73.78348365959188!3d19.987863371093294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1703580760467!5m2!1sen!2sin"
-                    width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.072690993769!2d72.81970837433005!3d18.928176356598303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e8d34ef5d7%3A0xd03369a7fcfee789!2sExpress%20Towers%2C%20Ramnath%20Goenka%20Marg%2C%20Nariman%20Point%2C%20Mumbai%2C%20Maharashtra%20400021!5e0!3m2!1sen!2sin!4v1704026033480!5m2!1sen!2sin" 
+                    width="85%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
 
-<div class="container-fluid">
+<div class="container-fluid mt-5 g-0">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

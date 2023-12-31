@@ -29,7 +29,7 @@
         <li class="@if (request()->is('list-solution*') || request()->is('list-our-solutions*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#our_olutions" aria-expanded="false"
                 aria-controls="our_olutions">
-                <i class="fa fa-th-large menu-icon"></i>
+                <i class="fa fa-users menu-icon"></i>
                 <span class="menu-title">Our Solutions</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -53,7 +53,7 @@
 
         <li class="@if (request()->is('list-services*') || request()->is('list-service-details*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="services">
-                <i class="fa fa-th-large menu-icon"></i>
+                <i class="fa fa-server menu-icon"></i>
                 <span class="menu-title">Services</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -92,7 +92,7 @@
 
         <li class="@if (request()->is('list-slide*') || request()->is('list-additional-solutions*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="home">
-                <i class="fas fa-bars menu-icon"></i>
+                <i class="fa fa-home menu-icon"></i>
                 <span class="menu-title">Home</span>
                 <i class="menu-arrow"></i>
             </a>
