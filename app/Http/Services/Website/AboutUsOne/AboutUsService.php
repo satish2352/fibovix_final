@@ -1,7 +1,6 @@
 <?php
 namespace App\Http\Services\Website\AboutUsOne;
-use App\Http\Repository\Website\AboutUs\AboutUsRepository;
-
+use App\Http\Repository\Website\AboutUsOne\AboutUsRepository;
 // use App\Marquee;
 use Carbon\Carbon;
 
