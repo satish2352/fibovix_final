@@ -46,7 +46,14 @@ class LoginController extends Controller
                     ->withErrors($validation);
             } else {
                 $resp  = self::$loginServe->checkLogin($request);
+
+                if (is_object($resp['msg']) && property_exists($resp['msg'], 'id')) {
+                            $userId = $resp['msg']->id;
+                            Session::put('user_id', $userId);
+                }
+                
                 if($resp['status']=='success') {
+                    
                     return redirect('/dashboard');
                 } else {
                     return redirect('/login')->with('error', $resp['msg']);

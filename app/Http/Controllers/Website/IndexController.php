@@ -34,16 +34,26 @@ class IndexController extends Controller
     {
         try {
             $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
-            $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
-            $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
-                                    ->where('our_solutions.is_active','=',true)
-                                    ->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
-                                    'our_solutions.short_description',
-                                    'our_solutions.long_description',
-                                    'our_solutions.image',
-                                    'our_solutions_master.solution_name',
-                                    'our_solutions_master.id as our_solutions_master_id')
-                                    ->get();
+            // $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
+            // $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
+            //                         ->where('our_solutions.is_active','=',true)
+            //                         ->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
+            //                         'our_solutions.short_description',
+            //                         'our_solutions.long_description',
+            //                         'our_solutions.image',
+            //                         'our_solutions_master.solution_name',
+            //                         'our_solutions_master.id as our_solutions_master_id')
+            //                         ->get();
+
+        $additionalSolutions = ServiceMasters::where(['is_active'=>true] )->orderBy('updated_at', 'desc')->get();
+        $ourSolutions = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id')
+                                                        ->select('service_details.id','service_details.service_id as solution_id', 'service_details.title',
+                                                        'service_details.short_description',
+                                                        'service_details.long_description',
+                                                        'service_details.image',
+                                                        'services_masters.service_name as solution_name',
+                                                        'services_masters.id as our_solutions_master_id')
+                                                        ->get();
             $ourSolutionsMaster  = OurSolutionsMasters::where('is_active','=',true)->orderBy('updated_at', 'desc')->get();
             $data_output_slider = Slider::where('is_active', true)->get();
         
