@@ -26,7 +26,7 @@
             </a>
         </li>
 
-        <li class="@if (request()->is('list-solution*') || request()->is('list-our-solutions*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
+        <!-- <li class="@if (request()->is('list-solution*') || request()->is('list-our-solutions*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#our_olutions" aria-expanded="false"
                 aria-controls="our_olutions">
                 <i class="fa fa-users menu-icon"></i>
@@ -48,13 +48,13 @@
 
                 </ul>
             </div>
-        </li>
+        </li> -->
 
 
         <li class="@if (request()->is('list-services*') || request()->is('list-service-details*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#services" aria-expanded="false" aria-controls="services">
                 <i class="fa fa-server menu-icon"></i>
-                <span class="menu-title">Services</span>
+                <span class="menu-title">Services/Solution</span>
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="services">

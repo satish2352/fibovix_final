@@ -173,7 +173,7 @@
                                     @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
                                     <div class="col-md-6 col-lg-4 col-sm-12">
                                         <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.OUR_SOLUTIONS_VIEW') }}{{ $item['image'] }}"
+                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
                                             <div class="card-body">
                                                 <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
