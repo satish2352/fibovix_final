@@ -111,7 +111,7 @@
             $("#gallary_data").empty();
             $.each(data, function (i, item) {
                 $("#gallary_data").append(` 
-                                <div class="col">
+                                <div class="col-md-6 col-lg-4 col-sm-12">
                                     <div class="card article_card_container h-100">
                                         <img src="`+ path + item.image + `"
                                             class="card-img-top" alt="`+ item.title + `">
