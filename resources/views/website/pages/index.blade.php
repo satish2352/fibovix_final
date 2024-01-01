@@ -163,10 +163,7 @@
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                            @forelse ($ourSolutions as $key=>$itemNew)
-                            <div class="tab-pane fade active @if($key==0) {{'show'}} @endif"
-                                id="data_id_{{$itemNew['our_solutions_master_id']}}" role="tabpanel"
-                                aria-labelledby="id_{{$itemNew['our_solutions_master_id']}}">
+                           
 
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($ourSolutions as $key=>$item)
@@ -193,12 +190,7 @@
                                     @endforelse
                                 </div>
 
-                            </div>
-                            @empty
-                            <div class="alert alert-primary" role="alert">
-                                No Data Found
-                            </div>
-                            @endforelse
+                         
 
                         </div>
                     </div>
