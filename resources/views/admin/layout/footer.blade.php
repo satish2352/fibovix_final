@@ -360,8 +360,8 @@
 <!-- Summernote Editor End -->
 <script>
     $(document).ready(() => {
-        getServices('all');
-        getOurSolutions('all');
+        // getServices('all');
+        // getOurSolutions('all');
     });
 </script>
 
