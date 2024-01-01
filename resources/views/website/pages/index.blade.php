@@ -67,9 +67,8 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg"
-                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                            <div class="card-body ">
+                        <div class="card shadow-lg why_fibo_card">
+                            <div class="card-body">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
                                 <h5 id="hh">Needs</h5>
                                 <p>
@@ -79,9 +78,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg"
-                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                            <div class="card-body ">
+                        <div class="card shadow-lg why_fibo_card">
+                            <div class="card-body">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
                                 <h5 id="hh">Advisor</h5>
                                 <p>
@@ -93,9 +91,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg"
-                            style="width: 20rem; border-radius:150px 150px 0 150px; height:15rem">
-                            <div class="card-body ">
+                        <div class="card shadow-lg why_fibo_card">
+                            <div class="card-body">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
                                 <h5 id="hh">Strategy</h5>
                                 <p>Your adviser can recommend tax-minimization techniques as part of your overall
@@ -218,7 +215,7 @@
             <h2 id="fibovix">Take <span style="color:#6246E5; padding:5px;">Actions</span></h2>
         </div>
 
-        <div class="row">
+        <div class="row take_action_row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
