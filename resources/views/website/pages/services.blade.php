@@ -29,7 +29,7 @@
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
-                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
+                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')" type="button" role="tab"
                                 aria-controls="nav-home" aria-selected="true">All items</button>
                             @forelse($all_services as $key=>$categories_data)
 
