@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Services\Website\AboutUs;
+namespace App\Http\Services\Website\AboutUsOne;
 
 use App\Http\Repository\Website\AboutUs\AboutUsRepository;
 
