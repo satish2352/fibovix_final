@@ -56,9 +56,10 @@
                                 aria-labelledby="id_{{$itemNew['service_details_id']}}">
 
                                 <div class="row row-cols-1 row-cols-md-4 g-3"> -->
+                                     <!-- @if($itemNew['service_details_id'] === $item['service_details_id']) -->
+                                     <div class="col-md-6 col-lg-4 col-sm-12">
                                     @forelse ($all_services_details as $key=>$item)
-                                    <!-- @if($itemNew['service_details_id'] === $item['service_details_id']) -->
-                                    <div class="col-md-6 col-lg-4 col-sm-12">
+                                   
                                         <div class="card article_card_container h-100">
                                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
@@ -71,13 +72,15 @@
                                                     $item['short_description'] }}</small>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- @endif -->
+                                  
                                     @empty
                                     <div class="alert alert-primary" role="alert">
                                         No Data Found
                                     </div>
                                     @endforelse
+
+                                    <!-- </div> -->
+                                    <!-- @endif -->
                                 <!-- </div>
 
                             </div> -->
