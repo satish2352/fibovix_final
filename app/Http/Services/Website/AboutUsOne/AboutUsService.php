@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Services\Website\AboutUsOne;
-use App\Http\Repository\Website\AboutUsOne\AboutUsRepository;
+use App\Http\Repository\Website\AboutUsOne\AboutUsRepositoryy;
 // use App\Marquee;
 use Carbon\Carbon;
 
@@ -14,7 +14,7 @@ class AboutUsService
      */
     public function __construct()
     {
-        $this->repo = new AboutusRepository();
+        $this->repo = new AboutUsRepositoryy();
     }
 
     

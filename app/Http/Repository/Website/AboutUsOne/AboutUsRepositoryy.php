@@ -9,7 +9,7 @@ use App\Models\ {
     AboutUsContactUs
 };
 
-class AboutUsRepository  {
+class AboutUsRepositoryy  {
 
 
     public function aboutusContact($request)
