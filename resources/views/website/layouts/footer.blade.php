@@ -56,31 +56,37 @@
                         <div class="row">
                             <div class="col-md-12 set_social_media_icon">
                                 <div class="col-md-4 set_icons_content">
-                                    <div class="icon d-flex align-items-center justify-content-center social_icons_div">
+                                    <a href="{{ $website_contact_details[0]['instagram_link'] }}">
+                                        <div class="icon d-flex align-items-center justify-content-center social_icons_div">
 
-                                        <a href="{{ $website_contact_details[0]['instagram_link'] }}">
-                                            <span>
-                                                <i class="fa fa-instagram fa-1x icon" aria-hidden="true"></i></span>
-                                        </a>
+                                            
+                                                <span class="icon_span">
+                                                    <i class="fa fa-instagram fa-1x icon" aria-hidden="true"></i></span>
+                                        
 
-                                    </div>
+                                        </div> 
+                                    </a>
                                 </div>
                                 <div class="col-md-4 set_icons_content">
-                                    <div class="icon d-flex align-items-center justify-content-center social_icons_div">
-                                        <span>
-                                            <a href="{{ $website_contact_details[0]['facebook_link'] }}">
-                                                <i class="fa fa-facebook fa-1x icon" aria-hidden="true"></i></span>
-                                        </a>
-                                    </div>
+                                    <a href="{{ $website_contact_details[0]['facebook_link'] }}">
+                                        <div class="icon d-flex align-items-center justify-content-center social_icons_div">
+                                            <span class="icon_span">
+                                               
+                                                    <i class="fa fa-facebook fa-1x icon" aria-hidden="true"></i></span>
+                                            
+                                        </div>
+                                    </a>
                                 </div>
                                 <div class="col-md-4 set_icons_content">
-                                    <div class="icon d-flex align-items-center justify-content-center social_icons_div">
-                                     <a href="mail:{{ $website_contact_details[0]['mail_id'] }}">
-                                            <span>
+                                    <a href="mail:{{ $website_contact_details[0]['mail_id'] }}">
+                                        <div class="icon d-flex align-items-center justify-content-center social_icons_div">
+                                     
+                                            <span class="icon_span">
                                             <i class="fa fa-envelope-o fa-1x icon" aria-hidden="true"></i></span>
-                                        </a>
+                                        
                                        
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
