@@ -167,7 +167,6 @@
 
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($ourSolutions as $key=>$item)
-                                    @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
                                     <div class="col-md-6 col-lg-4 col-sm-12">
                                         <div class="card article_card_container h-100">
                                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
@@ -182,7 +181,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endif
                                     @empty
                                     <div class="alert alert-primary" role="alert">
                                         No Data Found
