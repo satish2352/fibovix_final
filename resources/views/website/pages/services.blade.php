@@ -29,7 +29,7 @@
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
-                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')" type="button" role="tab"
+                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
                                 aria-controls="nav-home" aria-selected="true">All items</button>
                             @forelse($all_services as $key=>$categories_data)
 
@@ -51,10 +51,14 @@
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
                             @forelse ($all_services_details as $key=>$itemNew)
-                       
-                                     <div class="col-md-6 col-lg-4 col-sm-12">
+                            <div class="tab-pane fade active @if($key==0) {{'show'}} @endif"
+                                id="data_id_{{$itemNew['service_details_id']}}" role="tabpanel"
+                                aria-labelledby="id_{{$itemNew['service_details_id']}}">
+
+                                <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($all_services_details as $key=>$item)
-                                   
+                                    <!-- @if($itemNew['service_details_id'] === $item['service_details_id']) -->
+                                    <div class="col-md-6 col-lg-4 col-sm-12">
                                         <div class="card article_card_container h-100">
                                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
@@ -67,13 +71,16 @@
                                                     $item['short_description'] }}</small>
                                             </div>
                                         </div>
-                                  
+                                    </div>
+                                    <!-- @endif -->
                                     @empty
                                     <div class="alert alert-primary" role="alert">
                                         No Data Found
                                     </div>
                                     @endforelse
+                                </div>
 
+                            </div>
                             @empty
                             {{'No Categries found'}}
                             @endforelse
