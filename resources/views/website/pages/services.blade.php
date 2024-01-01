@@ -21,7 +21,7 @@
     </div>
 </section>
 
-<div class="container-fluid contaback">
+<div class="container-fluid">
     <div class="card p-3">
         <div class="col-md-12">
             <div class="row">
