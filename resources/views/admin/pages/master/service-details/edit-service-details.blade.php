@@ -195,7 +195,7 @@
                         },
                         image: {
                             validImage: true,
-                            fileSize: [180, 2048], // Min 180KB and Max 2MB (2048 * 1024 KB)
+                            fileSize: [180, 501], // Min 180KB and Max 2MB (2048 * 1024 KB)
                             // You need to replace the placeholder with actual dimensions
                             imageDimensions: [50, 50, 800, 800], // Min width x height and Max width x height
                         },
@@ -210,7 +210,7 @@
                         },
                         image: {
                             validImage: "Only JPG, JPEG, PNG images are allowed.",
-                            fileSize: "The file size must be between 180 KB and 2048 KB.",
+                            fileSize: "The file size must be between 180 KB and 500 KB.",
                             imageDimensions: "Image dimensions must be between 50x50 and 800x800 pixels.",
                         },
                     },

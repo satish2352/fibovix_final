@@ -169,7 +169,7 @@
                 image: {
                     required: true,
                     fileExtension: ["jpg", "jpeg", "png"],
-                    fileSize: [5, 200], // Min 10KB and Max 2MB (2 * 1024 KB)
+                    fileSize: [5, 501], // Min 10KB and Max 2MB (2 * 1024 KB)
                     imageDimensions: [50, 50, 800, 800], // Min width x height and Max width x height
                 },
             },
@@ -187,7 +187,7 @@
                 image: {
                     required: "Please upload an Image (jpg, jpeg, png).",
                     fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
-                    fileSize: "File size must be between 10 KB and 150 KB.",
+                    fileSize: "File size must be between 10 KB and 500 KB.",
                     imageDimensions: "Image dimensions must be between 100x100 and 800x800 pixels.",
                 },
             },
