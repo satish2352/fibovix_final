@@ -7,7 +7,7 @@ use App\Http\Repository\Website\AboutUs\AboutUsRepository;
 use Carbon\Carbon;
 
 
-class AboutUsServices
+class AboutUsService
 {
 
 	protected $repo;
