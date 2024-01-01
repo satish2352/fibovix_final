@@ -1,6 +1,5 @@
 <?php
 namespace App\Http\Services\Website\AboutUsOne;
-
 use App\Http\Repository\Website\AboutUs\AboutUsRepository;
 
 // use App\Marquee;
@@ -9,7 +8,6 @@ use Carbon\Carbon;
 
 class AboutUsService
 {
-
 	protected $repo;
 
     /**
