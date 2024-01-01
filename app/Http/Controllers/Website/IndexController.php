@@ -147,9 +147,11 @@ class IndexController extends Controller
     }
 
     
-    public function resouceInsightsDetails() {
+    public function resouceInsightsDetails(Request $request) {
         $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
-        return view('website.pages.details',compact('website_contact_details'));
+        $id = $request->id;
+        $insights_details = ResourcesAndInsights::where('id', $id)->first();
+        return view('website.pages.details',compact('website_contact_details','insights_details'));
     }
 
     public function media() {
