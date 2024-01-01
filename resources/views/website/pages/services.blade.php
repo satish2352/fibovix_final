@@ -50,10 +50,7 @@
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                           <!--  <div class="tab-pane fade active @if($key==0) {{'show'}} @endif"
-                                id="data_id_{{$itemNew['service_details_id']}}" role="tabpanel"
-                                aria-labelledby="id_{{$itemNew['service_details_id']}}"> -->
-
+                         
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($all_services_details as $key=>$item)
                                     <div class="col-md-6 col-lg-4 col-sm-12">
@@ -77,7 +74,6 @@
                                     @endforelse
                                 </div>
 
-                            </div>
                       
                         </div>
                     </div>
