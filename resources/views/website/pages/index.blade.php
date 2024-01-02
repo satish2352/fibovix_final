@@ -117,15 +117,16 @@
 
             </div>
             <div class="col-8">
-                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
-                and Bank of America offer a wide range of solutions to help you get there.
+                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals,
+                    Merrill
+                    and Bank of America offer a wide range of solutions to help you get there.
                 </p>
             </div>
             <div class="col-2">
 
             </div>
         </div>
-        
+
     </div>
 </div>
 
@@ -137,8 +138,9 @@
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
-                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')" type="button" role="tab"
-                                aria-controls="nav-home" aria-selected="true">All items</button>
+                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')"
+                                type="button" role="tab" aria-controls="nav-home" aria-selected="true">All
+                                items</button>
                             @forelse($all_services as $key=>$categories_data)
 
                             <button class="nav-link article_tab_link" id="id_{{ $categories_data['id'] }}"
@@ -158,31 +160,31 @@
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                         
-                                <div class="row row-cols-1 row-cols-md-4 g-3">
-                                    @forelse ($all_services_details as $key=>$item)
-                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                        <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
-                                                class="card-img-top" alt="{{ $item['title'] }}">
-                                            <div class="card-body">
-                                                <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
-                                                <p class="text-align-justify">{{
-                                                    $item['short_description'] }}</p>
-                                            </div>
-                                            <div class="card-footer article_card_footer">
-                                                
-                                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-4 g-3">
+                                @forelse ($all_services_details as $key=>$item)
+                                <div class="col-md-6 col-lg-4 col-sm-12">
+                                    <div class="card article_card_container h-100">
+                                        <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
+                                            class="card-img-top" alt="{{ $item['title'] }}">
+                                        <div class="card-body">
+                                            <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                            <p class="text-align-justify">{{
+                                                $item['short_description'] }}</p>
+                                        </div>
+                                        <div class="card-footer article_card_footer">
+
                                         </div>
                                     </div>
-                                    @empty
-                                    <div class="alert alert-primary" role="alert">
-                                        No Data Found
-                                    </div>
-                                    @endforelse
                                 </div>
+                                @empty
+                                <div class="alert alert-primary" role="alert">
+                                    No Data Found
+                                </div>
+                                @endforelse
+                            </div>
 
-                      
+
                         </div>
                     </div>
                 </div>
@@ -290,25 +292,27 @@
     <div class="row text-center">
         <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
     </div>
-    @foreach ($additionalSolutions as $item)
-    <div class="col-md-4 col-lg-4 col-sm-12">
-        <div class="card addi_sol_card">
-            <img class="addi_sol_card_img"
-                src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
-                <p class="card-text">{{ strip_tags($item->short_description) }}</p>
-                <!-- <a href="" target="_blank">
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+        @foreach ($additionalSolutions as $item)
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="card addi_sol_card">
+                <img class="addi_sol_card_img"
+                    src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
+                    <p class="card-text">{{ strip_tags($item->short_description) }}</p>
+                    <!-- <a href="" target="_blank">
                     <button class="btn btn-primary1 float-right">
                         Learn More
                     </button>
                 </a> -->
-            </div>
+                </div>
 
+            </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 @endif
 
