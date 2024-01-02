@@ -138,8 +138,7 @@ element.style {
             </div>
     </div>
 </div>
-
-@if(count($ourSolutions))
+@if(count($all_services))
 <div class="container">
     <div class="row text-center">
         <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
@@ -148,77 +147,73 @@ element.style {
 
             </div>
             <div class="col-8">
-                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill
-                and Bank of America offer a wide range of solutions to help you get there.
+                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals,
+                    Merrill
+                    and Bank of America offer a wide range of solutions to help you get there.
                 </p>
             </div>
             <div class="col-2">
 
             </div>
         </div>
-        
+
     </div>
 </div>
 
 <div class="container-fluid contaback">
-    <div class="card solution_card p-3">
+    <div class="card p-3">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-3 mt-5">
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
-
-
-                            <button class="nav-link article_tab_link mt-5 active" id="" onclick="getOurSolutions('all')"
-                                data-bs-toggle="tab" data-bs-target="#" type="button" role="tab"
-                                aria-controls="nav-home" aria-selected="true">All
+                            <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
+                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')"
+                                type="button" role="tab" aria-controls="nav-home" aria-selected="true">All
                                 items</button>
-                            @forelse($ourSolutionsMaster as $key=>$categories_data)
+                            @forelse($all_services as $key=>$categories_data)
 
                             <button class="nav-link article_tab_link" id="id_{{ $categories_data['id'] }}"
                                 data-bs-toggle="tab" data-bs-target="#data_id_{{ $categories_data['id'] }}"
-                                onclick="getOurSolutions('{{ $categories_data['id'] }}')" type="button" role="tab"
+                                onclick="getServices('{{ $categories_data['id'] }}')" type="button" role="tab"
                                 aria-controls="nav-profile" aria-selected="false">{{
-                                $categories_data['solution_name'] }}</button>
+                                $categories_data['service_name'] }}</button>
 
                             @empty
                             <div class="alert alert-primary" role="alert">
                                 No Data Found
                             </div>
                             @endforelse
-
                         </div>
                     </nav>
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                           
 
-                                <div class="row row-cols-1 row-cols-md-4 g-3">
-                                    @forelse ($ourSolutions as $key=>$item)
-                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                        <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
-                                                class="card-img-top" alt="{{ $item['title'] }}">
-                                            <div class="card-body">
-                                                <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
-                                                <p class="text-align-justify">{{
-                                                    $item['short_description'] }}</p>
-                                            </div>
-                                            <div class="card-footer article_card_footer">
-                                                
-                                            </div>
+                            <div class="row row-cols-1 row-cols-md-4 g-3">
+                                @forelse ($all_services_details as $key=>$item)
+                                <div class="col-md-6 col-lg-4 col-sm-12">
+                                    <div class="card article_card_container h-100">
+                                        <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
+                                            class="card-img-top" alt="{{ $item['title'] }}">
+                                        <div class="card-body">
+                                            <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                            <p class="text-align-justify">{{
+                                                $item['short_description'] }}</p>
+                                        </div>
+                                        <div class="card-footer article_card_footer">
+
                                         </div>
                                     </div>
-                                    @empty
-                                    <div class="alert alert-primary" role="alert">
-                                        No Data Found
-                                    </div>
-                                    @endforelse
                                 </div>
+                                @empty
+                                <div class="alert alert-primary" role="alert">
+                                    No Data Found
+                                </div>
+                                @endforelse
+                            </div>
 
-                         
 
                         </div>
                     </div>
@@ -324,47 +319,49 @@ element.style {
     <div class="row text-center">
         <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
     </div>
-    @foreach ($additionalSolutions as $item)
-    <div class="col-md-4 col-lg-4 col-sm-12">
-        <div class="card addi_sol_card">
-            <img class="addi_sol_card_img"
-                src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
-                <p class="card-text">{{ strip_tags($item->short_description) }}</p>
-                <!-- <a href="" target="_blank">
+    <div class="row row-cols-1 row-cols-md-4 g-3">
+        @foreach ($additionalSolutions as $item)
+        <div class="col-md-4 col-lg-4 col-sm-12">
+            <div class="card addi_sol_card">
+                <img class="addi_sol_card_img"
+                    src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
+                    <p class="card-text">{{ strip_tags($item->short_description) }}</p>
+                    <!-- <a href="" target="_blank">
                     <button class="btn btn-primary1 float-right">
                         Learn More
                     </button>
                 </a> -->
-            </div>
+                </div>
 
+            </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 @endif
 
 <script>
 
-    function getOurSolutions(our_solutions_master_id) {
-    gallary_data").empty();
+    function getServices(our_services_master_id) {
+        $("#gallary_data").empty();
         $.ajax({
-            url: "{{ route('list-our-solutions-ajax') }}",
+            url: "{{ route('list-our-services-ajax') }}",
             method: "POST",
             data: {
-                "our_solutions_master_id": our_solutions_master_id
+                "our_services_master_id": our_services_master_id
             },
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
-                var path = '<?php echo Config:: get('DocumentConstant.OUR_SOLUTIONS_VIEW'); ?>';
+                var path = '<?php echo Config:: get('DocumentConstant.SERVICES_VIEW'); ?>';
             $("#gallary_data").empty();
             $.each(data, function (i, item) {
                 $("#gallary_data").append(` 
-                                <div class="col">
+                                <div class="col-md-6 col-lg-4 col-sm-12">
                                     <div class="card article_card_container h-100">
                                         <img src="`+ path + item.image + `"
                                             class="card-img-top" alt="`+ item.title + `">
@@ -387,6 +384,7 @@ element.style {
 
 
 </script>
+
 
 
 @include('website.layouts.footer')
