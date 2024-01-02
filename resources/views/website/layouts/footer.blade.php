@@ -193,6 +193,7 @@
             sessionStorage.removeItem('scrollPosition');
         }
     }
+
     document.querySelector(".footer_subscribe_form").addEventListener("submit", function(event) {
         var isSubmissionSuccessful = true;
 
@@ -200,6 +201,7 @@
             storeScrollPosition();
         }
     });
+
     window.addEventListener("load", setScrollPosition);
 </script>
 </body>

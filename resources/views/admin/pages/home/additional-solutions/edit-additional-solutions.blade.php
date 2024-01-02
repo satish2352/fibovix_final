@@ -56,11 +56,10 @@
                                             <label for="short_description">Short Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
-                                                <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description">
-                                                @if (old('short_description'))
-                                                {{ old('short_description') }}@else{{ $editData->short_description }}
-                                                @endif
-                                                </textarea>
+                                               <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description"
+                                                    style="height: 100px;">{{ old('short_description') ?? $editData->short_description }}</textarea>
+
+
                                             </span>
                                             @if ($errors->has('short_description'))
                                                 <span class="red-text"><?php echo $errors->first('short_description', ':message'); ?></span>
@@ -74,11 +73,9 @@
                                             <label for="long_description">Long Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
-                                                <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description">
-                                                @if (old('long_description'))
-                                                {{ old('long_description') }}@else{{ $editData->long_description }}
-                                                @endif
-                                                </textarea>
+                                                <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description"
+                                                   style="height: 100px;">{{ old('long_description') ?? $editData->long_description }}</textarea>
+
                                             </span>
                                             @if ($errors->has('long_description'))
                                                 <span class="red-text"><?php echo $errors->first('long_description', ':message'); ?></span>
@@ -112,7 +109,7 @@
                 // Function to check if all input fields are filled with valid data
                 function checkFormValidity() {
                     const title = $('#title').val();
-                    const description = $('#description').val();
+                    const short_description = $('#short_description').val();
                     const image = $('#image').val();
         
                     // Update the old image values if there are any selected files
@@ -169,7 +166,7 @@
                             required: true,
                             spcenotallow: true,
                         },
-                        description: {
+                        short_description: {
                             required: true,
                         },
                         image: {
@@ -184,7 +181,7 @@
                             required: "Please Enter the Rank Number",
                             spcenotallow: "Enter Some Number",
                         },
-                        description: {
+                        short_description: {
                             required: "Please Enter the Rank description",
                         },
                         image: {

@@ -2,14 +2,14 @@
 {{-- start hero section --}}
 <head>
 <style>
-img, svg {
+.imgSrc {
     margin-left: -133px;
 }
-.h5, h5 {
+.headStretch {
     font-size: 1.25rem;
     margin-left: -119px;
     margin-top: 8px;
-}
+} */
 .text-start {
     text-align: left!important;
     margin-left: 29px;
@@ -24,12 +24,12 @@ element.style {
     margin-top: 13px;
     color: #666666;
 }
-.center
+ .center
 {
     /* background-color: red; */
     text-align: center;
     margin-top: 20px;
-}
+} 
 </style>
 </head>
 <div class="container-fluid mt-5 g-0">
@@ -97,8 +97,8 @@ element.style {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
-                                <h5 id="hh" class="ps-0">Needs</h5>
+                                <img src="{{ asset('website/images/Group.png') }}" class="imgSrc" width="50px" alt="">
+                                <h5 id="hh" class="ps-0 headStretch">Needs</h5>
                                 <p class="ps-0 text-start" style="font-size: 13px; margin-top: 13px; color: #666666;" >
                                     Your strategy is built on your objectives, concerns, and investment mindset.
                                 </p>
@@ -109,8 +109,8 @@ element.style {
                     <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
-                                <h5 id="hh" class="ps-0">Advisor</h5>
+                                <img src="{{ asset('website/images/Group1.png') }}" width="50px" class="imgSrc" alt="">
+                                <h5 id="hh" class="ps-0 headStretch">Advisor</h5>
                                 <p class="ps-0 text-start"style="font-size: 13px; margin-top: 13px; color: #666666;" >
                                     Your adviser is dedicated to supporting you in achieving your objectives & will
                                     offer
@@ -123,8 +123,8 @@ element.style {
                 <div class="col-lg-4 col-md-6 col-sm-12">
                         <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
-                                <div class="lestAlign" style="margin-left:10px"><h5 id="hh" class="ps-0">Strategy</h5></div>
+                                <img src="{{ asset('website/images/Group2.png') }}" class="imgSrc" width="50px" alt="">
+                                <div class="lestAlign" style="margin-left:10px"><h5 id="hh" class="ps-0 headStretch" >Strategy</h5></div>
                                 <p class="ps-0 text-start" style="font-size: 13px; margin-top: 13px; color: #666666;">
                                     Your adviser can recommend tax-minimization techniques as part of your overall
                                     investing
@@ -323,9 +323,7 @@ element.style {
         @foreach ($additionalSolutions as $item)
         <div class="col-md-4 col-lg-4 col-sm-12">
             <div class="card addi_sol_card">
-                <img class="addi_sol_card_img"
-                    src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
-                    class="card-img-top" alt="...">
+                <img class="addi_sol_card_img" src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ strip_tags($item->title) }}</h5>
                     <p class="card-text">{{ strip_tags($item->short_description) }}</p>

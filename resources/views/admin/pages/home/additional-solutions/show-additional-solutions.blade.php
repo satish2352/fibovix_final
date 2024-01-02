@@ -37,7 +37,7 @@
                                             <label>Description :</label>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <label>{{ strip_tags($showData->description) }}</label>
+                                            <label>{{$showData->short_description }}</label>
                                         </div>
                                     </div>                             
                                     <div class="row ">

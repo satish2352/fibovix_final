@@ -13,7 +13,7 @@ class AdditionalSolutionsRepository  {
 
     public function getAll(){
         try {
-            $data_output = AdditionalSolutions::where('is_active',true)->orderBy('updated_at', 'desc')->get();
+            $data_output = AdditionalSolutions::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;

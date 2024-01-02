@@ -30,7 +30,7 @@
                                             <label>Name :</label>
                                         </div>
                                         <div class="col-lg-4 col-md-4 col-sm-4">
-                                            <label>{{ strip_tags($incidenttype_data->name) }}</label>
+                                            <label>{{ strip_tags($incidenttype_data->service_name) }}</label>
                                         </div>
                                     </div>
                                 </div>

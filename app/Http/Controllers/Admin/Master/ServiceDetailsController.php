@@ -106,8 +106,8 @@ class ServiceDetailsController extends Controller
     public function edit(Request $request){
         $edit_data_id = base64_decode($request->edit_id);
         $editData = $this->service->getById($edit_data_id);
-        
-        return view('admin.pages.master.service-details.edit-service-details', compact('editData'));
+        $data = ServiceMasters::getall();
+        return view('admin.pages.master.service-details.edit-service-details', compact('editData','data'));
     }
 
     public function update(Request $request){
