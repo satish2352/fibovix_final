@@ -314,23 +314,23 @@
 
 <script>
 
-    function getOurSolutions(our_solutions_master_id) {
-    $("gallary_data").empty();
+    function getServices(our_services_master_id) {
+        $("#gallary_data").empty();
         $.ajax({
-            url: "{{ route('list-our-solutions-ajax') }}",
+            url: "{{ route('list-our-services-ajax') }}",
             method: "POST",
             data: {
-                "our_solutions_master_id": our_solutions_master_id
+                "our_services_master_id": our_services_master_id
             },
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (data) {
-                var path = '<?php echo Config:: get('DocumentConstant.OUR_SOLUTIONS_VIEW'); ?>';
+                var path = '<?php echo Config:: get('DocumentConstant.SERVICES_VIEW'); ?>';
             $("#gallary_data").empty();
             $.each(data, function (i, item) {
                 $("#gallary_data").append(` 
-                                <div class="col">
+                                <div class="col-md-6 col-lg-4 col-sm-12">
                                     <div class="card article_card_container h-100">
                                         <img src="`+ path + item.image + `"
                                             class="card-img-top" alt="`+ item.title + `">
@@ -353,6 +353,7 @@
 
 
 </script>
+
 
 
 @include('website.layouts.footer')
