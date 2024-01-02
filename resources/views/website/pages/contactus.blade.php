@@ -159,7 +159,7 @@
                 @endif
             </div>
             <div class="col-12 d-flex justify-content-center mt-3"><br>
-                <button class="btn btn-primary" type="submit">Send Message</button>
+                <button class="btn btn-primary" type="submit" style="background-color:#6246e5">Send Message</button>
             </div>
         </form>
 

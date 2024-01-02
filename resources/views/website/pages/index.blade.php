@@ -1,6 +1,37 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
-
+<head>
+<style>
+img, svg {
+    margin-left: -133px;
+}
+.h5, h5 {
+    font-size: 1.25rem;
+    margin-left: -119px;
+    margin-top: 8px;
+}
+.text-start {
+    text-align: left!important;
+    margin-left: 29px;
+}
+.why_fibo_card {
+    width: 19rem;
+    border-radius: 150px 150px 0 150px;
+    height: 16rem;
+}
+element.style {
+    font-size: 13px;
+    margin-top: 13px;
+    color: #666666;
+}
+.center
+{
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+</head>
 <div class="container-fluid mt-5 g-0">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -50,9 +81,7 @@
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your
-                            goals, Merrill
-                            and Bank of America offer a wide range of solutions to help you get there.
+                        <p>Everything we do starts with our purpose. Re imagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix
                         </p>
 
                     </div>
@@ -62,27 +91,27 @@
 
                 </div>
             </div>
-
+                
             <div class="container section_center">
                 <div class="row">
-
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg why_fibo_card">
+                        <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
-                                <h5 id="hh">Needs</h5>
-                                <p>
+                                <h5 id="hh" class="ps-0">Needs</h5>
+                                <p class="ps-0 text-start" style="font-size: 13px; margin-top: 13px; color: #666666;" >
                                     Your strategy is built on your objectives, concerns, and investment mindset.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg why_fibo_card">
+                        <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
-                                <h5 id="hh">Advisor</h5>
-                                <p>
+                                <h5 id="hh" class="ps-0">Advisor</h5>
+                                <p class="ps-0 text-start"style="font-size: 13px; margin-top: 13px; color: #666666;" >
                                     Your adviser is dedicated to supporting you in achieving your objectives & will
                                     offer
                                     tailored guidance from the start.
@@ -90,22 +119,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="card shadow-lg why_fibo_card">
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card shadow-lg why_fibo_card text-left">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
-                                <h5 id="hh">Strategy</h5>
-                                <p>Your adviser can recommend tax-minimization techniques as part of your overall
+                                <div class="lestAlign" style="margin-left:10px"><h5 id="hh" class="ps-0">Strategy</h5></div>
+                                <p class="ps-0 text-start" style="font-size: 13px; margin-top: 13px; color: #666666;">
+                                    Your adviser can recommend tax-minimization techniques as part of your overall
                                     investing
                                     strategy.
                                 </p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
-
     </div>
 </div>
 
@@ -206,28 +236,25 @@
         </div>
 
         <div class="row take_action_row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="card shadow-lg action_circle">
-                    <div class="card-body ">
-                        <span
-                            class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
-                            <span class="fs-2 tick_icon">✓</span>
-                        </span>
-                        <p class="card-text p-4 fs-5 fw-3">Find out what is important to you.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="card shadow-lg action_square">
-                    <div class="card-body ">
-                        <p class="card-text border-0 bg-light ">Together with your advisor, determine your
-                            priorities for the now and your long-term goals. If you are in need of an advisor, we
-                            can assist you in finding one.
-                        </p>
-                    </div>
-                </div>
-
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card shadow-lg action_circle d-flex align-items-center">
+            <div class="card-body text-center">
+                <span class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
+                    <span class="fs-2 tick_icon">✓</span>
+                </span>
+                <p class="card-text p-4 fs-5 fw-3 center">Find out what is important to you.</p>
             </div>
+        </div>
+
+        <div class="card shadow-lg action_square d-flex align-items-center">
+            <div class="card-body text-center">
+                <p class="card-text border-0 bg-light ">Together with your advisor, determine your
+                    priorities for the now and your long-term goals. If you are in need of an advisor, we
+                    can assist you in finding one.
+                </p>
+            </div>
+        </div>
+    </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card shadow-lg action_circle">
@@ -236,7 +263,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Create a plan and a roadmap for yourself.
+                        <p class="card-text p-4 fs-5 fw-3 center">Create a plan and a roadmap for yourself.
                         </p>
                     </div>
                 </div>
@@ -256,13 +283,13 @@
                             class="position-absolute px-3 tick_circle py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Recognize your options and take action.
+                        <p class="card-text p-4 fs-5 fw-3 center">Recognize your options and take action.
                         </p>
                     </div>
                 </div>
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
-                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
+                        <p class="card-text border-0 bg-light ">Find out more about your program alternatives and
                             investment connection. Then, with the help of your adviser, implement your strategy.
                         </p>
                     </div>
@@ -276,7 +303,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Review & track your progress</p>
+                        <p class="card-text p-4 fs-5 fw-3 center">Review & track your progress</p>
                     </div>
                 </div>
                 <div class="card shadow-lg action_square">

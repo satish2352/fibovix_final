@@ -2,6 +2,30 @@
 <hr class="line"> --}}
 
 {{-- footer --}}
+<head>
+<style>
+.social_icons_div {
+    background-color: #fff;
+    color: #6246E5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 28px;
+}
+.text-start {
+    text-align: left!important;
+    margin-left: 20px;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+    margin-left: -44px;
+}
+.more{
+    margin-left: -177px;
+}
+
+</style>
+</head>
 <footer class="mt-4">
     <div class="footimg">
 
@@ -16,7 +40,8 @@
                         <div class="container mt-5">
                             <div class="row news text-center mt-5">
                                 <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
-                                <div class="input-group  justify-content-center">
+                                  <center> <div class="col-8 grid-margin"> @include('website.layouts.alert')</div></center>
+                                <div class="input-group  ">
                                     <form class="footer_subscribe_form" action="{{ url('add-subscriber') }}"
                                         id="regForm" method="POST" enctype="multipart/form-data">
                                         @csrf
@@ -28,7 +53,7 @@
                                                 <?php echo $errors->first('email', ':message'); ?>
                                             </span>
                                         @endif
-                                        <input type="submit" name="submit" class="btnn" value="subscribe">
+                                        <input type="submit" name="submit" class="btnn" value="subscribe" >
                                     </form>
                                 </div>
                             </div>
@@ -50,11 +75,10 @@
                         <!-- Content -->
                         <img class="py-3" src="{{ asset('website/images/Logo1.png') }}" width="200px" alt="">
                         {{-- <h5 class="text-uppercase font-weight-bold mt-3 mb-4">About our Company</h5>
-            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
-                        <p>Book your trip in minute, get full
-                            Control for much longer.</p>
+                             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
                         <div class="row">
-                            <div class="col-md-12 set_social_media_icon">
+                        <p class="ps-0 text-start " style="width:61%" >Express Towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021.</p>
+                            <div class="col-md-6 set_social_media_icon">
                                 <div class="col-md-4 set_icons_content">
                                     <a href="{{ $website_contact_details[0]['instagram_link'] }}">
                                         <div class="icon d-flex align-items-center justify-content-center social_icons_div">
@@ -96,10 +120,10 @@
                         <h6 class="text-uppercase mt-4 font-weight-bold mb-4">Company</h6>
                         {{--
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
-                        <p>
+                        <p class="ps-0 text-start">
                             <a href="{{ route('aboutus') }}" id="links">About</a>
                         </p>
-                        <p>
+                        <p class="ps-0 text-start"> 
                             <a href="{{ route('services') }}" id="links">Services</a>
                         </p>
 
@@ -110,21 +134,21 @@
                         <h6 class="text-uppercase mt-4 font-weight-bold mb-4">Contact</h6>
                         {{--
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
-                        <p>
+                        <p class="ps-0 text-start">
                             <a href="#!" id="links">Help/FAQ</a>
                         </p>
-                        <p>
+                        <p class="ps-0 text-start">
                             <a href="#!" id="links">Privacy & Policy</a>
                         </p>
 
                     </div>
                     <hr class="clearfix w-100 d-md-none">
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer_link">
-                        <h6 class="text-uppercase mt-4 font-weight-bold mb-4">More</h6>
+                        <h6 class="text-uppercase mt-4 font-weight-bold mb-4 more">More</h6>
                         {{--
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> --}}
-                        <p><a href="{{ route('media') }}" id="links">Media</a></p>
-                        <p><a href="{{ route('resources-insights') }}" id="links">Insights</a></p>
+                        <p class="ps-0 text-start"><a href="{{ route('media') }}" id="links">Media</a></p>
+                        <p class="ps-0 text-start"><a href="{{ route('resources-insights') }}" id="links">Insights</a></p>
 
                         {{-- <p>
               <i class="fas fa-phone mr-3"></i> + 91 80254 52xxx
@@ -158,8 +182,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
 </script>
+<script>
+    function storeScrollPosition() {
+        sessionStorage.setItem('scrollPosition', window.scrollY);
+    }
+    function setScrollPosition() {
+        var scrollPosition = sessionStorage.getItem('scrollPosition');
+        if (scrollPosition !== null) {
+            window.scrollTo(0, parseInt(scrollPosition));
+            sessionStorage.removeItem('scrollPosition');
+        }
+    }
+    document.querySelector(".footer_subscribe_form").addEventListener("submit", function(event) {
+        var isSubmissionSuccessful = true;
 
-
+        if (isSubmissionSuccessful) {
+            storeScrollPosition();
+        }
+    });
+    window.addEventListener("load", setScrollPosition);
+</script>
 </body>
 
 </html>

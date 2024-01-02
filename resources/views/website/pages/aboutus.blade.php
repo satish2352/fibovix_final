@@ -202,8 +202,8 @@
                                 <p>WORKING TOGETHER-1</p>
                                     <h3>Prepare for important <span class="font_color">milestones</span> </h3>
                                     <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
-                                    <h4><b>Typing the knot and starting a family </b></h4>
-                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                    <h4><b>Marriage and Family</b></h4>
+                                    <p>Strike a balance between repaying your student loans and setting aside funds for your child's future.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -211,8 +211,8 @@
                                     <p>WORKING TOGETHER-2</p>
                                     <h3>Prepare for important <span class="font_color">milestones</span> </h3>
                                     <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
-                                    <h4><b>Typing the knot and starting a family </b></h4>
-                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                    <h4><b>Purchasing or selling a residence.</b></h4>
+                                    <p>Navigating Real Estate transactions in buying or selling a Home.</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -220,8 +220,8 @@
                                     <p>WORKING TOGETHER-3</p>
                                     <h3>Prepare for important <span class="font_color">milestones</span> </h3>
                                     <p>Having a dedicated advisor at certain times in your life can be valuable. Are any of these on your radar?</p>
-                                    <h4><b>Typing the knot and starting a family </b></h4>
-                                    <p>Having a dedicated advisor at certain times in your life can be valuable.</p>
+                                    <h4><b>Retirement Planning </b></h4>
+                                    <p>Preparing for your next chapter as you approach retirement.</p>
                                 </div>
                             </div>
                         </div>
@@ -339,9 +339,9 @@
                             </div>
 
 
-                            <div class="form_btn"><br>
-                                <button class="btn btn-primary mb-2" type="submit">Submit</button>
-                            </div>
+                            <center><div class="form_btn"><br>
+                                <button class="btn btn-primary mb-2" style="background-color:#6246E5"  id="submitBtn" type="submit" disabled>Submit</button>
+                            </div></center>
                         </form>
                     </div>
                 </div>
@@ -387,7 +387,18 @@
         </div>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#agree_checkbox').on('change', function () {
+            if (this.checked) {
+                $('#submitBtn').prop('disabled', false);
+            } else {
+                $('#submitBtn').prop('disabled', true);
+            }
+        });
+    });
+</script>
 
 
 
