@@ -360,20 +360,8 @@
 <!-- Summernote Editor End -->
 <script>
     $(document).ready(() => {
-        $("#english_image").change(function() {
-            $('#english').css('display', 'none');
-            $("#english_imgPreview").show();
-
-            const file = this.files[0];
-            if (file) {
-                let reader = new FileReader();
-                reader.onload = function(event) {
-                    $("#english_imgPreview")
-                        .attr("src", event.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        });
+        // getServices('all');
+        // getOurSolutions('all');
     });
 </script>
 

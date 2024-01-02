@@ -29,7 +29,7 @@ class ResourcesAndInsightsController extends Controller
             $rules = [
                 'title' => 'required|min:7|max:150',
                 'short_description' => 'required|min:7|max:150',
-                'long_description' => 'required|min:7|max:150',
+                'long_description' => 'required|min:7|max:255',
                 'image' => 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509',
                
             ];
@@ -42,7 +42,7 @@ class ResourcesAndInsightsController extends Controller
                 'short_description.max'=>'Please enter maximum character upto 150.',
                 'long_description.required' => 'Please  enter description.',
                 'long_description.min'=>'Please enter minimum 7 character.',
-                'long_description.max'=>'Please enter maximum character upto 150.',
+                'long_description.max'=>'Please enter maximum character upto 255.',
                 'image.required' => 'The image is required.',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
@@ -94,7 +94,7 @@ class ResourcesAndInsightsController extends Controller
             $rules = [
                 'title' => 'required|min:7|max:150',
                 'short_description' => 'required|min:7|max:150',
-                'long_description' => 'required|min:7|max:150',              
+                'long_description' => 'required|min:7|max:255',              
                
             ];
             
@@ -112,7 +112,7 @@ class ResourcesAndInsightsController extends Controller
                 'short_description.max'=>'Please enter maximum character upto 150.',
                 'long_description.required' => 'Please  enter description.',
                 'long_description.min'=>'Please enter minimum 7 character.',
-                'long_description.max'=>'Please enter maximum character upto 150.',
+                'long_description.max'=>'Please enter maximum character upto 255.',
                 'image.required' => 'The image is required.',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',

@@ -110,6 +110,10 @@
                                 Profile
                             </a> --}}
                             {{-- @endforeach --}}
+                            <a class="dropdown-item" href="{{ url('change-password') }}">
+                                <i class="fas fa-power-off text-primary"></i>
+                                Change Password
+                            </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ url('log-out') }}">
                                 <i class="fas fa-power-off text-primary"></i>

@@ -163,17 +163,13 @@
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                            @forelse ($ourSolutions as $key=>$itemNew)
-                            <div class="tab-pane fade active @if($key==0) {{'show'}} @endif"
-                                id="data_id_{{$itemNew['our_solutions_master_id']}}" role="tabpanel"
-                                aria-labelledby="id_{{$itemNew['our_solutions_master_id']}}">
+                           
 
                                 <div class="row row-cols-1 row-cols-md-4 g-3">
                                     @forelse ($ourSolutions as $key=>$item)
-                                    @if($itemNew['our_solutions_master_id'] === $item['our_solutions_master_id'])
                                     <div class="col-md-6 col-lg-4 col-sm-12">
                                         <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.OUR_SOLUTIONS_VIEW') }}{{ $item['image'] }}"
+                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
                                             <div class="card-body">
                                                 <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
@@ -185,7 +181,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endif
                                     @empty
                                     <div class="alert alert-primary" role="alert">
                                         No Data Found
@@ -193,12 +188,7 @@
                                     @endforelse
                                 </div>
 
-                            </div>
-                            @empty
-                            <div class="alert alert-primary" role="alert">
-                                No Data Found
-                            </div>
-                            @endforelse
+                         
 
                         </div>
                     </div>
