@@ -141,7 +141,7 @@ element.style {
 @if(count($all_services))
 <div class="container">
     <div class="row text-center">
-        <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
+        <h2 id="fibovix">Our <span style="color:#6246E5">Services </span> </h2>
         <div class="row">
             <div class="col-2">
 
@@ -227,7 +227,7 @@ element.style {
 <div class="container-fluid position-relative mb-5 bimg">
     <div class="container">
         <div class="row text-center ">
-            <h2 id="fibovix">Take <span style="color:#6246E5; padding:5px;">Actions</span></h2>
+            <h2 id="fibovix">Explore <span style="color:#6246E5; padding:5px;">With Us</span></h2>
         </div>
 
         <div class="row take_action_row">
@@ -317,7 +317,7 @@ element.style {
 @if(count($additionalSolutions))
 <div class="container mb-5 ">
     <div class="row text-center">
-        <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
+        <h2 id="fibovix">We Always <span style="color:#6246E5"> Offer More</span> </h2>
     </div>
     <div class="row row-cols-1 row-cols-md-4 g-3">
         @foreach ($additionalSolutions as $item)

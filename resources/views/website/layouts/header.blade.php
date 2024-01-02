@@ -71,7 +71,7 @@
             <a class="nav-link @if(\Request::route()->getName() == '/') {{'active'}} @endif" href="{{ route('/') }}">Home </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endif" href="{{ route('aboutus') }}">About</a>
+            <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endif" href="{{ route('aboutus') }}">About Us</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link @if(\Request::route()->getName() == 'services') {{'active'}} @endif" href="{{ route('services') }}">Services</a>

@@ -16,10 +16,7 @@
     text-align: left!important;
     margin-left: 20px;
 }
-.mb-4 {
-    margin-bottom: 1.5rem!important;
-    margin-left: -44px;
-}
+
 .more{
     margin-left: -177px;
 }
@@ -164,7 +161,7 @@
 
             <div class="container ">
                 <div class="row">
-                    <div id="links" class="col-lg-10 col-md-10 col-sm-6 mb-3">Copyright, Sumago infotech
+                    <div id="links" class="col-lg-10 col-md-10 col-sm-6 mb-3">Copyright, Trabook. 
                         <?php echo date('Y'); ?>. All rights reserved.
                     </div>
                     <div id="links" class="col-lg-2 col-md-10 col-sm-6 mb-3">Terms & Conditions</div>
