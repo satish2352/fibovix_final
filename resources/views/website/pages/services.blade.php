@@ -58,12 +58,12 @@
                                             <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                                 class="card-img-top" alt="{{ $item['title'] }}">
                                             <div class="card-body">
-                                                <h5 class="card-title">{{ $item['title'] }}</h5>
+                                                <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                                <p class="text-align-justify">{{
+                                                    $item['short_description'] }}</p>
                                             </div>
                                             <div class="card-footer article_card_footer">
-                                                <small class="text-muted"><i style="color: orange;"
-                                                        class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;{{
-                                                    $item['short_description'] }}</small>
+                                                
                                             </div>
                                         </div>
                                     </div>
