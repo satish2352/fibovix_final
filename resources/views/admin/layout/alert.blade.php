@@ -9,6 +9,7 @@
     </div>
 @endif
 
+
 @if (Session::get('status') == 'error')
     <div class="col-12 grid-margin">
         <div class="alert alert-danger" id="danger-alert">
