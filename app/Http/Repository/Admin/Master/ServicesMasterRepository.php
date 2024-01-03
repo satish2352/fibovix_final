@@ -104,13 +104,22 @@ class ServicesMasterRepository{
     }
     public function updateOne($request){
         try {
-            $slide = ServiceMasters::find($request); // Assuming $request directly contains the ID
-
-            // Assuming 'is_active' is a field in the Slider model
+            $slide = ServiceMasters::find($request); 
             if ($slide) {
-                $is_active = $slide->is_active === 1 ? 0 : 1;
-                $slide->is_active = $is_active;
-                $slide->save();
+                $active =  $slide->is_active;
+                // dd($active);
+                if($active == '1') {
+                    ServiceMasters::where('id',$request)
+                    ->update([
+                        'is_active' => '0' 
+                    ]); 
+                } else {
+                    ServiceMasters::where('id',$request)
+                    ->update([
+                        'is_active' => '1'
+                    ]); 
+                }
+               
 
                 return [
                     'msg' => 'Slide updated successfully.',

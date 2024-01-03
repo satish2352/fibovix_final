@@ -10,7 +10,6 @@ class ServiceMasters extends Model
     use HasFactory;
     protected $table = 'services_masters';
     protected $primaryKey = 'id';
-    protected $fillable = ['name'];
 
     public static function getall()
     {
