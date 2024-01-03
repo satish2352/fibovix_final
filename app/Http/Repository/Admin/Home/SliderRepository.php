@@ -93,20 +93,32 @@ class SliderRepository  {
             ];
         }
     }
-    public function updateOne($request){
+    public function updateOne($id){
         try {
-            $updateOutput = Slider::find($request); // Assuming $request directly contains the ID
+            $updateOutput = Slider::find($id); // Assuming $id directly contains the ID
 
-            // Assuming 'is_active' is a field in the Slider model
             if ($updateOutput) {
-                $is_active = $updateOutput->is_active === 1 ? 0 : 1;
-                $updateOutput->is_active = $is_active;
-                $updateOutput->save();
+                $active =  $updateOutput->is_active;
+                // dd($active);
+                if($active == '1') {
+                    Slider::where('id',$id)
+                    ->update([
+                        'is_active' => '0' 
+                    ]); 
+                } else {
+                    Slider::where('id',$id)
+                    ->update([
+                        'is_active' => '1'
+                    ]); 
+                }
+               
+
                 return [
-                    'msg' => 'Data Updated Successfully.',
+                    'msg' => 'Slide updated successfully.',
                     'status' => 'success'
                 ];
             }
+
             return [
                 'msg' => 'Data not Found.',
                 'status' => 'error'
@@ -121,7 +133,7 @@ class SliderRepository  {
     public function deleteById($id){
             try {
                 $deleteDataById = Slider::find($id);
-                if ($deleteData) {
+                if ($deleteDataById) {
                     if (file_exists_view(Config::get('DocumentConstant.SLIDER_DELETE') . $deleteDataById->image)){
                         removeImage(Config::get('DocumentConstant.SLIDER_DELETE') . $deleteDataById->image);
                     }

@@ -126,8 +126,8 @@ class SliderController extends Controller
     }
     public function updateOne(Request $request){
         try {
-            $active_id = $request->active_id;
-        $result = $this->service->updateOne($active_id);
+            $id = $request->active_id;
+            $result = $this->service->updateOne($id);
             return redirect('list-slide')->with('flash_message', 'Updated!');  
         } catch (\Exception $e) {
             return $e;

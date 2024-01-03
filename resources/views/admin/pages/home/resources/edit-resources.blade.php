@@ -5,7 +5,7 @@
         <div class="content-wrapper mt-6">
             <div class="page-header">
                 <h3 class="page-title">
-                    Courses Offered
+                Resource and Insights
                 </h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">

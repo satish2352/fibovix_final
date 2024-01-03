@@ -13,7 +13,7 @@ class AdditionalSolutionsRepository  {
 
     public function getAll(){
         try {
-            $data_output = AdditionalSolutions::where('is_active',true)->orderBy('updated_at', 'desc')->get();
+            $data_output = AdditionalSolutions::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
@@ -96,26 +96,37 @@ class AdditionalSolutionsRepository  {
             ];
         }
     }
-    public function updateOne($request){
+    public function updateOne($id){
         try {
-            $updateOutput = AdditionalSolutions::find($request); // Assuming $request directly contains the ID
+            $updateOutput = AdditionalSolutions::find($id); // Assuming $request directly contains the ID
 
-            // Assuming 'is_active' is a field in the model
             if ($updateOutput) {
-                $is_active = $updateOutput->is_active === 1 ? 0 : 1;
-                $updateOutput->is_active = $is_active;
-                $updateOutput->save();
-
+                $active =  $updateOutput->is_active;
+                if($active == '1') {
+                    AdditionalSolutions::where('id',$id)
+                    ->update([
+                        'is_active' => '0' 
+                    ]); 
+                } else {
+                    AdditionalSolutions::where('id',$id)
+                    ->update([
+                        'is_active' => '1'
+                    ]); 
+                }
 
                 return [
-                    'msg' => 'Data Updated Successfully.',
+                    'msg' => 'Slide updated successfully.',
                     'status' => 'success'
                 ];
+                   
+            } else {
+                return [
+                    'msg' => 'Data not found.',
+                    'status' => 'error'
+                ];
             }
-            return [
-                'msg' => 'Data not Found.',
-                'status' => 'error'
-            ];
+
+          
         } catch (\Exception $e) {
             return [
                 'msg' => 'Failed to Update Data.',

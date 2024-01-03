@@ -34,10 +34,18 @@
                                     </div>      
                                     <div class="row ">
                                         <div class="col-lg-3 col-md-3 col-sm-3">
-                                            <label>Description :</label>
+                                            <label>Short Description :</label>
                                         </div>
                                         <div class="col-lg-8 col-md-8 col-sm-8">
-                                            <label>{{ strip_tags($showData->description) }}</label>
+                                            <label>{{ strip_tags($showData->short_description) }}</label>
+                                        </div>
+                                    </div>   
+                                    <div class="row ">
+                                        <div class="col-lg-3 col-md-3 col-sm-3">
+                                            <label>Long Description :</label>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                            <label>{{ strip_tags($showData->long_description) }}</label>
                                         </div>
                                     </div>                             
                                     <div class="row ">

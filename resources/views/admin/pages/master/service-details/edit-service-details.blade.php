@@ -65,7 +65,7 @@
                                             @endif
                                         </div>
                                         <img id="english"
-                                            src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $editData->image }}"
+                                            src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $editData->image }}"
                                             class="img-fluid img-thumbnail" width="150">
                                         <img id="english_imgPreview" src="#"
                                             alt=" {{ strip_tags($editData['title']) }} Image"
@@ -77,11 +77,7 @@
                                             <label for="short_description">Short Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
-                                                <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description">
-                                                @if (old('short_description'))
-{{ old('short_description') }}@else{{ $editData->short_description }}
-@endif
-                                                </textarea>
+                                                <textarea class="form-control" name="short_description" id="short_description" placeholder="Enter the Description">@if (old('short_description')){{ old('short_description') }}@else{{ $editData->short_description }}@endif</textarea>
                                             </span>
                                             @if ($errors->has('short_description'))
                                                 <span class="red-text"><?php echo $errors->first('short_description', ':message'); ?></span>
@@ -95,11 +91,7 @@
                                             <label for="long_description">Long Description</label>&nbsp<span
                                                 class="red-text">*</span>
                                             <span class="summernote1">
-                                                <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description">
-                                                @if (old('long_description'))
-{{ old('long_description') }}@else{{ $editData->long_description }}
-@endif
-                                                </textarea>
+                                                <textarea class="form-control" name="long_description" id="long_description" placeholder="Enter the Long Description">@if (old('long_description')){{ old('long_description') }}@else{{ $editData->long_description }}@endif</textarea>
                                             </span>
                                             @if ($errors->has('long_description'))
                                                 <span class="red-text"><?php echo $errors->first('long_description', ':message'); ?></span>

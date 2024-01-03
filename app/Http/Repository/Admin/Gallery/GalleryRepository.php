@@ -89,24 +89,36 @@ class GalleryRepository  {
             ];
         }
     }
-    public function updateOne($request){
+    public function updateOne($id){
         try {
-            $updateOutput = Gallery::find($request); // Assuming $request directly contains the ID
-
-            // Assuming 'is_active' is a field in the Slider model
+            $updateOutput = Gallery::find($id); // Assuming $request directly contains the ID
+          
             if ($updateOutput) {
-                $is_active = $updateOutput->is_active === 1 ? 0 : 1;
-                $updateOutput->is_active = $is_active;
-                $updateOutput->save();
+                $active =  $updateOutput->is_active;
+                if($active == '1') {
+                    Gallery::where('id',$id)
+                    ->update([
+                        'is_active' => '0' 
+                    ]); 
+                } else {
+                    Gallery::where('id',$id)
+                    ->update([
+                        'is_active' => '1'
+                    ]); 
+                }
+
                 return [
-                    'msg' => 'Data Updated Successfully.',
+                    'msg' => 'Data updated successfully.',
                     'status' => 'success'
                 ];
+                   
+            } else {
+                return [
+                    'msg' => 'Data not found.',
+                    'status' => 'error'
+                ];
             }
-            return [
-                'msg' => 'Data not Found.',
-                'status' => 'error'
-            ];
+
         } catch (\Exception $e) {
             return [
                 'msg' => 'Failed to Update Data.',

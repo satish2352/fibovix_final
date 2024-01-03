@@ -22,6 +22,7 @@ class ServiceDetailsController extends Controller
 
            $combinedData = ServiceMasters::join('service_details', 'service_details.service_id', '=', 'services_masters.id')
             ->select('service_details.*', 'services_masters.service_name')
+            ->orderBy('service_details.id', 'DESC')
             ->get();
 
             return view('admin.pages.master.service-details.list-service-details', compact('combinedData'));
@@ -104,10 +105,11 @@ class ServiceDetailsController extends Controller
     }
 
     public function edit(Request $request){
+        $data = ServiceMasters::where('is_active', true)->get();
         $edit_data_id = base64_decode($request->edit_id);
         $editData = $this->service->getById($edit_data_id);
         
-        return view('admin.pages.master.service-details.edit-service-details', compact('editData'));
+        return view('admin.pages.master.service-details.edit-service-details', compact('editData','data'));
     }
 
     public function update(Request $request){
