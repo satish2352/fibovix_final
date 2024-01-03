@@ -13,7 +13,7 @@ class GalleryRepository  {
 
     public function getAll(){
         try {
-            $data_output = Gallery::where('is_active',true)->orderBy('updated_at', 'desc')->get();
+            $data_output = Gallery::orderBy('updated_at', 'desc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
