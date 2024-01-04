@@ -23,35 +23,25 @@
                                 @csrf
                                 <div class="row">
 
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="form-group" id="">
-                                            <label for="contact_one"> Enter Contact No 1<span
-                                                    class="red-text">*</span></label>
-                                            <input class="form-control mb-2" name="contact_one" id="contact_one"
-                                                placeholder=" Enter Contact No 1"
-                                                value="@if (old('contact_one')) {{ old('contact_one') }}@else{{ $website_contact_details[0]['contact_one'] }} @endif">
-                                            @if ($errors->has('contact_one'))
-                                                <span class="red-text"><?php echo $errors->first('contact_one', ':message'); ?></span>
-                                            @endif
+                                  <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="form-group" id="">
+        <label for="contact_one"> Enter Contact No 1<span class="red-text">*</span></label>
+        <input type="text" class="form-control mb-2" name="contact_one" id="contact_one" placeholder="Enter Contact No 1" oninput="validateNumericInput('contact_one')" value="{{ old('contact_one') ?: $website_contact_details[0]['contact_one'] }}">
+        @if ($errors->has('contact_one'))
+            <span class="red-text">{{ $errors->first('contact_one') }}</span>
+        @endif
+    </div>
+</div>
 
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <div class="form-group" id="">
-                                            <label for="contact_two"> Enter Contact No 2<span
-                                                    class="red-text">*</span></label>
-
-                                            <input class="form-control mb-2" name="contact_two" id="contact_two"
-                                                placeholder=" Enter Contact No 2"
-                                                value="@if (old('contact_two')) {{ old('contact_two') }}@else{{ $website_contact_details[0]['contact_two'] }} @endif">
-                                            @if ($errors->has('contact_two'))
-                                                <span class="red-text"><?php echo $errors->first('contact_two', ':message'); ?></span>
-                                            @endif
-
-                                        </div>
-                                    </div>
+<div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="form-group" id="">
+        <label for="contact_two"> Enter Contact No 2<span class="red-text">*</span></label>
+        <input type="text" class="form-control mb-2" name="contact_two" id="contact_two" placeholder="Enter Contact No 2" oninput="validateNumericInput('contact_two')" value="{{ old('contact_two') ?: $website_contact_details[0]['contact_two'] }}">
+        @if ($errors->has('contact_two'))
+            <span class="red-text">{{ $errors->first('contact_two') }}</span>
+        @endif
+    </div>
+</div>
 
 
 
@@ -128,4 +118,16 @@
                 </div>
             </div>
         </div>
+<script>
+    function validateNumericInput(inputId) {
+        var inputElement = document.getElementById(inputId);
+        var inputValue = inputElement.value.trim();
+
+        // Remove non-numeric characters using a regular expression
+        var numericValue = inputValue.replace(/[^0-9]/g, '');
+
+        // Update the input value with the cleaned numeric value
+        inputElement.value = numericValue;
+    }
+</script>
     @endsection

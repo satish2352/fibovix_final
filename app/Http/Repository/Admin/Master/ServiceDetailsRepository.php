@@ -13,7 +13,7 @@ class ServiceDetailsRepository  {
 
     public function getAll(){
         try {
-            $data_output = ServiceDetails::orderBy('updated_at', 'desc')->get();
+            $data_output = ServiceDetails::orderBy('updated_at', 'asc')->get();
             return $data_output;
         } catch (\Exception $e) {
             return $e;
