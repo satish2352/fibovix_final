@@ -27,9 +27,9 @@ class SubscriberServices
         try {
             $add_contact = $this->repo->aboutusContact($request);
             if ($add_contact) {
-                return ['status' => 'success', 'msg' => 'Contact Added Successfully.'];
+                return ['status' => 'success', 'msg' => 'Data Added Successfully.'];
             } else {
-                return ['status' => 'error', 'msg' => 'Contact get Not Added.'];
+                return ['status' => 'error', 'msg' => 'Data get Not Added.'];
             }  
         } catch (Exception $e) {
             return ['status' => 'error', 'msg' => $e->getMessage()];

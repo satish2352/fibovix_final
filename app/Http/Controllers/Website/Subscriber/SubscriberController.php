@@ -54,7 +54,7 @@ class SubscriberController extends Controller
     
             }
         } catch (Exception $e) {
-            return redirect('/')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'error']);
+            return redirect('/')->withInput()->with(['msg' => $e->getMessage(), 'status' => 'errors']);
         }
     }
 }

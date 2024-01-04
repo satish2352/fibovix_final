@@ -50,10 +50,7 @@
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your
-                            goals, Merrill
-                            and Bank of America offer a wide range of solutions to help you get there.
-                        </p>
+                        <p>Everything we do starts with our purpose. Re imagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix</p>
 
                     </div>
                     <div class="col-md-2 col-lg-2 col-sm-2">
@@ -111,15 +108,13 @@
 @if(count($all_services))
 <div class="container">
     <div class="row text-center">
-        <h2 id="fibovix">Our <span style="color:#6246E5">Solutions </span> </h2>
+        <h2 id="fibovix">Our <span style="color:#6246E5">Services </span> </h2>
         <div class="row">
             <div class="col-2">
 
             </div>
             <div class="col-8">
-                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals,
-                    Merrill
-                    and Bank of America offer a wide range of solutions to help you get there.
+                <p>Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill and Bank of America offer a wide range of solutions to help you get there. 
                 </p>
             </div>
             <div class="col-2">
@@ -197,7 +192,7 @@
 <div class="container-fluid position-relative mb-5 bimg">
     <div class="container">
         <div class="row text-center ">
-            <h2 id="fibovix">Take <span style="color:#6246E5; padding:5px;">Actions</span></h2>
+            <h2 id="fibovix">Explore <span style="color:#6246E5; padding:5px;">With Us</span></h2>
         </div>
 
         <div class="row take_action_row">
@@ -290,7 +285,7 @@
 @if(count($additionalSolutions))
 <div class="container mb-5 ">
     <div class="row text-center">
-        <h2 id="fibovix">Additional <span style="color:#6246E5"> Solutions</span> </h2>
+        <h2 id="fibovix">We Always <span style="color:#6246E5"> Offer More</span> </h2>
     </div>
     <div class="row row-cols-1 row-cols-md-4 g-3">
         @foreach ($additionalSolutions as $item)

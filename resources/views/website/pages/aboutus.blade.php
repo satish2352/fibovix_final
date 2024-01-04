@@ -10,11 +10,7 @@
                             <div class="col-md-12 mt-5 text-center">
                                 <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
                                 <h2 class="mt-3 about_img_head">WHY US</h2>
-                                <p class="mb-4 about_banner_para">You probably expect your advisor to provide guidance developing your financial 
-                                    plan and investment approach. But with FIBOVIX , your advisor is so much 
-                                    more – listening to your needs and understanding what matters most to you and 
-                                    your family. You and your advisor will work together one on one to help 
-                                    create a strategy that’s uniquely yours.</p>
+                                <p class="mb-4 about_banner_para">We rely on our principles to guide how we interact with each other, our clients, and the communities in which we operate. These principles represent our core values. Aspirations and our cultural language – lived and embraced by every employee at our firm. The people we serve entrust us to help them prepare for the future. Our culture is defined by the deep sense of responsibility we feel to our clients and to each other.</p>
                             </div>
                         </div>
                     </div>
@@ -57,12 +53,12 @@
 
     <div class="container">
         <div class="row">
-            <h1 class="text-center our_advisor_heading p-2">Our <span style="color:#6246E5; padding:5px;">Advisor</span></h1>
+            <h1 class="text-center our_advisor_heading p-2">Advisor’s <span style="color:#6246E5; padding:5px;">Advice</span></h1>
             <div class="col-md-3 col-lg-3 col-sm-3">
 
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6 d-flex justify-content-center">
-                <p>Your relationship with your dedicated advisor is all about you – you’ll be working with someone you connect with and who understands your priorities</p>
+                <p>You will be collaborating with someone that you connect with and who is aware of your priorities in your connection with your specialized adviser.</p>
 
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3">
@@ -82,11 +78,8 @@
             <div class="main col-lg-11 col-md-11 col-sm-11">
 
                 <div class="sub_main">
-                    <h4 class="our_advisor_h1">Guidance is just the beginning</h4>
-                    <p class="our_advisor_p">You may think your advisor’s role is limited to your portfolio however we
-                        believe it goes beyond that. Working with a Merrill advisor can help turn your hopes and dreams
-                        into a personalized financial strategy. Your advisor is your resource, and your strategy is your
-                        personal financial road map.</p>
+                    <h4 class="our_advisor_h1">The Right Guidance</h4>
+                    <p class="our_advisor_p">Although you might feel that your advisor's involvement ends with your portfolio, we think it doesn't end there. Engaging with our adviser will help in transforming your aspirations into a customized financial plan. Your plan is your own financial road map, and your adviser is your resource.</p>
                 </div>
                 <img class="our_advisor_img position-relative"
                     src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300"
@@ -104,7 +97,7 @@
 </div>
 <div class="container-fluid thing5_bg">
     <div class="container thing_5_top">
-        <h2 class="text-center p-3">5 Things an <span style="color:#6246E5; padding:5px;">Advisor</span> can help you do
+        <h2 class="text-center p-3">How<span style="color:#6246E5; padding:5px;">WE</span> can help <span style="color:#6246E5; padding:5px;">YOU</span>..
         </h2>
         <div class="row">
             <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
@@ -113,7 +106,7 @@
                         <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                        <p>To Prioritize your goals  </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -125,7 +118,7 @@
                         <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                        <p>Create a personalized financial strategy  </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -137,7 +130,7 @@
                         <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                        <p>The right analysis of situations</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -155,7 +148,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                        <p>Optimal monetary benefit oriented approach </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -167,7 +160,7 @@
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Priortize your goals ans create a apersonalized finanacial strategy </p>
+                        <p>Growth through a streamlined financial strategy  </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -365,17 +358,12 @@
             </div>
             <div class="col-lg-7">
                 <div class="wtsubmain">
-                    <span class="wtsubtit1">Enhanced tools Real-time <br />
-                        <span class="wtsubtit2">analysis.</span>
+                    <span class="wtsubtit1">Optimized analysis with better tools. <br />
+                        <span class="wtsubtit2"></span>
                     </span>
                     <br />
                     <p class="wtsubpara">
-                        With the Merrill Personal Wealth Analysis™ tool, you and your
-                        advisor will define and prioritize your goals, take stock of
-                        your finances and evaluate trade-offs to create an easy-to-read,
-                        personalized and comprehensive plan. And if your situation
-                        changes, you and your advisor can update your plan to help you
-                        stay on track toward your goals.
+                        Together with your advisor, you will delineate and prioritize your objectives, assess your financial standing, and assess trade-offs to formulate a personalized, easily understandable, and comprehensive plan using our optimized tools. In the event of changes in your situation, you and your advisor can revise the plan to ensure you remain on course toward your goals.
                     </p>
                 </div>
             </div>

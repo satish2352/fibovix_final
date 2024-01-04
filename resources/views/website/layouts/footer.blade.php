@@ -16,7 +16,27 @@
                         <div class="container mt-5">
                             <div class="row news text-center mt-5">
                                 <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
-                                  <center> <div class="col-6 grid-margin"> @include('website.layouts.alert')</div></center>
+                                  <center> <div class="col-6 grid-margin">
+                                    @if (Session::get('status') == 'success')
+
+                                        <div class="col-12 grid-margin">
+                                            <div class="alert alert-success alert-dismissible">
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                                <strong>Success!</strong> {{ Session::get('msg') }}
+                                            </div>
+                                        </div>
+
+                                        @endif
+
+                                        @if (Session::get('status') == 'errors')
+                                        <div class="col-12 grid-margin">
+                                            <div class="alert alert-danger alert-dismissible">
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                                <strong>Danger!</strong> {!! session('msg') !!}
+                                            </div>
+                                        </div>
+                                        @endif
+                                </div></center>
                                 <div class="input-group  ">
                                     <form class="footer_subscribe_form" action="{{ url('add-subscriber') }}"
                                         id="regForm" method="POST" enctype="multipart/form-data">
@@ -52,8 +72,7 @@
                         <img class="py-3" src="{{ asset('website/images/Logo1.png') }}" width="200px" alt="">
                         {{-- <h5 class="text-uppercase font-weight-bold mt-3 mb-4">About our Company</h5>
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
-                        <p>Book your trip in minute, get full
-                            Control for much longer.</p>
+                        <p>Express Towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021.</p>
                         <div class="row">
                             <div class="col-md-12 set_social_media_icon">
                                 <div class="col-md-4 set_icons_content">
