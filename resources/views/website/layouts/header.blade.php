@@ -50,6 +50,7 @@
             <li class="nav-item ">
               <a class="nav-link @if(\Request::route()->getName() == 'resources-insights') {{'active'}} @endif" href="{{ route('resources-insights') }}">Insights</a>
             </li>
+            
             <li class="nav-item ">
                 <a class="nav-link @if(\Request::route()->getName() == 'services' {{'contact-us'}} @endif" href="{{ route('contact-us') }}">Contact</a>
               </li>
@@ -71,13 +72,16 @@
             <a class="nav-link @if(\Request::route()->getName() == '/') {{'active'}} @endif" href="{{ route('/') }}">Home </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endif" href="{{ route('aboutus') }}">About</a>
+            <a class="nav-link @if(\Request::route()->getName() == 'aboutus') {{'active'}} @endif" href="{{ route('aboutus') }}">About us</a>
           </li>
           <li class="nav-item ">
             <a class="nav-link @if(\Request::route()->getName() == 'services') {{'active'}} @endif" href="{{ route('services') }}">Services</a>
           </li>
           <li class="nav-item ">
               <a class="nav-link @if(\Request::route()->getName() == 'resources-insights') {{'active'}} @endif" href="{{ route('resources-insights') }}">Insights</a>
+            </li>
+          <li class="nav-item ">
+              <a class="nav-link @if(\Request::route()->getName() == 'career') {{'active'}} @endif" href="{{ route('career') }}">Career</a>
             </li>
           <li class="nav-item ">
             <a class="nav-link @if(\Request::route()->getName() == 'contact-us') {{'active'}} @endif" href="{{ route('contact-us') }}">Contact Us</a>

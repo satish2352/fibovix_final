@@ -162,5 +162,10 @@ class IndexController extends Controller
         return view('website.pages.media',compact('gallery_data','website_contact_details'));
     }
 
+    public function career()
+    {
+        $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
+        return view('website.pages.career',compact('website_contact_details'));
+    }
 
 }

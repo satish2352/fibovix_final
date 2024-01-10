@@ -1,6 +1,19 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
+<style>
+        .card {
+            margin-bottom: 10px;
+        }
+     .card-header button {
+    text-decoration: none; /* Remove underline from the button */
+    font-weight: bold; /* Bold the text */
+}
 
+
+        .card-body {
+            background-color: #E1F8FF;
+        }
+    </style>
     <!-- Start contact-background -->
     <section>
             <div class="container-fluid about_img">
@@ -32,15 +45,9 @@
             <div class="col-lg-7">
                 <div class="row g-5 d-grid">
                     <div class="fcard">
-                        <div class="fcard_about">
-                            <h4>Founder</h4>
-                            <h2>Our Founder</h2>
-                            <p>Fibovix investment approach is informed by three principles: we start by
-                                understanding the client’s investment objectives we seek the best risk-adjusted
-                                returns within the scope of the mandate they give us; and we underpin our work with
-                                research, data, and analytics. Research informs our investment decisions and product
-                                innovation. We research major structural trends shaping the economy, markets, and
-                                asset prices.</p>
+                        <div class="fcard_about" style="margin-top:0; font-size:14px;">
+                           
+                            <p>Fibovix Wealth Management provides financial advice and solutions to private, institutional, and corporate clients worldwide. Headquartered in Nariman Point, Mumbai, we are present in all major financial assets worldwide. We provide corporate, institutional, and wealth management clients with expert advice, innovative solutions, execution, and comprehensive access to international capital markets. We deliver investment products, technology, and tools – helping millions meet immediate spending needs, build wealth, and retire securely. We are a fiduciary to our clients. We’re investing for the future on behalf of our clients, inspiring our employees, and supporting our local communities. Our purpose is to help more and more people experience financial well-being. Together with our clients, we’re contributing to a more equitable and resilient world – today and for generations to come. Our investment approach is informed by three principles: we start by understanding the client’s investment objectives; we seek the best risk-adjusted returns within the scope of the mandate they give us; and we underpin our work with research, data, and analytics.</p>
                         </div>
                     </div>
                     <img src="{{ asset('website/images/f3.png') }}" alt="">
@@ -53,12 +60,12 @@
 
     <div class="container">
         <div class="row">
-            <h1 class="text-center our_advisor_heading p-2">Advisor’s <span style="color:#6246E5; padding:5px;">Advice</span></h1>
+            <h1 class="text-center our_advisor_heading p-2">Who <span style="color:#6246E5; padding:5px;">We Are </span></h1>
             <div class="col-md-3 col-lg-3 col-sm-3">
 
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6 d-flex justify-content-center">
-                <p>You will be collaborating with someone that you connect with and who is aware of your priorities in your connection with your specialized adviser.</p>
+                <p>We are driven by a vision of a better retirement. We believe that people deserve financial security across their lifetimes and that retirement should be within reach for everyone. To make this a reality, we are building better solutions, and making them more accessible.</p>
 
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3">
@@ -79,7 +86,7 @@
 
                 <div class="sub_main">
                     <h4 class="our_advisor_h1">The Right Guidance</h4>
-                    <p class="our_advisor_p">Although you might feel that your advisor's involvement ends with your portfolio, we think it doesn't end there. Engaging with our adviser will help in transforming your aspirations into a customized financial plan. Your plan is your own financial road map, and your adviser is your resource.</p>
+                    <p class="our_advisor_p">Our team, clients, communities, and shareholders are at the center of everything we do. Through our tailored solutions spanning investment and commercial banking, payments processing, and asset management, we're relentlessly focused on serving our clients and driving sustainable impact for our communities.</p>
                 </div>
                 <img class="our_advisor_img position-relative"
                     src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300"
@@ -95,6 +102,88 @@
 
     </div>
 </div>
+</div>
+</div>
+    <div class="container" style="margin-top:100px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Our Firm
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    Fibovix Wealth Management provides a range of investment banking, investment management, and securities services for our clients. These services are delivered by teams working across multiple functions.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Our Purpose
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    Our purpose is to help more and more people experience financial well-being. Together with our clients, we’re contributing to a more equitable and resilient world – today and for generations to come.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Diversity & Inclusion
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    Our people are our greatest asset – we say it often and with good reason. It is only with the determination and dedication of our people that we can serve our clients, generate long-term value for our shareholders, and contribute to the broader public.
+                                    Fibovix economists and experts share insights on macro trends shaping the global economy.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Acting as a fiduciary
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    Fibovix's investment approach is informed by three principles: we start by understanding the client’s investment objectives; we seek the best risk-adjusted returns within the scope of the mandate they give us; and we underpin our work with research, data, and analytics. We apply those same principles to sustainability and the low-carbon transition.
+                                    At Fibovix, we believe we’re at our best when our employees connect their personal purpose to their work and our firm’s purpose. In our “What’s Your Why” series, employees share how they bring their passions to what they do.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    People and Leadership
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="card-body">
+                                    We frequently express that our team members are our most valuable treasure, and it's a sentiment we deeply believe in. Their unwavering commitment and dedication empower us to provide excellent service to our clients, create enduring value for our shareholders, and make meaningful contributions to society at large.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="container-fluid thing5_bg">
     <div class="container thing_5_top">
         <h2 class="text-center p-3">How<span style="color:#6246E5; padding:5px;">WE</span> can help <span style="color:#6246E5; padding:5px;">YOU</span>..
@@ -242,8 +331,7 @@
             <div class="col-md-10">
 
                 <div class="container about_contact_form">
-                    <h2 class="text-center p-3">Have an <span style="color:#6246E5; padding:5px;">Advisor</span> contact
-                        you.</h2>
+                    <h2 class="text-center p-3">Connect with <span style="color:#6246E5; padding:5px;">Fibovix</span> </h2>
                     <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
                     <div class="row about_contact_row">
                         @include('website.layouts.alert')

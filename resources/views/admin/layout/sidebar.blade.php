@@ -145,6 +145,26 @@
             </div>
         </li>
 
+
+        <li class="@if (request()->is('list-career*') || request()->is('list-career*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
+            <a class="nav-link" data-toggle="collapse" href="#career" aria-expanded="false" aria-controls="services">
+                <i class="fa fa-server menu-icon"></i>
+                <span class="menu-title">Careers</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="career">
+                <ul class="nav flex-column sub-menu">
+
+                    
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-career*')) {{ 'nav-link active' }} @else  {{ 'nav-link' }} @endif"
+                            href="{{ route('list-career') }}">Careers Form</a>
+                    </li>
+                </ul>
+            </div>
+        </li
+
+
         <li class="{{ request()->is('edit-website-contact-details*') ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ url('edit-website-contact-details') }}">
                 <i class="fas fa-window-restore menu-icon"></i>

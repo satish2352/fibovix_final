@@ -27,6 +27,8 @@ Route::POST('/list-our-services-ajax', ['as' => 'list-our-services-ajax', 'uses'
 Route::get('/services', ['as' => 'services', 'uses' => 'App\Http\Controllers\Website\IndexController@services']);
 Route::get('/insight-details/{id}', ['as' => 'insight-details', 'uses' => 'App\Http\Controllers\Website\IndexController@resouceInsightsDetails']);
 Route::get('/media', ['as' => 'media', 'uses' => 'App\Http\Controllers\Website\IndexController@media']);
+Route::get('/career', ['as' => 'career', 'uses' => 'App\Http\Controllers\Website\Career\CareerController@getCareer']);
+Route::post('/add-career', ['as' => 'add-career', 'uses' => 'App\Http\Controllers\Website\Career\CareerController@addCareer']);
 
 
 Route::get('/login', ['as' => 'login', 'uses' => 'App\Http\Controllers\Admin\LoginRegister\LoginController@index']);
@@ -50,6 +52,7 @@ Route::group(['middleware' => ['admin']], function () {
 
     Route::post('/website-contact', ['as' => 'website-contact', 'uses' => 'App\Http\Controllers\Admin\LoginRegister\RegisterController@updateProfile']);
 
+    Route::get('/list-career', ['as' => 'list-career', 'uses' => 'App\Http\Controllers\Admin\Career\CareerListController@index']);
 
     // Route::get('/list-resource', ['as' => 'list-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@index']);
     // Route::get('/add-resource', ['as' => 'add-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@add']);

@@ -10,11 +10,7 @@
                             <div class="col-md-12 mt-5 text-center">
                                 <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
                                 <h2 class="mt-3 about_img_head">ARTICLES</h2>
-                                <p class="mb-4 about_banner_para">You probably expect your advisor to provide guidance developing your financial 
-                                    plan and investment approach. But with FIBOVIX , your advisor is so much 
-                                    more – listening to your needs and understanding what matters most to you and 
-                                    your family. You and your advisor will work together one on one to help 
-                                    create a strategy that’s uniquely yours.</p>
+                                <p class="mb-4 about_banner_para"></p>
                             </div>
                         </div>
                     </div>
