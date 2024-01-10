@@ -34,7 +34,7 @@ return [
     'GALLERY_DELETE'	         => '/all_web_data/images/gallery/',
     'GALLERY_VIEW'	         => env("FILE_VIEW").'/all_web_data/images/gallery/',
 
-    'RESUME_VIEW'	         => env("FILE_VIEW").'/all_web_data/resume/resumes/',
+    'RESUME_VIEW'	         => env("FILE_VIEW").'/storage/all_web_data/resume/resumes/',
     'RESUME_ADD'	         => "/all_web_data/resume/resumes/",
 
 

@@ -154,15 +154,11 @@
                     return true; // No file selected, so consider it valid
                 }, "Only JPG, JPEG, PNG images are allowed.");
         
-                $.validator.addMethod("fileSize", function (value, element, param) {
-                    // Check if a file is selected
-                    if (element.files && element.files.length > 0) {
-                        // Convert bytes to KB
-                        const fileSizeKB = element.files[0].size / 1024;
-                        return fileSizeKB >= param[0] && fileSizeKB <= param[1];
-                    }
-                    return true; // No file selected, so consider it valid
-                }, "File size must be between {0} KB and {1} KB.");
+                 $.validator.addMethod("fileSize", function(value, element, param) {
+    // Convert bytes to KB
+    const fileSizeKB = element.files[0].size / 1024;
+    return fileSizeKB <= param;
+}, "File size must be less than or equal to {0} KB.");
         
                 // You need to define the imageDimensions method here
                 $.validator.addMethod("imageDimensions", function (value, element, param) {

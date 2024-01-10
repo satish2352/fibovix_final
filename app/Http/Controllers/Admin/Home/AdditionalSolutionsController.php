@@ -30,7 +30,7 @@ class AdditionalSolutionsController extends Controller
                 'title' => 'required|min:7|max:150',
                 'short_description' => 'required|min:7|max:150',
                 'long_description' => 'required|min:7|max:150',
-                'image' => 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509',
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:10240|min:5|dimensions:min_width=100,min_height=100,max_width=5000,max_height=5000',
             ];
             $messages = [    
                 'title.required'=>'Please enter title.',
@@ -45,7 +45,7 @@ class AdditionalSolutionsController extends Controller
                 'image.required' => 'The image is required.',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-                'image.max' => 'The image size must not exceed 500 KB .',
+                'image.max' => 'The image size must not exceed 10mb .',
                 'image.min' => 'The image size must not be less than 5 KB .',
                 'image.dimensions' => 'The image dimensions must be between 100X100 and 500x529 pixels.',
             ];
@@ -97,7 +97,7 @@ class AdditionalSolutionsController extends Controller
             ];
     
             if($request->has('image')) {
-                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509';
+                $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:10240|min:5|dimensions:min_width=100,min_height=100,max_width=5000,max_height=5000';
             }
            
             $messages = [   
@@ -113,7 +113,7 @@ class AdditionalSolutionsController extends Controller
                 'image.required' => 'The image is required.',
                 'image.image' => 'The image must be a valid image file.',
                 'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-                'image.max' => 'The image size must not exceed 500 KB .',
+                'image.max' => 'The image size must not exceed 10mb .',
                 'image.min' => 'The image size must not be less than 5 KB .',
                 'image.dimensions' => 'The image dimensions must be between 100X100 and 500x529 pixels.',
             ];

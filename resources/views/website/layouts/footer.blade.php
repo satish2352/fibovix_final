@@ -154,17 +154,17 @@
                     </div>
                 </div>
             </div>
-            <hr>
+            <!-- <hr> -->
             <!-- Call to action -->
 
-            <div class="container ">
+            <!-- <div class="container ">
                 <div class="row">
                     <div id="links" class="col-lg-10 col-md-10 col-sm-6 mb-3">Copyright, Sumago infotech
                         <?php echo date('Y'); ?>. All rights reserved.
                     </div>
                     <div id="links" class="col-lg-2 col-md-10 col-sm-6 mb-3">Terms & Conditions</div>
                 </div>
-            </div>
+            </div> -->
 
     </div>
 </footer>

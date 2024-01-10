@@ -457,7 +457,7 @@
             </div>
 
             <div class="col-lg-4">
-                <img src="{{ asset('website/images/Rectangle 1270.jpg') }}" class="wt-sub-img img-fluid" height="200px"
+                <img src="{{ asset('website/images/Rectangle 1270.png') }}" class="wt-sub-img img-fluid" height="200px"
                     width="100%" />
             </div>
         </div>
