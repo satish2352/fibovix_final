@@ -1,7 +1,7 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
 
-<div class="container-fluid mt-5 g-0">
+<div class="container-fluid mt-5 g-0 mobile_carousel">
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -38,12 +38,12 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid mb-4">
     {{-- <img class="img-fluid" style="" src="{{asset('website/images/WHYFIBOVIX.png')}}" alt=""> --}}
     <div class="row">
         <div class="backimg1 text-center py-5">
 
-            <div class="container mt-4">
+            <div class="container">
                 <div class="row text-center">
                     <h2 id="fibovix">Our<span style="color: #1F2D87 ">Purpose</span></h2>
                     <div class="col-md-2 col-lg-2 col-sm-2">
@@ -63,7 +63,7 @@
             <div class="container section_center">
                 <div class="row">
 
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
                                 <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
@@ -194,8 +194,8 @@
             <h2 id="fibovix">Explore <span style="color:#6246E5; padding:5px;">With Us</span></h2>
         </div>
 
-        <div class="row take_action_row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 take_action_row">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
@@ -218,7 +218,7 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6 take_action_row">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6 take_action_row">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
@@ -258,7 +258,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 ">
+            <div class="col-lg-3 col-md-6 col-sm-6 take_action_row">
                 <div class="card shadow-lg action_circle">
                     <div class="card-body ">
                         <span
