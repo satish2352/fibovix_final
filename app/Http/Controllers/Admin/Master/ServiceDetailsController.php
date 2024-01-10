@@ -40,32 +40,32 @@ class ServiceDetailsController extends Controller
     public function store(Request $request){
 
         $rules = [
-            'title' => 'required|min:7|max:150',
-            'short_description' => 'required|min:7|max:150',
-            'long_description' => 'required|min:7|max:150',
-            'service_id' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:501|min:5|dimensions:min_width=100,min_height=100,max_width=529,max_height=509',
-               
+    'title' => 'required|min:7|max:150',
+    'short_description' => 'required|min:7|max:150',
+    'long_description' => 'required|min:7|max:150',
+    'service_id' => 'required',
+    'image' => 'required|image|mimes:jpeg,png,jpg|max:10240|min:5|dimensions:min_width=100,min_height=100,max_width=5000,max_height=5000',
+];
 
-        ];
-        $messages = [    
-            'title.required'=>'Please enter title.',
-            'title.min'=>'Please enter minimum 7 character.',
-            'title.max'=>'Please enter maximum character upto 150.',
-            'short_description.required' => 'Please  enter description.',
-            'short_description.min'=>'Please enter minimum 7 character.',
-            'short_description.max'=>'Please enter maximum character upto 150.',
-            'long_description.required' => 'Please  enter description.',
-            'long_description.min'=>'Please enter minimum 7 character.',
-            'long_description.max'=>'Please enter maximum character upto 150.',
-            'image.required' => 'The image is required.',
-            'service_id.required' => 'Select the at least one option',
-            'image.image' => 'The image must be a valid image file.',
-            'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
-            'image.max' => 'The image size must not exceed 500 KB .',
-            'image.min' => 'The image size must not be less than 5 KB .',
-            'image.dimensions' => 'The image dimensions must be between 100X100 and 500x529 pixels.',
-        ];
+$messages = [
+    'title.required' => 'Please enter title.',
+    'title.min' => 'Please enter a minimum of 7 characters.',
+    'title.max' => 'Please enter a maximum of 150 characters.',
+    'short_description.required' => 'Please enter a description.',
+    'short_description.min' => 'Please enter a minimum of 7 characters.',
+    'short_description.max' => 'Please enter a maximum of 150 characters.',
+    'long_description.required' => 'Please enter a description.',
+    'long_description.min' => 'Please enter a minimum of 7 characters.',
+    'long_description.max' => 'Please enter a maximum of 150 characters.',
+    'image.required' => 'The image is required.',
+    'service_id.required' => 'Select at least one option',
+    'image.image' => 'The image must be a valid image file.',
+    'image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
+    'image.max' => 'The image size must not exceed 10 MB.',
+    'image.min' => 'The image size must not be less than 5 KB.',
+    'image.dimensions' => 'The image dimensions must be between 100x100 and 5000x5000 pixels.',
+];
+
 
     
         try {
