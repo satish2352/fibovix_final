@@ -2,21 +2,17 @@
 {{-- start hero section --}}
 
     <!-- Start contact-background -->
-    <section>
-            <div class="container-fluid about_img">
-               
-                    <div class="container">
-                        <div class="row mt-5">
-                            <div class="col-md-12 mt-5 text-center">
-                                <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
-                                <h2 class="mt-3 about_img_head">ARTICLES</h2>
-                                <p class="mb-4 about_banner_para"></p>
-                            </div>
-                        </div>
-                    </div>
-                
+   <section>
+    <div class="container-fluid conact_page_img">
+        <div class="row">
+            <div class="col-md-12 g-0">
+                <div class="logo image-fluid">
+                    <img src="{{ asset('website/images/articles.png') }}" width="100%">
+                </div>
             </div>
-    </section>
+        </div>
+    </div>
+</section>
     <!-- End contact-background -->
 
 
