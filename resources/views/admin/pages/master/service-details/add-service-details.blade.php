@@ -133,12 +133,11 @@
         }, "Invalid file extension.");
 
         // Custom validation method to check file size
-        $.validator.addMethod("fileSize", function (value, element, param) {
-            // Convert bytes to KB
-            const fileSizeKB = element.files[0].size / 1024;
-            return fileSizeKB >= param[0] && fileSizeKB <= param[1];
-        }, "File size must be between {0} KB and {1} KB.");
-
+         $.validator.addMethod("fileSize", function(value, element, param) {
+    // Convert bytes to KB
+    const fileSizeKB = element.files[0].size / 1024;
+    return fileSizeKB <= param;
+}, "File size must be less than or equal to {0} KB.");
         // Update the accept attribute to validate based on file extension
         $('#image').attr('accept', 'image/jpeg, image/png');
 
@@ -166,7 +165,12 @@
                 long_description: {
                     required: true,
                 },
-                
+                image: {
+                    required: true,
+                    fileExtension: ["jpg", "jpeg", "png"],
+                      fileSize: 102400, 
+                    imageDimensions: [50, 50, 800, 800],
+                },
             },
             messages: {
                 title: {
@@ -179,7 +183,12 @@
                 long_description: {
                     required: "Please Enter the Description",
                 },
-               
+                image: {
+                    required: "Please upload an Image (jpg, jpeg, png).",
+                    fileExtension: "Only JPG, JPEG, and PNG images are allowed.",
+                    fileSize: "File size must be between 10 KB and 10mb.",
+                    imageDimensions: "Image dimensions must be between 100x100 and 800x800 pixels.",
+                },
             },
         });
     });

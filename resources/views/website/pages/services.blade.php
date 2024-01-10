@@ -1,17 +1,16 @@
 @include('website.layouts.header')
 @if(count($all_services_details))
 <section>
-    <div class="container-fluid about_img">
+    <div class="container-fluid ">
 
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-md-12 mt-5 text-center">
-                    <img src="{{ asset('website/images/Logo1.png') }}" height="100" alt="">
-                    <h2 class="mt-3 about_img_head">Our Services</h2>
-                    <p class="mb-4 about_banner_para">Uncovering opportunities. Meeting challenges. Taking that next step forward. Whatever your goals, Merrill and Bank of America offer a wide range of solutions to help you get there. </p>
-                </div>
-            </div>
+        <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="{{ asset('website/images/SERVICE.jpg') }}" width="100%" alt="">
         </div>
+    </div>
+</div>
+
 
     </div>
 </section>
