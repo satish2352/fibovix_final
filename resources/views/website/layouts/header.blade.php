@@ -20,8 +20,19 @@
     <script src="https://kit.fontawesome.com/8b9cb07d67.js" crossorigin="anonymous"></script>
 
     <!-- <style>
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
-</style> -->
+    @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap');
+    </style> -->
+    
+    <!-- <style>
+    @font-face {
+      font-family: "BasisGrotesqueArabicPro-Black.ttf";
+      src: url("/asset/website/css/BasisGrotesqueArabicPro-Black.ttf") format("ttf"),
+          /* url("/asset/website/css/MyCustomFont.woff") format("woff"); */
+    }
+    </style> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Basis+Grotesque:wght@300;400;500;600;700&display=swap');
+    </style>
 
 <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');</style>
     

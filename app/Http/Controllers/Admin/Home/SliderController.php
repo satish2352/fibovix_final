@@ -27,7 +27,7 @@ class SliderController extends Controller
     public function store(Request $request){
         $rules = [
             'rank_no' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:800|min:5|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:800|min:5',//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767',
            
         ];
         $messages = [    
@@ -85,7 +85,7 @@ class SliderController extends Controller
         ];
 
         if($request->has('image')) {
-            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:800|min:5|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767';
+            $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:800|min:5';//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767';
         }
        
         $messages = [   
