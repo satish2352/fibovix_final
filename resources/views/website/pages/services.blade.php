@@ -6,7 +6,7 @@
         <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <img src="{{ asset('website/images/SERVICE.jpg') }}" width="100%" alt="">
+            <img src="{{ asset('website/images/Services.jpg') }}" width="100%" alt="">
         </div>
     </div>
 </div>
