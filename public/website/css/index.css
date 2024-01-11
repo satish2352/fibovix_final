@@ -8,7 +8,9 @@ body{
   text-decoration: none; 
   color: #000;
   /* font-family: 'Darker Grotesque', sans-serif; */
-  font-family:'Poppins', sans-serif;
+  /* font-family:'Poppins', sans-serif; */
+  /* font-family: "BasisGrotesqueArabicPro-Black", sans-serif; */
+  font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
 
 }
 .red-text{
@@ -129,9 +131,9 @@ width: 20rem;
 }
 #fibovix{
   line-height: 88px;
-  font-weight: 750;
+  font-weight: 400;
   /* margin-top: 50%; */
-  font-size: 40px !important;
+  font-size: 48px !important;
 }
 
 #fibovix span{
@@ -972,7 +974,7 @@ padding: 65px 30px 18px 30px;
 }
 
 .thing_5_top{
-margin-top: 8rem;
+margin-top: 3rem;
 }
 
 .wtsubtit1{
@@ -1119,7 +1121,10 @@ font-weight: 900;
 }
 
 .our_advisor_heading{
-font-weight: 900;
+  line-height: 88px;
+  font-weight: 400;
+  /* margin-top: 50%; */
+  font-size: 48px !important;
 }
 .founder_section_row{
   padding: 3rem;
