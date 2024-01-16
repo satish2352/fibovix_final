@@ -13,7 +13,8 @@ class CareerListRepository  {
 
     public function getAll(){
         try {
-            return CareerModel::all();
+           return CareerModel::orderBy('id', 'desc')->get();
+
         } catch (\Exception $e) {
             return $e;
         }
