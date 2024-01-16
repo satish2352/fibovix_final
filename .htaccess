@@ -3,7 +3,7 @@
   RewriteEngine On
   RewriteCond %{HTTP_HOST} ^fibovix.in$ [OR]
   RewriteCond %{HTTP_HOST} ^www.fibovix.in$
-  RewriteRule (.*)$ /www.fibovix.com/$1 [R=301,L]
+  RewriteRule (.*)$ /https://www.fibovix.com/$1 [R=301,L]
 </IfModule>
 
 
