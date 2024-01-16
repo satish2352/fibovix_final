@@ -15,6 +15,10 @@ body {
 
 }
 
+.foot_logo_para{
+  font-size: 0.9rem;
+}
+
 .red-text {
   color: red;
 }
@@ -1329,7 +1333,7 @@ padding: 0px !important;
 
 @media screen and (max-width: 430px) {
   .mobile_carousel {
-    margin-top: 25% !important;
+    margin-top: 15% !important;
   }
 }
 
