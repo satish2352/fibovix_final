@@ -54,7 +54,7 @@
     </a>
 </td>
 
-                                                        <td>{{strip_tags($item->messages)}}</td>
+                                                        <td>{{strip_tags($item->message)}}</td>
 
                                                         {{-- <td>
                                                             <label class="switch">
