@@ -14,7 +14,7 @@ class SubscriberController extends Controller
   
     public function index(){
         try {
-            $get_contactus= Subcribers::get();
+            $get_contactus= Subcribers::orderBy('id', 'desc')->get();
             return view('admin.pages.list-subscriber', compact('get_contactus'));
         } catch (\Exception $e) {
             return $e;
