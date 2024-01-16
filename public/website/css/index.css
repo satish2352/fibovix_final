@@ -1035,7 +1035,8 @@ padding-right: 15% !important;
 
 .wtsubmain {
   /* padding:80px 80px 10px 30px; */
-  padding: 65px 30px 18px 30px;
+  /* padding: 65px 30px 18px 30px; */
+  padding: 24px 30px 18px 30px;
 }
 
 .thing_5_top{
@@ -1043,13 +1044,14 @@ margin-top: 3rem;
 }
 
 .wtsubtit1 {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-size: 36px;
   font-weight: 500;
   line-height: 32px;
   letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
+  margin-top: -3rem;
 }
 
 .wtsubtit2 {
@@ -1063,13 +1065,14 @@ margin-top: 3rem;
 }
 
 .wtsub p {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
+  margin-top: -3rem;
 }
 
 .wtsubpara {
@@ -1086,7 +1089,7 @@ margin-top: 3rem;
 .wtgrp-img {
   background-size: cover;
   position: relative;
-  top: 100px;
+  top: 50px;
   right: 100px;
 }
 
@@ -1395,5 +1398,72 @@ padding: 0px !important;
   .carousel-indicators_new {
     top: 15.9rem !important;
     display: none !important;
+  }
+}
+
+@media (min-width: 492px) and (max-width: 759px) {
+  .fcard_about{
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 459px) and (max-width: 491px) {
+  .fcard_about{
+    font-size: 11px !important;
+  }
+}
+
+@media (min-width: 389px) and (max-width: 458px) {
+  .fcard_about{
+    font-size: 10px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (min-width: 355px) and (max-width: 388px) {
+  .fcard_about{
+    font-size: 10px !important;
+    padding: 5px !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 354px) {
+  .fcard_about{
+    font-size: 9px !important;
+    padding: 7px !important;
+  }
+}
+
+@media (min-width: 383px) and (max-width: 423px) {
+  .our_advisor_heading {
+    line-height: 55px;
+    font-size: 38px !important;
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 342px) and (max-width: 382px) {
+  .our_advisor_heading {
+    line-height: 40px;
+    font-size: 32px !important;
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 341px) {
+  .our_advisor_heading {
+    line-height: 38px;
+    font-size: 29px !important;
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 759px) {
+  .wtsubmain{
+    margin-top: -1rem !important;
+  }
+
+  .wtsubpara{
+    margin-top: -3rem !important;
   }
 }
