@@ -72,7 +72,7 @@
                         <img class="py-3" src="{{ asset('website/images/Logo1.png') }}" width="200px" alt="">
                         {{-- <h5 class="text-uppercase font-weight-bold mt-3 mb-4">About our Company</h5>
             <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;"> --}}
-                        <p>Express Towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021.</p>
+                        <p class="foot_logo_para">Express Towers, Marine Dr, Nariman Point, Mumbai, Maharashtra 400021.</p>
                         <div class="row">
                             <div class="col-md-12 set_social_media_icon">
                                 <div class="col-md-4 set_icons_content">
