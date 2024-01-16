@@ -34,6 +34,7 @@
     /* Add media queries for responsiveness */
     @media (max-width: 768px) {
         .career_form {
+            margin-top: 10rem;
             margin-left: 10px;
             margin-right: 10px;
         }

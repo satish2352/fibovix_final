@@ -195,7 +195,7 @@
                         <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>To Prioritize your goals  </p>
+                        <p class="d-flex justify-content-center">To Prioritize your goals  </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -207,7 +207,7 @@
                         <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Create a personalized financial strategy  </p>
+                        <p class="d-flex justify-content-center">Create a personalized financial strategy  </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -219,7 +219,7 @@
                         <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>The right analysis of situations</p>
+                        <p class="d-flex justify-content-center">The right analysis of situations</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -237,7 +237,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Optimal monetary benefit oriented approach </p>
+                        <p class="d-flex justify-content-center">Optimal monetary benefit oriented approach </p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -249,7 +249,7 @@
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body">
-                        <p>Growth through a streamlined financial strategy  </p>
+                        <p class="d-flex justify-content-center">Growth through a streamlined financial strategy  </p>
                     </div>
                     <div class="card_footer">
                     </div>

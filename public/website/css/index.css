@@ -148,7 +148,7 @@ li:last-child {
   line-height: 88px;
   font-weight: 400;
   /* margin-top: 50%; */
-  font-size: 48px !important;
+  font-size: 46px !important;
 }
 
 #fibovix span {
@@ -441,8 +441,8 @@ li:last-child {
   .circleimg {
     width: 250px;
     height: 250px;
-    margin-left: 60%;
-    margin-top: 30%;
+    margin-left: 51% !important;
+    margin-top: 51% !important;
   }
 }
 
@@ -683,12 +683,14 @@ width: 50%;
   font-weight: 600;
   line-height: 2.2;
   color: #000000;
+  font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
 }
 
 .our_advisor_p {
   font-size: 18px;
   line-height: 1.3;
   text-align: justify;
+  font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
 }
 
 .bord {
@@ -736,8 +738,8 @@ width: 50%;
   .circleimg {
     width: 200px;
     height: 200px !important;
-    margin-left: -70% !important;
-    margin-top: 80% !important;
+    margin-left: -65% !important;
+    margin-top: 65% !important;
   }
 
 }
@@ -1276,6 +1278,9 @@ background-attachment: fixed; */
 
   .circleimg {
     margin-left: 43%;
+    margin-top: 46% !important;
+    width: 200px !important;
+    height: 200px !important;
   }
 }
 
@@ -1465,5 +1470,62 @@ padding: 0px !important;
 
   .wtsubpara{
     margin-top: -3rem !important;
+  }
+}
+
+@media (min-width: 763px) and (max-width: 818px) {
+  .circleimg{
+    width: 150px;
+    height: 150px;
+    margin-left: 55% !important;
+    margin-top: 55% !important;
+  }
+}
+
+@media (min-width: 605px) and (max-width: 627px) {
+  .circleimg{
+    width: 150px;
+    height: 150px;
+    margin-left: 50% !important;
+    margin-top: 70% !important;
+  }
+}
+
+@media (min-width: 628px) and (max-width: 762px) {
+  .circleimg{
+    width: 150px;
+    height: 150px;
+    margin-left: 40% !important;
+    margin-top: 57% !important;
+  }
+}
+
+@media (min-width: 516px) and (max-width: 760px) {
+  #fibovix {
+    line-height: 60px;
+    font-weight: 400;
+    /* margin-top: 50%; */
+    font-size: 38px !important;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 515px) {
+  #fibovix {
+    line-height: 50px;
+    font-weight: 400;
+    /* margin-top: 50%; */
+    font-size: 36px !important;
+  }
+}
+
+@media (min-width: 591px) and (max-width: 886px) {
+  .services-banner{
+    margin-top: 2.5rem !important;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 590px) {
+  .services-banner{
+    margin-top: 3.5rem !important;
   }
 }
