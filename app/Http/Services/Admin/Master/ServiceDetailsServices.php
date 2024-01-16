@@ -68,7 +68,7 @@ class ServiceDetailsServices
                 }                
                 // $englishImageName = $return_data['last_insert_id'] . '_' . rand(100000, 999999) . '_image.' . $request->image->extension();
                 uploadImage($request, 'image', $path, $englishImageName);
-                $slide_data = CoursesOffered::find($return_data['last_insert_id']);
+                $slide_data = ServiceDetails::find($return_data['last_insert_id']);
                 $slide_data->image = $englishImageName;
                 $slide_data->save();
             }          
