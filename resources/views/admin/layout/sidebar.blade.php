@@ -162,7 +162,7 @@
                     </li>
                 </ul>
             </div>
-        </li
+        </li>
 
 
         <li class="{{ request()->is('edit-website-contact-details*') ? 'nav-item active' : 'nav-item' }}">
