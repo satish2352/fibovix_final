@@ -715,7 +715,8 @@ width: 50%;
 
   .our_advisor_p {
     position: relative;
-    background-color: #ffffff85
+    /* background-color: #ffffff85 */
+    font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
   }
 
   .our_advisor_img {
@@ -1337,6 +1338,7 @@ padding: 0px !important;
 
 .text-align-justify {
   text-align: justify;
+  font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
 }
 
 @media screen and (max-width: 430px) {

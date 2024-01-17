@@ -34,7 +34,7 @@
 
     {{-- start gallary --}}
 
-    <div class="container mt-1 mb-4">
+    <div class="container mt-1 mb-2">
         <div class="row founder_section_row">
             <div class="col-lg-5">
                 <div class="row gy-4 d-grid">
@@ -194,7 +194,7 @@
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image" class="card_image" />
                     </div>
-                    <div class="card_body">
+                    <div class="card_body mt-4">
                         <p class="d-flex justify-content-center">To Prioritize your goals  </p>
                     </div>
                     <div class="card_footer">
@@ -206,7 +206,7 @@
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image" class="card_image" />
                     </div>
-                    <div class="card_body">
+                    <div class="card_body mt-4">
                         <p class="d-flex justify-content-center">Create a personalized financial strategy  </p>
                     </div>
                     <div class="card_footer">
@@ -218,7 +218,7 @@
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image" class="card_image" />
                     </div>
-                    <div class="card_body">
+                    <div class="card_body mt-4">
                         <p class="d-flex justify-content-center">The right analysis of situations</p>
                     </div>
                     <div class="card_footer">
@@ -236,7 +236,7 @@
                         <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image"
                             class="card_image" />
                     </div>
-                    <div class="card_body">
+                    <div class="card_body mt-4">
                         <p class="d-flex justify-content-center">Optimal monetary benefit oriented approach </p>
                     </div>
                     <div class="card_footer">
@@ -248,7 +248,7 @@
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
                     </div>
-                    <div class="card_body">
+                    <div class="card_body mt-4">
                         <p class="d-flex justify-content-center">Growth through a streamlined financial strategy  </p>
                     </div>
                     <div class="card_footer">
