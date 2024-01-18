@@ -1317,7 +1317,7 @@ padding: 0px !important;
 
 @media (min-width: 250px) and (max-width: 380px) {
   .conact_page_img {
-    margin-top: 6rem;
+    margin-top: 3rem;
   }
 }
 
@@ -1516,7 +1516,7 @@ padding: 0px !important;
     line-height: 50px;
     font-weight: 400;
     /* margin-top: 50%; */
-    font-size: 36px !important;
+    font-size: 23px !important;
   }
 }
 
@@ -1534,12 +1534,25 @@ padding: 0px !important;
 
 @media (min-width: 280px) and (max-width: 590px){
   .about-banner {
-      margin-top: 2rem !important;
+      margin-top: 0.1rem !important;
   }
 }
 
 @media (min-width: 591px) and (max-width: 886px) {
   .services-banner{
     margin-top: 2rem !important;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 380px) {
+  .our_advisor_h1 {
+      font-size: 31px !important;
+      line-height: 1.5 !important;
+  }
+}
+
+@media screen and (max-width: 884px) {
+  .artical_top_mob {
+      margin-top: -3rem !important;
   }
 }

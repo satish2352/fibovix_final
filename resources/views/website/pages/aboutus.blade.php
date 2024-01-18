@@ -18,7 +18,7 @@
     <section>
            
                
-                    <div class="container-fluid" style="margin-top:20px">
+                    <div class="container-fluid" style="margin-top:55px">
                         <div class="row ">
                             <div class="col-lg-12 about-banner">
                                 <img src="{{ asset('website/images/aboutusbanner.jpg') }}" width="100%" alt="">
