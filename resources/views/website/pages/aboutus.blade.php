@@ -20,8 +20,8 @@
                
                     <div class="container-fluid" style="margin-top:55px">
                         <div class="row ">
-                            <div class="col-lg-12 about-banner">
-                                <img src="{{ asset('website/images/aboutusbanner.jpg') }}" width="100%" alt="">
+                            <div class="col-lg-12 about-banner g-0">
+                                <img class="img-fluid" src="{{ asset('website/images/aboutusbanner.jpg') }}" alt="">
                                 {{--<h2 class="mt-3 about_img_head">WHY US</h2>
                                 <p class="mb-4 about_banner_para">We rely on our principles to guide how we interact with each other, our clients, and the communities in which we operate. These principles represent our core values. Aspirations and our cultural language – lived and embraced by every employee at our firm. The people we serve entrust us to help them prepare for the future. Our culture is defined by the deep sense of responsibility we feel to our clients and to each other.</p>
                             --}}
