@@ -353,10 +353,11 @@
 <script>
 
 $(document).ready(() => {
-        if (isMobileDevice()) {
-            $(".banner_desktop").show();
-        } else {
+    if (isMobileDevice()) {
             $(".banner_mobile").show();
+        } else {
+            
+            $(".banner_desktop").show();
         }
     });
 

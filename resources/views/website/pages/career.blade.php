@@ -201,11 +201,12 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $(".banner_desktop").show();
-            $("#banner_desktop_new").show();
-        } else {
             $(".banner_mobile").show();
             $("#banner_mobile_new").show();
+        } else {
+           
+            $(".banner_desktop").show();
+            $("#banner_desktop_new").show();
         }
     });
 

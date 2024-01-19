@@ -52,9 +52,10 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $(".banner_desktop").show();
-        } else {
             $(".banner_mobile").show();
+        } else {
+            
+            $(".banner_desktop").show();
         }
     });
 
