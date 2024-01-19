@@ -570,15 +570,20 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $(".banner_desktop").show();
-        } else {
+            
             $(".banner_mobile").show();
+        } else {
+            $(".banner_desktop").show();
         }
     });
 
     function isMobileDevice() {
-        return window.innerWidth <= 800; // You can adjust this threshold based on your needs
+        if(window.innerWidth <= 800) {
+            return true;    
+        }
+        return false;    
     }
+
 
 
 </script>
