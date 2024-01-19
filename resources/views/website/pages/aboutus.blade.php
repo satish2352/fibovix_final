@@ -23,8 +23,9 @@
 
 
 
-    <div id="banner_desktop" style="display:none;">
-        <div class="container-fluid" style="margin-top:55px">
+
+    <div class="container-fluid" style="margin-top:55px">
+        <div class="banner_desktop" style="display:none;">
             <div class="row ">
                 <div class="col-lg-12 about-banner g-0">
                     <img class="img-fluid" src="{{ asset('website/images/aboutusbanner.jpg') }}" alt="">
@@ -39,16 +40,16 @@
             </div>
         </div>
 
-        <div id="banner_mobile" style="display:none;">
-            <div class="container-fluid" style="margin-top:55px">
-                <div class="row ">
-                    <div class="col-lg-12 about-banner g-0">
-                        <img class="img-fluid" src="{{ asset('website/images/why_us_mobile.jpg') }}" alt="">
 
-                    </div>
+        <div class="banner_mobile" style="display:none;">
+            <div class="row ">
+                <div class="col-lg-12 about-banner g-0">
+                    <img class="img-fluid" src="{{ asset('website/images/why_us_mobile.jpg') }}" alt="">
+
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <!-- End contact-background -->
 
@@ -569,9 +570,9 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $("#banner_desktop").show();
+            $(".banner_desktop").show();
         } else {
-            $("#banner_mobile").show();
+            $(".banner_mobile").show();
         }
     });
 

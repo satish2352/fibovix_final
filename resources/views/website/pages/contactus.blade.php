@@ -4,7 +4,7 @@
 <!-- Start contact-background -->
 <section>
     <div class="container-fluid conact_page_img">
-        <div id="banner_desktop" style="display:none;">
+        <div class="banner_desktop" style="display:none;">
             <div class="row">
                 <div class="col-md-12 g-0">
                     <div class="logo image-fluid">
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div id="banner_mobile" style="display:none;">
+        <div class="banner_mobile" style="display:none;">
             <div class="row">
                 <div class="col-md-12 g-0">
                     <div class="logo image-fluid">
@@ -188,9 +188,9 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $("#banner_desktop").show();
+            $(".banner_desktop").show();
         } else {
-            $("#banner_mobile").show();
+            $(".banner_mobile").show();
         }
     });
 

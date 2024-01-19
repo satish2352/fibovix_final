@@ -4,14 +4,14 @@
     <div class="container-fluid ">
 
         <div class="container-fluid">
-            <div id="banner_desktop" style="display:none;">
+            <div class="banner_desktop" style="display:none;">
                 <div class="row">
                     <div class="col-md-12 services-banner">
                         <img src="{{ asset('website/images/Services.jpg') }}" width="100%" alt="">
                     </div>
                 </div>
             </div>
-            <div id="banner_mobile" style="display:none;">
+            <div class="banner_mobile" style="display:none;">
                 <div class="row">
                     <div class="col-md-12 services-banner">
                         <img src="{{ asset('website/images/services_mobile.jpg') }}" width="100%" alt="">
@@ -135,9 +135,9 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $("#banner_desktop").show();
+            $(".banner_desktop").show();
         } else {
-            $("#banner_mobile").show();
+            $(".banner_mobile").show();
         }
     });
 

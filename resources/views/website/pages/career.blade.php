@@ -44,18 +44,18 @@
 </style>
 
 
-<div id="banner_desktop" style="display:none;">
-    <div class="container-fluid group_img">
+
+<div class="container-fluid group_img">
+    <div class="banner_desktop" style="display:none;">
         <div class="row">
             <div class="col-12">
                 <img src="{{ asset('website/images/mediabanner.jpg') }}" alt="background" class="img-fluid">
             </div>
         </div>
     </div>
-</div>
 
-<div id="banner_mobile" style="display:none;">
-    <div class="container-fluid group_img">
+
+    <div class="banner_mobile" style="display:none;">
         <div class="row">
             <div class="col-12">
                 <img src="{{ asset('website/images/carrer_mobile_mobile.jpg') }}" alt="background" class="img-fluid">
@@ -66,20 +66,20 @@
 
 <div class="container custom-container">
 
-<div id="banner_desktop_new" style="display:none;">
-    <div class="row">
-        <div class="col-12">
-            <img src="{{ asset('website/images/Group1000003716.jpg') }}" alt="Your Image" class="img-fluid">
+    <div id="banner_desktop_new" style="display:none;">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ asset('website/images/Group1000003716.jpg') }}" alt="Your Image" class="img-fluid">
+            </div>
         </div>
-    </div>
     </div>
 
     <div id="banner_mobile_new" style="display:none;">
-    <div class="row">
-        <div class="col-12">
-            <img src="{{ asset('website/images/careeeer.jpg') }}" alt="Your Image" class="img-fluid">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ asset('website/images/careeeer.jpg') }}" alt="Your Image" class="img-fluid">
+            </div>
         </div>
-    </div>
     </div>
 
 
@@ -201,10 +201,10 @@
 
     $(document).ready(() => {
         if (isMobileDevice()) {
-            $("#banner_desktop").show();
+            $(".banner_desktop").show();
             $("#banner_desktop_new").show();
         } else {
-            $("#banner_mobile").show();
+            $(".banner_mobile").show();
             $("#banner_mobile_new").show();
         }
     });

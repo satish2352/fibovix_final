@@ -1,7 +1,7 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
 
-<div id="banner_desktop" style="display:none;">
+<div class="banner_desktop" style="display:none;">
     <div class="container-fluid mt-5 g-0 mobile_carousel">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -37,7 +37,7 @@
 </div>
 
 
-<div id="banner_mobile" style="display:none;"> 
+<div class="banner_mobile" style="display:none;"> 
     <div class="container-fluid mt-5 g-0 mobile_carousel">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -354,9 +354,9 @@
 
 $(document).ready(() => {
         if (isMobileDevice()) {
-            $("#banner_desktop").show();
+            $(".banner_desktop").show();
         } else {
-            $("#banner_mobile").show();
+            $(".banner_mobile").show();
         }
     });
 
