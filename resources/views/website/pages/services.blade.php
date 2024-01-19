@@ -4,12 +4,22 @@
     <div class="container-fluid ">
 
         <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 services-banner">
-            <img src="{{ asset('website/images/Services.jpg') }}" width="100%" alt="">
+            <div id="banner_desktop" style="display:none;">
+                <div class="row">
+                    <div class="col-md-12 services-banner">
+                        <img src="{{ asset('website/images/Services.jpg') }}" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="banner_mobile" style="display:none;">
+                <div class="row">
+                    <div class="col-md-12 services-banner">
+                        <img src="{{ asset('website/images/services_mobile.jpg') }}" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
 
 
     </div>
@@ -23,8 +33,9 @@
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
-                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')" type="button" role="tab"
-                                aria-controls="nav-home" aria-selected="true">All items</button>
+                                data-bs-toggle="tab" data-bs-target="#todays_market" onclick="getServices('all')"
+                                type="button" role="tab" aria-controls="nav-home" aria-selected="true">All
+                                items</button>
                             @forelse($all_services as $key=>$categories_data)
 
                             <button class="nav-link article_tab_link" id="id_{{ $categories_data['id'] }}"
@@ -44,31 +55,31 @@
                 <div class="col-md-9">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
-                         
-                                <div class="row row-cols-1 row-cols-md-4 g-3">
-                                    @forelse ($all_services_details as $key=>$item)
-                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                        <div class="card article_card_container h-100">
-                                            <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
-                                                class="card-img-top" alt="{{ $item['title'] }}">
-                                            <div class="card-body">
-                                                <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
-                                                <p class="text-align-justify">{{
-                                                    $item['short_description'] }}</p>
-                                            </div>
-                                            <div class="card-footer article_card_footer">
-                                                
-                                            </div>
+
+                            <div class="row row-cols-1 row-cols-md-4 g-3">
+                                @forelse ($all_services_details as $key=>$item)
+                                <div class="col-md-6 col-lg-4 col-sm-12">
+                                    <div class="card article_card_container h-100">
+                                        <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
+                                            class="card-img-top" alt="{{ $item['title'] }}">
+                                        <div class="card-body">
+                                            <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
+                                            <p class="text-align-justify">{{
+                                                $item['short_description'] }}</p>
+                                        </div>
+                                        <div class="card-footer article_card_footer">
+
                                         </div>
                                     </div>
-                                    @empty
-                                    <div class="alert alert-primary" role="alert">
-                                        No Data Found
-                                    </div>
-                                    @endforelse
                                 </div>
+                                @empty
+                                <div class="alert alert-primary" role="alert">
+                                    No Data Found
+                                </div>
+                                @endforelse
+                            </div>
 
-                      
+
                         </div>
                     </div>
                 </div>
@@ -120,5 +131,20 @@
 
 </script>
 
+<script>
 
+    $(document).ready(() => {
+        if (isMobileDevice()) {
+            $("#banner_desktop").show();
+        } else {
+            $("#banner_mobile").show();
+        }
+    });
+
+    function isMobileDevice() {
+        return window.innerWidth <= 800; // You can adjust this threshold based on your needs
+    }
+
+
+</script>
 @include('website.layouts.footer')
