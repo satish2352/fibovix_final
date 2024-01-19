@@ -63,7 +63,7 @@
                 <img src="{{ asset('website/images/f2.png') }}" alt="">
             </div>
         </div>
-        <div class="col-md-3 col-lg-7 col-sm-12">
+        <div class="col-md-4 col-lg-7 col-sm-12">
             <div class="row g-5 d-grid">
                 <div class="fcard">
                     <div class="fcard_about" style="margin-top:0; font-size:14px;">
