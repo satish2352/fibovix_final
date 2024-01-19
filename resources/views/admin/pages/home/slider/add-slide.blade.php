@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <label for="image">Image </label>&nbsp<span class="red-text">*</span><br>
+                                            <label for="image">Desktop </label>&nbsp<span class="red-text">*</span><br>
                                             <input type="file" name="image" id="image" accept="image/*"
                                                 value="{{ old('image') }}" class="form-control mb-2">
                                             @if ($errors->has('image'))
@@ -43,6 +43,17 @@
                                         </div>
                                     </div>
 
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="mobile_view_image">Mobile View </label>&nbsp<span class="red-text">*</span><br>
+                                            <input type="file" name="mobile_view_image" id="mobile_view_image" accept="image/*"
+                                                value="{{ old('mobile_view_image') }}" class="form-control mb-2">
+                                            @if ($errors->has('mobile_view_image'))
+                                                <span class="red-text"><?php echo $errors->first('mobile_view_image', ':message'); ?></span>
+                                            @endif
+                                        </div>
+                                    </div>
                                   
 
                                     <div class="col-md-12 col-sm-12 text-center">

@@ -31,7 +31,8 @@
                                                     <th>Sr. No.</th>
                                                     <th>Sr.No. To View </th>
                                                   
-                                                    <th>Image </th>
+                                                    <th>Image Desktop View</th>
+                                                    <th>Image Mobile View</th>
                                                     <th>Status</th>
                                                     <th>Action</th>
                                                 </tr>
@@ -44,6 +45,10 @@
                                                      
                                                         <td> <img class="img-size"
                                                                 src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}"
+                                                                alt=" {{ strip_tags($item['title']) }} Image" />
+                                                        </td>
+                                                        <td> <img class="img-size"
+                                                                src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->mobile_view_image }}"
                                                                 alt=" {{ strip_tags($item['title']) }} Image" />
                                                         </td>
                                                         <td>

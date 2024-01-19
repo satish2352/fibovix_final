@@ -1,39 +1,75 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
 
-<div class="container-fluid mt-5 g-0 mobile_carousel">
+<div id="banner_desktop" style="display:none;">
+    <div class="container-fluid mt-5 g-0 mobile_carousel">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-
-        <div class="carousel-inner">
-            @foreach ($data_output_slider as $key=> $item)
-            <div class="carousel-item @if($key == 0) {{'active'}} @endif">
-                <img src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" class="d-block w-100"
-                    alt="...">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
-            @endforeach
+
+            <div class="carousel-inner">
+                @foreach ($data_output_slider as $key=> $item)
+                <div class="carousel-item @if($key == 0) {{'active'}} @endif">
+                    <img src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->image }}" class="d-block w-100"
+                        alt="...">
+                </div>
+                @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+</div>
 
 
+<div id="banner_mobile" style="display:none;"> 
+    <div class="container-fluid mt-5 g-0 mobile_carousel">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                @foreach ($data_output_slider as $key=> $item)
+                <div class="carousel-item @if($key == 0) {{'active'}} @endif">
+                    <img src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $item->mobile_view_image }}"
+                        class="d-block w-100" alt="...">
+                </div>
+                @endforeach
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 </div>
 
 
@@ -50,7 +86,10 @@
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p>We aspire to be the most exceptional financial institution, united by our shared values of partnership, client service, integrity, and excellence.Everything we do starts with our purpose. Re imagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix</p>
+                        <p>We aspire to be the most exceptional financial institution, united by our shared values of
+                            partnership, client service, integrity, and excellence.Everything we do starts with our
+                            purpose. Re imagining the power of investing. Connecting people for a better world. This is
+                            our purpose. This is Fibovix</p>
 
                     </div>
                     <div class="col-md-2 col-lg-2 col-sm-2">
@@ -114,7 +153,8 @@
 
             </div>
             <div class="col-8">
-                <p>Across our divisions, digital platforms, and services, our clients and customers have access to the resources and reach of a unified global firm to help them achieve their goals.</p>
+                <p>Across our divisions, digital platforms, and services, our clients and customers have access to the
+                    resources and reach of a unified global firm to help them achieve their goals.</p>
             </div>
             <div class="col-2">
 
@@ -312,6 +352,20 @@
 
 <script>
 
+$(document).ready(() => {
+        if (isMobileDevice()) {
+            $("#banner_desktop").show();
+        } else {
+            $("#banner_mobile").show();
+        }
+    });
+
+    function isMobileDevice() {
+        return window.innerWidth <= 800; // You can adjust this threshold based on your needs
+    }
+
+
+
     function getServices(our_services_master_id) {
         $("#gallary_data").empty();
         $.ajax({
@@ -337,7 +391,7 @@
                                         </div>
                                         <div class="card-footer article_card_footer">
                                             <small class="text-muted"><i style="color: orange;"
-                                                    class="fa fa-paper-plane" aria-hidden="true"></i> &nbsp;`+ item.short_description + `</small>
+                                                    class="fa fa-paper-sp;`+ item.short_description + `</small>
                                         </div>
                                     </div>
                                 </div>
