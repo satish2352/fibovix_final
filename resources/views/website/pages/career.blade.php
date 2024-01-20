@@ -45,9 +45,9 @@
 
 
 
-<div class="container-fluid group_img">
+<div class="container-fluid group_img g-0">
     <div class="banner_desktop" style="display:none;">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12">
                 <img src="{{ asset('website/images/mediabanner.jpg') }}" alt="background" class="img-fluid">
             </div>
