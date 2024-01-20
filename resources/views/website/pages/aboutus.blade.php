@@ -256,7 +256,7 @@
                 style="color:#6246E5; padding:5px;">YOU</span>..
         </h2>
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/starg.png') }}" alt="card-image"
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/market.png') }}" alt="card-image"
@@ -282,7 +282,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/goals.png') }}" alt="card-image"
@@ -300,7 +300,7 @@
 
             </div>
 
-            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax_final.png') }}" alt="card-image"
@@ -313,7 +313,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center">
                 <div class="card_container">
                     <div class="card_header">
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />

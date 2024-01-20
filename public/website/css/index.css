@@ -1475,6 +1475,13 @@ padding: 0px !important;
   }
 }
 
+@media (min-width: 496px) and (max-width: 749px){
+  .carousel-indicators_new {
+      top: 15.9rem !important;
+      display: none !important;
+  }
+}
+
 @media (min-width: 763px) and (max-width: 818px) {
   .circleimg{
     width: 150px;
