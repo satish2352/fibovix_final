@@ -1410,7 +1410,7 @@ padding: 0px !important;
 
 @media (min-width: 492px) and (max-width: 759px) {
   .fcard_about{
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 }
 
@@ -1568,5 +1568,25 @@ padding: 0px !important;
   .fcard {
     margin-top: 4rem;
     height: 37em;
+  }
+}
+
+@media (min-width: 459px) and (max-width: 491px){
+  .fcard {
+    margin-top: 4rem;
+    height: 30em;
+  }
+}
+
+@media (min-width: 492px) and (max-width: 759px){
+  .fcard {
+    margin-top: 4rem;
+    height: 32em;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .about_founder_last_pic {
+    margin-top: 25px;
   }
 }

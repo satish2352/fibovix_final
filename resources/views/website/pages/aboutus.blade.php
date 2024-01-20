@@ -84,7 +84,7 @@
                             research, data, and analytics.</p>
                     </div>
                 </div>
-                <img src="{{ asset('website/images/f3.png') }}" alt="">
+                <img class="about_founder_last_pic" src="{{ asset('website/images/f3.png') }}" alt="">
             </div>
         </div>
     </div>
