@@ -52,6 +52,24 @@
                                             class="img-fluid img-thumbnail" width="150" style="display:none">
                                     </div>  
                                     
+
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="mobile_view_image"> mobile_view_image</label>
+                                            <input type="file" name="mobile_view_image" class="form-control"
+                                                id="mobile_view_image" accept="image/*" placeholder="image">
+                                            @if ($errors->has('mobile_view_image'))
+                                                <div class="red-text"><?php echo $errors->first('mobile_view_image', ':message'); ?>
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <img id="english"
+                                            src="{{ Config::get('DocumentConstant.SLIDER_VIEW') }}{{ $editData->mobile_view_image }}"
+                                            class="img-fluid img-thumbnail" width="150">
+                                        <img id="english_imgPreview" src="#" alt="pic"
+                                            class="img-fluid img-thumbnail" width="150" style="display:none">
+                                    </div>  
+                                    
                                  
 
                                     <div class="col-md-12 col-sm-12 text-center">

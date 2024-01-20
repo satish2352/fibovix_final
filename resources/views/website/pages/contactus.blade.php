@@ -4,10 +4,22 @@
 <!-- Start contact-background -->
 <section>
     <div class="container-fluid conact_page_img">
-        <div class="row">
-            <div class="col-md-12 g-0">
-                <div class="logo image-fluid">
-                    <img src="{{ asset('website/images/get_in_touch.png') }}" width="100%">
+        <div class="banner_desktop" style="display:none;">
+            <div class="row">
+                <div class="col-md-12 g-0">
+                    <div class="logo image-fluid">
+                        <img src="{{ asset('website/images/get_in_touch.png') }}" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner_mobile" style="display:none;">
+            <div class="row">
+                <div class="col-md-12 g-0">
+                    <div class="logo image-fluid">
+                        <img src="{{ asset('website/images/get_in_touch_mobile.jpg') }}" width="100%">
+                    </div>
                 </div>
             </div>
         </div>
@@ -43,7 +55,8 @@
                                     </div>
                                     <div class="text">
                                         <h2>Email</h2>
-                                        <p><a href="mail:{{ $website_contact_details[0]['mail_id'] }}">{{ $website_contact_details[0]['mail_id'] }}</a></p>
+                                        <p><a href="mail:{{ $website_contact_details[0]['mail_id'] }}">{{
+                                                $website_contact_details[0]['mail_id'] }}</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -56,8 +69,11 @@
                                     </div>
                                     <div class="text">
                                         <h2>Phone</h2>
-                                        <p><a  href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{ $website_contact_details[0]['contact_one'] }}   </a> &nbsp; 
-                                        <a  href="tel:{{ $website_contact_details[0]['contact_two'] }}">{{ $website_contact_details[0]['contact_two'] }}   </a></p>
+                                        <p><a href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{
+                                                $website_contact_details[0]['contact_one'] }} </a> &nbsp;
+                                            <a href="tel:{{ $website_contact_details[0]['contact_two'] }}">{{
+                                                $website_contact_details[0]['contact_two'] }} </a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -76,9 +92,11 @@
     <div class="container" style="position: relative;">
         <div class="row">
             <div class="col-md-12 col-lg-12 d-flex justify-content-center">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.072690993769!2d72.81970837433005!3d18.928176356598303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e8d34ef5d7%3A0xd03369a7fcfee789!2sExpress%20Towers%2C%20Ramnath%20Goenka%20Marg%2C%20Nariman%20Point%2C%20Mumbai%2C%20Maharashtra%20400021!5e0!3m2!1sen!2sin!4v1704026033480!5m2!1sen!2sin" 
-                    width="85%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-             
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.072690993769!2d72.81970837433005!3d18.928176356598303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1e8d34ef5d7%3A0xd03369a7fcfee789!2sExpress%20Towers%2C%20Ramnath%20Goenka%20Marg%2C%20Nariman%20Point%2C%20Mumbai%2C%20Maharashtra%20400021!5e0!3m2!1sen!2sin!4v1704026033480!5m2!1sen!2sin"
+                    width="85%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
         </div>
     </div>
@@ -94,13 +112,12 @@
             @csrf
             <div class="col-md-6">
                 <label for="validationCustom01" class="form-label">Name</label>
-                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}"
-                    id="full_name">
+                <input type="text" class="form-control" name="full_name" value="{{ old('full_name') }}" id="full_name">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('full_name'))
-                    <span class="red-text">
-                        <?php echo $errors->first('full_name', ':message'); ?>
-                    </span>
+                <span class="red-text">
+                    <?php echo $errors->first('full_name', ':message'); ?>
+                </span>
                 @endif
 
             </div>
@@ -109,9 +126,9 @@
                 <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('email'))
-                    <span class="red-text">
-                        <?php echo $errors->first('email', ':message'); ?>
-                    </span>
+                <span class="red-text">
+                    <?php echo $errors->first('email', ':message'); ?>
+                </span>
                 @endif
             </div>
 
@@ -121,9 +138,9 @@
                     id="validationCustom03">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('mobile_number'))
-                    <span class="red-text">
-                        <?php echo $errors->first('mobile_number', ':message'); ?>
-                    </span>
+                <span class="red-text">
+                    <?php echo $errors->first('mobile_number', ':message'); ?>
+                </span>
                 @endif
             </div>
             <div class="col-md-6">
@@ -132,9 +149,9 @@
                     value="{{ old('subject') }}">
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('subject'))
-                    <span class="red-text">
-                        <?php echo $errors->first('subject', ':message'); ?>
-                    </span>
+                <span class="red-text">
+                    <?php echo $errors->first('subject', ':message'); ?>
+                </span>
                 @endif
             </div>
             <div class="col-md-12">
@@ -143,9 +160,9 @@
                     id="message" placeholder="Write a Message" class="form-control">{{ old('message') }}</textarea>
                 <span id="number-validate" class="red-text"></span>
                 @if ($errors->has('message'))
-                    <span class="red-text">
-                        <?php echo $errors->first('message', ':message'); ?>
-                    </span>
+                <span class="red-text">
+                    <?php echo $errors->first('message', ':message'); ?>
+                </span>
                 @endif
             </div>
             <div class="col-md-12 py-3 captcha_set captcha_css" style="text-align: -webkit-right;">
@@ -153,9 +170,9 @@
                 {!! NoCaptcha::display() !!}
 
                 @if ($errors->has('g-recaptcha-response'))
-                    <span class="help-block">
-                        <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
-                    </span>
+                <span class="help-block">
+                    <span class="red-text">{{ $errors->first('g-recaptcha-response') }}</span>
+                </span>
                 @endif
             </div>
             <div class="col-12 d-flex justify-content-center mt-3"><br>
@@ -167,6 +184,26 @@
 </section>
 <!-- End form -->
 
+<script>
+
+    $(document).ready(() => {
+        if (isMobileDevice()) {
+            $(".banner_mobile").show();
+        } else {
+            
+            $(".banner_desktop").show();
+        }
+    });
+
+    function isMobileDevice() {
+        if(window.innerWidth <= 800) {
+            return true;    
+        }
+        return false;    
+    }
+
+
+</script>
 
 
 @include('website.layouts.footer')

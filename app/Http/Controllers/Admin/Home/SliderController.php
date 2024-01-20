@@ -28,6 +28,7 @@ class SliderController extends Controller
         $rules = [
             'rank_no' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:800|min:5',//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767',
+            'mobile_view_image' => 'required|image|mimes:jpeg,png,jpg|max:800|min:5',//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767',
            
         ];
         $messages = [    
@@ -38,6 +39,14 @@ class SliderController extends Controller
             'image.max' => 'The image size must not exceed 800 KB .',
             'image.min' => 'The image size must not be less than 5 KB .',
             'image.dimensions' => 'The image dimensions must be between 760X767 and 1920x1920 pixels.',
+
+
+            'mobile_view_image.required' => 'The image is required.',
+            'mobile_view_image.image' => 'The image must be a valid image file.',
+            'mobile_view_image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
+            'mobile_view_image.max' => 'The image size must not exceed 800 KB .',
+            'mobile_view_image.min' => 'The image size must not be less than 5 KB .',
+            'mobile_view_image.dimensions' => 'The image dimensions must be between 760X767 and 1920x1920 pixels.',
         ];
 
         try {
@@ -87,6 +96,10 @@ class SliderController extends Controller
         if($request->has('image')) {
             $rules['image'] = 'required|image|mimes:jpeg,png,jpg|max:800|min:5';//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767';
         }
+
+        if($request->has('mobile_view_image')) {
+            $rules['mobile_view_image'] = 'required|image|mimes:jpeg,png,jpg|max:800|min:5';//|dimensions:min_width=1920,min_height=760,max_width=1920,max_height=767';
+        }
        
         $messages = [   
             'rank_no.required'=>'Please enter Rank Number.',
@@ -95,6 +108,13 @@ class SliderController extends Controller
             'image.max' => 'The image size must not exceed 800 KB .',
             'image.min' => 'The image size must not be less than 5 KB .',
             'image.dimensions' => 'The image dimensions must be between 760X767 and 1920x1920 pixels.',
+
+            'mobile_view_image.required' => 'The image is required.',
+            'mobile_view_image.image' => 'The image must be a valid image file.',
+            'mobile_view_image.mimes' => 'The image must be in JPEG, PNG, JPG format.',
+            'mobile_view_image.max' => 'The image size must not exceed 800 KB .',
+            'mobile_view_image.min' => 'The image size must not be less than 5 KB .',
+            'mobile_view_image.dimensions' => 'The image dimensions must be between 760X767 and 1920x1920 pixels.',
            
         ];
 
