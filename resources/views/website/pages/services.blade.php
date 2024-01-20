@@ -1,20 +1,20 @@
 @include('website.layouts.header')
 @if(count($all_services_details))
 <section>
-    <div class="container-fluid ">
+    <div class="container-fluid g-0">
 
         <div class="container-fluid">
             <div class="banner_desktop" style="display:none;">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-md-12 services-banner">
-                        <img src="{{ asset('website/images/Services.jpg') }}" width="100%" alt="" class="img-fluid">
+                        <img src="{{ asset('website/images/Services.jpg') }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
             <div class="banner_mobile" style="display:none;">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-md-12 services-banner">
-                        <img src="{{ asset('website/images/services_mobile.jpg') }}" width="100%" alt="" class="img-fluid">
+                        <img src="{{ asset('website/images/services_mobile.jpg') }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
