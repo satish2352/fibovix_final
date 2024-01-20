@@ -1422,14 +1422,14 @@ padding: 0px !important;
 
 @media (min-width: 389px) and (max-width: 458px) {
   .fcard_about{
-    font-size: 10px !important;
+    font-size: 13px !important;
     padding: 15px !important;
   }
 }
 
 @media (min-width: 355px) and (max-width: 388px) {
   .fcard_about{
-    font-size: 10px !important;
+    font-size: 12px !important;
     padding: 5px !important;
   }
 }
@@ -1554,5 +1554,19 @@ padding: 0px !important;
 @media screen and (max-width: 884px) {
   .artical_top_mob {
       margin-top: -3rem !important;
+  }
+}
+
+@media (min-width: 355px) and (max-width: 388px){
+  .fcard {
+    margin-top: 4rem;
+    height: 34em;
+  }
+}
+
+@media (min-width: 389px) and (max-width: 458px) {
+  .fcard {
+    margin-top: 4rem;
+    height: 37em;
   }
 }
