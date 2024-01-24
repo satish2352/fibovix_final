@@ -1673,6 +1673,15 @@ padding: 0px !important;
   color: #fff;
 }
 
+.text-align-center{
+  text-align: center;
+}
+
+.career_btn{
+  position: relative;
+  margin-top: -12rem;
+}
+
 @media (max-width: 768px){
   .home_titles_para {
     display: none !important;
@@ -1696,5 +1705,55 @@ padding: 0px !important;
 @media screen and (min-width: 1400px) {
   .wtsubmain {
     padding: 70px 80px 10px 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 796px){
+  .career_btn{
+    position: relative;
+    margin-top: -6rem;
+    margin-left: 17rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 769px){
+  .career_btn{
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 12rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 457px) and (max-width: 499px){
+  .career_btn{
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 10rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 398px) and (max-width: 456px){
+  .career_btn{
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 8rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 397px){
+  .career_btn{
+    position: relative;
+    margin-top: -2rem;
+    margin-left: 6rem;
+    padding: 9px 15px 9px 15px;
+    font-size: 12px;
   }
 }

@@ -53,8 +53,8 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#investorBackdrop">INVESTOR</button>
-                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#traderBackdrop">TRADER</button>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+                    
                 </div>
 
             </div>
@@ -476,12 +476,28 @@ $(document).ready(() => {
 </script>
 
 
-<!-- Modal 1 -->
-<div class="modal fade" id="investorBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle2">INVESTOR</button>
+        <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle3">TRADER</button>
+      </div>
+      <div class="modal-footer">
+        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Investor Form</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -516,19 +532,20 @@ $(document).ready(() => {
                 <input type="submit" class="btn investor_btn"></form>
         </div>
       </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn investor_btn">Submit</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- The rest of your view content -->
-
-<!-- Modal 2 -->
-<div class="modal fade" id="traderBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Trader Form</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -566,8 +583,9 @@ $(document).ready(() => {
         </div>
       </div>
       <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <input type="submit" class="btn trader_btn">
+        <button type="button" class="btn investor_btn">Submit</button>
       </div>
                     </form>
     </div>
