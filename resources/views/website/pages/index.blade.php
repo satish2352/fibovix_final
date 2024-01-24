@@ -2,7 +2,7 @@
 {{-- start hero section --}}
 
 <div class="banner_desktop" style="display:none;">
-    <div class="container-fluid mt-5 g-0 mobile_carousel">
+    <!-- <div class="container-fluid mt-5 g-0 mobile_carousel">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -33,12 +33,32 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </div> -->
+    <img class="img-fluid mt-5" style="" src="{{asset('website/images/home.jpg')}}" alt="">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 titles_container">
+                <div class="home_heading">
+                    <h1>Welcome to FIBOVIX. Let’s find an investing approach that helps meet your needs.</h1>
+                </div>
+                <div class="home_titles_para">
+                    <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
+                </div>
+                <div class="home_title_btn mb-4">
+                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#investorBackdrop">INVESTOR</button>
+                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#traderBackdrop">TRADER</button>
+                </div>
+
+            </div>
+            
+        </div>
     </div>
 </div>
 
 
 <div class="banner_mobile" style="display:none;"> 
-    <div class="container-fluid mt-5 g-0 mobile_carousel">
+    <!-- <div class="container-fluid mt-5 g-0 mobile_carousel">
 
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -69,6 +89,26 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </div> -->
+    <img class="img-fluid mt-5" style="" src="{{asset('website/images/home_mobile_view.png')}}" alt="">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 titles_container">
+                <div class="home_heading">
+                    <h1>Welcome to FIBOVIX. Let’s find an investing approach that helps meet your needs.</h1>
+                </div>
+                <div class="home_titles_para">
+                    <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
+                </div>
+                <div class="home_title_btn mb-4">
+                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#investorBackdrop">INVESTOR</button>
+                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#traderBackdrop">TRADER</button>
+                </div>
+
+            </div>
+            
+        </div>
     </div>
 </div>
 
@@ -81,12 +121,12 @@
 
             <div class="container">
                 <div class="row text-center">
-                    <h2 id="fibovix">Our<span style="color: #1F2D87 ">Purpose</span></h2>
+                    <h2 id="fibovix" class="white">Our<span style="color: #fff">Purpose</span></h2>
                     <div class="col-md-2 col-lg-2 col-sm-2">
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p>We aspire to be the most exceptional financial institution, united by our shared values of
+                        <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of
                             partnership, client service, integrity, and excellence.Everything we do starts with our
                             purpose. Re imagining the power of investing. Connecting people for a better world. This is
                             our purpose. This is Fibovix</p>
@@ -410,6 +450,102 @@ $(document).ready(() => {
 
 
 </script>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="investorBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="nameInput" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="nameInput" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="exampleInputEmail1" class="form-label">Contact</label>
+                                <input type="mobile" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="exampleInputEmail1" class="form-label">Comment</label>
+                                <textarea type="text" class="form-control" id="exampleInputEmail1" required></textarea>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn investor_btn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="traderBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="nameInput" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="nameInput" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <label for="resume" class="form-label">Resume/CV</label>
+                                <input type="file" class="form-control" id="resume" name="resume" accept=".pdf, .doc, .docx"
+                                    required>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn trader_btn">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

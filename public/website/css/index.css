@@ -15,6 +15,10 @@ body {
 
 }
 
+.white{
+  color: #fff;
+}
+
 .foot_logo_para{
   font-size: 0.9rem;
 }
@@ -98,7 +102,7 @@ li:last-child {
 
 
 .backimg1 {
-  background-image: url('../images/WHYFIBOVIX.png');
+  background-image: url('../images/newbg.jpg');
   background-size: cover;
   /* background-position: center; */
   background-attachment: fixed;
@@ -1595,5 +1599,102 @@ padding: 0px !important;
 @media screen and (max-width: 759px) {
   .about_founder_last_pic {
     margin-top: 16px;
+  }
+}
+
+/* new home banner */
+.home_heading{
+  padding: 40px 25px 10px;
+  text-align: center;
+}
+
+.titles_container{
+  margin-top: -3rem;
+  background: #fff;
+  /* box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.04); */
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 21%);;
+}
+
+.span_para{
+  text-align: center;
+}
+
+.span_para span{
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.25;
+}
+
+.home_titles_para{
+  font-size: 1.125rem;
+  line-height: 1.6;
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.home_title_btn{
+  text-align: center;
+}
+
+.banner_btn{
+  background-color: #1F2D87;
+  border-radius: 34px;
+  padding: 12px 20px 12px 20px;
+  border-color: #1F2D87;
+  color: #fff;
+}
+
+.banner_btn:hover{
+  background-color: #1F2D87;
+  border-radius: 34px;
+  padding: 12px 20px 12px 20px;
+  border-color: #1F2D87;
+  color: #fff !important;
+}
+
+.investor_btn{
+  background-color: #1F2D87;
+  color: #fff;
+}
+
+.investor_btn:hover{
+  background-color: #1F2D87;
+  color: #fff;
+}
+
+.trader_btn{
+  background-color: #1F2D87;
+  color: #fff;
+}
+
+.trader_btn:hover{
+  background-color: #1F2D87;
+  color: #fff;
+}
+
+@media (max-width: 768px){
+  .home_titles_para {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px){
+  .titles_container .home_heading h1{
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 766px){
+  .titles_container .home_heading h1{
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wtsubmain {
+    padding: 70px 80px 10px 30px;
   }
 }
