@@ -64,12 +64,12 @@
     </div>
 </div>
 
-<div class="container custom-container">
+<div class="container custom-container mt-5">
 
     <div id="banner_desktop_new" style="display:none;">
         <div class="row">
             <div class="col-12">
-                <img src="{{ asset('website/images/Group1000003716.jpg') }}" alt="Your Image" class="img-fluid">
+                <img src="{{ asset('website/images/CAREER.png') }}" alt="Your Image" class="img-fluid">
             </div>
         </div>
     </div>
@@ -77,13 +77,24 @@
     <div id="banner_mobile_new" style="display:none;">
         <div class="row">
             <div class="col-12">
-                <img src="{{ asset('website/images/careeeer.jpg') }}" alt="Your Image" class="img-fluid">
+                <img src="{{ asset('website/images/CAREER_mobile.png') }}" alt="Your Image" class="img-fluid">
             </div>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-6">
+            <div class="text-align-center">
+            <button type="button" class="btn banner_btn career_btn" data-bs-toggle="modal" data-bs-target="#careerBackdrop">Explore Career</button>
+            </div>
+        </div>
+        <div class="col-6">
 
-    <div class="career_form">
+        </div>
+    </div>
+
+
+    <!-- <div class="career_form">
         @if (Session::get('status') == 'succesed')
 
         <div class="col-12 grid-margin">
@@ -128,7 +139,7 @@
                             <option value="developer">Developer</option>
                             <option value="designer">Designer</option>
                             <option value="manager">Manager</option>
-                            <!-- Add more positions as needed -->
+                            
                         </select>
                     </div>
                 </div>
@@ -153,9 +164,10 @@
                         </div>
                     </div>
                 </center>
+            </div>
         </form>
-    </div>
-</div>
+        
+    </div> -->
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
@@ -220,4 +232,92 @@
 
 
 </script>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="careerBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Career Form</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <div class="modal-body">
+            @if (Session::get('status') == 'succesed')
+
+            <div class="col-12 grid-margin">
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Success!</strong> {{ Session::get('msg') }}
+                </div>
+            </div>
+
+            @endif
+
+            @if (Session::get('status') == 'errors')
+            <div class="col-12 grid-margin">
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Danger!</strong> {!! session('msg') !!}
+                </div>
+            </div>
+            @endif
+            <form method="POST" action="{{ route('add-career') }}" enctype="multipart/form-data">
+                @csrf
+                <div class="container data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="mobile_number" name="mobile_number" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="position" class="form-label">Choose Position</label>
+                            <select class="form-select" id="position" name="position" required>
+                                <option value="" selected disabled>Select Position</option>
+                                <option value="developer">Developer</option>
+                                <option value="designer">Designer</option>
+                                <option value="manager">Manager</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="resume" class="form-label">Resume/CV</label>
+                            <input type="file" class="form-control" id="resume" name="resume" accept=".pdf, .doc, .docx"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" style="background-color:#1F2D87; color:white"
+                                    class="btn btn-primary">Submit</button>
+                            <!-- <button type="button" class="btn investor_btn">Submit</button> -->
+                        </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 @include('website.layouts.footer')
