@@ -1,5 +1,12 @@
 @include('website.layouts.header')
 {{-- start hero section --}}
+<style>
+    label.error {
+        color: red; /* Change 'red' to your desired text color */
+        font-size: 12px; /* Adjust font size if needed */
+        /* Add any other styling as per your design */
+    }
+</style>
 
 <div class="banner_desktop" style="display:none;">
     <!-- <div class="container-fluid mt-5 g-0 mobile_carousel">
@@ -55,6 +62,23 @@
         </div>
     </div>
 </div>
+@if(session('success'))
+        <div class="container">
+    <div class="alert alert-success" id="autoCloseAlert">
+        {{ session('success') }}
+    </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Close the alert after 3 seconds
+            setTimeout(function(){
+                $("#autoCloseAlert").alert('close');
+            }, 3000);
+        });
+    </script>
+@endif
+
 
 
 <div class="banner_mobile" style="display:none;"> 
@@ -451,80 +475,84 @@ $(document).ready(() => {
 
 </script>
 
+
 <!-- Modal 1 -->
 <div class="modal fade" id="investorBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Investor Form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form>
+                    <form method="POST" action="{{ route('investorStore') }}" id="investorForm">
+                        @csrf
                         <div class="row">
                             <div class="col-6">
                                 <label for="nameInput" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="nameInput" required>
+                                <input type="text" class="form-control" id="nameInput" name="name" required>
                             </div>
                             <div class="col-6">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                                <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
                             </div>
                             <div class="col-6 mt-3">
                                 <label for="exampleInputEmail1" class="form-label">Contact</label>
-                                <input type="mobile" class="form-control" id="exampleInputEmail1" required>
+                                <input type="text" class="form-control" id="contactInput" name="contact" required>
                             </div>
                             <div class="col-6 mt-3">
                                 <label for="exampleInputEmail1" class="form-label">Comment</label>
-                                <textarea type="text" class="form-control" id="exampleInputEmail1" required></textarea>
+                                <textarea class="form-control" id="commentInput" name="comment" required></textarea>
                             </div>
                         </div>
                         
-                    </form>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <input type="submit" class="btn investor_btn"></form>
         </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn investor_btn">Submit</button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- The rest of your view content -->
 
 <!-- Modal 2 -->
 <div class="modal fade" id="traderBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Trader Form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form>
+                    <form method="POST" action="{{ route('traderStore') }}" id="traderForm" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-6">
                                 <label for="nameInput" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="nameInput" required>
+                                <input type="text" class="form-control" id="nameInput" name="name" required>
                             </div>
                             <div class="col-6">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                                <label for="exampleInputEmail1" class="form-label">Contact</label>
+                                <input type="text" class="form-control" name="contact" id="contactInput" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" required>
+                                <label for="exampleInputEmail1" class="form-label">Comment</label>
+                                <input type="text" class="form-control" id="commentInput" required>
                             </div>
                             <div class="col-12 mt-3">
                                 <label for="resume" class="form-label">Resume/CV</label>
@@ -533,20 +561,91 @@ $(document).ready(() => {
                             </div>
                         </div>
                         
-                    </form>
                 </div>
             </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn trader_btn">Submit</button>
+        <input type="submit" class="btn trader_btn">
       </div>
+                    </form>
     </div>
   </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+        $("#investorForm").validate({
+            rules: {
+                nameInput: {
+                    required: true
+                },
+                exampleInputEmail1: {
+                    required: true,
+                    email: true
+                },
+                contactInput: {
+                    required: true
+                    // Add any additional rules for the contact field
+                },
+                commentInput: {
+                    required: true
+                }
+            },
+            messages: {
+                name: "Please enter your name",
+                exampleInputEmail1: {
+                    required: "Please enter your email",
+                    exampleInputEmail1: "Please enter a valid email address"
+                },
+                contactInput: "Please enter a valid contact number",
+                commentInput: "Please enter your comment"
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+</script>
+<script>
+
+$(document).ready(function () {
+        $("#traderForm").validate({
+            rules: {
+                nameInput: {
+                    required: true
+                },
+                exampleInputEmail1: {
+                    required: true,
+                    email: true
+                },
+                contactInput: {
+                    required: true
+                    // Add any additional rules for the contact field
+                },
+                commentInput: {
+                    required: true
+                }
+            },
+            messages: {
+                name: "Please enter your name",
+                exampleInputEmail1: {
+                    required: "Please enter your email",
+                    exampleInputEmail1: "Please enter a valid email address"
+                },
+                contactInput: "Please enter a valid contact number",
+                commentInput: "Please enter your comment"
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+</script>
 
 
 @include('website.layouts.footer')

@@ -123,7 +123,17 @@
                 <span class="menu-title">Subscriber From Website</span>
             </a>
         </li>
-
+        <li class="{{ request()->is('list-investor*') ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" href="{{ route('list-investor') }}">
+                <i class="fas fa-window-restore menu-icon"></i>
+                <span class="menu-title">Investor</span>
+            </a>
+        </li><li class="{{ request()->is('list-trader*') ? 'nav-item active' : 'nav-item' }}">
+            <a class="nav-link" href="{{ route('list-trader') }}">
+                <i class="fas fa-window-restore menu-icon"></i>
+                <span class="menu-title">Traders</span>
+            </a>
+        </li>
 
 
         <li class="@if (request()->is('list-contactus-form*') || request()->is('list-about-us-contactus*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">

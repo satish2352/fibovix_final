@@ -12,10 +12,12 @@ use App\Models\ {
     ResourcesAndInsights,
     ServiceMasters,
     ServiceDetails,
-    Gallery
+    Gallery,
+    InvestorModel,
+    TraderModel
 
 };
-
+use Config;
 use App\Models\ {
     AdditionalSolutions,
     Slider,
@@ -167,5 +169,71 @@ class IndexController extends Controller
         $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
         return view('website.pages.career',compact('website_contact_details'));
     }
+
+    public function investorStore(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'contact' => 'required|string|max:20', 
+            'comment' => 'required|string',
+        ]);
+
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $data = new InvestorModel;
+        $data->name = $request->input('name');
+        $data->email = $request->input('email');
+        $data->contact = $request->input('contact');
+        $data->comment = $request->input('comment');
+        
+        $data->save();
+
+        return redirect()->back()->with('success', 'Data has been successfully stored.');
+    }
+public function traderStore(Request $request)
+{
+    try {
+        $data = array();
+        $trader = new TraderModel();
+        $trader->name = $request['name'];
+        $trader->email = $request['email'];
+        $trader->contact = $request['contact'];
+        $trader->comment = $request['comment'];
+        $trader->resume = 'null'; // Are you sure you want to store the string 'null' here?
+
+        $trader->save();
+
+        $last_insert_id = $trader->id; // Fix the variable name here
+
+        $ResumeName = $last_insert_id . '_' . rand(100000, 999999) . '_resume.' . $request->file('resume')->extension();
+        
+        $finalOutput = TraderModel::find($last_insert_id);
+        $finalOutput->resume = $ResumeName;
+        $finalOutput->save();
+
+        $data['ResumeName'] = $ResumeName;
+        // Commented out the return here so that the code below runs
+        // return $data;
+
+        $add_career = $data;
+        $path = Config::get('DocumentConstant.RESUME_ADD');
+        $ResumeName = $add_career['ResumeName'];
+        uploadImage($request, 'resume', $path, $ResumeName);
+        
+        if ($add_career) {
+            return redirect()->back()->with('success', 'Data has been successfully stored.');
+        } else {
+            return redirect()->back()->with('error', 'Data has not been successfully stored.');
+        }
+    } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Data has not been successfully stored.');
+       
+    }
+}
 
 }

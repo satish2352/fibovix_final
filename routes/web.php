@@ -39,6 +39,8 @@ Route::post('/add-about-us-contactus', ['as' => 'add-about-us-contactus', 'uses'
 Route::post('/add-subscriber', ['as' => 'add-subscriber', 'uses' => 'App\Http\Controllers\Website\Subscriber\SubscriberController@addSubscriber']);
 
 
+Route::post('/investorStore', ['as' => 'investorStore', 'uses' => 'App\Http\Controllers\Website\IndexController@investorStore']);
+Route::post('/traderStore', ['as' => 'traderStore', 'uses' => 'App\Http\Controllers\Website\IndexController@traderStore']);
 
 
 
@@ -53,6 +55,10 @@ Route::group(['middleware' => ['admin']], function () {
     Route::post('/website-contact', ['as' => 'website-contact', 'uses' => 'App\Http\Controllers\Admin\LoginRegister\RegisterController@updateProfile']);
 
     Route::get('/list-career', ['as' => 'list-career', 'uses' => 'App\Http\Controllers\Admin\Career\CareerListController@index']);
+
+
+    Route::get('/list-trader', ['as' => 'list-trader', 'uses' => 'App\Http\Controllers\Admin\Trader\TraderController@index']);
+    Route::get('/list-investor', ['as' => 'list-investor', 'uses' => 'App\Http\Controllers\Admin\Investor\InvestorController@index']);
 
     // Route::get('/list-resource', ['as' => 'list-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@index']);
     // Route::get('/add-resource', ['as' => 'add-resource', 'uses' => 'App\Http\Controllers\Admin\Master\ResourceController@add']);
