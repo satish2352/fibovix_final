@@ -352,8 +352,7 @@
                 </div>
                 <div class="card shadow-lg action_square">
                     <div class="card-body ">
-                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and
-                            investment connection. Then, with the help of your adviser, implement your strategy.
+                        <p class="card-text border-0 bg-light">Find out more about your program alternatives and investment connections. Then, with the help of your adviser, implement your strategy.
                         </p>
                     </div>
                 </div>
