@@ -86,7 +86,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
 
 <div class="container">
     <div class="row">
-        <h1 class="text-center our_advisor_heading p-2">Who <span style="color:#6246E5; padding:5px;">We Are </span>
+        <h1 class="text-center our_advisor_heading p-2">Who <span style="color:#6246E5;">We Are </span>
         </h1>
         <div class="col-md-3 col-lg-3 col-sm-3">
 
