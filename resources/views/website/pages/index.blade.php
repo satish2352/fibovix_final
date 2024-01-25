@@ -53,7 +53,7 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <a class="btn btn-primary banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
+                    <a class="btn banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
                     
                 </div>
 
@@ -126,7 +126,7 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <a class="btn btn-primary banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
+                    <a class="btn banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
 
                 </div>
 
@@ -477,7 +477,7 @@ $(document).ready(() => {
 
 
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header modal_header_new">
         <h5 class="modal-title" id="exampleModalToggleLabel">Join Us</h5>
@@ -508,7 +508,7 @@ $(document).ready(() => {
   </div>
 </div>
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalToggleLabel2">Investor Form</h5>
@@ -553,7 +553,7 @@ $(document).ready(() => {
 </div>
 
 <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalToggleLabel2">Trader Form</h5>
