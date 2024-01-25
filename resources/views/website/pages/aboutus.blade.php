@@ -402,7 +402,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
             <div class="col-md-10">
 
                 <div class="container about_contact_form">
-                    <h2 class="text-center p-3">Connect with <span style="color:#6246E5; padding:5px;">Fibovix</span>
+                    <h2 class="text-center p-3">Connect with <span style="color:#6246E5;">Fibovix</span>
                     </h2>
                     <p class="text-center">Already a client? Connect to your Fibovix Adviser!</p>
                     <div class="row about_contact_row">

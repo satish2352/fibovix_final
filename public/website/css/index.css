@@ -600,8 +600,9 @@ width: 50%;
 }
 
 .fcard_about {
-  padding: 25px;
-  margin-top: 50px;
+  /* padding: 25px; */
+  padding: 2px;
+  margin-top: 14px !important;
   color: #fff;
 }
 
