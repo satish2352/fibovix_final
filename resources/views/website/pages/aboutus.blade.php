@@ -68,7 +68,7 @@
                 <div class="fcard">
                     <div class="fcard_about" style="margin-top:0; font-size:14px;">
 
-                        <p class="text-align-justify">Fibovix Wealth Management provides financial advice and solutions to private, institutional, and corporate clients worldwide. Headquartered in Nariman Point, Mumbai, we are present in all major financial assets worldwide. 
+                        <p class="text-align-nojustify">Fibovix Wealth Management provides financial advice and solutions to private, institutional, and corporate clients worldwide. Headquartered in Nariman Point, Mumbai, we are present in all major financial assets worldwide. 
 
 We provide corporate, institutional, and wealth management clients with expert advice, innovative solutions, execution, and comprehensive access to international capital markets. We deliver investment products, technology, and tools – helping millions meet immediate spending needs, build wealth, and retire securely. 
 
