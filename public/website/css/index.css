@@ -1340,6 +1340,11 @@ padding: 0px !important;
   padding-top: 4rem;
 }
 
+.text-align-nojustify {
+  text-align: justify;
+  font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;
+}
+
 .text-align-justify {
   text-align: justify;
   font-family: 'Basis Grotesque', Arial, Helvetica, sans-serif;

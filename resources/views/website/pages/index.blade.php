@@ -267,7 +267,7 @@
                                             class="card-img-top" alt="{{ $item['title'] }}">
                                         <div class="card-body">
                                             <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
-                                            <p class="text-align-justify">{{
+                                            <p class="text-align-nojustify">{{
                                                 $item['short_description'] }}</p>
                                         </div>
                                         <div class="card-footer article_card_footer">
