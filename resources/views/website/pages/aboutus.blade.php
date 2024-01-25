@@ -44,7 +44,7 @@
         <div class="banner_mobile" style="display:none;">
             <div class="row ">
                 <div class="col-lg-12 about-banner g-0">
-                    <img class="img-fluid" src="{{ asset('website/images/all banner.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('website/images/about_mobile.jpg') }}" alt="">
 
                 </div>
             </div>

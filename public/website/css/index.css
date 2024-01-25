@@ -595,6 +595,7 @@ width: 50%;
   .fcard {
     display: block;
     width: 100%;
+    height: 28em;
   }
 
 }
@@ -1581,14 +1582,14 @@ padding: 0px !important;
 @media (min-width: 355px) and (max-width: 388px){
   .fcard {
     margin-top: 4rem;
-    height: 34em;
+    height: 40em;
   }
 }
 
 @media (min-width: 389px) and (max-width: 458px) {
   .fcard {
     margin-top: 4rem;
-    height: 37em;
+    height: 43em;
   }
 }
 
