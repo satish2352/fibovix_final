@@ -1686,6 +1686,10 @@ padding: 0px !important;
   padding: 7px 20px 7px 20px !important;
 }
 
+.careere_img_bottom{
+  margin-top: -2rem !important;
+}
+
 @media (max-width: 768px){
   .home_titles_para {
     display: none !important;

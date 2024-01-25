@@ -56,7 +56,7 @@
 
 
     <div class="banner_mobile" style="display:none;">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12">
                 <img src="{{ asset('website/images/carrer_mobile_mobile.jpg') }}" alt="background" class="img-fluid">
             </div>
@@ -64,10 +64,10 @@
     </div>
 </div>
 
-<div class="container custom-container mt-5">
+<div class="container custom-container mt-3 careere_img_bottom">
 
     <div id="banner_desktop_new" style="display:none;">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12">
                 <img src="{{ asset('website/images/CAREER.png') }}" alt="Your Image" class="img-fluid">
             </div>
@@ -75,7 +75,7 @@
     </div>
 
     <div id="banner_mobile_new" style="display:none;">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-12">
                 <img src="{{ asset('website/images/CAREER_mobile.png') }}" alt="Your Image" class="img-fluid">
             </div>
