@@ -230,7 +230,7 @@
 
 <div class="container-fluid contaback">
     <div class="card p-3">
-        <div class="col-md-12 artical_top_mob">
+        <div class="col-md-12 artical_top_mob artical_row_top">
             <div class="row">
                 <div class="col-md-3 mt-5">
                     <nav class="article_nav p-3">
