@@ -123,10 +123,20 @@
                 <span class="menu-title">Subscriber From Website</span>
             </a>
         </li>
+
+
+        <li class="@if (request()->is('list-investor*') || request()->is('list-investor*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
+            <a class="nav-link" data-toggle="collapse" href="#investors" aria-expanded="false" aria-controls="services">
+                <i class="fa fa-server menu-icon"></i>
+                <span class="menu-title">Website Contact Details</span>
+                <i class="menu-arrow"></i>
+            </a>
+        <div class="collapse" id="master">
+                <ul class="nav flex-column sub-menu">
         <li class="{{ request()->is('list-investor*') ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('list-investor') }}">
                 <i class="fas fa-window-restore menu-icon"></i>
-                <span class="menu-title">Investor</span>
+                <span class="menu-title">Investors</span>
             </a>
         </li><li class="{{ request()->is('list-trader*') ? 'nav-item active' : 'nav-item' }}">
             <a class="nav-link" href="{{ route('list-trader') }}">
@@ -134,7 +144,9 @@
                 <span class="menu-title">Traders</span>
             </a>
         </li>
-
+        </ul>
+        </div>
+        </li>
 
         <li class="@if (request()->is('list-contactus-form*') || request()->is('list-about-us-contactus*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#contact" aria-expanded="false" aria-controls="contact">

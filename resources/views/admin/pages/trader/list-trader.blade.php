@@ -48,9 +48,9 @@
                                                         <td>{{ strip_tags($item->contact) }}</td>
                                                         <td>{{ strip_tags($item->comment) }}</td>
                                                         <td> <a href="{{ Config::get('DocumentConstant.RESUME_VIEW') . $item->resume }}" download="{{ Config::get('DocumentConstant.RESUME_VIEW') . $item->resume }}">
-        Download Resume
-    </a>
-</td>
+                                                                Download Resume
+                                                            </a>
+                                                        </td>
 
                                                         <td>{{strip_tags($item->message)}}</td>
 
