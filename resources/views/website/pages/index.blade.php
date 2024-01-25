@@ -120,7 +120,7 @@
 
             <div class="col-md-12 titles_container">
                 <div class="home_heading">
-                    <h1>Welcome to FIBOVIX. Let’s find an investing approach that helps meet your needs.</h1>
+                    <h1>Welcome to FIBOVIX. Together, we can identify an investment strategy that best suits your needs.</h1>
                 </div>
                 <div class="home_titles_para">
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
