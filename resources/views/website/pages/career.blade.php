@@ -49,7 +49,7 @@
     <div class="banner_desktop" style="display:none;">
         <div class="row g-0">
             <div class="col-12">
-                <img src="{{ asset('website/images/mediabanner.jpg') }}" alt="background" class="img-fluid">
+                <img src="{{ asset('website/images/career_desk.jpg') }}" alt="background" class="img-fluid">
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
     <div class="banner_mobile" style="display:none;">
         <div class="row g-0">
             <div class="col-12">
-                <img src="{{ asset('website/images/carrer_mobile_mobile.jpg') }}" alt="background" class="img-fluid">
+                <img src="{{ asset('website/images/career_mobile.jpg') }}" alt="background" class="img-fluid">
             </div>
         </div>
     </div>

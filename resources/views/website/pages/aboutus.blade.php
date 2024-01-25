@@ -28,7 +28,7 @@
         <div class="banner_desktop" style="display:none;">
             <div class="row ">
                 <div class="col-lg-12 about-banner g-0">
-                    <img class="img-fluid" src="{{ asset('website/images/aboutusbanner.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('website/images/all banner-1.jpg') }}" alt="">
                     {{--<h2 class="mt-3 about_img_head">WHY US</h2>
                     <p class="mb-4 about_banner_para">We rely on our principles to guide how we interact with each
                         other, our clients, and the communities in which we operate. These principles represent our core
@@ -44,7 +44,7 @@
         <div class="banner_mobile" style="display:none;">
             <div class="row ">
                 <div class="col-lg-12 about-banner g-0">
-                    <img class="img-fluid" src="{{ asset('website/images/why_us_mobile.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('website/images/all banner.jpg') }}" alt="">
 
                 </div>
             </div>
