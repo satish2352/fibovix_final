@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-12 g-0">
                     <div class="logo image-fluid">
-                        <img src="{{ asset('website/images/get_in_touch.png') }}" width="100%">
+                        <img src="{{ asset('website/images/get_in_touch.jpg') }}" width="100%">
                     </div>
                 </div>
             </div>

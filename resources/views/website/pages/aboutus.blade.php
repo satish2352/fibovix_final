@@ -255,7 +255,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center text-align-center">To Prioritize your goals.</p>
+                        <p class="d-flex justify-content-center text-align-center">To prioritize your goals.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -299,7 +299,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center text-align-center">Optimal monetary benefit oriented approach.</p>
+                        <p class="d-flex justify-content-center text-align-center">Optimal monetary benefit-oriented approach.</p>
                     </div>
                     <div class="card_footer">
                     </div>
