@@ -145,15 +145,12 @@
 
             <div class="container">
                 <div class="row text-center">
-                    <h2 id="fibovix" class="white">Our<span style="color: #fff">Purpose</span></h2>
+                    <h2 id="fibovix" class="white">Our<span style="color: #fff"> Purpose</span></h2>
                     <div class="col-md-2 col-lg-2 col-sm-2">
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of
-                            partnership, client service, integrity, and excellence.Everything we do starts with our
-                            purpose. Re imagining the power of investing. Connecting people for a better world. This is
-                            our purpose. This is Fibovix.</p>
+                        <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of partnership, client service, integrity, and excellence. Everything we do starts with our purpose. Re-imagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix.</p>
 
                     </div>
                     <div class="col-md-2 col-lg-2 col-sm-2">
