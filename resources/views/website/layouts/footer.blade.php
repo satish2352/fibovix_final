@@ -15,7 +15,7 @@
                     <div id="corn">
                         <div class="container mt-5">
                             <div class="row news text-center mt-5">
-                                <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our News letter</h2>
+                                <h2 class="text-center fw-bold fs-1 mt-5 mb-5">Subscribe to our Newsletter</h2>
                                   <center> <div class="col-6 grid-margin">
                                     @if (Session::get('status') == 'success')
 

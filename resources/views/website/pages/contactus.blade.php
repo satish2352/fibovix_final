@@ -70,7 +70,7 @@
                                     <div class="text">
                                         <h2>Phone</h2>
                                         <p><a href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{
-                                                $website_contact_details[0]['contact_one'] }} </a> &nbsp;
+                                                $website_contact_details[0]['contact_one'] }} </a>/ &nbsp;
                                             <a href="tel:{{ $website_contact_details[0]['contact_two'] }}">{{
                                                 $website_contact_details[0]['contact_two'] }} </a>
                                         </p>

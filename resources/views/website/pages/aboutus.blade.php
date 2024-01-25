@@ -263,7 +263,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center">To Prioritize your goals </p>
+                        <p class="d-flex justify-content-center">To Prioritize your goals.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -276,7 +276,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center">Create a personalized financial strategy </p>
+                        <p class="d-flex justify-content-center">Create a personalized financial strategy.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -289,7 +289,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center">The right analysis of situations</p>
+                        <p class="d-flex justify-content-center">The right analysis of situations.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -307,7 +307,7 @@
                             class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center">Optimal monetary benefit oriented approach </p>
+                        <p class="d-flex justify-content-center">Optimal monetary benefit oriented approach.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -319,7 +319,7 @@
                         <img src="{{ asset('website/images/advisor/tax.png') }}" alt="card-image" class="card_image" />
                     </div>
                     <div class="card_body mt-4">
-                        <p class="d-flex justify-content-center">Growth through a streamlined financial strategy </p>
+                        <p class="d-flex justify-content-center">Growth through a streamlined financial strategy.</p>
                     </div>
                     <div class="card_footer">
                     </div>
@@ -412,7 +412,7 @@
                 <div class="container about_contact_form">
                     <h2 class="text-center p-3">Connect with <span style="color:#6246E5; padding:5px;">Fibovix</span>
                     </h2>
-                    <p class="text-center">Alrady a client? Connect to your Fibovix Adviser</p>
+                    <p class="text-center">Already a client? Connect to your Fibovix Adviser!</p>
                     <div class="row about_contact_row">
                         @include('website.layouts.alert')
                         <form class="row g-3 needs-validation" action="{{ url('add-about-us-contactus') }}" id="regForm"
@@ -485,23 +485,12 @@
                                         <span class="red-text">{{ $errors->first('agree_checkbox') }}</span>
                                     </span>
                                     @endif
-                                    By providing your contact information above, you agree that a
-                                    representative of Merrill, the Brokerage
-                                    affiliate of Bank of America Corporation, may contact you via telephone and/or email
-                                    to
-                                    discuss and/or offer investment products and services that may be appropriate for
-                                    you.
-                                    You
-                                    agree that
-                                    you are providing to us your consent for us to contact you regardless of any Do Not
-                                    Call
-                                    or
-                                    Do Not
-                                    Email privacy choices you may have previously expressed until you revoke this
-                                    consent,
-                                    or up
-                                    to 90 days.
-                                    You may revoke your consent at any time by notifying the Merrill representative.
+                                    By providing your contact information above, you agree that a representative of Fibovix 
+                                    may contact you via telephone and/or email to discuss and/or offer investment products and 
+                                    services that may be appropriate for you. You agree that you are providing us with your consent 
+                                    for us to contact you regardless of any Do Not Call or Do Not Email privacy choices you may have 
+                                    previously expressed until you revoke this consent, or up to 90 days. You may revoke your 
+                                    consent at any time by notifying our representative.
                                 </p>
                             </div>
 

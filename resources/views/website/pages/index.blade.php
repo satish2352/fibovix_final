@@ -153,7 +153,7 @@
                         <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of
                             partnership, client service, integrity, and excellence.Everything we do starts with our
                             purpose. Re imagining the power of investing. Connecting people for a better world. This is
-                            our purpose. This is Fibovix</p>
+                            our purpose. This is Fibovix.</p>
 
                     </div>
                     <div class="col-md-2 col-lg-2 col-sm-2">
@@ -369,7 +369,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Review & track your progress</p>
+                        <p class="card-text p-4 fs-5 fw-3">Review & track your progress.</p>
                     </div>
                 </div>
                 <div class="card shadow-lg action_square">
