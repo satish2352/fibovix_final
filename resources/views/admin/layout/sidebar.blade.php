@@ -128,7 +128,7 @@
         <li class="@if (request()->is('list-investor*') || request()->is('list-investor*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#investors" aria-expanded="false" aria-controls="services">
                 <i class="fa fa-server menu-icon"></i>
-                <span class="menu-title">Website Contact Details</span>
+                <span class="menu-title">Data From Front Website</span>
                 <i class="menu-arrow"></i>
             </a>
         <div class="collapse" id="master">
