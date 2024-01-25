@@ -126,8 +126,8 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#investorBackdrop">INVESTOR</button>
-                    <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-target="#traderBackdrop">TRADER</button>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+
                 </div>
 
             </div>
@@ -480,16 +480,16 @@ $(document).ready(() => {
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel">Join Us</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body text-align-center">
         <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle2">INVESTOR</button>
         <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle3">TRADER</button>
       </div>
-      <div class="modal-footer">
-        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button> -->
-      </div>
+      <!-- <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+      </div> -->
     </div>
   </div>
 </div>
@@ -527,15 +527,12 @@ $(document).ready(() => {
                         
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <input type="submit" class="btn investor_btn"></form>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn investor_btn">Submit</button>
+        <button type="submit" class="btn investor_btn">Submit</button>
       </div>
     </div>
   </div>
@@ -587,7 +584,7 @@ $(document).ready(() => {
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn investor_btn">Submit</button>
       </div>
-                    </form>
+    </form>
     </div>
   </div>
 </div>
