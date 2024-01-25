@@ -730,7 +730,7 @@ width: 50%;
   }
 
   .our_advisor_h1 {
-    font-size: 35px;
+    font-size: 33px;
     padding-top: 0px;
     padding-bottom: 0px;
 
@@ -1456,7 +1456,7 @@ padding: 0px !important;
 @media (min-width: 342px) and (max-width: 382px) {
   .our_advisor_heading {
     line-height: 40px;
-    font-size: 32px !important;
+    font-size: 27px !important;
     margin-top: -2rem;
   }
 }
@@ -1557,7 +1557,7 @@ padding: 0px !important;
 
 @media (min-width: 250px) and (max-width: 380px) {
   .our_advisor_h1 {
-      font-size: 31px !important;
+      font-size: 27px !important;
       line-height: 1.5 !important;
   }
 }
