@@ -360,7 +360,7 @@
                                 stages of your life?</p>
                             <h4><b>Marriage and Family</b></h4>
                             <p>Strike a balance between repaying your student loans and setting aside funds for your
-                                child's future</p>
+                                child's future.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
