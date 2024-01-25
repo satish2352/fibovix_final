@@ -450,21 +450,20 @@ $(document).ready(() => {
                 var path = '<?php echo Config:: get('DocumentConstant.SERVICES_VIEW'); ?>';
             $("#gallary_data").empty();
             $.each(data, function (i, item) {
-                $("#gallary_data").append(` 
-                                <div class="col-md-6 col-lg-4 col-sm-12">
-                                    <div class="card article_card_container h-100">
-                                        <img src="`+ path + item.image + `"
-                                            class="card-img-top" alt="`+ item.title + `">
-                                        <div class="card-body">
-                                            <h5 class="card-title">`+ item.title + `</h5>
-                                        </div>
-                                        <div class="card-footer article_card_footer">
-                                            <small class="text-muted"><i style="color: orange;"
-                                                    class="fa fa-paper-sp;`+ item.short_description + `</small>
-                                        </div>
-                                    </div>
-                                </div>
-                         `);
+               $("#gallary_data").append(` 
+                    <div class="col-md-6 col-lg-4 col-sm-12">
+                        <div class="card article_card_container h-100">
+                            <img src="` + path + item.image + `" class="card-img-top" alt="` + item.title + `">
+                                <div class="card-body">
+                                <h4 class="card-title fw-7">` + item.title + `</h4>
+                                <p class="text-align-nojustify">` + item.short_description + `</p>
+                            </div>
+                            <div class="card-footer article_card_footer">
+                            </div>
+                        </div>
+                    </div>
+                `);
+
             });
         },
             error: function (data) { }
