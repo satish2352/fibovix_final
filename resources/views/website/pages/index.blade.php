@@ -510,8 +510,8 @@ $(document).ready(() => {
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header modal_header_new">
-        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Investor Form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -547,7 +547,7 @@ $(document).ready(() => {
         <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button> -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn investor_btn">Submit</button>
-      </div>
+      </div></form>
     </div>
   </div>
 </div>
@@ -556,31 +556,31 @@ $(document).ready(() => {
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Trader Form</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+    <form method="POST" action="{{ route('traderStore') }}" id="traderForm" enctype="multipart/form-data">
+        @csrf
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form method="POST" action="{{ route('traderStore') }}" id="traderForm" enctype="multipart/form-data">
-                        @csrf
                         <div class="row">
                             <div class="col-6">
-                                <label for="nameInput" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="nameInput" name="name" required>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="col-6">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" required>
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Contact</label>
-                                <input type="text" class="form-control" name="contact" id="contactInput" required>
+                                <label for="contact" class="form-label">Contact</label>
+                                <input type="text" class="form-control" name="contact" id="contact" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Comment</label>
-                                <input type="text" class="form-control" id="commentInput" required>
+                                <label for="comment" class="form-label">Comment</label>
+                                <input type="text" class="form-control" name="comment" id="comment" required>
                             </div>
                             <div class="col-12 mt-3">
                                 <label for="resume" class="form-label">Resume/CV</label>
@@ -596,7 +596,7 @@ $(document).ready(() => {
       <div class="modal-footer">
         <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button> -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn investor_btn">Submit</button>
+        <button type="submit" class="btn investor_btn">Submit</button>
       </div>
     </form>
     </div>
@@ -619,7 +619,6 @@ $(document).ready(() => {
                 },
                 contactInput: {
                     required: true
-                    // Add any additional rules for the contact field
                 },
                 commentInput: {
                     required: true
@@ -643,37 +642,41 @@ $(document).ready(() => {
 <script>
 
 $(document).ready(function () {
-        $("#traderForm").validate({
-            rules: {
-                nameInput: {
-                    required: true
-                },
-                exampleInputEmail1: {
-                    required: true,
-                    email: true
-                },
-                contactInput: {
-                    required: true
-                    // Add any additional rules for the contact field
-                },
-                commentInput: {
-                    required: true
-                }
+    $("#traderForm").validate({
+        rules: {
+            name: {
+                required: true
             },
-            messages: {
-                name: "Please enter your name",
-                exampleInputEmail1: {
-                    required: "Please enter your email",
-                    exampleInputEmail1: "Please enter a valid email address"
-                },
-                contactInput: "Please enter a valid contact number",
-                commentInput: "Please enter your comment"
+            email: {
+                required: true,
+                email: true
             },
-            submitHandler: function (form) {
-                form.submit();
+            contact: {
+                required: true
+            },
+            comment: {
+                required: true
+            },
+            resume: {
+                required: true
             }
-        });
+        },
+        messages: {
+            name: "Please enter your name",
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address"
+            },
+            contact: "Please enter a valid contact number",
+            comment: "Please enter your comment",
+            resume: "Please select your resume"
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
     });
+});
+
 </script>
 
 
