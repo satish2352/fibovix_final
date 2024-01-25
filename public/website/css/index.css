@@ -1682,6 +1682,10 @@ padding: 0px !important;
   margin-top: -12rem;
 }
 
+.modal_header_new{
+  padding: 7px 20px 7px 20px !important;
+}
+
 @media (max-width: 768px){
   .home_titles_para {
     display: none !important;
@@ -1718,11 +1722,31 @@ padding: 0px !important;
   }
 }
 
+@media (min-width: 800px) and (max-width: 993px){
+  .career_btn{
+    position: relative;
+    margin-top: -9rem;
+    margin-left: 2rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 796px){
+  .career_btn{
+    position: relative;
+    margin-top: -3rem;
+    margin-left: 0rem;
+    padding: 12px 20px 12px 20px;
+    font-size: 12px;
+  }
+}
+
 @media (min-width: 500px) and (max-width: 769px){
   .career_btn{
     position: relative;
     margin-top: -2rem;
-    margin-left: 12rem;
+    margin-left: 2rem;
     padding: 12px 20px 12px 20px;
     font-size: 12px;
   }
@@ -1732,7 +1756,7 @@ padding: 0px !important;
   .career_btn{
     position: relative;
     margin-top: -2rem;
-    margin-left: 10rem;
+    margin-left: 1rem;
     padding: 12px 20px 12px 20px;
     font-size: 12px;
   }
@@ -1742,7 +1766,7 @@ padding: 0px !important;
   .career_btn{
     position: relative;
     margin-top: -2rem;
-    margin-left: 8rem;
+    margin-left: 1rem;
     padding: 12px 20px 12px 20px;
     font-size: 12px;
   }
@@ -1752,7 +1776,7 @@ padding: 0px !important;
   .career_btn{
     position: relative;
     margin-top: -2rem;
-    margin-left: 6rem;
+    margin-left: 1rem;
     padding: 9px 15px 9px 15px;
     font-size: 12px;
   }

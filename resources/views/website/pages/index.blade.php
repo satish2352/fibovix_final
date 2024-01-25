@@ -53,7 +53,7 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+                    <a class="btn btn-primary banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
                     
                 </div>
 
@@ -126,7 +126,7 @@
                     <p class="span_para"><span>No matter where you are in your investing journey, we have the knowledge, resources, and skills to provide the right support for you.</span></p>
                 </div>
                 <div class="home_title_btn mb-4">
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+                    <a class="btn btn-primary banner_btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Join Us</a>
 
                 </div>
 
@@ -477,15 +477,29 @@ $(document).ready(() => {
 
 
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header modal_header_new">
         <h5 class="modal-title" id="exampleModalToggleLabel">Join Us</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-align-center">
-        <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle2">INVESTOR</button>
-        <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle3">TRADER</button>
+        <div class="row">
+            <div class="col-6">
+                <div class="icon d-flex align-items-center justify-content-center"><span>
+                    <i><img class="img-fluid" src="{{ asset('website/images/investor.png') }}" alt="" style="width: 50%;"></i></span>
+                </div>
+                <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle2">INVESTOR</button>
+
+            </div>
+            <div class="col-6">
+                <div class="icon d-flex align-items-center justify-content-center"><span>
+                    <i><img class="img-fluid" src="{{ asset('website/images/trader_new.png') }}" alt="" style="width: 50%;"></i></span>
+                </div>
+                <button type="button" class="btn banner_btn" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalToggle3">TRADER</button>
+
+            </div>
+        </div>
       </div>
       <!-- <div class="modal-footer">
         <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
@@ -496,7 +510,7 @@ $(document).ready(() => {
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header modal_header_new">
         <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -530,7 +544,7 @@ $(document).ready(() => {
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button> -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="submit" class="btn investor_btn">Submit</button>
       </div>
@@ -580,7 +594,7 @@ $(document).ready(() => {
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button> -->
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn investor_btn">Submit</button>
       </div>

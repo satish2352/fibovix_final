@@ -83,12 +83,12 @@
     </div>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="text-align-center">
             <button type="button" class="btn banner_btn career_btn" data-bs-toggle="modal" data-bs-target="#careerBackdrop">Explore Career</button>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-sm-12 col-md-12 col-lg-6">
 
         </div>
     </div>
