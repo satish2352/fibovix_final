@@ -517,20 +517,20 @@ $(document).ready(() => {
                         @csrf
                         <div class="row">
                             <div class="col-6">
-                                <label for="nameInput" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="nameInput" name="name" required>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="col-6">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" name="email" required>
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Contact</label>
-                                <input type="text" class="form-control" id="contactInput" name="contact" required>
+                                <label for="contact" class="form-label">Contact</label>
+                                <input type="text" class="form-control" id="contact" name="contact" required>
                             </div>
                             <div class="col-6 mt-3">
-                                <label for="exampleInputEmail1" class="form-label">Comment</label>
-                                <textarea class="form-control" id="commentInput" name="comment" required></textarea>
+                                <label for="comment" class="form-label">Comment</label>
+                                <textarea class="form-control" id="comment" name="comment" required></textarea>
                             </div>
                         </div>
                         
@@ -601,38 +601,50 @@ $(document).ready(() => {
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
+</script>
 <script>
-    $(document).ready(function () {
-        $("#investorForm").validate({
-            rules: {
-                nameInput: {
-                    required: true
-                },
-                exampleInputEmail1: {
-                    required: true,
-                    email: true
-                },
-                contactInput: {
-                    required: true
-                },
-                commentInput: {
-                    required: true
-                }
+
+$(document).ready(function () {
+    $("#investorForm").validate({
+        rules: {
+            name: {
+                required: true
             },
-            messages: {
-                name: "Please enter your name",
-                exampleInputEmail1: {
-                    required: "Please enter your email",
-                    exampleInputEmail1: "Please enter a valid email address"
-                },
-                contactInput: "Please enter a valid contact number",
-                commentInput: "Please enter your comment"
+            email: {
+                required: true,
+                email: true
             },
-            submitHandler: function (form) {
-                form.submit();
+            contact: {
+                required: true,
+                digits: true, // Only accept digits (numbers)
+                minlength: 10, // Minimum length is 10 digits
+                maxlength: 10 // Maximum length is 10 digits
+            },
+            comment: {
+                required: true
             }
-        });
+            
+        },
+        messages: {
+            name: "Please enter your name",
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address"
+            },
+            contact: {
+                required: "Please enter a valid 10-digit contact number",
+                digits: "Please enter only digits",
+                minlength: "Contact number must be at least 10 digits",
+                maxlength: "Contact number must not exceed 10 digits"
+            },
+            comment: "Please enter your comment"
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
     });
+});
+
 </script>
 <script>
 
@@ -647,7 +659,10 @@ $(document).ready(function () {
                 email: true
             },
             contact: {
-                required: true
+                required: true,
+                digits: true, // Only accept digits (numbers)
+                minlength: 10, // Minimum length is 10 digits
+                maxlength: 10 // Maximum length is 10 digits
             },
             comment: {
                 required: true
@@ -662,7 +677,12 @@ $(document).ready(function () {
                 required: "Please enter your email",
                 email: "Please enter a valid email address"
             },
-            contact: "Please enter a valid contact number",
+            contact: {
+                required: "Please enter a valid 10-digit contact number",
+                digits: "Please enter only digits",
+                minlength: "Contact number must be at least 10 digits",
+                maxlength: "Contact number must not exceed 10 digits"
+            },
             comment: "Please enter your comment",
             resume: "Please select your resume"
         },

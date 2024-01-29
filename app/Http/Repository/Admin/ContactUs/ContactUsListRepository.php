@@ -11,13 +11,14 @@ use Config;
 
 class ContactUsListRepository  {
 
-    public function getAll(){
-        try {
-            return ContactUs::all();
-        } catch (\Exception $e) {
-            return $e;
-        }
+   public function getAll(){
+    try {
+        return ContactUs::orderBy('updated_at', 'desc')->get();
+    } catch (\Exception $e) {
+        return $e;
     }
+}
+
     public function getById($id)
     {
         try {
