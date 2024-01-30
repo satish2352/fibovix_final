@@ -166,7 +166,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group.png') }}" width="50px" alt="">
+                                <img src="{{ asset('website/images/Group.png') }}" width="70px" alt="">
                                 <h5 id="hh">Needs</h5>
                                 <p>
                                     Your strategy is built on your objectives, concerns, and investment mindset.
@@ -177,7 +177,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group1.png') }}" width="50px" alt="">
+                                <img src="{{ asset('website/images/Group1.png') }}" width="70px" alt="">
                                 <h5 id="hh">Advice</h5>
                                 <p>
                                     Your adviser is dedicated to supporting you in achieving your objectives & will
@@ -190,7 +190,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
                         <div class="card shadow-lg why_fibo_card">
                             <div class="card-body">
-                                <img src="{{ asset('website/images/Group2.png') }}" width="50px" alt="">
+                                <img src="{{ asset('website/images/Group2.png') }}" width="70px" alt="">
                                 <h5 id="hh">Strategy</h5>
                                 <p>Your adviser can recommend tax-minimization techniques as part of your overall
                                     investing
