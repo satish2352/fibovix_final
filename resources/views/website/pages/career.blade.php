@@ -41,9 +41,13 @@
             margin-right: 10px;
         }
     }
+
+    label.error {
+        color: red; /* Change 'red' to your desired text color */
+        font-size: 12px; /* Adjust font size if needed */
+        /* Add any other styling as per your design */
+    }
 </style>
-
-
 
 <div class="container-fluid group_img g-0">
     <div class="banner_desktop" style="display:none;">
@@ -64,6 +68,25 @@
     </div>
 </div>
 
+  @if (Session::get('status') == 'succesed')
+
+            <div class="col-12 grid-margin">
+                <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Success!</strong> {{ Session::get('msg') }}
+                </div>
+            </div>
+
+            @endif
+
+            @if (Session::get('status') == 'errors')
+            <div class="col-12 grid-margin">
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>Danger!</strong> {!! session('msg') !!}
+                </div>
+            </div>
+            @endif
 <div class="container custom-container mt-3 careere_img_bottom">
 
     <div id="banner_desktop_new" style="display:none;">
@@ -93,81 +116,7 @@
         </div>
     </div>
 
-
-    <!-- <div class="career_form">
-        @if (Session::get('status') == 'succesed')
-
-        <div class="col-12 grid-margin">
-            <div class="alert alert-success alert-dismissible">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Success!</strong> {{ Session::get('msg') }}
-            </div>
-        </div>
-
-        @endif
-
-        @if (Session::get('status') == 'errors')
-        <div class="col-12 grid-margin">
-            <div class="alert alert-danger alert-dismissible">
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <strong>Danger!</strong> {!! session('msg') !!}
-            </div>
-        </div>
-        @endif
-        <form method="POST" action="{{ route('add-career') }}" enctype="multipart/form-data">
-            @csrf
-            <div class="container data">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="phone" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="mobile_number" name="mobile_number" required>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="position" class="form-label">Choose Position</label>
-                        <select class="form-select" id="position" name="position" required>
-                            <option value="" selected disabled>Select Position</option>
-                            <option value="developer">Developer</option>
-                            <option value="designer">Designer</option>
-                            <option value="manager">Manager</option>
-                            
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <label for="resume" class="form-label">Resume/CV</label>
-                        <input type="file" class="form-control" id="resume" name="resume" accept=".pdf, .doc, .docx"
-                            required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                    </div>
-                </div>
-                <center>
-                    <div class="row">
-                        <div class="col-12">
-                            <button type="submit" style="margin-top: 10px; background-color:#1F2D87; color:white"
-                                class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </center>
-            </div>
-        </form>
-        
-    </div> -->
+    
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script>
@@ -242,26 +191,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
             <div class="modal-body">
-            @if (Session::get('status') == 'succesed')
-
-            <div class="col-12 grid-margin">
-                <div class="alert alert-success alert-dismissible">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>Success!</strong> {{ Session::get('msg') }}
-                </div>
-            </div>
-
-            @endif
-
-            @if (Session::get('status') == 'errors')
-            <div class="col-12 grid-margin">
-                <div class="alert alert-danger alert-dismissible">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <strong>Danger!</strong> {!! session('msg') !!}
-                </div>
-            </div>
-            @endif
-            <form method="POST" action="{{ route('add-career') }}" enctype="multipart/form-data">
+          
+            <form method="POST" action="{{ route('add-career') }}" enctype="multipart/form-data" id="careerForm">
                 @csrf
                 <div class="container data">
                     <div class="row">
@@ -318,6 +249,56 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
+</script>
+<script>
 
+$(document).ready(function () {
+    $("#careerForm").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            mobile_number: {
+                required: true,
+                digits: true, // Only accept digits (numbers)
+                minlength: 10, // Minimum length is 10 digits
+                maxlength: 10 // Maximum length is 10 digits
+            },
+            message: {
+                required: true
+            },
+             resume: {
+                required: true
+            }
+            
+        },
+        messages: {
+            name: "Please enter your name",
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address"
+            },
+            mobile_number: {
+                required: "Please enter a valid 10-digit contact number",
+                digits: "Please enter only digits",
+                minlength: "Contact number must be at least 10 digits",
+                maxlength: "Contact number must not exceed 10 digits"
+            },
+            message: "Please enter your comment",
+            resume: "Please select your resume"
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+});
+
+</script>
 @include('website.layouts.footer')

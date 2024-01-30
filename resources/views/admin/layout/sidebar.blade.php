@@ -98,9 +98,9 @@
             </a>
             <div class="collapse" id="home">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item d-none d-lg-block"><a
+                    <!-- <li class="nav-item d-none d-lg-block"><a
                             class="@if (request()->is('list-slide*')) {{ 'nav-link active' }} @else {{ 'nav-link' }} @endif"
-                            href="{{ route('list-slide') }}">Slider</a></li>
+                            href="{{ route('list-slide') }}">Slider</a></li> -->
 
                     <li class="nav-item d-none d-lg-block"><a
                             class="@if (request()->is('list-additional-solutions*')) {{ 'nav-link active' }} @else {{ 'nav-link' }} @endif"
@@ -125,28 +125,27 @@
         </li>
 
 
+
         <li class="@if (request()->is('list-investor*') || request()->is('list-investor*')) {{ 'nav-item active' }} @else  {{ 'nav-item' }} @endif">
-            <a class="nav-link" data-toggle="collapse" href="#investors" aria-expanded="false" aria-controls="services">
+            <a class="nav-link" data-toggle="collapse" href="#investors" aria-expanded="false" aria-controls="investors">
                 <i class="fa fa-server menu-icon"></i>
                 <span class="menu-title">Data From Front Website</span>
                 <i class="menu-arrow"></i>
             </a>
-        <div class="collapse" id="master">
+            <div class="collapse" id="services">
                 <ul class="nav flex-column sub-menu">
-        <li class="{{ request()->is('list-investor*') ? 'nav-item active' : 'nav-item' }}">
-            <a class="nav-link" href="{{ route('list-investor') }}">
-                <i class="fas fa-window-restore menu-icon"></i>
-                <span class="menu-title">Investors</span>
-            </a>
-        </li><li class="{{ request()->is('list-trader*') ? 'nav-item active' : 'nav-item' }}">
-            <a class="nav-link" href="{{ route('list-trader') }}">
-                <i class="fas fa-window-restore menu-icon"></i>
-                <span class="menu-title">Traders</span>
-            </a>
+
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-investor*')) {{ 'nav-link active' }} @else  {{ 'nav-link' }} @endif"
+                            href="{{ route('list-investor') }}">Investors</a></li>
+                    <li class="nav-item d-none d-lg-block"><a
+                            class="@if (request()->is('list-trader*')) {{ 'nav-link active' }} @else  {{ 'nav-link' }} @endif"
+                            href="{{ route('list-trader') }}">Traders</a>
+                    </li>
+                </ul>
+            </div>
         </li>
-        </ul>
-        </div>
-        </li>
+
 
         <li class="@if (request()->is('list-contactus-form*') || request()->is('list-about-us-contactus*')) {{ 'nav-item active' }} @else {{ 'nav-item' }} @endif">
             <a class="nav-link" data-toggle="collapse" href="#contact" aria-expanded="false" aria-controls="contact">

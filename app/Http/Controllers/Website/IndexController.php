@@ -37,7 +37,10 @@ class IndexController extends Controller
         try {
 
             $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
-            $additionalSolutions = AdditionalSolutions::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
+            $additionalSolutions = AdditionalSolutions::where('is_deleted', false)
+                ->where('is_active', true)
+                ->orderBy('updated_at', 'desc')
+                ->get();
             // $ourSolutions = OurSolutions::leftJoin('our_solutions_master', 'our_solutions_master.id', '=', 'our_solutions.solution_id')
             //                         ->where('our_solutions.is_active','=',true)
             //                         ->select('our_solutions.id','our_solutions.solution_id', 'our_solutions.title',
@@ -84,7 +87,7 @@ class IndexController extends Controller
                                     'our_solutions_master.solution_name',
                                     'our_solutions_master.id as our_solutions_master_id')
                                     ->get();
-
+            // dd($ourSolutions);
             return $ourSolutions;
         } catch (\Exception $e) {
             return $e;
@@ -106,8 +109,11 @@ class IndexController extends Controller
     
     public function resources() {
         $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
-        $resourceInsights = ResourcesAndInsights::where('is_deleted','=',false)->orderBy('updated_at', 'desc')->get();
-        return view('website.pages.resources-insights',compact('resourceInsights','website_contact_details'));
+    $resourceInsights = ResourcesAndInsights::where('is_deleted', false)
+                        ->where('is_active', true)
+                        ->orderBy('updated_at', 'desc')
+                        ->get();        
+    return view('website.pages.resources-insights',compact('resourceInsights','website_contact_details'));
     }
 
     
@@ -115,13 +121,22 @@ class IndexController extends Controller
         $website_contact_details = WebsiteContactDetails::where('id',1)->get()->toArray();
         $all_services = ServiceMasters::where(['is_active'=>true] )->orderBy('updated_at', 'desc')->get();
         $all_services_details = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id')
-                                                        ->select('service_details.id','service_details.service_id', 'service_details.title',
-                                                        'service_details.short_description',
-                                                        'service_details.long_description',
-                                                        'service_details.image',
-                                                        'services_masters.service_name',
-                                                        'services_masters.id as service_details_id')
-                                                        ->get();
+                                            ->where('services_masters.is_active', true)
+                                            ->where('service_details.is_active', true)
+                                            ->select(
+                                                'service_details.id',
+                                                'service_details.service_id',
+                                                'service_details.title',
+                                                'service_details.short_description',
+                                                'service_details.long_description',
+                                                'service_details.image',
+                                                'services_masters.service_name',
+                                                'services_masters.id as service_details_id',
+                                                'service_details.is_active as service_details_is_active'
+                                            )
+                                            ->get();
+        // dd($all_services_details);
+
         return view('website.pages.services',compact('all_services','all_services_details','website_contact_details'));
     }
 
@@ -136,13 +151,21 @@ class IndexController extends Controller
             if($request['our_services_master_id'] != 'all') {
                 $all_services_details =  $all_services_details->where('services_masters.id','=',$request['our_services_master_id']);
             }
-            $all_services_details =  $all_services_details->select('service_details.id','service_details.service_id', 'service_details.title',
-                                    'service_details.short_description',
-                                    'service_details.long_description',
-                                    'service_details.image',
-                                    'services_masters.service_name',
-                                    'services_masters.id as service_details_id')
-                                    ->get();
+            $all_services_details = ServiceDetails::leftJoin('services_masters', 'services_masters.id', '=', 'service_details.service_id')
+                                            ->where('services_masters.is_active', true)
+                                            ->where('service_details.is_active', true)
+                                            ->select(
+                                                'service_details.id',
+                                                'service_details.service_id',
+                                                'service_details.title',
+                                                'service_details.short_description',
+                                                'service_details.long_description',
+                                                'service_details.image',
+                                                'services_masters.service_name',
+                                                'services_masters.id as service_details_id',
+                                                'service_details.is_active as service_details_is_active'
+                                            )
+                                            ->get();
 
             return $all_services_details;
         } catch (\Exception $e) {
