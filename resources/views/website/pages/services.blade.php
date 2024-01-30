@@ -29,6 +29,7 @@
 <div class="container-fluid">
     <div class="card p-3">
         <div class="col-md-12">
+            <div class="container">
             <div class="row">
                 <!-- <div class="col-md-3 mt-5">
                     <nav class="article_nav p-3">
@@ -84,6 +85,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
