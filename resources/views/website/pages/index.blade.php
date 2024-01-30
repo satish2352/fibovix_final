@@ -150,7 +150,7 @@
 
                     </div>
                     <div class="col-md-8 col-lg-8 col-sm-8 d-flex justify-content-center">
-                        <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of partnership, client service, integrity, and excellence. Everything we do starts with our purpose. Re-imagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix.</p>
+                        <p class="white">We aspire to be the most exceptional financial institution, united by our shared values of partnership, client service, integrity, and excellence. Everything we do starts with our purpose. Reimagining the power of investing. Connecting people for a better world. This is our purpose. This is Fibovix.</p>
 
                     </div>
                     <div class="col-md-2 col-lg-2 col-sm-2">
@@ -208,7 +208,7 @@
 @if(count($all_services))
 <div class="container">
     <div class="row text-center">
-        <h2 id="fibovix">Discover Fibovix <span style="color:#6246E5">Wealth Management </span> </h2>
+        <h2 id="fibovix">Discover Fibovix Wealth Management</span> </h2>
         <div class="row">
             <div class="col-2">
 
@@ -228,8 +228,9 @@
 <div class="container-fluid contaback">
     <div class="card p-3">
         <div class="col-md-12 artical_top_mob artical_row_top">
+            <div class="container">
             <div class="row">
-                <div class="col-md-3 mt-5">
+                <!-- <div class="col-md-3 mt-5">
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
@@ -251,8 +252,8 @@
                             @endforelse
                         </div>
                     </nav>
-                </div>
-                <div class="col-md-9">
+                </div> -->
+                <div class="col-md-12">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
 
@@ -284,6 +285,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </div>
 </div>
@@ -303,7 +305,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Find out what is important to you.
+                        <p class="card-text circle-text p-4 fs-5 fw-3">Find out what is important to you.
                         </p>
                     </div>
                 </div>
@@ -326,7 +328,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Create a plan and a roadmap for yourself.
+                        <p class="card-text p-4 fs-5 fw-3 circle-text">Create a plan and a roadmap for yourself.
                         </p>
                     </div>
                 </div>
@@ -346,7 +348,7 @@
                             class="position-absolute px-3 tick_circle py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Recognize your options and take action.
+                        <p class="card-text p-4 fs-5 fw-3 circle-text">Recognize your options and take action.
                         </p>
                     </div>
                 </div>
@@ -365,7 +367,7 @@
                             class="position-absolute tick_circle px-3 py-2 badge outerBadge border border-light rounded-circle">
                             <span class="fs-2 tick_icon">✓</span>
                         </span>
-                        <p class="card-text p-4 fs-5 fw-3">Review & track your progress.</p>
+                        <p class="card-text p-4 fs-5 fw-3 circle-text">Review & track your progress.</p>
                     </div>
                 </div>
                 <div class="card shadow-lg action_square">

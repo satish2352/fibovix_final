@@ -124,8 +124,8 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
                     src="{{ asset('website/images/our_advicer/Rectangleadvice.png') }}" width="450" height="300"
                     alt='Responsive 2-column layout'>
 
-                <img class="circleimg  position-absolute"
-                    src="{{ asset('website/images/our_advicer/advisorcircle.png') }}" alt='Responsive 3-column layout'>
+                <!-- <img class="circleimg  position-absolute"
+                    src="{{ asset('website/images/our_advicer/advisorcircle.png') }}" alt='Responsive 3-column layout'> -->
             </div>
             <div class="col-1">
 
