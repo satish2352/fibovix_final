@@ -292,7 +292,8 @@
 </div>
 @endif
 
-<div class="container-fluid position-relative mb-5 bimg">
+<!-- bimg -->
+<div class="container-fluid position-relative mb-5">
     <div class="container">
         <div class="row text-center ">
             <h2 id="fibovix">Explore <span style="color:#6246E5; padding:5px;">With Us</span></h2>
