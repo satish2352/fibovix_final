@@ -228,7 +228,7 @@
 <!-- contaback -->
 <div class="container-fluid">
     <div class="card p-3">
-        <div class="col-md-12 artical_top_mob artical_row_top contaback">
+        <div class="col-md-12 artical_top_mob artical_row_top">
             <div class="container">
             <div class="row">
                 <!-- <div class="col-md-3 mt-5">
@@ -260,7 +260,7 @@
 
                             <div class="row row-cols-1 row-cols-md-4 g-3 d-flex justify-content-center">
                                 @forelse ($all_services_details as $key=>$item)
-                                <div class="col-md-6 col-lg-4 col-sm-12">
+                                <div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
                                     <div class="card article_card_container h-100">
                                         <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                             class="card-img-top" alt="{{ $item['title'] }}">

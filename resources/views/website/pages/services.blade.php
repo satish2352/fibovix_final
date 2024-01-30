@@ -25,11 +25,12 @@
     </div>
 </section>
 
-<div class="container-fluid contaback">
+<!-- contaback -->
+<div class="container-fluid">
     <div class="card p-3">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-3 mt-5">
+                <!-- <div class="col-md-3 mt-5">
                     <nav class="article_nav p-3">
                         <div class="nav nav-tabs article_tab" id="nav-tab" role="tablist">
                             <button class="nav-link article_tab_link mt-5 active" id="todays_market_tab"
@@ -51,14 +52,14 @@
                             @endforelse
                         </div>
                     </nav>
-                </div>
-                <div class="col-md-9">
+                </div> -->
+                <div class="col-md-12">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex gallery" id="gallary_data">
 
-                            <div class="row row-cols-1 row-cols-md-4 g-3">
+                            <div class="row row-cols-1 row-cols-md-4 g-3 d-flex justify-content-center">
                                 @forelse ($all_services_details as $key=>$item)
-                                <div class="col-md-6 col-lg-4 col-sm-12">
+                                <div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
                                     <div class="card article_card_container h-100">
                                         <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
                                             class="card-img-top" alt="{{ $item['title'] }}">
