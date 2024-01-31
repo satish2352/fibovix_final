@@ -1010,13 +1010,13 @@ padding-right: 15% !important;
 .article_card_container {
   background-color: #fff !important;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  max-width: 300px;
+  /* max-width: 300px; */
   width: 100%;
   position: relative;
   border-radius: 15px;
   padding: 0rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  /* margin-left: 0.5rem;
+  margin-right: 0.5rem; */
   margin-top: 1rem;
   margin-bottom: 1rem;
 
