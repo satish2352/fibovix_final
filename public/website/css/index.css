@@ -1815,7 +1815,7 @@ padding: 0px !important;
   margin-top: -2rem;
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (min-width: 1400px){
   .fcard {
       height: 28em;
   }
