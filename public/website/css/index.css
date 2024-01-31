@@ -1207,6 +1207,7 @@ background-attachment: fixed; */
 
 .founder_section_row {
   padding: 3rem;
+  margin-top: -1rem;
 }
 
 .about_banner_para {
@@ -1804,4 +1805,23 @@ padding: 0px !important;
 .circle-text{
   margin-top: 25px;
 
+}
+
+.explore_with_top{
+  margin-top: -2rem;
+}
+
+.who_we_are_top{
+  margin-top: -2rem;
+}
+
+@media screen and (max-width: 1400px){
+  .fcard {
+      height: 28em;
+  }
+
+  .fcard_about {
+    padding: 10px;
+    margin-top: 30px !important;
+  }
 }

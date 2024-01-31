@@ -264,7 +264,7 @@
                                 <div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
                                     <div class="card article_card_container h-100">
                                         <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
-                                            class="card-img-top" alt="{{ $item['title'] }}">
+                                            class="card-img-top img-fluid" alt="{{ $item['title'] }}">
                                         <div class="card-body">
                                             <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
                                             <p class="text-align-nojustify">{{
@@ -294,7 +294,7 @@
 @endif
 
 <!-- bimg -->
-<div class="container-fluid position-relative mb-5">
+<div class="container-fluid position-relative mb-5 explore_with_top">
     <div class="container">
         <div class="row text-center ">
             <h2 id="fibovix">Explore <span style="color:#6246E5; padding:5px;">With Us</span></h2>

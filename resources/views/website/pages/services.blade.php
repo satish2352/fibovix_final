@@ -56,14 +56,15 @@
                 </div> -->
                 <div class="col-md-12">
                     <div class="tab-content p-3" id="nav-tabContent">
-                        <div class="row d-flex gallery" id="gallary_data">
+                        <div class="row d-flex justify-content-center gallery" id="gallary_data">
 
-                            <div class="row row-cols-1 row-cols-md-4 g-3 d-flex justify-content-center">
+                            <!-- row-cols-1 row-cols-md-4 g-3  -->
+                            <div class="row d-flex justify-content-center">
                                 @forelse ($all_services_details as $key=>$item)
                                 <div class="col-md-6 col-lg-4 col-sm-12 d-flex justify-content-center">
                                     <div class="card article_card_container h-100">
                                         <img src="{{ Config::get('DocumentConstant.SERVICES_VIEW') }}{{ $item['image'] }}"
-                                            class="card-img-top" alt="{{ $item['title'] }}">
+                                            class="card-img-top img-fluid" alt="{{ $item['title'] }}">
                                         <div class="card-body">
                                             <h4 class="card-title fw-7">{{ $item['title'] }}</h4>
                                             <p class="text-align-nojustify">{{

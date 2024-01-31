@@ -84,7 +84,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
 
 <!-- End gallary -->
 
-<div class="container">
+<div class="container who_we_are_top">
     <div class="row">
         <h1 class="text-center our_advisor_heading p-2">Who <span style="color:#6246E5;">We Are </span>
         </h1>
@@ -136,7 +136,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
 </div>
 </div>
 </div>
-<div class="container" style="margin-top:140px;">
+<div class="container" style="margin-top:80px;">
     <div class="row">
         <div class="col-md-12">
             <div class="accordion" id="accordionExample">
