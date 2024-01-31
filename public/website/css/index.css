@@ -70,7 +70,8 @@ a {
   font-weight: 200px;
   font-size: 20px;
   /* float: center; */
-  border-left: 1px solid #bbb;
+  /* border-left: 1px solid #bbb; */
+  border-right: 1px solid #bbb;
 }
 
 li:last-child {
@@ -1396,6 +1397,7 @@ padding: 0px !important;
 @media screen and (max-width: 992px) {
   .fibovix_navbar_nav li {
     border-left: none !important;
+    border-right: none !important;
   }
 }
 
