@@ -245,7 +245,7 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
 </div>
 <div class="container-fluid thing5_bg">
     <div class="container thing_5_top">
-        <h2 class="text-center p-3" id="fibovix">How<span style="color:#6246E5;"> WE</span> can help <span
+        <h2 class="text-center p-3" style="margin-bottom: -0.8rem;" id="fibovix">How<span style="color:#6246E5;"> WE</span> can help <span
                 style="color:#6246E5;">YOU</span>..
         </h2>
         <div class="row">
