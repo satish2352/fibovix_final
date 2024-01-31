@@ -256,7 +256,7 @@
                 </div> -->
                 <div class="col-md-12">
                     <div class="tab-content p-3" id="nav-tabContent">
-                        <div class="row d-flex gallery" id="gallary_data">
+                        <div class="row d-flex justify-content-center gallery" id="gallary_data">
 
                             <!-- row-cols-1 row-cols-md-4 g-3  -->
                             <div class="row d-flex justify-content-center">
