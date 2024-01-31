@@ -212,6 +212,8 @@ class IndexController extends Controller
         $data->name = $request->input('name');
         $data->email = $request->input('email');
         $data->contact = $request->input('contact');
+        $data->state = $request->input('state');
+        $data->city = $request->input('city');
         $data->comment = $request->input('comment');
         
         $data->save();
@@ -226,6 +228,8 @@ public function traderStore(Request $request)
         $trader->name = $request['name'];
         $trader->email = $request['email'];
         $trader->contact = $request['contact'];
+        $trader->state = $request['state'];
+        $trader->city = $request['city'];
         $trader->comment = $request['comment'];
         $trader->resume = 'null'; // Are you sure you want to store the string 'null' here?
 

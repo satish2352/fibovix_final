@@ -14,7 +14,7 @@ class TraderController extends Controller
         }
         public function index(){
             try {
-                $get_careerList= TraderModel::get();
+                $get_careerList= TraderModel::orderBy('updated_at', 'desc')->get();
                 // dd($get_careerList);
                 
                 return view('admin.pages.trader.list-trader', compact('get_careerList'));

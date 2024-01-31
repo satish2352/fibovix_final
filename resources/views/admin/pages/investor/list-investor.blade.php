@@ -15,7 +15,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('list-investor') }}">Master</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"> Careers Page</li>
+                        <li class="breadcrumb-item active" aria-current="page"> Investors</li>
                     </ol>
                 </nav>
             </div>
@@ -34,10 +34,9 @@
                                                     <th>Name</th>
                                                     <th>Email</th>
                                                     <th>Contact</th>
-                                                    <!-- <th>Position</th> -->
-                                                            
-                                                     <th>Message</th>
-                                                   
+                                                    <th>State</th>
+                                                    <th>City</th>
+                                                    <th>Message</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -47,10 +46,12 @@
                                                         <td>{{ strip_tags($item->name) }}</td>
                                                         <td>{{ strip_tags($item->email) }}</td>
                                                         <td>{{ strip_tags($item->contact) }}</td>
+                                                        <td>{{ strip_tags($item->state) }}</td>
+                                                        <td>{{ strip_tags($item->city) }}</td>
                                                         <td>{{ ucfirst($item->comment) }}</td>
                                                         
 
-                                                        <td>{{strip_tags($item->message)}}</td>
+                                                        <!-- <td>{{strip_tags($item->message)}}</td> -->
 
                                                         {{-- <td>
                                                             <label class="switch">

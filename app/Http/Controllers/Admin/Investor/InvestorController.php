@@ -14,7 +14,7 @@ class InvestorController extends Controller
     }
         public function index(){
             try {
-                $get_careerList= InvestorModel::get();
+                $get_careerList = InvestorModel::orderBy('updated_at', 'desc')->get();
                 return view('admin.pages.investor.list-investor', compact('get_careerList'));
             } catch (\Exception $e) {
                 return $e;

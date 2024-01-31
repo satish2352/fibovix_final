@@ -534,6 +534,14 @@ $(document).ready(() => {
                                 <input type="text" class="form-control" id="contact" name="contact" required>
                             </div>
                             <div class="col-6 mt-3">
+                                <label for="contact" class="form-label">State</label>
+                                <input type="text" class="form-control" id="state" name="state" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="contact" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" name="city" required>
+                            </div>
+                            <div class="col-6 mt-3">
                                 <label for="comment" class="form-label">Comment</label>
                                 <textarea class="form-control" id="comment" name="comment" required></textarea>
                             </div>
@@ -577,6 +585,14 @@ $(document).ready(() => {
                             <div class="col-6 mt-3">
                                 <label for="contact" class="form-label">Contact</label>
                                 <input type="text" class="form-control" name="contact" id="contact" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="contact" class="form-label">State</label>
+                                <input type="text" class="form-control" id="state" name="state" required>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <label for="contact" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" name="city" required>
                             </div>
                             <div class="col-6 mt-3">
                                 <label for="comment" class="form-label">Comment</label>
@@ -625,6 +641,12 @@ $(document).ready(function () {
                 minlength: 10, // Minimum length is 10 digits
                 maxlength: 10 // Maximum length is 10 digits
             },
+            state: {
+                required: true
+            },
+            city: {
+                required: true
+            },
             comment: {
                 required: true
             }
@@ -642,6 +664,8 @@ $(document).ready(function () {
                 minlength: "Contact number must be at least 10 digits",
                 maxlength: "Contact number must not exceed 10 digits"
             },
+            state: "Please enter your state",
+            city: "Please enter your city",
             comment: "Please enter your comment"
         },
         submitHandler: function (form) {
@@ -662,6 +686,12 @@ $(document).ready(function () {
             email: {
                 required: true,
                 email: true
+            },
+            state: {
+                required: true
+            },
+            city: {
+                required: true
             },
             contact: {
                 required: true,
@@ -689,6 +719,8 @@ $(document).ready(function () {
                 maxlength: "Contact number must not exceed 10 digits"
             },
             comment: "Please enter your comment",
+            state: "Please enter your state",
+            city: "Please enter your city",
             resume: "Please select your resume"
         },
         submitHandler: function (form) {

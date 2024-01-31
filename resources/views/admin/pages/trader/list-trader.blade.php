@@ -34,7 +34,9 @@
                                                     <th>Name</th>
                                                     <th>Email</th>
                                                     <th>Contact</th>
-                                                     <th>Message</th>
+                                                    <th>State</th>
+                                                    <th>City</th>
+                                                    <th>Message</th>
                                                     <th>Resume</th>         
                                                    
                                                 </tr>
@@ -46,13 +48,14 @@
                                                         <td>{{ strip_tags($item->name) }}</td>
                                                         <td>{{ strip_tags($item->email) }}</td>
                                                         <td>{{ strip_tags($item->contact) }}</td>
+                                                        <td>{{ strip_tags($item->state) }}</td>
+                                                        <td>{{ strip_tags($item->city) }}</td>
                                                         <td>{{ strip_tags($item->comment) }}</td>
                                                         <td> <a href="{{ Config::get('DocumentConstant.RESUME_VIEW') . $item->resume }}" download="{{ Config::get('DocumentConstant.RESUME_VIEW') . $item->resume }}">
                                                                 Download Resume
                                                             </a>
                                                         </td>
 
-                                                        <td>{{strip_tags($item->message)}}</td>
 
                                                         {{-- <td>
                                                             <label class="switch">
