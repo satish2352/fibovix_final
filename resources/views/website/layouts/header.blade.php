@@ -78,12 +78,12 @@
     <div class="container">
       <!-- <a class="navbar-brand navbar_mobile" href="tel:{{ $website_contact_details[0]['contact_one'] }}">{{ $website_contact_details[0]['contact_one'] }}  </a>
           <a class="navbar-brand navbar_mobile" href="tel:{{ $website_contact_details[0]['contact_two'] }}"> {{ $website_contact_details[0]['contact_two'] }}</a> -->
-<a class="navbar-brand navbar_mobile" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-<a class="navbar-brand navbar_mobile" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+<!-- <a class="navbar-brand navbar_mobile" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+<a class="navbar-brand navbar_mobile" href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav fibovix_navbar_nav">
           <li class="nav-item ">
             <a class="nav-link @if(\Request::route()->getName() == '/') {{'active'}} @endif" href="{{ route('/') }}">Home </a>
