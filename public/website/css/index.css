@@ -996,7 +996,7 @@ padding-right: 15% !important;
 }
 
 .contact-form {
-  width: 50%;
+  width: 55%;
 }
 
 .background-color {
@@ -1824,4 +1824,13 @@ padding: 0px !important;
     padding: 10px;
     margin-top: 30px !important;
   }
+}
+
+.insights_top{
+  margin-top: -3rem;
+  margin-bottom: -5rem;
+}
+
+.contact_us_bottom{
+  margin-bottom: -6rem;
 }

@@ -26,7 +26,7 @@
 </section>
 
 <!-- contaback -->
-<div class="container-fluid" style="margin-bottom: -3rem;">
+<div class="container-fluid" style="margin-bottom: -4rem;">
     <div class="card p-3">
         <div class="col-md-12">
             <div class="container">
@@ -54,7 +54,7 @@
                         </div>
                     </nav>
                 </div> -->
-                <div class="col-md-12">
+                <div class="col-md-12" style="margin-top: -1rem;">
                     <div class="tab-content p-3" id="nav-tabContent">
                         <div class="row d-flex justify-content-center gallery" id="gallary_data">
 
