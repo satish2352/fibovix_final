@@ -622,114 +622,134 @@ $(document).ready(() => {
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
+<script>
+    $(document).ready(function () {
+        $.validator.addMethod("lettersOnly", function (value, element) {
+            return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
+        }, "Please enter only letters");
+
+        $("#investorForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                contact: {
+                    required: true,
+                    digits: true, // Only accept digits (numbers)
+                    minlength: 10, // Minimum length is 10 digits
+                    maxlength: 10 // Maximum length is 10 digits
+                },
+                state: {
+                    required: true,
+                    lettersOnly: true // Only accept letters
+                },
+                city: {
+                    required: true,
+                    lettersOnly: true // Only accept letters
+                },
+                comment: {
+                    required: true
+                }
+            },
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email",
+                    email: "Please enter a valid email address"
+                },
+                contact: {
+                    required: "Please enter a valid 10-digit contact number",
+                    digits: "Please enter only digits",
+                    minlength: "Contact number must be at least 10 digits",
+                    maxlength: "Contact number must not exceed 10 digits"
+                },
+                state: {
+                    required: "Please enter the state.",
+                    lettersOnly: "Please enter a valid state name (only letters are allowed)."
+                },
+                city: {
+                    required: "Please enter the city.",
+                    lettersOnly: "Please enter a valid city name (only letters are allowed)."
+                },
+                comment: "Please enter your comment"
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
 </script>
+
 <script>
 
-$(document).ready(function () {
-    $("#investorForm").validate({
-        rules: {
-            name: {
-                required: true
+    $(document).ready(function () {
+
+         $.validator.addMethod("lettersOnly", function (value, element) {
+            return this.optional(element) || /^[a-zA-Z\s]+$/.test(value);
+        }, "Please enter only letters");
+ 
+        $("#traderForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                state: {
+                    required: true,
+                    lettersOnly: true // Only accept letters
+                },
+                city: {
+                    required: true,
+                    lettersOnly: true // Only accept letters
+                },
+                contact: {
+                    required: true,
+                    digits: true, // Only accept digits (numbers)
+                    minlength: 10, // Minimum length is 10 digits
+                    maxlength: 10 // Maximum length is 10 digits
+                },
+                comment: {
+                    required: true
+                },
+                resume: {
+                    required: true
+                }
             },
-            email: {
-                required: true,
-                email: true
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email",
+                    email: "Please enter a valid email address"
+                },
+                contact: {
+                    required: "Please enter a valid 10-digit contact number",
+                    digits: "Please enter only digits",
+                    minlength: "Contact number must be at least 10 digits",
+                    maxlength: "Contact number must not exceed 10 digits"
+                },
+                comment: "Please enter your comment",
+                state: {
+                    required: "Please enter the state.",
+                    lettersOnly: "Please enter a valid state name (only letters are allowed)."
+                },
+                city: {
+                    required: "Please enter the city.",
+                    lettersOnly: "Please enter a valid city name (only letters are allowed)."
+                },
+                resume: "Please select your resume"
             },
-            contact: {
-                required: true,
-                digits: true, // Only accept digits (numbers)
-                minlength: 10, // Minimum length is 10 digits
-                maxlength: 10 // Maximum length is 10 digits
-            },
-            state: {
-                required: true
-            },
-            city: {
-                required: true
-            },
-            comment: {
-                required: true
+            submitHandler: function (form) {
+                form.submit();
             }
-            
-        },
-        messages: {
-            name: "Please enter your name",
-            email: {
-                required: "Please enter your email",
-                email: "Please enter a valid email address"
-            },
-            contact: {
-                required: "Please enter a valid 10-digit contact number",
-                digits: "Please enter only digits",
-                minlength: "Contact number must be at least 10 digits",
-                maxlength: "Contact number must not exceed 10 digits"
-            },
-            state: "Please enter your state",
-            city: "Please enter your city",
-            comment: "Please enter your comment"
-        },
-        submitHandler: function (form) {
-            form.submit();
-        }
+        });
     });
-});
-
 </script>
-<script>
-
-$(document).ready(function () {
-    $("#traderForm").validate({
-        rules: {
-            name: {
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            state: {
-                required: true
-            },
-            city: {
-                required: true
-            },
-            contact: {
-                required: true,
-                digits: true, // Only accept digits (numbers)
-                minlength: 10, // Minimum length is 10 digits
-                maxlength: 10 // Maximum length is 10 digits
-            },
-            comment: {
-                required: true
-            },
-            resume: {
-                required: true
-            }
-        },
-        messages: {
-            name: "Please enter your name",
-            email: {
-                required: "Please enter your email",
-                email: "Please enter a valid email address"
-            },
-            contact: {
-                required: "Please enter a valid 10-digit contact number",
-                digits: "Please enter only digits",
-                minlength: "Contact number must be at least 10 digits",
-                maxlength: "Contact number must not exceed 10 digits"
-            },
-            comment: "Please enter your comment",
-            state: "Please enter your state",
-            city: "Please enter your city",
-            resume: "Please select your resume"
-        },
-        submitHandler: function (form) {
-            form.submit();
-        }
-    });
-});
-
-</script>
-
 
 @include('website.layouts.footer')
