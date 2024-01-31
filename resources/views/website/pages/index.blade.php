@@ -394,7 +394,7 @@
     <div class="row row-cols-1 row-cols-md-4 g-3">
         @foreach ($additionalSolutions as $item)
         <div class="col-md-4 col-lg-4 col-sm-12">
-            <div class="card addi_sol_card">
+            <div class="card addi_sol_card h-100">
                 <img class="addi_sol_card_img img-fluid"
                     src="{{ Config::get('DocumentConstant.ADDITIONAL_SOLUTIONS_VIEW') }}{{ $item->image }}"
                     class="card-img-top" alt="...">
