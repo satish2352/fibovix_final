@@ -148,7 +148,8 @@ We are a fiduciary to our clients. We’re investing for the future on behalf of
                                 Our Firm
                             </button>
                         </h2>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            <!-- show -->
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="card-body">
                                 Fibovix Wealth Management provides a range of investment banking, investment management,
